@@ -1,84 +1,118 @@
-<html>
-    <head>
-        <meta charset="UTF-8" lang="en">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>LESIS - Laboratory of Engineering Studies in Information Security</title>
-        <meta name="description" content="We are an applied security research firm, focused on developing effective offensive technology to support critical operations.">
-        <meta name="keywords" content="vulnerability, research, hunting, exploit, development, fuzzing, analysis, zero, day, nday, intelligence">
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="lesis_group" />
-        <meta property="og:title" content="LESIS - Laboratory of Engineering Studies in Information Security" />
-        <meta property="og:description" content="We are an applied security research firm, focused on developing effective offensive technology to support critical operations" />
-        <meta property="og:image" content="https://lesis.lat/assets/images/banner.jpeg">
-        <link href="assets/css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-    <body class="circle">
-        <nav>
-            <a href="#">www.lesis.lat</a>
-        </nav>
-        <section id="header">
-            <h1>LESIS</h1>
-            <h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LESIS - Laboratory of Engineering Studies in Information Security</title>
+  <meta name="description" content="LESIS is an applied security research entity focused on developing effective offensive technologies in support of critical operations. Its approach is grounded in a thorough attacker’s perspective and rigorous, research-driven thinking.">
+  <meta name="keywords" content="LESIS, lesis, lesis.lat, www.lesis.lat, vulnerability, research, hunting, exploit, development, fuzzing, analysis, zero, day, nday, intelligence">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="assets/images/favicon-white.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/images/favicon-white.png">
+  <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer">  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </noscript>
+</head>
+<body>
+  <div class="container">
+    <div class="left-side">
+      <a href="#">
+        <img src="assets/images/logo-branco.png" alt="LESIS logo" class="logo-left">
+      </a>
+    </div>
+    <main class="right-side">
+        <!-- <div class="top-bar">
+            <h1 class="site-title">LESIS</h1>
+            <nav class="top-menu">
+              <ul>
+                <li><a href="https://blog.lesis.lat" target="_blank">BLOG</a></li>
+              </ul>
+            </nav>
+          </div>           -->
+      <section id="header">
+        <h2 class="ibm-plex-sans-light">
+          <p>
+            LESIS is an <b>applied security research entity</b> focused on
+            <b>developing effective offensive technologies</b> in support of critical operations.
+            Its approach is grounded in a thorough <b>attacker’s perspective</b> and rigorous, <b>research-driven thinking</b>.”
+          </p>
+        </h2>
+      </section>
+      <hr/>
+      <section id="research">
+        <h2 class="ibm-plex-sans-regular">CORE COMPETENCIES</h2>
+        <div id="items">
+          <div class="item">
+            <h3 class="ibm-plex-sans-regular">VULNERABILITY RESEARCH</h3>
+            <h3 class="ibm-plex-sans-light">
                 <p>
-                    We are an applied security research firm, focused on developing effective offensive technology to support critical operations.
+                    A detailed analysis of the attack surface of the product under test, taking into consideration 
+                    the security expectations, objectives and threat model.
+                    In general, our approach of vulnerability research aims to verify the resilience of all components of the product
+                    under test - typically, this service is composed of architecture review, supporting infrastructure testing,
+                    application security, code review and reverse engineering, as well as the creation of bespoke tools such as 
+                    fuzzers and custom code static analyzers. 
                 </p>
-                <p>
-                    We propose solutions based on a thorough attacker's perspective and a research-based thinking for the needs of identifying security risks and testing current measures.
-                </p>
-            </h2>
-            <h3>
-                <button class="btn" id="contactBtn">
-                    You can contact us via email: business@lesis.lat
-                </button>
             </h3>
-        </section>
-        <section id="services">
-            <div class="item">
-                <h3>VULNERABILITY RESEARCH</h3>
-                <h4>
-                    A detailed analysis of the attack surface of the product under test, taking into consideration the security expectations, objectives and threat model. 
-                    In general, our approach of vulnerability research aims to verify the resilience of all components of the product under test 
-                    - typically, this service is composed of architecture review, supporting infrastructure testing, application security, code 
-                    review and reverse engineering, as well as the creation of bespoke tools such as fuzzers and custom code static analyzers.
-                </h4>
-            </div>
-            <div class="item">
-                <h3>RESEARCH & DEVELOPMENT</h3>
-                <h4>
-                    Hard problems require unique solutions. We create tailor made tools for optimizing your operation, providing exclusive capabilities
-                    and tailored on-demand research to improve exploitation and post-exploitation tasks.
-                    From high level design to low-level implementation. In the past years our engineer are worked on advanced projects around topics like: static analysis, fuzzing, data mining and other. 
-                </h4>
-            </div>
-            </div>
-        </section>
-        <div id="contactModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <section id="contact">
-                    <iframe class="airtable-embed" src="https://airtable.com/embed/appfeP9KaqBMsKelX/pagaLC855RrraVM4w/form" frameborder="0" onmousewheel="" width="98%" height="600em" style="background: transparent; border: 1px solid #ccc;">
-                    </iframe>
-                </section>
-            </div>
+          </div>
+          <div class="item">
+            <h3 class="ibm-plex-sans-regular">RESEARCH & DEVELOPMENT</h3>
+            <h3 class="ibm-plex-sans-light">
+                <p>
+                    Hard problems require unique solutions. We create tailor made tools for optimizing operation,
+                    providing exclusive capabilities and tailored on-demand research to improve exploitation and post-exploitation tasks.
+                    From high level design to low-level implementation.
+                    In the past years our team are worked on projects around topics like: static analysis, fuzzing, data mining and other. 
+                </p>
+            </h3>
+          </div>
         </div>
-        <footer>
-            <center>
-                <section>
-                    <ul class="social-icons">
-                        <li><a href="https://www.instagram.com/lesis.lat/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://x.com/lesis_lat" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="http://github.com/instriq" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-                        <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    </ul>
-                </section>
-                <h6>
-                    <p>São Paulo | Buenos Aires | Lisbon</p>
-                    <p>Laboratory of Engineering Studies in Information Security - 2024</p>
-                </h6>
-            </center>
-        </footer>
-        <script src="assets/scripts/main.js"></script>
-    </body>
+      </section>
+      <hr/>
+      <section id="about">
+        <h2 class="ibm-plex-sans-regular">OUR APPROACH</h2>
+        <h3 class="ibm-plex-sans-light">
+            <p>
+                At LESIS (Laboratory of Engineering Studies in Information Security), our focus is on applied research in offensive security technologies that underpin critical operations. Our team of engineers and researchers is dedicated to uncovering vulnerabilities, developing innovative solutions, and strengthening the security of organizations facing complex cybersecurity challenges.
+            </p>
+            <p>
+                With a deep understanding of the tactics, techniques, and procedures (TTPs) employed by attackers, we offer a unique perspective on protecting systems and infrastructures. We work closely with our collaborators, tailoring strategies to meet specific needs and objectives. Whether through vulnerability research, advanced exploitation techniques, or the development of custom tools for security assessments, our aim is to reinforce digital resilience and empower those involved to stay ahead of emerging threats.
+            </p>
+          <p>
+            Our commitment is to deliver world-class research, cutting-edge technology, and actionable insights that contribute to a safer digital landscape. At LESIS, we do more than assess security—we propel it forward.    
+          </p>
+        </h3>
+      </section>
+      <hr/>
+      <footer>
+        <section class="ibm-plex-sans-light">
+          <ul class="social-icons">
+            <li><a href="https://www.instagram.com/lesis.lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://x.com/lesis_lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/lesis-lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on GitHub"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+        </section>
+        <h4 class="ibm-plex-sans-light">
+          <p>contact@lesis.lat - www.lesis.lat</p>
+          <p>São Paulo | Buenos Aires | Lisbon</p>
+          <p>Laboratory of Engineering Studies in Information Security - 2025</p>
+        </h4>
+      </footer>
+    </main>
+  </div>
+  <script src="assets/scripts/main.js" defer></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF7S2MHBGH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BF7S2MHBGH');
+  </script>
+</body>
 </html>
