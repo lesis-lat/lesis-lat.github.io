@@ -8,11 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/images/favicon-white.png" type="image/png">
   <link rel="apple-touch-icon" href="assets/images/favicon-white.png">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer">  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </noscript>
 </head>
 <body>
   <div class="container">
@@ -21,7 +25,7 @@
         <img src="assets/images/logo-branco.png" alt="LESIS logo" class="logo-left">
       </a>
     </div>
-    <div class="right-side">
+    <main class="right-side">
         <!-- <div class="top-bar">
             <h1 class="site-title">LESIS</h1>
             <nav class="top-menu">
@@ -88,10 +92,10 @@
       <footer>
         <section class="ibm-plex-sans-light">
           <ul class="social-icons">
-            <li><a href="https://www.instagram.com/lesis.lat/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://x.com/lesis_lat" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/lesis-lat" target="_blank"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/lesis.lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://x.com/lesis_lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/lesis-lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on GitHub"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
           </ul>
         </section>
         <h4 class="ibm-plex-sans-light">
@@ -100,9 +104,9 @@
           <p>Laboratory of Engineering Studies in Information Security - 2025</p>
         </h4>
       </footer>
-    </div>
+    </main>
   </div>
-  <script src="assets/scripts/main.js"></script>
+  <script src="assets/scripts/main.js" defer></script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BF7S2MHBGH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
