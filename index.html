@@ -101,8 +101,10 @@
   <script src="assets/scripts/main.min.js" defer></script>
   <script>
     const loadGoogleTagManager = () => {
-      if (window.gtmLoaded) return;
-      window.gtmLoaded = true;
+      if (window.googleTagManagerLoaded) {
+        return;
+      }
+      window.googleTagManagerLoaded = true;
       const script = document.createElement('script');
       script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BF7S2MHBGH';
       script.async = true;
@@ -118,8 +120,8 @@
       };
     };
 
-    const gtmEvents = ['click', 'scroll', 'keydown', 'mousemove', 'touchstart'];
-    gtmEvents.forEach((eventName) => {
+    const googleTagManagerEvents = ['click', 'scroll', 'keydown', 'mousemove', 'touchstart'];
+    googleTagManagerEvents.forEach((eventName) => {
       window.addEventListener(eventName, loadGoogleTagManager, { once: true, passive: true });
     });
 
