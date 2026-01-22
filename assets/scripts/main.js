@@ -1,51 +1,48 @@
-var host="lesis.lat"
+const expectedHost = "lesis.lat";
 
-if (window.location.host == host && window.location.protocol != "https:") {
-    window.location.protocol = "https:"
+if (window.location.host === expectedHost && window.location.protocol !== "https:") {
+    window.location.protocol = "https:";
 }
 
-var modal = document.getElementById("contactModal");
-var btn   = document.getElementById("contactBtn");
-var span  = document.getElementsByClassName("close")[0];
+const contactModal = document.getElementById("contactModal");
+const contactButton = document.getElementById("contactBtn");
+const closeButton = document.getElementsByClassName("close")[0];
 
-if (btn && modal) {
-    btn.onclick = function () {
-        modal.style.display = "block";
+if (contactButton && contactModal) {
+    contactButton.onclick = function () {
+        contactModal.style.display = "block";
     }
 }
 
-if (span && modal) {
-    span.onclick = function () {
-        modal.style.display = "none";
+if (closeButton && contactModal) {
+    closeButton.onclick = function () {
+        contactModal.style.display = "none";
     }
 }
 
-if (modal) {
+if (contactModal) {
     window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
+        if (event.target === contactModal) {
+            contactModal.style.display = "none";
         }
     }
 }
 
-var contactLink = document.getElementById("contactLink");
+const contactLink = document.getElementById("contactLink");
 
-if (contactLink && modal) {
+if (contactLink && contactModal) {
     contactLink.onclick = function (e) {
         e.preventDefault();
-        modal.style.display = "block";
+        contactModal.style.display = "block";
     }
 }
 
+const menuToggleButton = document.getElementById("hamburgerIcon");
+const navigationMenu = document.querySelector("nav ul");
 
-const hamburger = document.getElementById('hamburgerIcon');
-const menu = document.querySelector('nav ul');
-
-if (hamburger && menu) {
-    hamburger.addEventListener('click', function() {
-        // Alterna a classe 'open' para transformar o hambúrguer em X
-        hamburger.classList.toggle('open');
-        // Alterna a exibição do menu
-        menu.classList.toggle('show');
+if (menuToggleButton && navigationMenu) {
+    menuToggleButton.addEventListener("click", function () {
+        menuToggleButton.classList.toggle("open");
+        navigationMenu.classList.toggle("show");
     });
 }
