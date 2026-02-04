@@ -1,0 +1,10 @@
+title: LESIS
+url: "https://lesis.lat"
+baseurl: ""
+
+exclude:
+  - Dockerfile
+  - README.md
+  - LICENSE.md
+  - SECURITY.md
+  - .editorconfig

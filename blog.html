@@ -1,112 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Blog - LESIS</title>
-  <meta name="description" content="Publications and research from LESIS - Laboratory of Engineering Studies in Information Security.">
-  <meta name="keywords" content="LESIS, blog, publications, security, research, vulnerability, advisory">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="assets/images/favicon-white.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/images/favicon-white.png">
-  <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <noscript>
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-  </noscript>
-</head>
-<body>
-  <div class="container">
-    <div class="left-side left-side-blog">
-      <a href="index.html">
-        <img src="assets/images/logo-branco.png" alt="LESIS logo" class="logo-left" fetchpriority="high">
-      </a>
-    </div>
-    <main class="right-side">
-      <nav class="top-menu">
-        <ul>
-          <li><a href="index.html" class="ibm-plex-sans-regular">Home</a></li>
-          <li><a href="team.html" class="ibm-plex-sans-regular">Team</a></li>
-          <li><a href="blog.html" class="ibm-plex-sans-regular active">Blog</a></li>
-        </ul>
-      </nav>
-      <section class="blog-list">
-        <ul>
-          <li>
-            <h3 class="ibm-plex-sans-light">
-              <span class="blog-date">2026.01</span>
-              <a href="https://blog.lesis.lat/2026/01/15/considerations-for-writing-security-reports-en.html" target="_blank" rel="noopener noreferrer">Considerations for writing security reports</a>
-            </h3>
-          </li>
-          <li>
-            <h3 class="ibm-plex-sans-light">
-              <span class="blog-date">2026.01</span>
-              <a href="https://blog.lesis.lat/2026/01/14/commitiment-to-strengthening-community-en.html" target="_blank" rel="noopener noreferrer">Strengthening the Brazilian cybersecurity community through education</a>
-            </h3>
-          </li>
-          <li>
-            <h3 class="ibm-plex-sans-light">
-              <span class="blog-date">2025.11</span>
-              <a href="https://blog.lesis.lat/2025/11/30/sposoring-events-en.html" target="_blank" rel="noopener noreferrer">Why we sponsor information security events</a>
-            </h3>
-          </li>
-          <li>
-            <h3 class="ibm-plex-sans-light">
-              <span class="blog-date">2025.10</span>
-              <a href="https://blog.lesis.lat/2025/10/04/rocking-gift-card-en.html" target="_blank" rel="noopener noreferrer">Money for nothing, discounts for free: rocking the gift card loop</a>
-            </h3>
-          </li>
-        </ul>
-      </section>
-      <hr/>
-      <footer>
-        <section class="ibm-plex-sans-light">
-          <ul class="social-icons">
-            <li><a href="https://www.instagram.com/lesis.lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Instagram"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://x.com/lesis_lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Twitter"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/lesis-lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-          </ul>
-        </section>
-        <h4 class="ibm-plex-sans-light">
-          <p>contact@lesis.lat - www.lesis.lat</p>
-          <p>São Paulo | Buenos Aires | Lisbon</p>
-          <p>Laboratory of Engineering Studies in Information Security | 2025 - 2026</p>
-        </h4>
-      </footer>
-    </main>
-  </div>
-  <script src="assets/scripts/main.min.js" defer></script>
-  <script>
-    const loadGoogleTagManager = () => {
-      if (window.googleTagManagerLoaded) {
-        return;
-      }
-      window.googleTagManagerLoaded = true;
-      const script = document.createElement('script');
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BF7S2MHBGH';
-      script.async = true;
-      document.head.appendChild(script);
-      script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          window.dataLayer.push(arguments);
-        }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', 'G-BF7S2MHBGH');
-      };
-    };
+---
+layout: default
+title: "Blog - LESIS"
+description: "Publications and research from LESIS - Laboratory of Engineering Studies in Information Security."
+keywords: "LESIS, blog, publications, security, research, vulnerability, advisory"
+sidebar_class: "left-side-blog"
+---
 
-    const googleTagManagerEvents = ['click', 'scroll', 'keydown', 'mousemove', 'touchstart'];
-    googleTagManagerEvents.forEach((eventName) => {
-      window.addEventListener(eventName, loadGoogleTagManager, { once: true, passive: true });
-    });
-
-    setTimeout(loadGoogleTagManager, 3000);
-  </script>
-</body>
-</html>
+<section class="blog-list">
+  <ul>
+    <li>
+      <h3 class="ibm-plex-sans-light">
+        <span class="blog-date">2026.01</span>
+        <a href="https://blog.lesis.lat/2026/01/15/considerations-for-writing-security-reports-en.html" target="_blank" rel="noopener noreferrer">Considerations for writing security reports</a>
+      </h3>
+    </li>
+    <li>
+      <h3 class="ibm-plex-sans-light">
+        <span class="blog-date">2026.01</span>
+        <a href="https://blog.lesis.lat/2026/01/14/commitiment-to-strengthening-community-en.html" target="_blank" rel="noopener noreferrer">Strengthening the Brazilian cybersecurity community through education</a>
+      </h3>
+    </li>
+    <li>
+      <h3 class="ibm-plex-sans-light">
+        <span class="blog-date">2025.11</span>
+        <a href="https://blog.lesis.lat/2025/11/30/sposoring-events-en.html" target="_blank" rel="noopener noreferrer">Why we sponsor information security events</a>
+      </h3>
+    </li>
+    <li>
+      <h3 class="ibm-plex-sans-light">
+        <span class="blog-date">2025.10</span>
+        <a href="https://blog.lesis.lat/2025/10/04/rocking-gift-card-en.html" target="_blank" rel="noopener noreferrer">Money for nothing, discounts for free: rocking the gift card loop</a>
+      </h3>
+    </li>
+  </ul>
+</section>

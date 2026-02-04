@@ -1,0 +1,29 @@
+<script src="assets/scripts/main.min.js" defer></script>
+<script>
+  const loadGoogleTagManager = () => {
+    if (window.googleTagManagerLoaded) {
+      return;
+    }
+    window.googleTagManagerLoaded = true;
+    const script = document.createElement('script');
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BF7S2MHBGH';
+    script.async = true;
+    document.head.appendChild(script);
+    script.onload = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-BF7S2MHBGH');
+    };
+  };
+
+  const googleTagManagerEvents = ['click', 'scroll', 'keydown', 'mousemove', 'touchstart'];
+  googleTagManagerEvents.forEach((eventName) => {
+    window.addEventListener(eventName, loadGoogleTagManager, { once: true, passive: true });
+  });
+
+  setTimeout(loadGoogleTagManager, 3000);
+</script>

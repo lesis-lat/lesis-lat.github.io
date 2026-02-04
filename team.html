@@ -1,139 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Team - LESIS</title>
-  <meta name="description" content="Meet the team behind LESIS - Laboratory of Engineering Studies in Information Security.">
-  <meta name="keywords" content="LESIS, team, security, research, vulnerability, exploit, development">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="assets/images/favicon-white.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/images/favicon-white.png">
-  <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <noscript>
-    <link rel="stylesheet" href="assets/css/style.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-  </noscript>
-</head>
-<body>
-  <div class="container">
-    <div class="left-side left-side-team">
-      <a href="index.html">
-        <img src="assets/images/logo-branco.png" alt="LESIS logo" class="logo-left" fetchpriority="high">
-      </a>
+---
+layout: default
+title: "Team - LESIS"
+description: "Meet the team behind LESIS - Laboratory of Engineering Studies in Information Security."
+keywords: "LESIS, team, security, research, vulnerability, exploit, development"
+sidebar_class: "left-side-team"
+---
+
+<section class="team-grid">
+  <div class="team-member">
+    <img src="assets/images/heitor.png" alt="Heitor Gouvêa" class="team-photo">
+    <div class="team-info">
+      <h3 class="ibm-plex-sans-regular">Heitor Gouvêa</h3>
+      <h3 class="ibm-plex-sans-light team-role">Founder, Managing Partner</h3>
+      <h3 class="ibm-plex-sans-light">
+        <p>
+          Security researcher focused on vulnerability research, exploit development and offensive tooling.
+          Previously led offensive security engagements across Latin America and Europe, working on architecture review,
+          reverse engineering and custom fuzzing solutions for critical systems.
+        </p>
+      </h3>
+      <ul class="social-icons">
+        <li><a href="https://github.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/htrgouvea/" target="_blank" rel="noopener noreferrer" aria-label="Heitor on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://x.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on Twitter"><i class="fab fa-twitter"></i></a></li>
+      </ul>
     </div>
-    <main class="right-side">
-      <nav class="top-menu">
-        <ul>
-          <li><a href="index.html" class="ibm-plex-sans-regular">Home</a></li>
-          <li><a href="team.html" class="ibm-plex-sans-regular active">Team</a></li>
-          <li><a href="blog.html" class="ibm-plex-sans-regular">Blog</a></li>
-        </ul>
-      </nav>
-      <section class="team-grid">
-        <div class="team-member">
-          <img src="assets/images/heitor.png" alt="Heitor Gouvêa" class="team-photo">
-          <div class="team-info">
-            <h3 class="ibm-plex-sans-regular">Heitor Gouvêa</h3>
-            <h3 class="ibm-plex-sans-light team-role">Founder, Managing Partner</h3>
-            <h3 class="ibm-plex-sans-light">
-              <p>
-                Security researcher focused on vulnerability research, exploit development and offensive tooling.
-                Previously led offensive security engagements across Latin America and Europe, working on architecture review,
-                reverse engineering and custom fuzzing solutions for critical systems.
-              </p>
-            </h3>
-            <ul class="social-icons">
-              <li><a href="https://github.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on GitHub"><i class="fab fa-github"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/htrgouvea/" target="_blank" rel="noopener noreferrer" aria-label="Heitor on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-              <li><a href="https://x.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on Twitter"><i class="fab fa-twitter"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="team-member">
-          <img src="assets/images/maria.png" alt="Maria Eduarda Dionisio" class="team-photo">
-          <div class="team-info">
-            <h3 class="ibm-plex-sans-regular">Maria Eduarda Dionisio</h3>
-            <h3 class="ibm-plex-sans-light team-role">Associate Security Analyst</h3>
-            <h3 class="ibm-plex-sans-light">
-              <p>
-                Studied software engineering at 42 Rio de Janeiro. Contributes to the development and maintenance
-                of engineering solutions that deliver value to our end clients — tools and systems designed to identify
-                vulnerabilities and reduce risk.
-              </p>
-            </h3>
-            <ul class="social-icons">
-              <li><a href="https://github.com/EduardaDT" target="_blank" rel="noopener noreferrer" aria-label="Maria on GitHub"><i class="fab fa-github"></i></a></li>
-              <li><a href="https://www.linkedin.com/in/eduardadionisio/" target="_blank" rel="noopener noreferrer" aria-label="Maria on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="team-member">
-          <img src="assets/images/joao.png" alt="João" class="team-photo">
-          <div class="team-info">
-            <h3 class="ibm-plex-sans-regular">João Vitor Pereira</h3>
-            <h3 class="ibm-plex-sans-light team-role">Research Analyst</h3>
-            <h3 class="ibm-plex-sans-light">
-              <p>
-                Undergraduate student in Business Administration at the Federal University of Viçosa (UFV), contributing to LESIS through analytical research on industry dynamics, market structures, and data-driven insights. His work supports the organization’s research efforts by strengthening strategic understanding of the information security landscape and its economic and organizational dimensions.
-              </p>
-            </h3>
-            <ul class="social-icons">
-              <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Marina on GitHub"><i class="fab fa-github"></i></a></li>
-              <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Marina on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <hr/>
-      <footer>
-        <section class="ibm-plex-sans-light">
-          <ul class="social-icons">
-            <li><a href="https://www.instagram.com/lesis.lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Instagram"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://x.com/lesis_lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Twitter"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/lesis-lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-          </ul>
-        </section>
-        <h4 class="ibm-plex-sans-light">
-          <p>contact@lesis.lat - www.lesis.lat</p>
-          <p>São Paulo | Buenos Aires | Lisbon</p>
-          <p>Laboratory of Engineering Studies in Information Security | 2025 - 2026</p>
-        </h4>
-      </footer>
-    </main>
   </div>
-  <script src="assets/scripts/main.min.js" defer></script>
-  <script>
-    const loadGoogleTagManager = () => {
-      if (window.googleTagManagerLoaded) {
-        return;
-      }
-      window.googleTagManagerLoaded = true;
-      const script = document.createElement('script');
-      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BF7S2MHBGH';
-      script.async = true;
-      document.head.appendChild(script);
-      script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          window.dataLayer.push(arguments);
-        }
-        window.gtag = gtag;
-        gtag('js', new Date());
-        gtag('config', 'G-BF7S2MHBGH');
-      };
-    };
-
-    const googleTagManagerEvents = ['click', 'scroll', 'keydown', 'mousemove', 'touchstart'];
-    googleTagManagerEvents.forEach((eventName) => {
-      window.addEventListener(eventName, loadGoogleTagManager, { once: true, passive: true });
-    });
-
-    setTimeout(loadGoogleTagManager, 3000);
-  </script>
-</body>
-</html>
+  <div class="team-member">
+    <img src="assets/images/maria.png" alt="Maria Eduarda Dionisio" class="team-photo">
+    <div class="team-info">
+      <h3 class="ibm-plex-sans-regular">Maria Eduarda Dionisio</h3>
+      <h3 class="ibm-plex-sans-light team-role">Associate Security Analyst</h3>
+      <h3 class="ibm-plex-sans-light">
+        <p>
+          Studied software engineering at 42 Rio de Janeiro. Contributes to the development and maintenance
+          of engineering solutions that deliver value to our end clients — tools and systems designed to identify
+          vulnerabilities and reduce risk.
+        </p>
+      </h3>
+      <ul class="social-icons">
+        <li><a href="https://github.com/EduardaDT" target="_blank" rel="noopener noreferrer" aria-label="Maria on GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/eduardadionisio/" target="_blank" rel="noopener noreferrer" aria-label="Maria on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="team-member">
+    <img src="assets/images/joao.png" alt="João" class="team-photo">
+    <div class="team-info">
+      <h3 class="ibm-plex-sans-regular">João Vitor Pereira</h3>
+      <h3 class="ibm-plex-sans-light team-role">Research Analyst</h3>
+      <h3 class="ibm-plex-sans-light">
+        <p>
+          Undergraduate student in Business Administration at the Federal University of Viçosa (UFV), contributing to LESIS through analytical research on industry dynamics, market structures, and data-driven insights. His work supports the organization's research efforts by strengthening strategic understanding of the information security landscape and its economic and organizational dimensions.
+        </p>
+      </h3>
+      <ul class="social-icons">
+        <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Marina on GitHub"><i class="fab fa-github"></i></a></li>
+        <li><a href="#" target="_blank" rel="noopener noreferrer" aria-label="Marina on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</section>

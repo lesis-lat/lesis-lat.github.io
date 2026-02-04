@@ -1,0 +1,48 @@
+const expectedHost = "lesis.lat";
+
+if (window.location.host === expectedHost && window.location.protocol !== "https:") {
+    window.location.protocol = "https:";
+}
+
+const contactModal = document.getElementById("contactModal");
+const contactButton = document.getElementById("contactBtn");
+const closeButton = document.getElementsByClassName("close")[0];
+
+if (contactButton && contactModal) {
+    contactButton.onclick = function () {
+        contactModal.style.display = "block";
+    }
+}
+
+if (closeButton && contactModal) {
+    closeButton.onclick = function () {
+        contactModal.style.display = "none";
+    }
+}
+
+if (contactModal) {
+    window.onclick = function (event) {
+        if (event.target === contactModal) {
+            contactModal.style.display = "none";
+        }
+    }
+}
+
+const contactLink = document.getElementById("contactLink");
+
+if (contactLink && contactModal) {
+    contactLink.onclick = function (e) {
+        e.preventDefault();
+        contactModal.style.display = "block";
+    }
+}
+
+const menuToggleButton = document.getElementById("hamburgerIcon");
+const navigationMenu = document.querySelector("nav ul");
+
+if (menuToggleButton && navigationMenu) {
+    menuToggleButton.addEventListener("click", function () {
+        menuToggleButton.classList.toggle("open");
+        navigationMenu.classList.toggle("show");
+    });
+}
