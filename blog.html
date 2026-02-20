@@ -4,39 +4,109 @@ title: "Blog - LESIS"
 description: "Publications and research from LESIS - Laboratory of Engineering Studies in Information Security."
 keywords: "LESIS, blog, publications, security, research, vulnerability, advisory"
 sidebar_class: "left-side-blog"
+show_site_title: false
 ---
 
 <section class="blog-list">
-  <ul>
-    <li>
-      <h2 class="ibm-plex-sans-light">
-        <span class="blog-date">2026.02</span>
-        <a href="https://blog.lesis.lat/2026/02/08/vulnerability-price-en.html" target="_blank" rel="noopener noreferrer">Economic taxonomy of vulnerabilities</a>
-      </h2>
-    </li>
-    <li>
-      <h2 class="ibm-plex-sans-light">
-        <span class="blog-date">2026.01</span>
-        <a href="https://blog.lesis.lat/2026/01/15/considerations-for-writing-security-reports-en.html" target="_blank" rel="noopener noreferrer">Considerations for writing security reports</a>
-      </h2>
-    </li>
-    <li>
-      <h2 class="ibm-plex-sans-light">
-        <span class="blog-date">2026.01</span>
-        <a href="https://blog.lesis.lat/2026/01/14/commitiment-to-strengthening-community-en.html" target="_blank" rel="noopener noreferrer">Strengthening the Brazilian cybersecurity community through education</a>
-      </h2>
-    </li>
-    <li>
-      <h2 class="ibm-plex-sans-light">
-        <span class="blog-date">2025.11</span>
-        <a href="https://blog.lesis.lat/2025/11/30/sposoring-events-en.html" target="_blank" rel="noopener noreferrer">Why we sponsor information security events</a>
-      </h2>
-    </li>
-    <li>
-      <h2 class="ibm-plex-sans-light">
-        <span class="blog-date">2025.10</span>
-        <a href="https://blog.lesis.lat/2025/10/04/rocking-gift-card-en.html" target="_blank" rel="noopener noreferrer">Money for nothing, discounts for free: rocking the gift card loop</a>
-      </h2>
+  <ul id="blog-list" data-feed="https://blog.lesis.lat/feed.xml">
+    <li class="is-loading">
+      <h2 class="ibm-plex-sans-light">Loading posts...</h2>
     </li>
   </ul>
 </section>
+
+<script>
+  (function () {
+    var listEl = document.getElementById("blog-list");
+    if (!listEl) return;
+
+    var feedUrl = listEl.getAttribute("data-feed");
+    var MAX_ITEMS = 20;
+
+    function formatYearMonth(date) {
+      if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "";
+      var year = date.getUTCFullYear();
+      var month = String(date.getUTCMonth() + 1).padStart(2, "0");
+      return year + "." + month;
+    }
+
+    function extractItemDate(item) {
+      var dateNode = item.querySelector("pubDate, published, updated");
+      if (!dateNode) return null;
+      var parsed = new Date(dateNode.textContent.trim());
+      return Number.isNaN(parsed.getTime()) ? null : parsed;
+    }
+
+    function extractLink(item) {
+      var linkNode = item.querySelector("link");
+      if (!linkNode) return "";
+      var href = linkNode.getAttribute("href");
+      if (href) return href.trim();
+      return linkNode.textContent.trim();
+    }
+
+    function isEnglishItem(item) {
+      var link = extractLink(item);
+      return /-en\.html$/i.test(link);
+    }
+
+    function renderItems(items) {
+      if (!items.length) {
+        listEl.innerHTML =
+          '<li><h2 class="ibm-plex-sans-light">No English posts found.</h2></li>';
+        return;
+      }
+
+      var html = items
+        .slice(0, MAX_ITEMS)
+        .map(function (item) {
+          var titleNode = item.querySelector("title");
+          var title = titleNode ? titleNode.textContent.trim() : "Untitled";
+          var link = extractLink(item) || "#";
+          var date = extractItemDate(item);
+          var dateLabel = formatYearMonth(date);
+
+          return (
+            '<li>' +
+            '<h2 class="ibm-plex-sans-light">' +
+            (dateLabel ? '<span class="blog-date">' + dateLabel + "</span>" : "") +
+            '<a href="' +
+            link +
+            '" target="_blank" rel="noopener noreferrer">' +
+            title +
+            "</a>" +
+            "</h2>" +
+            "</li>"
+          );
+        })
+        .join("");
+
+      listEl.innerHTML = html;
+    }
+
+    function renderError(message) {
+      listEl.innerHTML =
+        '<li><h2 class="ibm-plex-sans-light">' +
+        message +
+        "</h2></li>";
+    }
+
+    fetch(feedUrl, { cache: "no-cache" })
+      .then(function (response) {
+        if (!response.ok) {
+          throw new Error("Feed request failed: " + response.status);
+        }
+        return response.text();
+      })
+      .then(function (xmlText) {
+        var parser = new DOMParser();
+        var xml = parser.parseFromString(xmlText, "text/xml");
+        var items = Array.prototype.slice.call(xml.querySelectorAll("item, entry"));
+        var englishItems = items.filter(isEnglishItem);
+        renderItems(englishItems);
+      })
+      .catch(function () {
+        renderError("Unable to load posts right now.");
+      });
+  })();
+</script>
