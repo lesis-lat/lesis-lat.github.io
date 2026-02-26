@@ -67,9 +67,9 @@ bundle exec jekyll serve
 
 Your contributions and suggestions are welcome!
 
-- [Contribution Guidelines](/.github/CONTRIBUTING.md)
-- [Report Bugs](https://github.com/lesis-lat/lesis-lat.github.io/issues)
-- [Security Policy](/SECURITY.md)
+- [Contribution Guidelines](./.github/CONTRIBUTING.md)
+- [Report a Bug](https://github.com/lesis-lat/lesis-lat.github.io/issues)
+- [Security Policy](./SECURITY.md)
 
 ---
 
