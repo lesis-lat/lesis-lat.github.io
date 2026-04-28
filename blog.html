@@ -8,7 +8,7 @@ show_site_title: false
 ---
 
 <section class="blog-list">
-  <ul id="blog-list" data-feed="https://blog.lesis.lat/feed.xml">
+  <ul id="blog-list" data-sitemap="https://blog.lesis.lat/sitemap.xml">
     <li class="is-loading">
       <h2 class="ibm-plex-sans-light">Loading posts...</h2>
     </li>
@@ -20,8 +20,18 @@ show_site_title: false
     var listEl = document.getElementById("blog-list");
     if (!listEl) return;
 
-    var feedUrl = listEl.getAttribute("data-feed");
+    var sitemapUrl = listEl.getAttribute("data-sitemap");
     var MAX_ITEMS = 20;
+    var TITLE_OVERRIDES = {
+      "rocking-gift-card": "Money for nothing, discounts for free: rocking the gift card loop",
+      "sposoring-events": "Why we sponsor information security events",
+      "commitiment-to-strengthening-community": "Strengthening the Brazilian cybersecurity community through education",
+      "considerations-for-writing-security-reports": "Considerations for writing security reports",
+      "vulnerability-price": "Economic taxonomy of vulnerabilities",
+      "vuln-state-machine": "State machine for vulnerability management",
+      "o-cibernauta-digital-safety-for-the-next-generation": "Digital safety for children: preparing the next generation",
+      "primitives-and-vulnerabilities": "Primitives and vulnerabilities"
+    };
 
     function formatYearMonth(date) {
       if (!(date instanceof Date) || Number.isNaN(date.getTime())) return "";
@@ -30,24 +40,38 @@ show_site_title: false
       return year + "." + month;
     }
 
-    function extractItemDate(item) {
-      var dateNode = item.querySelector("pubDate, published, updated");
-      if (!dateNode) return null;
-      var parsed = new Date(dateNode.textContent.trim());
+    function extractPostDate(url, lastModified) {
+      var match = url.match(/\/(\d{4})\/(\d{2})\/(\d{2})\//);
+      if (match) {
+        return new Date(match[1] + "-" + match[2] + "-" + match[3] + "T00:00:00Z");
+      }
+
+      var parsed = new Date(lastModified || "");
       return Number.isNaN(parsed.getTime()) ? null : parsed;
     }
 
-    function extractLink(item) {
-      var linkNode = item.querySelector("link");
-      if (!linkNode) return "";
-      var href = linkNode.getAttribute("href");
-      if (href) return href.trim();
-      return linkNode.textContent.trim();
+    function extractSlug(url) {
+      var filename = url.split("/").pop() || "";
+      return filename.replace(/-en\.html$/i, "");
     }
 
-    function isEnglishItem(item) {
-      var link = extractLink(item);
-      return /-en\.html$/i.test(link);
+    function titleFromSlug(slug) {
+      if (TITLE_OVERRIDES[slug]) return TITLE_OVERRIDES[slug];
+
+      return slug
+        .split("-")
+        .map(function (word, index) {
+          if (!word) return "";
+          if (index > 0 && ["a", "an", "and", "for", "in", "of", "the", "to"].indexOf(word) !== -1) {
+            return word;
+          }
+          return word.charAt(0).toUpperCase() + word.slice(1);
+        })
+        .join(" ");
+    }
+
+    function isEnglishPostUrl(url) {
+      return /\/\d{4}\/\d{2}\/\d{2}\/[^/]+-en\.html$/i.test(url);
     }
 
     function renderItems(items) {
@@ -60,10 +84,9 @@ show_site_title: false
       var html = items
         .slice(0, MAX_ITEMS)
         .map(function (item) {
-          var titleNode = item.querySelector("title");
-          var title = titleNode ? titleNode.textContent.trim() : "Untitled";
-          var link = extractLink(item) || "#";
-          var date = extractItemDate(item);
+          var link = item.link;
+          var title = item.title;
+          var date = item.date;
           var dateLabel = formatYearMonth(date);
 
           return (
@@ -91,18 +114,40 @@ show_site_title: false
         "</h2></li>";
     }
 
-    fetch(feedUrl, { cache: "no-cache" })
+    fetch(sitemapUrl, { cache: "no-cache" })
       .then(function (response) {
         if (!response.ok) {
-          throw new Error("Feed request failed: " + response.status);
+          throw new Error("Sitemap request failed: " + response.status);
         }
         return response.text();
       })
       .then(function (xmlText) {
         var parser = new DOMParser();
         var xml = parser.parseFromString(xmlText, "text/xml");
-        var items = Array.prototype.slice.call(xml.querySelectorAll("item, entry"));
-        var englishItems = items.filter(isEnglishItem);
+        var items = Array.prototype.slice.call(xml.getElementsByTagName("url"))
+          .map(function (item) {
+            var locNode = item.getElementsByTagName("loc")[0];
+            var lastmodNode = item.getElementsByTagName("lastmod")[0];
+            var link = locNode ? locNode.textContent.trim() : "";
+            var lastModified = lastmodNode ? lastmodNode.textContent.trim() : "";
+            var slug = extractSlug(link);
+
+            return {
+              link: link,
+              title: titleFromSlug(slug),
+              date: extractPostDate(link, lastModified)
+            };
+          })
+          .filter(function (item) {
+            return isEnglishPostUrl(item.link);
+          })
+          .sort(function (a, b) {
+            var aTime = a.date ? a.date.getTime() : 0;
+            var bTime = b.date ? b.date.getTime() : 0;
+            return bTime - aTime;
+          });
+
+        var englishItems = items;
         renderItems(englishItems);
       })
       .catch(function () {
