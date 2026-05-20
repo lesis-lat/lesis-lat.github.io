@@ -51,8 +51,11 @@ show_site_title: false
     }
 
     function extractSlug(url) {
-      var filename = url.split("/").pop() || "";
-      return filename.replace(/-en\.html$/i, "");
+      var cleanUrl = url.split("#")[0].split("?")[0].replace(/\/+$/, "");
+      var segment = cleanUrl.split("/").pop() || "";
+      return segment
+        .replace(/-(en|es)\.html$/i, "")
+        .replace(/\.html$/i, "");
     }
 
     function titleFromSlug(slug) {
@@ -70,8 +73,47 @@ show_site_title: false
         .join(" ");
     }
 
-    function isEnglishPostUrl(url) {
+    function isLegacyEnglishPostUrl(url) {
       return /\/\d{4}\/\d{2}\/\d{2}\/[^/]+-en\.html$/i.test(url);
+    }
+
+    function isModernBlogPostUrl(url) {
+      return /\/blog\/[^/]+\/?$/i.test(url);
+    }
+
+    function fetchModernPostMetadata(item) {
+      return fetch(item.link, { cache: "no-cache" })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Post request failed: " + response.status);
+          }
+          return response.text();
+        })
+        .then(function (htmlText) {
+          var parser = new DOMParser();
+          var doc = parser.parseFromString(htmlText, "text/html");
+          var lang = "";
+          var docEl = doc.documentElement;
+          var titleNode = doc.querySelector('meta[property="og:title"]') || doc.querySelector("title");
+          var timeNode = doc.querySelector("time[datetime]");
+
+          if (docEl) {
+            lang = (docEl.getAttribute("lang") || "").toLowerCase();
+          }
+
+          if (lang.indexOf("en") !== 0) {
+            return null;
+          }
+
+          return {
+            link: item.link,
+            title: titleNode ? titleNode.getAttribute("content") || titleNode.textContent.trim() : item.title,
+            date: extractPostDate(item.link, timeNode ? timeNode.getAttribute("datetime") : item.lastModified)
+          };
+        })
+        .catch(function () {
+          return null;
+        });
     }
 
     function renderItems(items) {
@@ -124,7 +166,7 @@ show_site_title: false
       .then(function (xmlText) {
         var parser = new DOMParser();
         var xml = parser.parseFromString(xmlText, "text/xml");
-        var items = Array.prototype.slice.call(xml.getElementsByTagName("url"))
+        var sitemapItems = Array.prototype.slice.call(xml.getElementsByTagName("url"))
           .map(function (item) {
             var locNode = item.getElementsByTagName("loc")[0];
             var lastmodNode = item.getElementsByTagName("lastmod")[0];
@@ -135,20 +177,38 @@ show_site_title: false
             return {
               link: link,
               title: titleFromSlug(slug),
-              date: extractPostDate(link, lastModified)
+              date: extractPostDate(link, lastModified),
+              lastModified: lastModified
             };
-          })
-          .filter(function (item) {
-            return isEnglishPostUrl(item.link);
-          })
-          .sort(function (a, b) {
-            var aTime = a.date ? a.date.getTime() : 0;
-            var bTime = b.date ? b.date.getTime() : 0;
-            return bTime - aTime;
           });
+        Promise.all(
+          sitemapItems.map(function (item) {
+            if (isLegacyEnglishPostUrl(item.link)) {
+              return Promise.resolve(item);
+            }
 
-        var englishItems = items;
-        renderItems(englishItems);
+            if (isModernBlogPostUrl(item.link)) {
+              return fetchModernPostMetadata(item);
+            }
+
+            return Promise.resolve(null);
+          })
+        )
+          .then(function (items) {
+            return items
+              .filter(function (item) {
+                return !!item;
+              })
+              .sort(function (a, b) {
+                var aTime = a.date ? a.date.getTime() : 0;
+                var bTime = b.date ? b.date.getTime() : 0;
+                return bTime - aTime;
+              });
+          })
+          .then(renderItems)
+          .catch(function () {
+            renderError("Unable to load posts right now.");
+          });
       })
       .catch(function () {
         renderError("Unable to load posts right now.");
