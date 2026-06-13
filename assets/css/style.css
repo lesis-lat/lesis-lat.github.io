@@ -152,7 +152,7 @@
   }
   footer {
     text-align: left;
-  }
+}
   .team-grid {
     display: flex;
     flex-direction: column;
@@ -360,4 +360,81 @@
       font-size: 1.3em;
     }
 
+  }
+
+  /* Press Kit Page */
+  .assets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .asset-item {
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .asset-item:hover {
+    border-color: #000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .asset-preview {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    background: #f5f5f5;
+    padding: 1rem;
+  }
+
+  .asset-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .asset-item p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+
+  .download-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+  }
+
+  .download-btn:hover {
+    background: #000;
+    color: #fff;
+  }
+
+  #brand-assets,
+  #logo-usage,
+  #contact {
+    margin-top: 3rem;
+  }
+
+  #logo-usage ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+
+  #logo-usage li {
+    margin: 0.5rem 0;
+  }
+
+  #logo-usage li:before {
+    content: "- ";
+    margin-right: 0.5rem;
   }
