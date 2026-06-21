@@ -425,6 +425,18 @@
     margin-top: 3rem;
   }
 
+  #contact a,
+  .footer-link a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  #contact a:hover,
+  .footer-link a:hover {
+    color: #555;
+    text-decoration: none;
+}
+
   #logo-usage ul {
     list-style: none;
     padding-left: 1rem;
