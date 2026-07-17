@@ -50,11 +50,24 @@ bundle exec jekyll serve
 # Access at http://localhost:4000
 ```
 
+### Newsletter synchronization
+
+The `/newsletter/` index is generated from `_data/newsletters.json`, while each full edition is generated in `_newsletters/`. To update them locally, create a Kit API v4 key and provide it only through the environment:
+
+```bash
+KIT_API_KEY="your-api-key" bundle exec ruby script/sync_newsletters.rb
+```
+
+The daily GitHub Actions workflow reads the same value from the `KIT_API_KEY` repository secret, commits the generated data and internal newsletter pages only when they change, and requests a new GitHub Pages build. Never commit the key or add it to Jekyll configuration or data files.
+
 ### Project Structure
 
 ```
 ├── _includes/       # Reusable components
 ├── _layouts/        # Jekyll templates
+├── _data/           # Build-time newsletter data
+├── _newsletters/    # Generated full newsletter editions
+├── script/          # Build-time synchronization scripts
 ├── assets/          # CSS, JavaScript and images
 ├── blog.html        # Blog page
 ├── index.html       # Home page

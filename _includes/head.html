@@ -1,25 +1,26 @@
 <meta charset="UTF-8">
-<title>{{ page.title }}</title>
-<meta name="description" content="{{ page.description }}">
-<meta name="keywords" content="{{ page.keywords }}">
+<title>{{ page.title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+<meta name="keywords" content="{{ page.keywords | escape }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:title" content="{{ page.title }}">
-<meta property="og:description" content="{{ page.description }}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ site.url | escape }}{{ page.url | escape }}">
 <meta property="og:type" content="website">
 <meta property="og:image" content="{{ site.url }}/assets/images/SitePreview.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.description | escape }}">
 <meta name="twitter:image" content="{{ site.url }}/assets/images/SitePreview.png">
-<link rel="icon" href="assets/images/favicon-white.png" type="image/png">
-<link rel="apple-touch-icon" href="assets/images/favicon-white.png">
-<link rel="preload" href="assets/css/style.min.css" as="style" onload="this.rel='stylesheet'">
+<link rel="icon" href="{{ '/assets/images/favicon-white.png' | relative_url }}" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/assets/images/favicon-white.png' | relative_url }}">
+{% assign stylesheet_version = site.time | date: '%s' %}
+<link rel="preload" href="{{ '/assets/css/style.min.css' | relative_url }}?v={{ stylesheet_version }}" as="style" onload="this.rel='stylesheet'">
 <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <noscript>
-  <link rel="stylesheet" href="assets/css/style.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}?v={{ stylesheet_version }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 </noscript>

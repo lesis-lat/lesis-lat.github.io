@@ -1,0 +1,50 @@
+---
+layout: default
+title: "Newsletter | LESIS"
+description: "Follow the latest editions of the LESIS newsletter, featuring research, tools, events, and information security news."
+keywords: "LESIS, newsletter, security, research, tools, events, information security"
+permalink: /newsletter/
+---
+
+<section class="newsletter-page">
+  <header class="newsletter-header">
+    <h1 class="ibm-plex-sans-regular">Newsletter</h1>
+    <p>Follow the latest editions of the LESIS newsletter, featuring research, tools, events, and information security news.</p>
+  </header>
+
+  {% assign newsletters = site.data.newsletters | sort: "published_at" | reverse %}
+  {% if newsletters.size > 0 %}
+    <div class="newsletter-list">
+      {% for newsletter in newsletters %}
+        {% assign newsletter_title = newsletter.title | default: "Untitled newsletter" %}
+        <article class="newsletter-card">
+          <div class="newsletter-content">
+            <h2 class="ibm-plex-sans-regular">
+              {% if newsletter.url and newsletter.url != "" %}
+                <a href="{{ newsletter.url | relative_url }}">{{ newsletter_title | escape }}</a>
+              {% else %}
+                {{ newsletter_title | escape }}
+              {% endif %}
+            </h2>
+
+            {% if newsletter.published_at and newsletter.published_at != "" %}
+              <time class="newsletter-date" datetime="{{ newsletter.published_at | escape }}">
+                {{ newsletter.published_at | date: "%B %-d, %Y" }}
+              </time>
+            {% endif %}
+
+            {% if newsletter.excerpt and newsletter.excerpt != "" %}
+              <p>{{ newsletter.excerpt | escape }}</p>
+            {% endif %}
+
+            {% if newsletter.url and newsletter.url != "" %}
+              <a class="newsletter-read-link" href="{{ newsletter.url | relative_url }}">Read the full newsletter</a>
+            {% endif %}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="newsletter-empty">No newsletter editions are available yet. Please check back soon.</p>
+  {% endif %}
+</section>
