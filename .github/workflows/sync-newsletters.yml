@@ -1,0 +1,66 @@
+name: Sync newsletters
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 8 * * *"
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sync-newsletters-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.0"
+          bundler-cache: true
+
+      - name: Fetch public newsletters from Kit
+        env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+        run: bundle exec ruby script/sync_newsletters.rb
+
+      - name: Validate generated data
+        run: >-
+          ruby -rjson -e 'data = JSON.parse(File.read(ARGV.fetch(0)));
+          abort("Expected a JSON array") unless data.is_a?(Array);
+          missing = data.reject { |item| item["slug"].is_a?(String) &&
+          File.file?(File.join("_newsletters", "#{item["slug"]}.html")) };
+          abort("Missing generated newsletter pages") unless missing.empty?'
+          _data/newsletters.json
+
+      - name: Commit updated newsletter data
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain -- _data/newsletters.json _newsletters)" ]; then
+            echo "Newsletter data is already up to date."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -- _data/newsletters.json _newsletters
+          git commit -m "chore: sync newsletters from Kit"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Request a GitHub Pages build
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds"
