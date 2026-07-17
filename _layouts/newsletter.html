@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  <div class="container">
+    {% include left-sidebar.html %}
+
+    <main class="right-side newsletter-right-side">
+      {% include nav.html %}
+
+      <a class="newsletter-back-link" href="{{ '/newsletter/' | relative_url }}">&larr; Back to Newsletter</a>
+
+      <article class="newsletter-edition">
+        <header class="newsletter-edition-header">
+          <a class="newsletter-edition-mark" href="{{ '/' | relative_url }}" aria-label="LESIS home">
+            <img src="{{ '/assets/images/favicon.png' | relative_url }}" alt="LESIS" width="60" height="64">
+          </a>
+
+          <div class="newsletter-edition-heading">
+            <h1>{{ page.newsletter_title | default: "Untitled newsletter" | escape }}</h1>
+            {% if page.published_at and page.published_at != "" %}
+              <p class="newsletter-edition-meta">
+                <time datetime="{{ page.published_at | escape }}">{{ page.published_at | date: "%B %Y" }}</time>
+                <span aria-hidden="true">&mdash;</span>
+                <span>Research, tools and insights</span>
+              </p>
+            {% endif %}
+          </div>
+        </header>
+
+        <div class="newsletter-body">
+          {{ content }}
+        </div>
+      </article>
+
+      {% include footer.html %}
+    </main>
+  </div>
+  {% include analytics.html %}
+</body>
+</html>

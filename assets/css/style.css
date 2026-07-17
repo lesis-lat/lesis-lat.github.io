@@ -450,3 +450,268 @@
     content: "- ";
     margin-right: 0.5rem;
   }
+
+  /* Newsletter Page */
+  .newsletter-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .newsletter-header p,
+  .newsletter-content p,
+  .newsletter-empty {
+    text-align: left;
+    line-height: 1.6;
+  }
+
+  .newsletter-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .newsletter-card {
+    padding: 2rem 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .newsletter-card:last-child {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .newsletter-content {
+    min-width: 0;
+  }
+
+  .newsletter-content h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .newsletter-content h2 a,
+  .newsletter-read-link {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .newsletter-content h2 a:hover,
+  .newsletter-read-link:hover {
+    color: #555;
+  }
+
+  .newsletter-date {
+    display: block;
+    margin-bottom: 1rem;
+    color: #666;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.9rem;
+  }
+
+  .newsletter-content h2 a:focus-visible,
+  .newsletter-read-link:focus-visible,
+  .newsletter-back-link:focus-visible,
+  .newsletter-body a:focus-visible,
+  .newsletter-source a:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 4px;
+  }
+
+  .newsletter-back-link,
+  .newsletter-body a,
+  .newsletter-source a {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .newsletter-back-link:hover,
+  .newsletter-body a:hover,
+  .newsletter-source a:hover {
+    color: #555;
+  }
+
+  .newsletter-detail-header {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .newsletter-body {
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+  }
+
+  .newsletter-body p,
+  .newsletter-body li,
+  .newsletter-source {
+    text-align: left;
+  }
+
+  .newsletter-body h2,
+  .newsletter-body h3,
+  .newsletter-body h4,
+  .newsletter-body h5,
+  .newsletter-body h6 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .newsletter-body img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+  }
+
+  .newsletter-body blockquote {
+    margin: 1.5rem 0;
+    padding-left: 1.25rem;
+    border-left: 3px solid #000;
+  }
+
+  .newsletter-body pre {
+    max-width: 100%;
+    padding: 1rem;
+    overflow-x: auto;
+    background: #f2f2f2;
+  }
+
+  .newsletter-source {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd;
+  }
+
+  /* Newsletter edition */
+  .newsletter-right-side > .newsletter-back-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+
+  .newsletter-edition {
+    overflow: hidden;
+    border: 1px solid #d8d8d2;
+    border-radius: 10px;
+    background: #fbfaf5;
+    color: #1d1d1d;
+  }
+
+  .newsletter-edition-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    min-height: 190px;
+    padding: 2.75rem 2rem;
+    border-bottom: 1px solid #c9c9c3;
+  }
+
+  .newsletter-edition-mark {
+    display: block;
+    flex: 0 0 60px;
+    width: 60px;
+    line-height: 0;
+  }
+
+  .newsletter-edition-mark img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .newsletter-edition-heading {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .newsletter-edition-heading h1 {
+    margin: 0 0 0.35rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: clamp(1.55rem, 4vw, 2rem);
+    font-weight: 600;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .newsletter-edition-meta {
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.45;
+    text-align: left;
+  }
+
+  .newsletter-edition .newsletter-body {
+    padding: 2.75rem 2rem 3.5rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .newsletter-edition .newsletter-body > :first-child {
+    margin-top: 0;
+  }
+
+  .newsletter-edition .newsletter-body > :last-child {
+    margin-bottom: 0;
+  }
+
+  .newsletter-edition .newsletter-body h2 {
+    margin-top: 2.75rem;
+    font-size: 1.45rem;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  .newsletter-edition .newsletter-body h3,
+  .newsletter-edition .newsletter-body h4,
+  .newsletter-edition .newsletter-body h5,
+  .newsletter-edition .newsletter-body h6 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .newsletter-edition .newsletter-body p,
+  .newsletter-edition .newsletter-body li {
+    line-height: 1.55;
+  }
+
+  .newsletter-edition .newsletter-body hr {
+    height: 1px;
+    margin: 2.25rem 0;
+    background: #e0e0dc;
+  }
+
+  .newsletter-edition .newsletter-body img {
+    max-width: min(100%, 720px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (max-width: 600px) {
+    .newsletter-edition-header {
+      gap: 1.25rem;
+      min-height: 165px;
+      padding: 2rem 1.25rem;
+    }
+
+    .newsletter-edition-mark {
+      flex-basis: 46px;
+      width: 46px;
+    }
+
+    .newsletter-edition-heading h1 {
+      font-size: 1.35rem;
+    }
+
+    .newsletter-edition-meta {
+      font-size: 0.82rem;
+    }
+
+    .newsletter-edition .newsletter-body {
+      padding: 2rem 1.25rem 2.75rem;
+      font-size: 0.92rem;
+    }
+
+    .newsletter-edition .newsletter-body h2 {
+      font-size: 1.25rem;
+    }
+
+  }
