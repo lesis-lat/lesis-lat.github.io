@@ -437,6 +437,193 @@
     text-decoration: none;
 }
 
+  /* Partnership Page */
+  .left-side-partnership {
+    background-image: url('../images/partnership.png');
+  }
+
+  .partnership-page p {
+    margin: 0 0 0.8rem;
+    text-align: left;
+    line-height: 1.5;
+  }
+
+  .partnership-header {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #000;
+  }
+
+  .partnership-header h1 {
+    margin-bottom: 0.4rem;
+  }
+
+  .partnership-lead {
+    font-size: 1rem;
+  }
+
+  .partnership-columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    margin-top: 2rem;
+  }
+
+  .partnership-section {
+    min-width: 0;
+  }
+
+  .partnership-section > h2 {
+    margin-bottom: 1.4rem;
+    font-size: 1.15rem;
+  }
+
+  .partnership-benefits {
+    padding-right: 2.5rem;
+  }
+
+  .partnership-levels {
+    padding-left: 2.5rem;
+    border-left: 1px solid #d4d4d4;
+  }
+
+  .partnership-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: benefit;
+  }
+
+  .partnership-list li {
+    display: grid;
+    grid-template-columns: 2rem 1fr;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #d4d4d4;
+    counter-increment: benefit;
+  }
+
+  .partnership-list li:first-child {
+    padding-top: 0;
+  }
+
+  .partnership-list li::before {
+    content: counter(benefit, decimal-leading-zero);
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .partnership-list h3,
+  .partnership-level h3 {
+    margin: 0 0 0.45rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .partnership-level {
+    padding: 1rem 0;
+    border-bottom: 1px solid #d4d4d4;
+  }
+
+  .partnership-level h3 {
+    color: #000;
+  }
+
+  .partnership-note {
+    margin-top: 1.25rem !important;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  .partnership-cta {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2rem;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 1.75rem;
+    border: 1px solid #d4d4d4;
+  }
+
+  .partnership-cta h2 {
+    margin-bottom: 0.6rem;
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .partnership-cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .partnership-cta-button {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    min-width: 17rem;
+    padding: 0.9rem 1.2rem;
+    background: #000;
+    color: #fff;
+    font-family: "IBM Plex Mono", monospace;
+    text-decoration: none;
+  }
+
+  .partnership-cta-button:hover,
+  .partnership-cta-button:focus-visible {
+    background: #333;
+  }
+
+  .partnership-email {
+    color: #000;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .partnership-cta-button:focus-visible,
+  .partnership-email:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 1050px) {
+    .partnership-columns,
+    .partnership-cta {
+      grid-template-columns: 1fr;
+    }
+
+    .partnership-benefits {
+      padding-right: 0;
+    }
+
+    .partnership-levels {
+      margin-top: 2rem;
+      padding: 2rem 0 0;
+      border-top: 1px solid #000;
+      border-left: 0;
+    }
+
+    .partnership-cta-actions {
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .left-side-partnership {
+      background-position: center 34%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .partnership-cta {
+      padding: 1.25rem;
+    }
+
+    .partnership-cta-button {
+      min-width: 0;
+      width: 100%;
+    }
+  }
+
   #logo-usage ul {
     list-style: none;
     padding-left: 1rem;
