@@ -1,5 +1,14 @@
 [
   {
+    "id": "25244812",
+    "title": "LESIS Bulletin #6 - PII masking, secure identifier sharing and AWS monitoring",
+    "published_at": "2026-08-24T19:27:45Z",
+    "excerpt": "​ LESIS Bulletin #6 August 2026 - Research, tools and insights ​ ​ Introduction This month, we explore practical approaches to reducing the exposure of personal data, discuss how organizations can compare identifiers without sharing more information than necessary, and highlight an open-source tool for continuous…",
+    "slug": "lesis-bulletin-6-pii-masking-secure-identifier-sharing-and-aws-monitoring",
+    "url": "/newsletter/lesis-bulletin-6-pii-masking-secure-identifier-sharing-and-aws-monitoring/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-6-pii-masking-secure-identifier-sharing-and-aws-monitoring"
+  },
+  {
     "id": "25241273",
     "title": "LESIS Bulletin #5 - Digital safety, dependency automation and FAIR",
     "published_at": "2026-08-03T12:31:50Z",
