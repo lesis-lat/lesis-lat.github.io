@@ -1,50 +1,74 @@
 ---
-layout: default
+layout: landing
 title: "Newsletter | LESIS"
 description: "Follow the latest editions of the LESIS newsletter, featuring research, tools, events, and information security news."
 keywords: "LESIS, newsletter, security, research, tools, events, information security"
 permalink: /newsletter/
 ---
 
-<section class="newsletter-page">
-  <header class="newsletter-header">
-    <h1 class="ibm-plex-sans-regular">Newsletter</h1>
-    <p>Follow the latest editions of the LESIS newsletter, featuring research, tools, events, and information security news.</p>
-  </header>
-
-  {% assign newsletters = site.data.newsletters | sort: "published_at" | reverse %}
-  {% if newsletters.size > 0 %}
-    <div class="newsletter-list">
-      {% for newsletter in newsletters %}
-        {% assign newsletter_title = newsletter.title | default: "Untitled newsletter" %}
-        <article class="newsletter-card">
-          <div class="newsletter-content">
-            <h2 class="ibm-plex-sans-regular">
-              {% if newsletter.url and newsletter.url != "" %}
-                <a href="{{ newsletter.url | relative_url }}">{{ newsletter_title | escape }}</a>
-              {% else %}
-                {{ newsletter_title | escape }}
-              {% endif %}
-            </h2>
-
-            {% if newsletter.published_at and newsletter.published_at != "" %}
-              <time class="newsletter-date" datetime="{{ newsletter.published_at | escape }}">
-                {{ newsletter.published_at | date: "%B %-d, %Y" }}
-              </time>
-            {% endif %}
-
-            {% if newsletter.excerpt and newsletter.excerpt != "" %}
-              <p>{{ newsletter.excerpt | escape }}</p>
-            {% endif %}
-
-            {% if newsletter.url and newsletter.url != "" %}
-              <a class="newsletter-read-link" href="{{ newsletter.url | relative_url }}">Read the full newsletter</a>
-            {% endif %}
-          </div>
-        </article>
-      {% endfor %}
+<section class="page-head" data-chrome="light" aria-labelledby="newsletter-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">Newsletter</p>
+    <div class="page-head-grid">
+      <h1 id="newsletter-title" class="page-title reveal">The LESIS Bulletin.</h1>
+      <div class="reveal" style="--i:1">
+        <p class="page-lead">Research, tools, events and information security news, written by the team. Every edition is published here and sent to subscribers.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="https://lesis.kit.com/" target="_blank" rel="noopener noreferrer">Subscribe</a>
+          <a class="button button-outline-dark" href="#editions">All editions</a>
+        </div>
+      </div>
     </div>
-  {% else %}
-    <p class="newsletter-empty">No newsletter editions are available yet. Please check back soon.</p>
-  {% endif %}
+  </div>
+</section>
+
+{% assign newsletters = site.data.newsletters | sort: "published_at" | reverse %}
+<section class="section" id="editions" data-chrome="light" aria-labelledby="editions-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="editions-title" class="eyebrow reveal">All editions</h2>
+      <p class="section-intro reveal">Every bulletin since the first one, most recent first.</p>
+    </div>
+    {% if newsletters.size > 0 %}
+    <ul class="insights">
+      {% for newsletter in newsletters %}
+      {% assign full_title = newsletter.title | default: "Untitled newsletter" %}
+      {% assign parts = full_title | split: " - " %}
+      {% if parts.size > 1 %}
+        {% assign label = parts[0] | replace: "LESIS ", "" %}
+        {% assign heading = parts | shift | join: " - " %}
+      {% else %}
+        {% assign label = "Newsletter" %}
+        {% assign heading = full_title | replace: "LESIS ", "" %}
+      {% endif %}
+      {% assign excerpt = newsletter.excerpt | default: "" | replace: "​", "" | split: "Introduction" | last | strip | truncate: 180 %}
+      <li class="reveal" style="--i:{{ forloop.index0 | modulo: 3 }}">
+        <time datetime="{{ newsletter.published_at | escape }}">{{ label | escape }}{% if newsletter.published_at and newsletter.published_at != "" %} &middot; {{ newsletter.published_at | date: "%B %Y" }}{% endif %}</time>
+        <h3>
+          {% if newsletter.url and newsletter.url != "" %}
+          <a href="{{ newsletter.url | relative_url }}">{{ heading | escape }}</a>
+          {% else %}
+          {{ heading | escape }}
+          {% endif %}
+        </h3>
+        {% if excerpt != "" %}<p>{{ excerpt | escape }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="section-intro reveal">No newsletter editions are available yet. Please check back soon.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="cta-band" id="subscribe" data-chrome="dark" aria-labelledby="subscribe-title">
+  <div class="wrap cta-band-row reveal">
+    <div>
+      <h2 id="subscribe-title">Get the next edition in your inbox.</h2>
+      <p>What the team reads, builds and publishes, sent when there is something worth sending.</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button button-light" href="https://lesis.kit.com/" target="_blank" rel="noopener noreferrer">Subscribe</a>
+    </div>
+  </div>
 </section>

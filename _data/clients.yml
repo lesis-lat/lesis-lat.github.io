@@ -1,0 +1,36 @@
+# Organizations LESIS has reported vulnerabilities to, shown in the band under
+# the hero. Most of these came through their own bug bounty or disclosure
+# programmes, so the section says so: it is not a client list.
+#
+# name  required, shown as text until a logo is supplied.
+# logo  optional. Drop an SVG (preferred) or a transparent PNG about 200px wide
+#       in assets/images/clients/ and point to it, for example:
+#         logo: "/assets/images/clients/uol.svg"
+#       Logos render at 1.75rem tall, in grayscale.
+
+- name: "Adobe"
+  logo: "/assets/images/clients/adobe.svg"
+
+- name: "UOL"
+  logo: "/assets/images/clients/uol.svg"
+
+- name: "Oracle"
+  logo: "/assets/images/clients/oracle.svg"
+
+- name: "Ford"
+  logo: "/assets/images/clients/ford.svg"
+
+- name: "D-Link"
+  logo: "/assets/images/clients/dlink.svg"
+
+- name: "TIM"
+  logo: "/assets/images/clients/tim.svg"
+
+- name: "OLX"
+  logo: "/assets/images/clients/olx.svg"
+
+- name: "Smart Fit"
+  logo: "/assets/images/clients/smart-fit.svg"
+
+- name: "Rentcars"
+  logo: "/assets/images/clients/rentcars.svg"

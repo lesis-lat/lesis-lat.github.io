@@ -1,0 +1,57 @@
+# Selected publications shown on the home page. The first three entries are
+# rendered, so reordering this file changes the selection. Blog posts only.
+# title        as published, in English
+# description  one line under the title on the home page
+# topic        short label shown before the date
+# date         publication date
+# url          the English version on blog.lesis.lat
+
+- title: "Choosing the right method for sharing identifiers"
+  description: "Encrypting a customer list before sending it is not the same as revealing only what the other side needs."
+  topic: "Privacy engineering"
+  date: 2026-05-05
+  url: "https://blog.lesis.lat/blog/choosing-the-right-method-for-sharing-identifiers/"
+
+- title: "Orientations for PII obfuscation and masking"
+  description: "When each application masks the same field differently, the fragments can be recombined into the original value."
+  topic: "Privacy engineering"
+  date: 2026-05-04
+  url: "https://blog.lesis.lat/blog/orientations-for-pii-obfuscation-and-masking/"
+
+- title: "Money for nothing, discounts for free: rocking the gift card loop"
+  description: "A coupon that applied to gift cards, and gift cards that could buy more gift cards: credit out of nothing."
+  topic: "Vulnerability research"
+  date: 2025-10-04
+  url: "https://blog.lesis.lat/vulnerability/2025/10/04/rocking-gift-card-en.html"
+
+# --- not shown today; move one up to swap it into the selection --------------
+
+- title: "Our first observation of an AI-assisted malicious group targeting small and medium-sized Brazilian fintech companies"
+  description: "A financially motivated group using AI tooling against Brazilian fintechs, through application flaws and stolen credentials."
+  topic: "Threat research"
+  date: 2026-06-29
+  url: "https://blog.lesis.lat/blog/our-first-observation-of-an-ai-assisted-malicious-group/"
+
+- title: "State machine for vulnerability management"
+  description: "A finding's status means different things to different teams. A formal state machine settles what each one is."
+  topic: "Research"
+  date: 2026-04-09
+  url: "https://blog.lesis.lat/research/2026/04/09/vuln-state-machine-en.html"
+
+- title: "Economic taxonomy of vulnerabilities"
+  description: "What bug bounty programmes pay, read as a market price attached to each level of severity."
+  topic: "Research"
+  date: 2026-02-08
+  url: "https://blog.lesis.lat/research/2026/02/08/vulnerability-price-en.html"
+
+- title: "Primitives and vulnerabilities"
+  description: "Three questions about a piece of code: what it should do, what it does, and what it can be made to do."
+  topic: "Research"
+  date: 2026-04-26
+  url: "https://blog.lesis.lat/research/2026/04/26/primitives-and-vulnerabilities-en.html"
+
+- title: "Considerations for writing security reports"
+  description: "A report is read by people who did not do the work. What that demands of the way it is written."
+  topic: "Guide"
+  date: 2026-01-15
+  url: "https://blog.lesis.lat/guides/2026/01/15/considerations-for-writing-security-reports-en.html"
