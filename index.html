@@ -1,60 +1,454 @@
 ---
-layout: default
-title: "LESIS - Laboratory of Engineering Studies in Information Security"
-description: "LESIS is an applied security research entity focused on developing effective offensive technologies in support of critical operations. Its approach is grounded in a thorough attacker's perspective and rigorous, research-driven thinking."
-keywords: "LESIS, lesis, lesis.lat, www.lesis.lat, vulnerability, research, hunting, exploit, development, fuzzing, analysis, zero, day, nday, intelligence"
-sidebar_class: ""
+layout: landing
+title: "Cybersecurity, tailored to your mission."
+description: "LESIS is a security engineering team with a platform: security assessments, security consultancy, due diligence and custom tools, delivered and tracked to closure."
+keywords: "LESIS, lesis.lat, security engineering, security assessment, vulnerability research, threat model, security consultancy, architecture review, security due diligence, custom security tooling, incident investigation, security platform"
 ---
 
-<section id="header">
-  <h3 class="ibm-plex-sans-light">
-    <p>
-      LESIS is an <b>applied security research entity</b> focused on
-      <b>developing effective offensive technologies</b> in support of critical operations.
-      Its approach is grounded in a thorough <b>attacker's perspective</b> and rigorous, <b>research-driven thinking</b>.
-    </p>
-  </h3>
-</section>
-<section id="research">
-  <div id="items">
-    <div class="item">
-      <h2 class="ibm-plex-sans-regular">VULNERABILITY RESEARCH</h2>
-      <h3 class="ibm-plex-sans-light">
-        <p>
-          A detailed analysis of the attack surface of the product under test, taking into consideration
-          the security expectations, objectives and threat model.
-          Our approach aims to verify the resilience of all components of the product
-          under test - typically composed of architecture review, infrastructure testing,
-          application security, code review and reverse engineering, as well as the creation of bespoke tools such as
-          fuzzers and custom code static analyzers.
-        </p>
-      </h3>
+<section class="hero" data-chrome="light" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <div class="hero-copy-inner">
+      <h1 id="hero-title" class="hero-title">Cybersecurity, tailored<br>to your mission.</h1>
+      <p class="hero-lead">LESIS is a partner, not a product. We are a security engineering team that works closely with each client and shapes the scope, the method and the tools around the system in question. No two engagements are alike.</p>
+      <div class="hero-actions">
+        <a class="button button-dark" href="mailto:contact@lesis.lat?subject=Start%20a%20project">Start a project</a>
+        <a class="button button-outline-dark" href="#how">How your posture improves</a>
+      </div>
     </div>
-    <div class="item">
-      <h2 class="ibm-plex-sans-regular">RESEARCH & DEVELOPMENT</h2>
-      <h3 class="ibm-plex-sans-light">
-        <p>
-          Hard problems require unique solutions. We design and build tailor-made tools for optimizing
-          operations, providing exclusive capabilities and on-demand research to improve exploitation
-          and post-exploitation tasks. From high-level design to low-level implementation, our process
-          is driven by the specific demands of each engagement. Over the past years, our team has worked
-          on projects involving static analysis, fuzzing, data mining, and custom instrumentation.
-        </p>
-      </h3>
+  </div>
+  <div class="hero-photo" aria-hidden="true">
+    <div class="hero-media"></div>
+    <div class="hero-cards">
+      <article class="hero-card" style="--d:0.90s">
+        <p class="hero-card-label">Finding &middot; VUL-0417</p>
+        <p class="hero-card-title">Account takeover via stored XSS</p>
+        <ul class="hero-card-meta"><li>Critical severity, fixing</li><li>Deadline in 2 days</li><li>Linked to portal.example.com</li></ul>
+        <div class="hero-card-foot"><span class="badge badge-critical">Critical</span><span class="sla" style="--p:92%"><i></i></span><span>2d</span></div>
+      </article>
+      <article class="hero-card" style="--d:3.20s; --bar: var(--high-dk)">
+        <p class="hero-card-label">Investigation &middot; INV-0042</p>
+        <p class="hero-card-title">Unexplained admin actions in the audit log</p>
+        <ul class="hero-card-meta"><li>High severity, under investigation</li><li>Entry point reproduced, evidence attached</li><li>Linked to 2 findings and the admin console</li></ul>
+        <div class="hero-card-foot"><span class="badge badge-high">High</span><span class="hero-card-note">Timeline open</span><span>6d</span></div>
+      </article>
+      <article class="hero-card" style="--d:5.50s; --bar: rgba(255,255,255,0.72)">
+        <p class="hero-card-label">Research &middot; TOOL-0031</p>
+        <p class="hero-card-title">Custom fuzzer for the partner API</p>
+        <ul class="hero-card-meta"><li>4.2M cases over 19 hours</li><li>3 crashes triaged, 1 reproducible</li><li>Raised as VUL-0429, critical</li></ul>
+        <div class="hero-card-foot"><span class="badge badge-neutral">Fuzzing</span><span class="sla" style="--p:100%"><i></i></span><span>19h</span></div>
+      </article>
+    </div>
     </div>
   </div>
 </section>
-<section id="about">
-  <h2 class="ibm-plex-sans-regular">OUR APPROACH</h2>
-  <h3 class="ibm-plex-sans-light">
-    <p>
-      At LESIS (Laboratory of Engineering Studies in Information Security), our focus is on applied research in offensive security technologies that underpin critical operations. Our team of engineers and researchers is dedicated to uncovering vulnerabilities, developing innovative solutions, and strengthening the security of organizations facing complex cybersecurity challenges.
-    </p>
-    <p>
-      With a deep understanding of the tactics, techniques, and procedures (TTPs) employed by attackers, we offer a unique perspective on protecting systems and infrastructures. We work closely with our collaborators, tailoring strategies to meet specific needs and objectives. Whether through vulnerability research, advanced exploitation techniques, or the development of custom tools for security assessments, our aim is to reinforce digital resilience and empower those involved to stay ahead of emerging threats.
-    </p>
-    <p>
-      Our commitment is to deliver world-class research, cutting-edge technology, and actionable insights that contribute to a safer digital landscape. At LESIS, we do more than assess security—we propel it forward.
-    </p>
-  </h3>
+
+<section class="strip" data-chrome="light" aria-label="Organizations LESIS has reported vulnerabilities to">
+  <div class="wrap">
+    <div class="strip-head">
+      <p class="strip-label"><span class="eyebrow">Who we have helped protect</span></p>
+    </div>
+    <div class="clients-row">
+      {% assign clients = site.data.clients %}
+      {% if clients and clients.size > 0 %}
+      <div class="marquee">
+        {% for pass in (1..2) %}
+        <ul class="clients-list"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+          {% for client in clients %}
+          <li>{% if client.logo %}<img src="{{ client.logo | relative_url }}" alt="{{ client.name | escape }}" loading="lazy">{% else %}<span>{{ client.name | escape }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+        {% endfor %}
+      </div>
+      {% else %}
+      <span class="clients-empty">Fintechs, retail, healthcare, telecommunications and lawtechs</span>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="statement" id="what" data-chrome="light" aria-labelledby="what-title">
+  <div class="wrap">
+    <h2 id="what-title" class="eyebrow reveal">Your security R&amp;D partner</h2>
+    <p class="statement-display reveal">The future of the internet is still unwritten. We are here to make sure the next chapter is written securely.</p>
+    <div class="statement-cols">
+      <p class="statement-text reveal">Our approach is grounded in a thorough attacker's perspective and in research-driven thinking. We understand what each organization needs and adapt to requirements that differ from one to the next, so that the investment in security becomes a differentiator for the business, and the investments already made are preserved. LESIS works with fintechs, retail, healthcare, telecommunications and lawtechs.</p>
+      <p class="statement-text reveal" style="--i:1">As an independent institution, with no ties to other companies or investors, we are neutral when we evaluate products and technology, and our work is judged on its quality alone. Our consultants bring more than ten years of experience and have reported vulnerabilities to D-Link (CVE-2020-9376 and CVE-2020-9377), Apple, Activision, Oracle and MISP (CVE-2020-28043).</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="meet" id="platform" data-chrome="dark" aria-labelledby="meet-title">
+  <div class="wrap">
+    <p class="eyebrow reveal meet-eyebrow">One shared ontology</p>
+    <h2 id="meet-title" class="meet-title reveal">Because every record has a type and every relationship has a name, nobody has to guess.</h2>
+    <p class="meet-intro reveal">A finding, a system, a person, an incident, a runbook: each one is a defined kind of record, and every link between them means one specific thing. That precision is what our engineers and our agents both work against, and it is where speed, coverage and technical depth come from.</p>
+    <div class="venn-layout">
+      <div class="venn-col venn-col-eng reveal" style="--i:0">
+        <h3>Engineers</h3>
+        <ul><li>Define the threat model and map the attack surface</li><li>Verify every component, from architecture to code</li><li>Build the tools an engagement requires</li><li>Answer for every finding and retest each fix</li></ul>
+      </div>
+      <figure class="venn reveal">
+      <svg viewBox="0 0 460 400" role="img" aria-labelledby="venn-title" xmlns="http://www.w3.org/2000/svg">
+        <title id="venn-title">Three overlapping circles, our engineers, our agents and the platform, meeting on one record</title>
+        <defs>
+          <pattern id="venn-hatch" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="5" stroke="rgba(255,255,255,0.28)" stroke-width="1"/>
+          </pattern>
+          <clipPath id="venn-a"><circle cx="181" cy="158" r="112"/></clipPath>
+          <clipPath id="venn-b"><circle cx="279" cy="158" r="112"/></clipPath>
+          <clipPath id="venn-c"><circle cx="230" cy="243" r="112"/></clipPath>
+        </defs>
+        <g clip-path="url(#venn-a)"><g clip-path="url(#venn-b)"><g clip-path="url(#venn-c)">
+          <rect x="0" y="0" width="460" height="400" fill="url(#venn-hatch)"/>
+        </g></g></g>
+        <g fill="none" stroke="rgba(255,255,255,0.75)" stroke-width="1">
+          <circle class="venn-ring" cx="181" cy="158" r="112"/>
+          <circle class="venn-ring" cx="279" cy="158" r="112"/>
+          <circle class="venn-ring" cx="230" cy="243" r="112"/>
+        </g>
+        <g class="venn-node venn-payoff" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="400" fill="#fff" text-anchor="middle">
+          <text x="230" y="178">Your</text>
+          <text x="230" y="194">security posture,</text>
+          <text x="230" y="210">continuously</text>
+        </g>
+        <g font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="1.6" fill="#fff" text-anchor="middle">
+          <text x="122" y="164">ENGINEERS</text>
+          <text x="342" y="164">AGENTS</text>
+          <text x="230" y="318">PLATFORM</text>
+        </g>
+      </svg>
+      </figure>
+      <div class="venn-col venn-col-agt reveal" style="--i:1">
+        <h3>Agents</h3>
+        <ul><li>Add context to what the engineers record</li><li>Link findings to systems, people and incidents</li><li>Keep working continuously, not just per project</li><li>Remember every detail of your organization</li></ul>
+      </div>
+      <div class="venn-col venn-col-plat reveal" style="--i:2">
+        <h3>The platform</h3>
+        <ul><li>Type every finding, system, person and incident</li><li>Link them with relationships that mean one thing</li><li>Track every finding from report to verified fix</li><li>Keep the evidence, history and audit trail</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="execution" data-chrome="light" aria-labelledby="exec-title">
+  <div class="wrap">
+    <h2 id="exec-title" class="eyebrow reveal">How we execute</h2>
+    <p class="statement-display reveal">Security is not linear. Neither is our execution.</p>
+    <p class="statement-text reveal">In the traditional model, a single analyst conducts the whole assessment. LESIS runs each project as a collaborative effort, with several specialists working on the same system at the same time, each bringing a different background to it.</p>
+    <ol class="exec-grid">
+      <li class="reveal" style="--i:0"><h3>Greater technical coverage</h3><p>More components examined, and more than one way of examining each of them.</p></li>
+      <li class="reveal" style="--i:1"><h3>Fewer individual biases</h3><p>No single assumption about the system goes unchallenged.</p></li>
+      <li class="reveal" style="--i:2"><h3>Cross-validation of findings</h3><p>Each vulnerability is confirmed by more than one engineer before it is recorded.</p></li>
+      <li class="reveal" style="--i:3"><h3>Deeper scenarios</h3><p>Time to follow a chain of weaknesses to what it actually exposes.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="journey" id="how" data-chrome="light" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="how-title" class="eyebrow reveal">Security that gets stronger with every engagement</h2>
+      <p class="section-intro reveal">Every finding, every system registered, every incident and every fix changes what the rest of the record can say. A vulnerability closed last year explains a pattern in this one; an incident names the systems worth looking at first; a fix that failed its retest tells you more about a team than any questionnaire would. Nothing here is filed and forgotten: each addition is read against everything already there, and the posture improves because of what comes back.</p>
+    </div>
+    <div class="journey-grid">
+      <div class="journey-stack" aria-hidden="true"></div>
+      <ol class="steps">
+      <li class="step" data-step="0">
+        <figure class="step-media" data-step="0"><div class="panel panel-threat">
+  <div class="mock-toolbar"><span>Threat model &middot; portal.example.com</span><span class="mock-count">scope v2</span></div>
+  <p class="mock-subhead">What it must protect</p>
+  <ol class="mock-agent">
+    <li style="--i:0"><span class="mock-agent-tag">scope</span><div><b>Must protect</b><span>Customer records, payment instructions, admin sessions</span></div><time>4 assets</time></li>
+    <li style="--i:1"><span class="mock-agent-tag">scope</span><div><b>From whom</b><span>External users, a compromised employee account, a vendor with API access</span></div><time>3 actors</time></li>
+    <li style="--i:2"><span class="mock-agent-tag">scope</span><div><b>Attack surface</b><span>Public web app, partner API, CI pipeline, internal admin console</span></div><time>4 entries</time></li>
+    <li style="--i:3"><span class="mock-agent-tag">scope</span><div><b>Out of scope</b><span>Corporate laptops, physical access</span></div><time>excluded</time></li>
+  </ol>
+  <div class="mock-links"><span>4 assets registered</span><span>2 repositories</span><span>method agreed</span></div>
+</div></figure>
+        <div class="step-text reveal">
+          <p class="eyebrow"><span class="step-num">Threat model</span> Engineers</p>
+          <h3>What the system must protect</h3>
+          <p>Severity means nothing on its own. A finding is severe in proportion to the objective it puts at risk, so the first thing we settle with your team is what the product must protect, from whom, and where its attack surface lies. That answer is kept as a record rather than a document: change it, and the priority of everything already recorded changes with it.</p>
+        </div>
+      </li>
+      <li class="step" data-step="1">
+        <figure class="step-media" data-step="1"><div class="panel panel-findings">
+  <div class="mock-toolbar"><span>Vulnerabilities</span><span class="mock-count">142 open</span></div>
+  <p class="mock-subhead">Eight states, one deadline each</p>
+  <ol class="mock-agent">
+    <li style="--i:0"><span class="mock-agent-tag">crit</span><div><b>Account takeover via stored XSS</b><span>VUL-0417, fixing, portal.example.com</span></div><time>2d</time></li>
+    <li style="--i:1"><span class="mock-agent-tag">crit</span><div><b>AWS credentials reachable through SSRF</b><span>VUL-0435, identified, the image proxy</span></div><time>5d</time></li>
+    <li style="--i:2"><span class="mock-agent-tag">high</span><div><b>Race condition doubles a withdrawal</b><span>VUL-0428, fixing, the ledger service</span></div><time>4d</time></li>
+    <li style="--i:3"><span class="mock-agent-tag">high</span><div><b>IDOR on invoice download</b><span>VUL-0412, retest, acme/portal-web</span></div><time>9d</time></li>
+    <li style="--i:4"><span class="mock-agent-tag">med</span><div><b>Request signatures replayable on the partner API</b><span>VUL-0421, identified, no nonce in the scheme</span></div><time>12d</time></li>
+  </ol>
+  <div class="mock-links"><span>evidence on every one</span><span>every change in the audit log</span><span>retest before closed</span></div>
+</div></figure>
+        <div class="step-text reveal">
+          <p class="eyebrow"><span class="step-num">Findings</span> Platform</p>
+          <h3>What is wrong with it, and until when</h3>
+          <p>Each finding carries its evidence, a CVSS 4.0 severity, and a deadline that the severity sets rather than the calendar. It moves through eight states, and every change stays in the history with the name of whoever made it. Nothing closes on someone's word: a fix is closed after we have retested it.</p>
+        </div>
+      </li>
+      <li class="step" data-step="2">
+        <figure class="step-media" data-step="2"><div class="panel panel-verify">
+  <div class="mock-toolbar"><span>Verification plan &middot; portal.example.com</span><span class="mock-count">week 2 of 4</span></div>
+  <p class="mock-subhead">Every component, one method each</p>
+  <ol class="mock-agent">
+    <li style="--i:0"><span class="mock-agent-tag">done</span><div><b>Architecture review</b><span>Trust boundaries and data flows mapped</span></div><time>wk 1</time></li>
+    <li style="--i:1"><span class="mock-agent-tag">done</span><div><b>Infrastructure testing</b><span>Perimeter, network and cloud configuration</span></div><time>wk 1</time></li>
+    <li style="--i:2"><span class="mock-agent-tag">now</span><div><b>Application security</b><span>Authentication, authorization and business logic</span></div><time>wk 2</time></li>
+    <li style="--i:3"><span class="mock-agent-tag">next</span><div><b>Code review</b><span>acme/portal-web, the paths behind the findings</span></div><time>wk 3</time></li>
+    <li style="--i:4"><span class="mock-agent-tag">next</span><div><b>Reverse engineering</b><span>Mobile client and its pinned transport</span></div><time>wk 3</time></li>
+    <li style="--i:5"><span class="mock-agent-tag">built</span><div><b>Custom fuzzer for the partner API</b><span>Nothing available could reach its message format</span></div><time>wk 2</time></li>
+  </ol>
+  <div class="mock-links"><span>3 findings so far</span><span>1 critical</span><span>1 tool built</span></div>
+</div></figure>
+        <div class="step-text reveal">
+          <p class="eyebrow"><span class="step-num">Method</span> Engineers</p>
+          <h3>What it is made of, and whether each part holds</h3>
+          <p>Architecture review, infrastructure testing, application security, code review and reverse engineering are the methods; what decides the outcome is what they are pointed at. A weak default in the infrastructure is worth little until it is chained to a parser that trusts it and an endpoint that reaches both. Our engineers follow those chains to what they actually expose, because a list of isolated weaknesses is not a description of risk.</p>
+        </div>
+      </li>
+      <li class="step" data-step="3">
+        <figure class="step-media" data-step="3"><div class="panel panel-agents">
+  <div class="mock-toolbar"><span>VUL-0417 &middot; Account takeover</span><span class="badge badge-critical">Critical</span></div>
+  <p class="mock-subhead">Enrichment log</p>
+  <ol class="mock-agent">
+    <li style="--i:0"><span class="mock-agent-tag">agent</span><div><b>Linked to asset</b><span>portal.example.com, repository acme/portal-web</span></div><time>09:02</time></li>
+    <li style="--i:1"><span class="mock-agent-tag">agent</span><div><b>Correlated with investigation</b><span>INV-0042 Credential exposure, same account, same week</span></div><time>09:02</time></li>
+    <li style="--i:2"><span class="mock-agent-tag">agent</span><div><b>Related finding in this organization</b><span>VUL-0288, closed in 2025, same rendering path</span></div><time>09:03</time></li>
+    <li style="--i:3"><span class="mock-agent-tag">agent</span><div><b>Runbook applies</b><span>Session invalidation runbook, from the knowledge base</span></div><time>09:03</time></li>
+    <li style="--i:4"><span class="mock-agent-tag">agent</span><div><b>Person linked</b><span>A. Silva, Finance, risk profile updated to elevated</span></div><time>09:04</time></li>
+  </ol>
+  <div class="mock-links"><span>5 edges added</span><span>0 findings created</span><span>audit log: agent, 09:02 to 09:04</span></div>
+</div></figure>
+        <div class="step-text reveal">
+          <p class="eyebrow"><span class="step-num">Connections</span> Agents</p>
+          <h3>What each record has to do with the others</h3>
+          <p>The agents work only on what is already recorded. They link a finding to the systems it affects, the people involved, the incident it bears on and the runbook that answers it, and they notice when something in one project resembles something in another. They never create a finding. That is the engineers' work, and the line between the two is deliberate.</p>
+        </div>
+      </li>
+      <li class="step" data-step="4">
+        <figure class="step-media" data-step="4"><div class="panel panel-fuzz">
+  <div class="mock-toolbar"><span>Campaign &middot; partner API</span><span class="mock-count">19h 04m</span></div>
+  <p class="mock-subhead">Nothing available could reach its message format</p>
+  <ol class="mock-agent">
+    <li style="--i:0"><span class="mock-agent-tag">corpus</span><div><b>1,840 seeds from captured traffic</b><span>Minimized to 212 that keep the same coverage</span></div><time>02:10</time></li>
+    <li style="--i:1"><span class="mock-agent-tag">run</span><div><b>4.2M cases executed</b><span>Six workers, coverage guided</span></div><time>19:04</time></li>
+    <li style="--i:2"><span class="mock-agent-tag">crash</span><div><b>3 unique crashes</b><span>Deduplicated by stack and by input class</span></div><time>11:32</time></li>
+    <li style="--i:3"><span class="mock-agent-tag">triage</span><div><b>1 reproducible outside the harness</b><span>Reaches the parser through the public endpoint</span></div><time>16:47</time></li>
+    <li style="--i:4"><span class="mock-agent-tag">raised</span><div><b>VUL-0429, critical</b><span>Evidence attached, deadline set by the severity</span></div><time>18:20</time></li>
+  </ol>
+  <div class="mock-links"><span>harness handed over</span><span>kept for the retest</span><span>1 finding</span></div>
+</div></figure>
+        <div class="step-text reveal">
+          <p class="eyebrow"><span class="step-num">Tooling</span> Engineers</p>
+          <h3>What we build when nothing reaches it</h3>
+          <p>Some components cannot be examined with anything that already exists: a proprietary message format, a pinned mobile transport, a parser nobody has documented. We build for those, and what gets built is a fuzzer, a static analyzer, instrumentation or a harness rather than a deliverable. The tool stays with the engagement, so the same component can be examined again without starting the work over.</p>
+        </div>
+      </li>
+      <li class="step" data-step="5">
+        <figure class="step-media" data-step="5"><div class="panel panel-bench">
+  <div class="mock-toolbar"><span>Benchmark &middot; average resolution time</span><span class="mock-count">last 12 months</span></div>
+  <div class="bench-legend" aria-hidden="true"><span><i class="bench-key bench-key-you"></i>Your organization</span><span><i class="bench-key bench-key-group"></i>Group median</span></div>
+  <dl class="bench">
+    <div class="bench-row" style="--i:0"><dt class="sev-t-critical">Critical</dt><dd><span class="bench-bar bench-you" style="--w:14%"><i></i><em>4 days</em></span><span class="bench-bar bench-group" style="--w:39%"><i></i><em>11 days</em></span></dd></div>
+    <div class="bench-row" style="--i:1"><dt class="sev-t-high">High</dt><dd><span class="bench-bar bench-you" style="--w:32%"><i></i><em>9 days</em></span><span class="bench-bar bench-group" style="--w:75%"><i></i><em>21 days</em></span></dd></div>
+    <div class="bench-row" style="--i:2"><dt class="sev-t-medium">Medium</dt><dd><span class="bench-bar bench-you" style="--w:64%"><i></i><em>18 days</em></span><span class="bench-bar bench-group" style="--w:100%"><i></i><em>28 days</em></span></dd></div>
+  </dl>
+  <div class="trend">
+    <div class="trend-head"><span class="mock-subhead">Findings created and resolved</span><span class="bench-legend"><span><i class="bench-key key-resolved"></i>Resolved</span><span><i class="bench-key key-created"></i>Created</span></span></div>
+    <svg viewBox="0 0 600 120" role="img" aria-label="Findings created and resolved per month over the last twelve months" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#d4d4d4" stroke-width="1"><line x1="0" y1="110" x2="600" y2="110"/></g>
+      <polyline class="trend-line" fill="none" stroke="var(--high)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="10,70 63,62 116,74 170,55 223,60 277,48 330,52 384,40 437,46 491,36 544,44 590,38"/>
+      <polyline class="trend-line" fill="none" stroke="var(--resolved-line)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="10,96 63,90 116,92 170,80 223,76 277,66 330,60 384,50 437,44 491,34 544,30 590,24"/>
+      <circle class="trend-dot" cx="590" cy="24" r="4" fill="var(--resolved-line)" stroke="#fff" stroke-width="2"/>
+      <circle class="trend-dot" cx="590" cy="38" r="4" fill="var(--high)" stroke="#fff" stroke-width="2"/>
+      <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#666"><text x="10" y="120">12 months ago</text><text x="590" y="120" text-anchor="end">this month</text></g>
+    </svg>
+  </div>
+  <div class="mock-links"><span>plain days, not your SLA</span><span>group median</span><span>updated on every change</span></div>
+</div></figure>
+        <div class="step-text reveal">
+          <p class="eyebrow"><span class="step-num">Measurement</span> Platform</p>
+          <h3>Whether any of it is actually improving</h3>
+          <p>Analytics read twelve months of the record: findings created against findings resolved, resolution time by severity, and the share of fixes that held the first time, which is the number separating a team that closes tickets from one that fixes things. The benchmark sets each measure beside comparable organizations in plain days, not against targets you set yourself, because a program scored on its own promises rewards whoever promised least.</p>
+        </div>
+      </li>
+      <li class="step" data-step="6">
+        <figure class="step-media" data-step="6"><div class="panel panel-incident">
+  <div class="mock-toolbar"><span>INV-0042 &middot; Unexplained admin actions</span><span class="badge badge-high">High</span></div>
+  <p class="mock-subhead">Reconstructed to the way in</p>
+  <ol class="mock-agent">
+    <li style="--i:0"><span class="mock-agent-tag">observed</span><div><b>Admin actions with no ticket behind them</b><span>Raised by the client, nobody could account for them</span></div><time>day 0</time></li>
+    <li style="--i:1"><span class="mock-agent-tag">narrowed</span><div><b>All of them carried one session token</b><span>Issued before the actions and never rotated</span></div><time>day 1</time></li>
+    <li style="--i:2"><span class="mock-agent-tag">found</span><div><b>The token was readable from the support console</b><span>A field rendered unescaped to any operator</span></div><time>day 2</time></li>
+    <li style="--i:3"><span class="mock-agent-tag">proved</span><div><b>The path reproduced end to end</b><span>Same token, same actions, in a copy of the environment</span></div><time>day 3</time></li>
+    <li style="--i:4"><span class="mock-agent-tag">raised</span><div><b>VUL-0441, the entry point</b><span>Linked to the investigation and to the console</span></div><time>day 3</time></li>
+  </ol>
+  <div class="mock-links"><span>entry point proven</span><span>not probable cause</span><span>2 findings linked</span></div>
+</div></figure>
+        <div class="step-text reveal">
+          <p class="eyebrow"><span class="step-num">Investigation</span> Engineers</p>
+          <h3>What happened, and how it began</h3>
+          <p>When something has already happened we do not take the response over. We join it for one part, the way in: taking the evidence back to the weakness that made the intrusion possible and reproducing the path, so the conclusion still holds when someone questions it. What comes out is an entry point carrying evidence and a deadline, not a narrative.</p>
+        </div>
+      </li>
+      <li class="step" data-step="7">
+        <figure class="step-media" data-step="7"><div class="panel panel-graph">
+  <div class="mock-toolbar"><span>Connected records &middot; VUL-0417</span><span class="mock-count">9 records</span></div>
+  <p class="mock-subhead">What one finding turned out to touch</p>
+  <ol class="mock-agent">
+    <li style="--i:0"><span class="mock-agent-tag">asset</span><div><b>portal.example.com</b><span>The system the finding was raised against</span></div><time>linked</time></li>
+    <li style="--i:1"><span class="mock-agent-tag">repo</span><div><b>acme/portal-web</b><span>Where the rendering path behind it lives</span></div><time>linked</time></li>
+    <li style="--i:2"><span class="mock-agent-tag">incident</span><div><b>INV-0042 Credential exposure</b><span>Same account, same week</span></div><time>linked</time></li>
+    <li style="--i:3"><span class="mock-agent-tag">runbook</span><div><b>Session invalidation</b><span>The procedure this finding calls for</span></div><time>applies</time></li>
+    <li style="--i:4"><span class="mock-agent-tag">person</span><div><b>A. Silva, Finance</b><span>Risk profile raised by the link</span></div><time>linked</time></li>
+    <li style="--i:5"><span class="mock-agent-tag">evidence</span><div><b>login-bypass.png</b><span>Attached when the finding was raised</span></div><time>1 file</time></li>
+  </ol>
+  <div class="mock-links"><span>9 records</span><span>12 links</span><span>1 organization</span></div>
+</div></figure>
+        <div class="step-text reveal">
+          <p class="eyebrow"><span class="step-num">The record</span> Platform</p>
+          <h3>Why none of it is spent</h3>
+          <p>Nothing is consumed by the work that produced it. The findings, the systems, the repositories, the people, the runbooks and the links between them stay, so an incident opened a year from now arrives with its history already attached. No engagement begins on an empty page, and each one leaves the next one further ahead.</p>
+        </div>
+      </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="ways" id="services" data-chrome="light" aria-labelledby="ways-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="ways-title" class="eyebrow reveal">Ways of working with LESIS</h2>
+      <p class="section-intro reveal">There are two ways to work with LESIS: a scoped project with a beginning and an end, or a managed program in which we run the operation and your team collects the result.</p>
+    </div>
+    <div class="ways-grid">
+      <div class="way way-projects reveal" style="--i:0">
+        <h3>Projects</h3>
+        <p class="way-lead">A scoped engagement with a defined product, method and timeline, delivered on the platform, where its findings stay alive until they are fixed.</p>
+        <details class="svc">
+          <summary><span>Vulnerability Research</span><i aria-hidden="true"></i></summary>
+          <div class="svc-body"><p class="svc-summary">We assess a product against its threat model, component by component; each finding arrives with evidence, severity, deadline and retest.</p><p>Each assessment begins with a detailed analysis of the attack surface of the product under test, against its security objectives and threat model: what it must protect, and where it is exposed. We then verify the resilience of every component: architecture review, infrastructure testing, application security, code review and reverse engineering. Every finding arrives on the platform with evidence, a CVSS 4.0 severity, a deadline set by that severity, and a retest once fixed.</p></div>
+        </details>
+        <details class="svc">
+          <summary><span>Consultancy</span><i aria-hidden="true"></i></summary>
+          <div class="svc-body"><p class="svc-summary">We advise on the decisions that are cheapest to change early, mapping trust boundaries and data flows into guidance your engineers can build against.</p><p>We work alongside your engineers on the decisions that are cheapest to change early: how a system is structured, where its trust boundaries fall, and which controls each boundary requires. The same rigor applies to a proposal as to a finished product, and the engagement extends to the questions that follow: reviewing a design as it evolves, advising on a control before it is built, or sitting with a team through a migration. What comes out is a set of decisions your engineers can build against, delivered through the platform, where a later assessment of the same system can verify the design held.</p></div>
+        </details>
+        <details class="svc">
+          <summary><span>Research &amp; Development</span><i aria-hidden="true"></i></summary>
+          <div class="svc-body"><p class="svc-summary">When no available tool fits, we build fuzzers, analyzers and instrumentation for the engagement, and what they uncover arrives as findings.</p><p>Hard problems often require tools that do not yet exist, and when no available tool can examine a component properly we design and build what is needed: fuzzers, custom static analyzers, instrumentation, data mining and on-demand research capabilities. From high-level design to low-level implementation, the process is driven by the specific demands of each engagement, and what those tools uncover arrives on the platform as findings, with the same evidence and lifecycle as any other.</p></div>
+        </details>
+        <details class="svc">
+          <summary><span>Incident Investigations</span><i aria-hidden="true"></i></summary>
+          <div class="svc-body"><p class="svc-summary">We do not run the response; we join the team that does, for one part of it: establishing how the intrusion began, and proving it rather than asserting it.</p><p>Most of what an incident demands belongs to the team already handling it: containment, eradication, communication. We do not take that over. We join for the way in. We take the evidence back to the specific weakness that made the intrusion possible and then demonstrate that weakness, reproducing the path instead of naming a probable cause, so the conclusion still holds when someone questions it. What comes out is not a narrative but a finding: an entry point with evidence, a severity, a deadline and a retest, linked on the platform to the affected systems and to the timeline of the investigation it came from. This is worth commissioning for a narrow set of incidents. When the way in is already understood, or when nothing technical was exploited at all, there is nothing for us to prove, and we say so before the work starts rather than after.</p></div>
+        </details>
+        <details class="svc">
+          <summary><span>Due Diligence</span><i aria-hidden="true"></i></summary>
+          <div class="svc-body"><p class="svc-summary">We assess what a transaction brings with it, a company, a codebase or a product you are about to adopt, on the timeline the transaction allows.</p><p>A decision to acquire, invest in or adopt something is made against a deadline, and usually with less access than an ordinary engagement. We work within both. Before a deal closes we establish the security posture of what is being bought to the depth the available access permits, and separate what is merely untidy from what becomes expensive later. Once it closes, the same engineers examine the acquired systems with the access ownership now allows, and state what has to be resolved before the environments are joined. The same work applies when you are evaluating a product rather than a company: we assess it on your behalf, with no relationship to its vendor. In each case the result is a record on the platform, where every finding carries evidence, severity and a deadline and stays open until it is fixed, so the assessment keeps working for whoever owns the system afterwards.</p></div>
+        </details>
+        <a class="button button-dark" href="mailto:contact@lesis.lat?subject=Start%20a%20project">Request a proposal</a>
+      </div>
+      <div class="way way-program reveal" style="--i:1">
+        <h3>Managed</h3>
+        <p class="way-lead">A standing operation rather than an engagement: LESIS runs the security program on the platform, and what reaches your team is the outcome rather than the queue.</p>
+        <p class="way-lead">Everything the platform supports is ours to administer: findings and their deadlines, the channel outsiders report through, vendor assessments, the inventory and the runbooks, the training, the reporting set against comparable organizations. What you collect is the result of it, a posture that improves because it is attended to every week rather than every quarter. What we ask of your teams is not headcount but connection: that they act at the moment acting matters, and that what they learn goes into the record as they work. With both in place the mechanism keeps turning on its own.</p>
+        <a class="button button-light" href="mailto:contact@lesis.lat?subject=Managed%20program">Start a conversation</a>
+      </div>
+    </div>
+    <p class="ways-partners reveal">Consultancies can deliver our assessments and research under their own brand, or refer clients to us, through the <a href="{{ '/partnership/' | relative_url }}">LESIS Partnership Program</a>, without building an internal team.</p>
+  </div>
+</section>
+
+
+
+
+{% assign pubs = site.data.publications %}
+{% if pubs and pubs.size > 0 %}
+<section class="section section-rule" id="publications" data-chrome="light" aria-labelledby="publications-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="publications-title" class="eyebrow reveal">Selected publications</h2>
+      <p class="section-intro reveal">Most of what the team publishes began as a problem inside an engagement, written up in full once it could be shared.</p>
+    </div>
+    <ul class="insights">
+      {% for item in pubs limit: 3 %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}">
+        <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.topic | escape }} &middot; {{ item.date | date: "%B %Y" }}</time>
+        <h3><a href="{{ item.url | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h3>
+        {% if item.description %}<p>{{ item.description | escape }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    <div class="section-foot reveal">
+      <a class="text-link" href="{{ '/blog.html' | relative_url }}" target="_blank" rel="noopener noreferrer">All publications &rarr;</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="section section-rule" id="team" data-chrome="light" aria-labelledby="team-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="team-title" class="eyebrow reveal">Team</h2>
+      <p class="section-intro reveal">An experienced team in static analysis, fuzzing, data mining and custom instrumentation. The approach remains grounded in rigorous, research-driven thinking.</p>
+    </div>
+    <ul class="team-strip">
+      <li class="reveal" style="--i:0">
+        <img src="{{ '/assets/images/heitor-640x800.webp' | relative_url }}" srcset="{{ '/assets/images/heitor-320x400.webp' | relative_url }} 320w, {{ '/assets/images/heitor-640x800.webp' | relative_url }} 640w" sizes="(max-width: 760px) 6.5rem, (max-width: 1080px) 25vw, 20rem" alt="Heitor Gouvêa" width="640" height="800" loading="lazy" decoding="async">
+        <div><h3>Heitor Gouvêa</h3><p>Founder, Managing Partner</p>
+          <ul class="social-icons">
+            <li><a href="https://github.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on GitHub">{% include icon.html name="github" %}</a></li>
+            <li><a href="https://www.linkedin.com/in/htrgouvea/" target="_blank" rel="noopener noreferrer" aria-label="Heitor on LinkedIn">{% include icon.html name="linkedin" %}</a></li>
+            <li><a href="https://x.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on Twitter">{% include icon.html name="twitter" %}</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="reveal" style="--i:1">
+        <img src="{{ '/assets/images/maria-640x800.webp' | relative_url }}" srcset="{{ '/assets/images/maria-320x400.webp' | relative_url }} 320w, {{ '/assets/images/maria-640x800.webp' | relative_url }} 640w" sizes="(max-width: 760px) 6.5rem, (max-width: 1080px) 25vw, 20rem" alt="Eduarda Dionisio" width="640" height="800" loading="lazy" decoding="async">
+        <div><h3>Eduarda Dionisio</h3><p>Associate Security Analyst</p>
+          <ul class="social-icons">
+            <li><a href="https://github.com/EduardaDT" target="_blank" rel="noopener noreferrer" aria-label="Maria on GitHub">{% include icon.html name="github" %}</a></li>
+            <li><a href="https://www.linkedin.com/in/eduardadionisio/" target="_blank" rel="noopener noreferrer" aria-label="Maria on LinkedIn">{% include icon.html name="linkedin" %}</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="reveal" style="--i:2">
+        <img src="{{ '/assets/images/lucas-640x800.webp' | relative_url }}" srcset="{{ '/assets/images/lucas-320x400.webp' | relative_url }} 320w, {{ '/assets/images/lucas-640x800.webp' | relative_url }} 640w" sizes="(max-width: 760px) 6.5rem, (max-width: 1080px) 25vw, 20rem" alt="Lucas V. Araujo" width="640" height="800" loading="lazy" decoding="async">
+        <div><h3>Lucas V. Araujo</h3><p>Security Researcher</p>
+          <ul class="social-icons">
+            <li><a href="https://github.com/LvMalware" target="_blank" rel="noopener noreferrer" aria-label="Lucas on GitHub">{% include icon.html name="github" %}</a></li>
+            <li><a href="https://www.linkedin.com/in/lvash/" target="_blank" rel="noopener noreferrer" aria-label="Lucas on LinkedIn">{% include icon.html name="linkedin" %}</a></li>
+            <li><a href="https://x.com/lvmalware" target="_blank" rel="noopener noreferrer" aria-label="Lucas on Twitter">{% include icon.html name="twitter" %}</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="reveal" style="--i:3">
+        <img src="{{ '/assets/images/yves-640x800.webp' | relative_url }}" srcset="{{ '/assets/images/yves-320x400.webp' | relative_url }} 320w, {{ '/assets/images/yves-640x800.webp' | relative_url }} 640w" sizes="(max-width: 760px) 6.5rem, (max-width: 1080px) 25vw, 20rem" alt="Yves" width="640" height="800" loading="lazy" decoding="async">
+        <div><h3>Yves</h3><p>Threat Detection Intern</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="closing" id="contact" data-chrome="dark" aria-labelledby="closing-title">
+  <div class="closing-media" aria-hidden="true"><img src="{{ '/assets/images/switchboard-1600.webp' | relative_url }}" srcset="{{ '/assets/images/switchboard-1000.webp' | relative_url }} 1000w, {{ '/assets/images/switchboard-1600.webp' | relative_url }} 1600w" sizes="100vw" alt="" width="1600" height="1154" loading="lazy" decoding="async"></div>
+  <div class="wrap closing-inner">
+    <h2 id="closing-title" class="closing-title">
+      <span class="reveal" style="--i:0">Every engagement begins</span>
+      <span class="reveal" style="--i:1">with the question</span>
+      <span class="reveal" style="--i:2">you actually have.</span>
+    </h2>
+    <div class="closing-row reveal" style="--i:3">
+      <p>Tell us what you need to find out: about a system you run, a company you are about to buy, a design nobody has built yet, or something that already happened. We come back with the scope, the method and the timeline.</p>
+      <div class="hero-actions">
+        <a class="button button-light" href="mailto:contact@lesis.lat?subject=Start%20a%20project">Start a project</a>
+        <a class="button button-ghost" href="mailto:contact@lesis.lat">Talk to the team</a>
+      </div>
+    </div>
+  </div>
 </section>

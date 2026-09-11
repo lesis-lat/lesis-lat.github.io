@@ -29,7 +29,11 @@ jobs:
         run: npx clean-css-cli@5.6.3 -o assets/css/style.min.css assets/css/style.css
 
       - name: Minify JS
-        run: npx terser@5.31.0 assets/scripts/main.js -c -m -o assets/scripts/main.min.js
+        run: |
+          npx terser@5.31.0 assets/scripts/main.js -c -m -o assets/scripts/main.min.js
+          npx terser@5.31.0 assets/scripts/landing.js -c -m -o assets/scripts/landing.min.js
+          npx terser@5.31.0 assets/scripts/analytics.js -c -m -o assets/scripts/analytics.min.js
+          npx terser@5.31.0 assets/scripts/blog.js -c -m -o assets/scripts/blog.min.js
 
       - name: Commit changes
         run: |
@@ -39,6 +43,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/css/style.min.css assets/scripts/main.min.js
+          git add assets/css/style.min.css assets/scripts/main.min.js assets/scripts/landing.min.js assets/scripts/analytics.min.js assets/scripts/blog.min.js
           git commit -m "chore: minify css and js"
           git push
