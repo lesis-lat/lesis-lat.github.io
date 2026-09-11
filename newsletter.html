@@ -45,8 +45,8 @@ permalink: /newsletter/
       <li class="reveal" style="--i:{{ forloop.index0 | modulo: 3 }}">
         <time datetime="{{ newsletter.published_at | escape }}">{{ label | escape }}{% if newsletter.published_at and newsletter.published_at != "" %} &middot; {{ newsletter.published_at | date: "%B %Y" }}{% endif %}</time>
         <h3>
-          {% if newsletter.url and newsletter.url != "" %}
-          <a href="{{ newsletter.url | relative_url }}">{{ heading | escape }}</a>
+          {% if newsletter.slug and newsletter.slug != "" %}
+          <a href="{{ '/newsletter/' | append: newsletter.slug | append: '/' | relative_url | escape }}">{{ heading | escape }}</a>
           {% else %}
           {{ heading | escape }}
           {% endif %}

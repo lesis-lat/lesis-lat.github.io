@@ -379,7 +379,7 @@ keywords: "LESIS, lesis.lat, security engineering, security assessment, vulnerab
       {% for item in pubs limit: 3 %}
       <li class="reveal" style="--i:{{ forloop.index0 }}">
         <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.topic | escape }} &middot; {{ item.date | date: "%B %Y" }}</time>
-        <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h3>
+        <h3><a href="{{ item.url | escape }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h3>
         {% if item.description %}<p>{{ item.description | escape }}</p>{% endif %}
       </li>
       {% endfor %}
@@ -399,36 +399,36 @@ keywords: "LESIS, lesis.lat, security engineering, security assessment, vulnerab
     </div>
     <ul class="team-strip">
       <li class="reveal" style="--i:0">
-        <img src="{{ '/assets/images/heitor-640x800.webp' | relative_url }}" alt="Heitor Gouvêa" width="640" height="800" loading="lazy">
+        <img src="{{ '/assets/images/heitor-640x800.webp' | relative_url }}" srcset="{{ '/assets/images/heitor-320x400.webp' | relative_url }} 320w, {{ '/assets/images/heitor-640x800.webp' | relative_url }} 640w" sizes="(max-width: 760px) 6.5rem, (max-width: 1080px) 25vw, 20rem" alt="Heitor Gouvêa" width="640" height="800" loading="lazy" decoding="async">
         <div><h3>Heitor Gouvêa</h3><p>Founder, Managing Partner</p>
           <ul class="social-icons">
-            <li><a href="https://github.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/htrgouvea/" target="_blank" rel="noopener noreferrer" aria-label="Heitor on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://x.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on GitHub">{% include icon.html name="github" %}</a></li>
+            <li><a href="https://www.linkedin.com/in/htrgouvea/" target="_blank" rel="noopener noreferrer" aria-label="Heitor on LinkedIn">{% include icon.html name="linkedin" %}</a></li>
+            <li><a href="https://x.com/htrgouvea" target="_blank" rel="noopener noreferrer" aria-label="Heitor on Twitter">{% include icon.html name="twitter" %}</a></li>
           </ul>
         </div>
       </li>
       <li class="reveal" style="--i:1">
-        <img src="{{ '/assets/images/maria-640x800.webp' | relative_url }}" alt="Eduarda Dionisio" width="640" height="800" loading="lazy">
+        <img src="{{ '/assets/images/maria-640x800.webp' | relative_url }}" srcset="{{ '/assets/images/maria-320x400.webp' | relative_url }} 320w, {{ '/assets/images/maria-640x800.webp' | relative_url }} 640w" sizes="(max-width: 760px) 6.5rem, (max-width: 1080px) 25vw, 20rem" alt="Eduarda Dionisio" width="640" height="800" loading="lazy" decoding="async">
         <div><h3>Eduarda Dionisio</h3><p>Associate Security Analyst</p>
           <ul class="social-icons">
-            <li><a href="https://github.com/EduardaDT" target="_blank" rel="noopener noreferrer" aria-label="Maria on GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/eduardadionisio/" target="_blank" rel="noopener noreferrer" aria-label="Maria on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/EduardaDT" target="_blank" rel="noopener noreferrer" aria-label="Maria on GitHub">{% include icon.html name="github" %}</a></li>
+            <li><a href="https://www.linkedin.com/in/eduardadionisio/" target="_blank" rel="noopener noreferrer" aria-label="Maria on LinkedIn">{% include icon.html name="linkedin" %}</a></li>
           </ul>
         </div>
       </li>
       <li class="reveal" style="--i:2">
-        <img src="{{ '/assets/images/lucas-640x800.webp' | relative_url }}" alt="Lucas V. Araujo" width="640" height="800" loading="lazy">
+        <img src="{{ '/assets/images/lucas-640x800.webp' | relative_url }}" srcset="{{ '/assets/images/lucas-320x400.webp' | relative_url }} 320w, {{ '/assets/images/lucas-640x800.webp' | relative_url }} 640w" sizes="(max-width: 760px) 6.5rem, (max-width: 1080px) 25vw, 20rem" alt="Lucas V. Araujo" width="640" height="800" loading="lazy" decoding="async">
         <div><h3>Lucas V. Araujo</h3><p>Security Researcher</p>
           <ul class="social-icons">
-            <li><a href="https://github.com/LvMalware" target="_blank" rel="noopener noreferrer" aria-label="Lucas on GitHub"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/lvash/" target="_blank" rel="noopener noreferrer" aria-label="Lucas on LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://x.com/lvmalware" target="_blank" rel="noopener noreferrer" aria-label="Lucas on Twitter"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/LvMalware" target="_blank" rel="noopener noreferrer" aria-label="Lucas on GitHub">{% include icon.html name="github" %}</a></li>
+            <li><a href="https://www.linkedin.com/in/lvash/" target="_blank" rel="noopener noreferrer" aria-label="Lucas on LinkedIn">{% include icon.html name="linkedin" %}</a></li>
+            <li><a href="https://x.com/lvmalware" target="_blank" rel="noopener noreferrer" aria-label="Lucas on Twitter">{% include icon.html name="twitter" %}</a></li>
           </ul>
         </div>
       </li>
       <li class="reveal" style="--i:3">
-        <img src="{{ '/assets/images/yves-640x800.webp' | relative_url }}" alt="Yves" width="640" height="800" loading="lazy">
+        <img src="{{ '/assets/images/yves-640x800.webp' | relative_url }}" srcset="{{ '/assets/images/yves-320x400.webp' | relative_url }} 320w, {{ '/assets/images/yves-640x800.webp' | relative_url }} 640w" sizes="(max-width: 760px) 6.5rem, (max-width: 1080px) 25vw, 20rem" alt="Yves" width="640" height="800" loading="lazy" decoding="async">
         <div><h3>Yves</h3><p>Threat Detection Intern</p></div>
       </li>
     </ul>
@@ -436,7 +436,7 @@ keywords: "LESIS, lesis.lat, security engineering, security assessment, vulnerab
 </section>
 
 <section class="closing" id="contact" data-chrome="dark" aria-labelledby="closing-title">
-  <div class="closing-media" aria-hidden="true"></div>
+  <div class="closing-media" aria-hidden="true"><img src="{{ '/assets/images/switchboard-1600.webp' | relative_url }}" srcset="{{ '/assets/images/switchboard-1000.webp' | relative_url }} 1000w, {{ '/assets/images/switchboard-1600.webp' | relative_url }} 1600w" sizes="100vw" alt="" width="1600" height="1154" loading="lazy" decoding="async"></div>
   <div class="wrap closing-inner">
     <h2 id="closing-title" class="closing-title">
       <span class="reveal" style="--i:0">Every engagement begins</span>

@@ -7,6 +7,9 @@ collections:
     output: true
     permalink: /newsletter/:name/
 
+include:
+  - .well-known
+
 exclude:
   - Dockerfile
   - README.md
