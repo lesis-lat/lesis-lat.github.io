@@ -1,5 +1,14 @@
 [
   {
+    "id": "25835402",
+    "title": "LESIS Bulletin #7 - CTF victory, open-source security and community",
+    "published_at": "2026-09-11T13:04:14Z",
+    "excerpt": "​ LESIS Bulletin #7 September 2026 - Research, tools and insights ​ ​ Introduction This month, we highlight an open-source tool developed by LESIS, celebrate the GRIS/UFRJ team's first-place finish at the SBSeg CTF, and share our upcoming participation in Mind The Sec and sponsorship of BSides CWB. From practical…",
+    "slug": "lesis-bulletin-7-ctf-victory-open-source-security-and-community",
+    "url": "/newsletter/lesis-bulletin-7-ctf-victory-open-source-security-and-community/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-7-ctf-victory-open-source-security-and-community"
+  },
+  {
     "id": "25244812",
     "title": "LESIS Bulletin #6 - PII masking, secure identifier sharing and AWS monitoring",
     "published_at": "2026-08-24T19:27:45Z",
