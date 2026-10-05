@@ -3,26 +3,82 @@
   if (!header) return;
 
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var exploreLink = document.querySelector('.hero-actions a[href="#how"]');
+  var technicalWork = document.getElementById("how");
+  if (exploreLink && technicalWork) {
+    var scrollFrame = null;
+    function stopExploreScroll() {
+      cancelAnimationFrame(scrollFrame);
+      scrollFrame = null;
+      ["wheel", "touchstart", "pointerdown", "keydown"].forEach(function (type) {
+        window.removeEventListener(type, stopExploreScroll);
+      });
+    }
+    exploreLink.addEventListener("click", function (event) {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      stopExploreScroll();
+      var startY = window.scrollY;
+      var endY = Math.max(0, Math.min(
+        startY + technicalWork.getBoundingClientRect().top - header.offsetHeight,
+        document.documentElement.scrollHeight - window.innerHeight
+      ));
+      var startTime = null;
+      var duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1400;
+      function scrollStep(time) {
+        if (startTime === null) startTime = time;
+        var progress = duration ? Math.min((time - startTime) / duration, 1) : 1;
+        var eased = (1 - Math.cos(Math.PI * progress)) / 2;
+        window.scrollTo({ top: startY + (endY - startY) * eased, behavior: "instant" });
+        if (progress < 1) {
+          scrollFrame = requestAnimationFrame(scrollStep);
+        } else {
+          stopExploreScroll();
+          if (window.location.hash !== "#how") window.history.pushState(null, "", "#how");
+          technicalWork.setAttribute("tabindex", "-1");
+          technicalWork.focus({ preventScroll: true });
+          technicalWork.addEventListener("blur", function () {
+            technicalWork.removeAttribute("tabindex");
+          }, { once: true });
+        }
+      }
+      ["wheel", "touchstart", "pointerdown", "keydown"].forEach(function (type) {
+        window.addEventListener(type, stopExploreScroll, { passive: true });
+      });
+      scrollFrame = requestAnimationFrame(scrollStep);
+    });
+  }
   var chromeSections = Array.prototype.slice.call(document.querySelectorAll("[data-chrome]")).filter(function (el) {
     return el !== header;
   });
 
   function updateHeader() {
-    header.classList.toggle("is-scrolled", window.scrollY > 40);
-
     var probe = header.offsetHeight / 2;
+    var chrome = null;
     for (var i = chromeSections.length - 1; i >= 0; i--) {
       var rect = chromeSections[i].getBoundingClientRect();
       if (rect.top <= probe && rect.bottom > probe) {
-        header.setAttribute("data-chrome", chromeSections[i].getAttribute("data-chrome"));
+        chrome = chromeSections[i].getAttribute("data-chrome");
         break;
       }
     }
+
+    header.classList.toggle("is-scrolled", window.scrollY > 40);
+    if (chrome && header.getAttribute("data-chrome") !== chrome) header.setAttribute("data-chrome", chrome);
   }
 
-  window.addEventListener("scroll", updateHeader, { passive: true });
-  window.addEventListener("resize", updateHeader);
-  updateHeader();
+  var headerFrame = null;
+  function scheduleHeader() {
+    if (headerFrame !== null) return;
+    headerFrame = requestAnimationFrame(function () {
+      headerFrame = null;
+      updateHeader();
+    });
+  }
+
+  window.addEventListener("scroll", scheduleHeader, { passive: true });
+  window.addEventListener("resize", scheduleHeader);
+  scheduleHeader();
 
   var toggle = document.querySelector(".site-menu-toggle");
   var nav = document.getElementById("site-nav");
@@ -57,50 +113,49 @@
     requestAnimationFrame(step);
   }
 
-  // On wide screens every screen stacks in a sticky centre column and follows
-  // the text being read; on narrow screens each returns to its own text.
   var stack = document.querySelector(".journey-stack");
   var steps = Array.prototype.slice.call(document.querySelectorAll(".steps .step"));
   var wide = window.matchMedia("(min-width: 1081px)");
 
-  function replay(panel) {
-    if (!panel) return;
-    panel.classList.remove("is-visible");
-    void panel.offsetWidth;
-    panel.classList.add("is-visible");
-  }
+  var activeStep = -1;
+  var journeyFrame = null;
 
   function activate(index) {
-    if (!stack) return;
+    if (!stack || index === activeStep) return;
+    activeStep = index;
     Array.prototype.forEach.call(stack.querySelectorAll(".step-media"), function (media) {
-      var on = Number(media.getAttribute("data-step")) === index;
-      if (on && !media.classList.contains("is-active")) replay(media.querySelector(".panel"));
+      var mediaIndex = Number(media.getAttribute("data-step"));
+      var on = mediaIndex === index;
+      var panel = media.querySelector(".panel");
+      if (on && panel) panel.classList.add("is-visible");
+      media.classList.toggle("is-past", mediaIndex < index);
       media.classList.toggle("is-active", on);
+    });
+    steps.forEach(function (step, stepIndex) {
+      step.classList.toggle("is-current", stepIndex === index);
     });
   }
 
   function layoutJourney() {
     if (!stack || !steps.length) return;
+    activeStep = -1;
     if (wide.matches) {
       steps.forEach(function (step) {
         var media = step.querySelector(".step-media");
         if (media) stack.appendChild(media);
       });
-      activate(0);
+      syncScreen();
     } else {
       Array.prototype.forEach.call(stack.querySelectorAll(".step-media"), function (media) {
         var step = steps[Number(media.getAttribute("data-step"))];
         media.classList.remove("is-active");
+        media.classList.remove("is-past");
         if (step) step.insertBefore(media, step.firstChild);
       });
+      steps.forEach(function (step) { step.classList.remove("is-current"); });
     }
   }
 
-  layoutJourney();
-  if (wide.addEventListener) wide.addEventListener("change", layoutJourney);
-
-  // the texts sit two to a row, so which one is "in view" cannot pick the
-  // screen: the centre follows how far the section itself has been read.
   var grid = document.querySelector(".journey-grid");
 
   function syncScreen() {
@@ -108,17 +163,27 @@
     var box = grid.getBoundingClientRect();
     if (!box.height) return;
     var read = (window.innerHeight * 0.55 - box.top) / box.height;
-    var index = Math.floor(read * steps.length);
+    var position = read * steps.length;
+    if (activeStep >= 0 && position >= activeStep - 0.08 && position < activeStep + 1.08) return;
+    var index = Math.floor(position);
     if (index < 0) index = 0;
     if (index > steps.length - 1) index = steps.length - 1;
     activate(index);
   }
 
-  window.addEventListener("scroll", syncScreen, { passive: true });
-  window.addEventListener("resize", syncScreen);
-  syncScreen();
+  function scheduleJourney() {
+    if (journeyFrame !== null) return;
+    journeyFrame = requestAnimationFrame(function () {
+      journeyFrame = null;
+      syncScreen();
+    });
+  }
 
-  // <details> snaps open. Drive the height ourselves so a service unfolds.
+  layoutJourney();
+  if (wide.addEventListener) wide.addEventListener("change", layoutJourney);
+  window.addEventListener("scroll", scheduleJourney, { passive: true });
+  window.addEventListener("resize", scheduleJourney);
+
   Array.prototype.forEach.call(document.querySelectorAll(".svc"), function (svc) {
     var summary = svc.querySelector("summary");
     var body = svc.querySelector(".svc-body");
@@ -135,7 +200,7 @@
 
       var full = body.scrollHeight;
       body.style.height = (closing ? full : 0) + "px";
-      void body.offsetHeight; // flush, or both heights land in one frame
+      void body.offsetHeight;
       body.style.height = (closing ? 0 : full) + "px";
 
       var done = function () {
