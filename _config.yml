@@ -1,0 +1,19 @@
+title: LESIS
+url: "https://lesis.lat"
+baseurl: ""
+
+collections:
+  newsletters:
+    output: true
+    permalink: /newsletter/:name/
+
+include:
+  - .well-known
+
+exclude:
+  - Dockerfile
+  - README.md
+  - LICENSE.md
+  - SECURITY.md
+  - .editorconfig
+  - script

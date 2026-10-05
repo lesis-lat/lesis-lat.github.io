@@ -1,0 +1,40 @@
+  <footer class="site-footer" data-chrome="dark">
+    <div class="wrap site-footer-inner">
+      <div class="site-footer-cols">
+        <div>
+          <h3>Navigation</h3>
+          <a href="{{ '/' | relative_url }}#services">Services</a>
+          <a href="{{ '/' | relative_url }}#how">Methodology</a>
+          {% comment %}<a href="{{ '/team.html' | relative_url }}">Team</a>{% endcomment %}
+          <a href="{{ '/blog.html' | relative_url }}">Blog</a>
+          <a href="{{ '/newsletter/' | relative_url }}">Newsletter</a>
+          <a href="{{ '/privacy-policy.html' | relative_url }}">Privacy policy</a>
+          <a href="{{ '/terms-of-use.html' | relative_url }}">Terms of use</a>
+        </div>
+        <div>
+          <h3>Company</h3>
+          <a href="{{ '/partnership/' | relative_url }}">Partnership</a>
+          <a href="{{ '/press.html' | relative_url }}">Press kit</a>
+          <a href="https://trainings.lesis.lat/">Trainings</a>
+          <a href="https://platform.lesis.lat/app/login" target="_blank" rel="noopener noreferrer">Client login</a>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <a href="mailto:contact@lesis.lat">contact@lesis.lat</a>
+          <a href="mailto:business@lesis.lat">business@lesis.lat</a>
+          <a href="mailto:media@lesis.lat">media@lesis.lat</a>
+          <a href="mailto:security@lesis.lat">security@lesis.lat</a>
+          <ul class="social-icons">
+            <li><a href="https://www.instagram.com/lesis.lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Instagram">{% include icon.html name="instagram" %}</a></li>
+            <li><a href="https://x.com/lesis_lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Twitter">{% include icon.html name="twitter" %}</a></li>
+            <li><a href="https://github.com/lesis-lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on GitHub">{% include icon.html name="github" %}</a></li>
+            <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on LinkedIn">{% include icon.html name="linkedin" %}</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="site-footer-legal">Crafted worldwide &middot; Laboratory of Engineering Studies in Information Security &middot; 2023 - 2026</p>
+    </div>
+    <div class="site-footer-mark" aria-hidden="true">
+    <img src="{{ '/assets/images/wordmark-branco.png' | relative_url }}" alt="" width="1348" height="545" loading="lazy" decoding="async">
+  </div>
+  </footer>

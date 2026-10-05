@@ -1,0 +1,50 @@
+{%- capture organization -%}
+{
+  "@type": "Organization",
+  "@id": "{{ site.url }}/#organization",
+  "name": "LESIS",
+  "alternateName": "Laboratory of Engineering Studies in Information Security",
+  "url": "{{ site.url }}/",
+  "logo": "{{ site.url }}/assets/images/favicon.png",
+  "email": "contact@lesis.lat",
+  "foundingDate": "2023",
+  "sameAs": [
+    "https://www.linkedin.com/company/lesis-lat/",
+    "https://github.com/lesis-lat",
+    "https://x.com/lesis_lat",
+    "https://www.instagram.com/lesis.lat/"
+  ]
+}
+{%- endcapture -%}
+{%- if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {{ organization }},
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "name": "LESIS",
+      "url": "{{ site.url }}/",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    }
+  ]
+}
+</script>
+{%- elsif page.layout == "newsletter" and page.published_at %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.newsletter_title | default: page.title | jsonify }},
+  "description": {{ include.meta_description | jsonify }},
+  "url": {{ include.canonical_url | jsonify }},
+  "mainEntityOfPage": {{ include.canonical_url | jsonify }},
+  "datePublished": "{{ page.published_at | date_to_xmlschema }}",
+  "image": "{{ site.url }}/assets/images/SitePreview.png",
+  "author": {{ organization }},
+  "publisher": {{ organization }}
+}
+</script>
+{%- endif -%}

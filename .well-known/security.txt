@@ -1,0 +1,5 @@
+Contact: mailto:security@lesis.lat
+Expires: 2027-09-11T00:00:00.000Z
+Preferred-Languages: en, pt
+Canonical: https://lesis.lat/.well-known/security.txt
+Policy: https://github.com/lesis-lat/lesis-lat.github.io/blob/main/SECURITY.md

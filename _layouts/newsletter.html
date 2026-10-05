@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+  <script src="{{ '/assets/scripts/landing.min.js' | relative_url }}" defer></script>
+</head>
+<body class="landing">
+  {% include site-header.html %}
+  <main>
+    <section class="edition" data-chrome="light">
+      <div class="wrap edition-wrap">
+        <a class="text-link edition-back" href="{{ '/newsletter/' | relative_url }}">&larr; All editions</a>
+        <article class="newsletter-edition">
+          <header class="newsletter-edition-header">
+            <a class="newsletter-edition-mark" href="{{ '/' | relative_url }}" aria-label="LESIS home">
+              <img src="{{ '/assets/images/symbol-black-120.png' | relative_url }}" alt="LESIS" width="60" height="64">
+            </a>
+            <div class="newsletter-edition-heading">
+              <h1>{{ page.newsletter_title | default: "Untitled newsletter" | escape }}</h1>
+              {% if page.published_at and page.published_at != "" %}
+              <p class="newsletter-edition-meta">
+                <time datetime="{{ page.published_at | escape }}">{{ page.published_at | date: "%B %Y" }}</time>
+                <span aria-hidden="true">&mdash;</span>
+                <span>Research, tools and insights</span>
+              </p>
+              {% endif %}
+            </div>
+          </header>
+          <div class="newsletter-body">
+            {{ content }}
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="cta-band" id="subscribe" data-chrome="dark" aria-labelledby="subscribe-title">
+      <div class="wrap cta-band-row reveal">
+        <div>
+          <h2 id="subscribe-title">Get the next edition in your inbox.</h2>
+          <p>What the team reads, builds and publishes, sent when there is something worth sending.</p>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-light" href="https://lesis.kit.com/" target="_blank" rel="noopener noreferrer">Subscribe</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  {% include site-footer.html %}
+  {% include analytics.html %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "25835402",
+    "title": "LESIS Bulletin #7 - CTF victory, open-source security and community",
+    "published_at": "2026-09-11T13:04:14Z",
+    "excerpt": "​ LESIS Bulletin #7 September 2026 - Research, tools and insights ​ ​ Introduction This month, we highlight an open-source tool developed by LESIS, celebrate the GRIS/UFRJ team's first-place finish at the SBSeg CTF, and share our upcoming participation in Mind The Sec and sponsorship of BSides CWB. From practical…",
+    "slug": "lesis-bulletin-7-ctf-victory-open-source-security-and-community",
+    "url": "/newsletter/lesis-bulletin-7-ctf-victory-open-source-security-and-community/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-7-ctf-victory-open-source-security-and-community"
+  },
+  {
+    "id": "25244812",
+    "title": "LESIS Bulletin #6 - PII masking, secure identifier sharing and AWS monitoring",
+    "published_at": "2026-08-24T19:27:45Z",
+    "excerpt": "​ LESIS Bulletin #6 August 2026 - Research, tools and insights ​ ​ Introduction This month, we explore practical approaches to reducing the exposure of personal data, discuss how organizations can compare identifiers without sharing more information than necessary, and highlight an open-source tool for continuous…",
+    "slug": "lesis-bulletin-6-pii-masking-secure-identifier-sharing-and-aws-monitoring",
+    "url": "/newsletter/lesis-bulletin-6-pii-masking-secure-identifier-sharing-and-aws-monitoring/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-6-pii-masking-secure-identifier-sharing-and-aws-monitoring"
+  },
+  {
+    "id": "25241273",
+    "title": "LESIS Bulletin #5 - Digital safety, dependency automation and FAIR",
+    "published_at": "2026-08-03T12:31:50Z",
+    "excerpt": "​ LESIS Bulletin #5 August 2026 - Research, tools and insights ​ ​ Introduction This month we highlight recent research from the LESIS team, share an open-source tool designed for security investigations, and look at a development shaping the industrial cybersecurity landscape. Research & Articles Digital safety for…",
+    "slug": "lesis-bulletin-5-digital-safety-dependency-automation-and-fair",
+    "url": "/newsletter/lesis-bulletin-5-digital-safety-dependency-automation-and-fair/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-5-digital-safety-dependency-automation-and-fair"
+  },
+  {
+    "id": "24923192",
+    "title": "LESIS Bulletin #4 - AI in cyberattacks, vulnerabilities primitives and a new SCA project",
+    "published_at": "2026-07-15T11:10:11Z",
+    "excerpt": "​ LESIS Bulletin #4 July 2026 - Research, tools and insights ​ ​ Introduction This month we highlight recent research from the LESIS team, share an open-source tool designed for security investigations, and look at a development shaping the industrial cybersecurity landscape. Research & Articles Our first observation…",
+    "slug": "lesis-bulletin-4-ai-in-cyberattacks-vulnerabilities-primitives-and-a-new-sca-pro",
+    "url": "/newsletter/lesis-bulletin-4-ai-in-cyberattacks-vulnerabilities-primitives-and-a-new-sca-pro/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-4-ai-in-cyberattacks-vulnerabilities-primitives-and-a-new-sca-project"
+  },
+  {
+    "id": "24443681",
+    "title": "LESIS Bulletin #3",
+    "published_at": "2026-07-01T11:11:11Z",
+    "excerpt": "​ LESIS Bulletin #3 July 2026 - Research, tools and insights ​ ​ Introduction This month we highlight recent research from the LESIS team, share an open-source tool designed for security investigations, and look at a development shaping the industrial cybersecurity landscape. Research & Articles Economic taxonomy of…",
+    "slug": "lesis-bulletin-3",
+    "url": "/newsletter/lesis-bulletin-3/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-3"
+  },
+  {
+    "id": "23977563",
+    "title": "LESIS Bulletin #2",
+    "published_at": "2026-06-01T11:10:18Z",
+    "excerpt": "​ LESIS Bulletin #2 June 2026 - Research, tools and insights ​ ​ Introduction This month we highlight recent research from the LESIS team, share an open-source tool designed for security investigations, and look at a development shaping the industrial cybersecurity landscape. Research & Articles Considerations for…",
+    "slug": "lesis-bulletin-2",
+    "url": "/newsletter/lesis-bulletin-2/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-2"
+  },
+  {
+    "id": "23975467",
+    "title": "LESIS Bulletin #1",
+    "published_at": "2026-05-04T15:09:07Z",
+    "excerpt": "​ LESIS Bulletin #1 May 2026 - Research, tools and insights ​ ​ Introduction This month we highlight recent research from the LESIS team, share an open-source tool designed for security investigations, and look at a development shaping the industrial cybersecurity landscape. Research & Articles Rocking the Gift Card…",
+    "slug": "lesis-bulletin-1",
+    "url": "/newsletter/lesis-bulletin-1/",
+    "kit_url": "https://lesis.kit.com/posts/lesis-bulletin-1"
+  }
+]

@@ -1,0 +1,32 @@
+name: Purge Cloudflare cache
+
+on:
+  workflow_run:
+    workflows:
+      - pages build and deployment
+    types:
+      - completed
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: purge-cloudflare-cache
+  cancel-in-progress: true
+
+jobs:
+  purge:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge all cached files
+        uses: fishmanlabs/cloudflare-purge-cache-action@v2.0.0
+        with:
+          api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          zone_id: ${{ secrets.CLOUDFLARE_ZONE_ID }}
+          purge_everything: "true"
