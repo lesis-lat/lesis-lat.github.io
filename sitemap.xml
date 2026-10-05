@@ -1,0 +1,25 @@
+---
+layout: null
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in site.html_pages %}
+  {%- if p.sitemap == false or p.published == false or p.url contains "/404" %}{% continue %}{% endif %}
+  <url>
+    <loc>{{ site.url }}{{ p.url | replace: 'index.html', '' }}</loc>
+    {%- if p.last_modified_at %}
+    <lastmod>{{ p.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endfor %}
+{%- for edition in site.newsletters %}
+  {%- if edition.sitemap == false or edition.published == false %}{% continue %}{% endif %}
+  <url>
+    <loc>{{ site.url }}{{ edition.url }}</loc>
+    {%- if edition.published_at %}
+    <lastmod>{{ edition.published_at | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+{%- endfor %}
+</urlset>

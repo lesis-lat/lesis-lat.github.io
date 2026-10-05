@@ -15,9 +15,6 @@
     "primitives-and-vulnerabilities": "Primitives and vulnerabilities"
   };
 
-  // Everything rendered here comes from another origin. Links are accepted
-  // only as https URLs on the blog host, and text only ever reaches the page
-  // through textContent, never through markup.
   var BLOG_HOST = "blog.lesis.lat";
 
   function safeBlogUrl(value) {
@@ -82,8 +79,6 @@
         return response.text();
       })
       .then(function (htmlText) {
-        // the parsed document inherits this page's CSP, so drop the post's own
-        // style and script blocks before parsing: only head metadata is read
         htmlText = htmlText.replace(/<(style|script)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, "");
         var doc = new DOMParser().parseFromString(htmlText, "text/html");
         var docEl = doc.documentElement;

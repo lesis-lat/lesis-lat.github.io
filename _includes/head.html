@@ -1,24 +1,42 @@
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src-elem 'self' https://cdnjs.cloudflare.com; style-src-attr 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://blog.lesis.lat https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; style-src-elem 'self'; style-src-attr 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://blog.lesis.lat https://*.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
+{%- assign canonical_path = page.url | replace: 'index.html', '' -%}
+{%- assign canonical_url = site.url | append: canonical_path -%}
+{%- assign meta_description = page.description | strip_html | remove: "​" | normalize_whitespace -%}
+{%- if page.layout == "newsletter" %}{% assign meta_description = meta_description | truncatewords: 26 %}{% endif -%}
+{%- assign social_image = site.url | append: '/assets/images/SitePreview.png' -%}
 <title>{{ page.title | escape }}</title>
-<meta name="description" content="{{ page.description | escape }}">
+<meta name="description" content="{{ meta_description | escape }}">
 <meta name="keywords" content="{{ page.keywords | escape }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="{{ canonical_url | escape }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="{{ page.title | escape }}">
-<meta property="og:description" content="{{ page.description | escape }}">
-<meta property="og:url" content="{{ site.url | escape }}{{ page.url | escape }}">
+<meta property="og:description" content="{{ meta_description | escape }}">
+<meta property="og:url" content="{{ canonical_url | escape }}">
+{% if page.layout == "newsletter" and page.published_at -%}
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="{{ page.published_at | date_to_xmlschema }}">
+{%- else -%}
 <meta property="og:type" content="website">
-<meta property="og:image" content="{{ site.url }}/assets/images/SitePreview.png">
+{%- endif %}
+<meta property="og:image" content="{{ social_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LESIS">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@lesis_lat">
 <meta name="twitter:title" content="{{ page.title | escape }}">
-<meta name="twitter:description" content="{{ page.description | escape }}">
-<meta name="twitter:image" content="{{ site.url }}/assets/images/SitePreview.png">
-<link rel="icon" href="{{ '/assets/images/favicon-white.png' | relative_url }}" type="image/png">
-<link rel="apple-touch-icon" href="{{ '/assets/images/favicon-white.png' | relative_url }}">
+<meta name="twitter:description" content="{{ meta_description | escape }}">
+<meta name="twitter:image" content="{{ social_image }}">
+{% include structured-data.html canonical_url=canonical_url meta_description=meta_description %}
+<link rel="icon" href="{{ '/assets/images/favicon-32.png' | relative_url }}" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 {% assign stylesheet_version = site.time | date: '%s' %}
 <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}?v={{ stylesheet_version }}">
 {% if page.url == "/" %}<link rel="preload" href="{{ '/assets/images/bell-labs.avif' | relative_url }}" as="image" type="image/avif" fetchpriority="high">
-{% endif %}{% unless page.layout == "landing" or page.layout == "newsletter" %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous" referrerpolicy="no-referrer">{% endunless %}
-<link rel="preload" href="{{ '/assets/fonts/woff2/plex-sans-300-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+{% endif %}
+<link rel="preload" href="{{ '/assets/fonts/woff2/plex-sans-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ '/assets/fonts/woff2/plex-mono-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
