@@ -1,5 +1,0 @@
-const expectedHost = "lesis.lat";
-
-if (window.location.host === expectedHost && window.location.protocol !== "https:") {
-    window.location.protocol = "https:";
-}

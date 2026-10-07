@@ -7,30 +7,50 @@
 #       in assets/images/clients/ and point to it, for example:
 #         logo: "/assets/images/clients/uol.svg"
 #       Logos render at 1.75rem tall, in grayscale.
+# width, height  optional, the logo's proportions (an SVG's viewBox), so the band
+#       keeps its layout while logos load.
 
 - name: "Adobe"
   logo: "/assets/images/clients/adobe.svg"
+  width: 949
+  height: 239
 
 - name: "UOL"
   logo: "/assets/images/clients/uol.svg"
+  width: 500
+  height: 181
 
 - name: "Oracle"
   logo: "/assets/images/clients/oracle.svg"
+  width: 231
+  height: 30
 
 - name: "Ford"
   logo: "/assets/images/clients/ford.svg"
+  width: 600
+  height: 225
 
 - name: "D-Link"
   logo: "/assets/images/clients/dlink.svg"
+  width: 800
+  height: 161
 
 - name: "TIM"
   logo: "/assets/images/clients/tim.svg"
+  width: 1238
+  height: 321
 
 - name: "OLX"
   logo: "/assets/images/clients/olx.svg"
+  width: 64
+  height: 43
 
 - name: "Smart Fit"
   logo: "/assets/images/clients/smart-fit.svg"
+  width: 1546
+  height: 564
 
 - name: "Rentcars"
   logo: "/assets/images/clients/rentcars.svg"
+  width: 1065
+  height: 190

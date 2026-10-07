@@ -53,7 +53,7 @@ keywords: "LESIS, lesis.lat, security engineering, application security, pentest
         {% for pass in (1..2) %}
         <ul class="clients-list"{% if pass == 2 %} aria-hidden="true"{% endif %}>
           {% for client in clients %}
-          <li>{% if client.logo %}<img src="{{ client.logo | relative_url }}" alt="{{ client.name | escape }}" loading="lazy">{% else %}<span>{{ client.name | escape }}</span>{% endif %}</li>
+          <li>{% if client.logo %}<img src="{{ client.logo | relative_url }}" alt="{{ client.name | escape }}"{% if client.width and client.height %} width="{{ client.width }}" height="{{ client.height }}"{% endif %} loading="lazy">{% else %}<span>{{ client.name | escape }}</span>{% endif %}</li>
           {% endfor %}
         </ul>
         {% endfor %}
@@ -211,7 +211,7 @@ keywords: "LESIS, lesis.lat, security engineering, application security, pentest
         <p class="way-lead">A scoped engagement with a defined system, technical objective, method and timeline.</p>
         <details class="svc">
           <summary><span>Security Engineering</span><i aria-hidden="true"></i></summary>
-          <div class="svc-body"><p class="svc-summary">Work alongside our engineers on architecture, security controls and the technical questions that arise as your product evolves.</p><p>We review designs, map trust boundaries and data flows, and help your team assess security decisions before and during implementation. The collaboration can cover a new system, a migration or changes to an existing product, with focused investigation and validation where needed.</p></div>
+          <div class="svc-body"><p class="svc-summary">Work alongside our engineers on architecture, security controls and the secure development lifecycle of a product as it evolves.</p><p>We review designs, map trust boundaries and data flows, and help your team assess security decisions before and during implementation. The collaboration can cover a new system, a migration or changes to an existing product, with focused investigation and validation where needed.</p><p>We also build application security into your development cycle (SSDLC). We select, implement and tune SAST, DAST and SCA for your stack and CI/CD pipeline, define the thresholds at which a build fails, and triage what the tools report, so engineers receive findings that are real and actionable rather than a queue of alerts. Where it fits, we use tooling we maintain, such as <a href="https://github.com/lesis-lat/security-gate" target="_blank" rel="noopener noreferrer">Security Gate</a>.</p></div>
         </details>
         <details class="svc">
           <summary><span>Vulnerability Research</span><i aria-hidden="true"></i></summary>
@@ -219,7 +219,7 @@ keywords: "LESIS, lesis.lat, security engineering, application security, pentest
         </details>
         <details class="svc">
           <summary><span>Custom Security Tooling</span><i aria-hidden="true"></i></summary>
-          <div class="svc-body"><p class="svc-summary">Build the fuzzers, analyzers and instrumentation needed to investigate your system.</p><p>We develop tools around specific formats, interfaces and behaviors, from test harnesses to custom analysis. The scope defines what the tool must examine and how your team will use it, whether for a focused investigation or repeated testing.</p></div>
+          <div class="svc-body"><p class="svc-summary">Build the fuzzers, analyzers and instrumentation needed to investigate your system.</p><p>We develop tools around specific formats, interfaces and behaviors, from test harnesses to custom analysis. The scope defines what the tool must examine and how your team will use it, whether for a focused investigation or repeated testing.</p><p>Some of that work runs on language models where they do better than a fixed rule: reviewing code changes for security-relevant behavior before they merge, triaging analyzer output against the code it points to, or testing your own model-based features for prompt injection and data exposure. Each one is measured against the cases it must catch before your team relies on it.</p></div>
         </details>
         <details class="svc">
           <summary><span>Incident Investigations</span><i aria-hidden="true"></i></summary>
@@ -234,7 +234,7 @@ keywords: "LESIS, lesis.lat, security engineering, application security, pentest
       <div class="way way-program reveal" style="--i:1">
         <h3>Ongoing collaboration</h3>
         <p class="way-lead">Work with a security engineering team that builds knowledge of your systems over time.</p>
-        <p class="way-lead">Together we define priorities and a cadence for design reviews, focused assessments, technical investigation and retesting. As your product changes, we revisit its assumptions and help your engineers address new risks. The platform keeps findings, evidence and remediation history available across that work.</p>
+        <p class="way-lead">Together we define priorities and a cadence for design reviews, focused assessments and technical investigation. As your product changes, we revisit its assumptions and help your engineers address new risks. The platform is where that work accumulates: context from every review, assessment and investigation carries into the next, so your security operation stops rebuilding what is already known and each cycle goes deeper into the problem.</p>
         <a class="button button-light" href="mailto:contact@lesis.lat?subject=Managed%20program">Start a conversation</a>
       </div>
     </div>
@@ -259,11 +259,11 @@ keywords: "LESIS, lesis.lat, security engineering, application security, pentest
       </li>
       <li class="reveal" style="--i:1">
         <h3>Participation in CTF competitions</h3>
-        <p>Members of our team have competed in Capture The Flag events, winning a Hackaflag qualifier and participating in CTFs at BSides São Paulo. LESIS also supports teams in the community: at <a href="https://www.sbseg2026.uff.br/" target="_blank" rel="noopener noreferrer">SBSeg 2026</a>, the GRIS/UFRJ team, supported by LESIS, <a href="{{ '/newsletter/lesis-bulletin-7-ctf-victory-open-source-security-and-community/' | relative_url }}">placed first among 18 teams</a> in challenges covering traffic analysis, forensics and incident investigation.</p>
+        <p>Members of our team have competed in Capture The Flag events, taking first place in the CTF at BSides São Paulo and winning a Hackaflag qualifier. LESIS also supports teams in the community: at <a href="https://www.sbseg2026.uff.br/" target="_blank" rel="noopener noreferrer">SBSeg 2026</a>, the GRIS/UFRJ team, supported by LESIS, <a href="{{ '/newsletter/lesis-bulletin-7-ctf-victory-open-source-security-and-community/' | relative_url }}">placed first among 18 teams</a> in challenges covering traffic analysis, forensics and incident investigation.</p>
       </li>
       <li class="reveal" style="--i:2">
         <h3>Experience at market leaders</h3>
-        <p>Our team includes engineers who have worked at companies such as Nubank, Latin America's largest digital bank, and Globo, Brazil's largest media company. They bring experience with the engineering demands of systems serving millions of people to their work at LESIS.</p>
+        <p>Our team includes engineers who have worked at companies such as Nubank, Latin America's largest digital bank, and Globo, Brazil's largest media company, as well as at Brazil's leading cybersecurity vendors and other companies just as strong, if less well known. They bring experience with the engineering demands of systems serving millions of people to their work at LESIS.</p>
       </li>
       <li class="reveal" style="--i:3">
         <h3>Speaking at security events</h3>
