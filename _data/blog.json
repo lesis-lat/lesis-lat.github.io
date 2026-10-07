@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Our first observation of an AI-assisted malicious group targeting small and medium-sized Brazilian fintech companies",
+    "url": "https://blog.lesis.lat/blog/our-first-observation-of-an-ai-assisted-malicious-group/",
+    "date": "2026-06-29",
+    "topic": "Case Study",
+    "summary": "An investigation by LESIS has identified a malicious campaign targeting small and medium-sized Brazilian fintech companies, using AI to accelerate the development of offensive tools, adapt payloads and support the…"
+  },
+  {
+    "title": "Dependabot: automating dependency updates on GitHub",
+    "url": "https://blog.lesis.lat/blog/dependabot-automating-dependency-updates-on-github/",
+    "date": "2026-06-25",
+    "topic": "Guides",
+    "summary": "Understand how Dependabot automates vulnerability monitoring and dependency updates directly on GitHub."
+  },
+  {
+    "title": "Choosing the right method for sharing identifiers",
+    "url": "https://blog.lesis.lat/blog/choosing-the-right-method-for-sharing-identifiers/",
+    "date": "2026-05-05",
+    "topic": "Case Study",
+    "summary": "How to choose between encryption, hashes, HMAC, APIs, and PSI when comparing datasets with personal identifiers."
+  },
+  {
+    "title": "Orientations for PII obfuscation and masking",
+    "url": "https://blog.lesis.lat/blog/orientations-for-pii-obfuscation-and-masking/",
+    "date": "2026-05-04",
+    "topic": "Guides",
+    "summary": "Practical recommendations for masking common types of personally identifiable information without exposing useful fragments across systems."
+  },
+  {
+    "title": "Primitives and vulnerabilities",
+    "url": "https://blog.lesis.lat/research/2026/04/26/primitives-and-vulnerabilities-en.html",
+    "date": "2026-04-26",
+    "topic": "Research",
+    "summary": "How thinking in primitives helps turn discrepancies between intent and real behavior into impact analysis."
+  },
+  {
+    "title": "Digital safety for children: preparing the next generation",
+    "url": "https://blog.lesis.lat/community/2026/04/26/o-cibernauta-digital-safety-for-the-next-generation-en.html",
+    "date": "2026-04-26",
+    "topic": "Community",
+    "summary": "Information security needs to reach people earlier. For a long time, this subject was treated as something restricted to professionals, companies, and technical teams. But reality has changed: children grow up…"
+  },
+  {
+    "title": "State machine for vulnerability management",
+    "url": "https://blog.lesis.lat/research/2026/04/09/vuln-state-machine-en.html",
+    "date": "2026-04-09",
+    "topic": "Research",
+    "summary": "In many organizations, the vulnerability management process suffers from a recurring — yet frequently overlooked — problem: inconsistency in the definition and use of statuses. It is common to see the same statuses used…"
+  },
+  {
+    "title": "Economic taxonomy of vulnerabilities",
+    "url": "https://blog.lesis.lat/research/2026/02/08/vulnerability-price-en.html",
+    "date": "2026-02-08",
+    "topic": "Research",
+    "summary": "In cybersecurity, one of the most relevant questions and, at the same time, one of the hardest to answer precisely is: what is the financial cost of a vulnerability? Although there are several programs and practices…"
+  },
+  {
+    "title": "Considerations for writing security reports",
+    "url": "https://blog.lesis.lat/guides/2026/01/15/considerations-for-writing-security-reports-en.html",
+    "date": "2026-01-15",
+    "topic": "Guides",
+    "summary": "After days or weeks of work, you have identified relevant security issues, gained a solid understanding of the assessed environment’s attack surface, and gathered sufficient evidence to demonstrate real business risks…"
+  },
+  {
+    "title": "Strengthening the Brazilian cybersecurity community through education",
+    "url": "https://blog.lesis.lat/community/2026/01/14/commitiment-to-strengthening-community-en.html",
+    "date": "2026-01-14",
+    "topic": "Community",
+    "summary": "In 2026, LESIS will take another concrete step in its commitment to the sustainable development of the technology and information security ecosystem in Brazil. We will make a financial donation to the NGO Mente Binária…"
+  },
+  {
+    "title": "Why we sponsor information security events",
+    "url": "https://blog.lesis.lat/community/2025/11/30/sposoring-events-en.html",
+    "date": "2025-11-30",
+    "topic": "Community",
+    "summary": "The year 2025 has been a milestone for LESIS. Between projects, research, and the growth of our presence in the market, we have also taken on a commitment we consider essential: to directly contribute to and with the…"
+  },
+  {
+    "title": "Money for nothing, discounts for free: rocking the gift card loop",
+    "url": "https://blog.lesis.lat/vulnerability/2025/10/04/rocking-gift-card-en.html",
+    "date": "2025-10-04",
+    "topic": "Vulnerability",
+    "summary": "From time to time, the opportunity arises to conduct vulnerability research on e-commerce platforms. Although the context is similar, each opportunity is unique, as there are always peculiarities in every application…"
+  }
+]

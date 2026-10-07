@@ -1,0 +1,65 @@
+name: Sync blog posts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "47 8 * * *"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-blog-main
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v7
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Fetch English posts from blog.lesis.lat
+        run: bundle exec ruby script/sync_blog.rb
+
+      - name: Validate generated data
+        run: >-
+          ruby -rjson -e 'data = JSON.parse(File.read(ARGV.fetch(0)));
+          abort("Expected a non-empty JSON array") unless data.is_a?(Array) && !data.empty?;
+          invalid = data.reject { |item| item["title"].is_a?(String) && !item["title"].empty? &&
+          item["url"].to_s.start_with?("https://blog.lesis.lat/") &&
+          item["date"].to_s.match?(/\A\d{4}-\d{2}-\d{2}\z/) };
+          abort("Invalid blog entries") unless invalid.empty?'
+          _data/blog.json
+
+      - name: Detect blog updates
+        id: changes
+        run: |
+          if [ -z "$(git status --porcelain -- _data/blog.json)" ]; then
+            echo "Blog data is already up to date."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Create or update pull request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v8
+        with:
+          commit-message: "chore: sync blog posts from blog.lesis.lat"
+          branch: "automation/sync-blog"
+          title: "chore: sync blog posts from blog.lesis.lat"
+          body: "Automated sync of the English post list from https://blog.lesis.lat/feed.xml."
+          add-paths: |
+            _data/blog.json
