@@ -1,41 +1,143 @@
 [
   {
     "title": "Our first observation of an AI-assisted malicious group targeting small and medium-sized Brazilian fintech companies",
+    "lang": "en",
     "url": "https://blog.lesis.lat/blog/our-first-observation-of-an-ai-assisted-malicious-group/",
     "date": "2026-06-29",
     "topic": "Case Study",
     "summary": "An investigation by LESIS has identified a malicious campaign targeting small and medium-sized Brazilian fintech companies, using AI to accelerate the development of offensive tools, adapt payloads and support the…"
   },
   {
+    "title": "Nuestra primera detección de un grupo malicioso que utiliza inteligencia artificial y que tiene como objetivo a las empresas fintech brasileñas de pequeño y mediano tamaño",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/blog/nuestra-primera-observacion-de-un-grupo-malicioso-asistido-por-ia/",
+    "date": "2026-06-29",
+    "topic": "Estudio de Caso",
+    "summary": "Una investigación de LESIS ha identificado una campaña maliciosa dirigida contra empresas fintech brasileñas de pequeño y mediano tamaño, en la que se utiliza la inteligencia artificial para acelerar el desarrollo de…"
+  },
+  {
+    "title": "Nossa primeira observação de um grupo malicioso assistido por IA mirando fintechs brasileiras de pequeno e médio porte",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/blog/nossa-primeira-observa%C3%A7%C3%A3o-de-um-grupo-malicioso-assistido-por-ia/",
+    "date": "2026-06-29",
+    "topic": "Estudo de caso",
+    "summary": "Investigação da LESIS identifica uma campanha maliciosa contra fintechs brasileiras de pequeno e médio porte, com uso de IA para acelerar tooling ofensivo, adaptação de payloads e apoio à exploração de aplicações."
+  },
+  {
+    "title": "Dependabot: automatizando la actualización de dependencias en GitHub",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/blog/dependabot-automatizando-actualizacion-de-dependencias-en-github/",
+    "date": "2026-06-25",
+    "topic": "Guías",
+    "summary": "Entiende cómo Dependabot automatiza el monitoreo de vulnerabilidades y la actualización de dependencias directamente en GitHub."
+  },
+  {
+    "title": "Dependabot: automatizando a atualização de dependências no GitHub",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/blog/dependabot-automatizando-atualizacao-de-dependencias/",
+    "date": "2026-06-25",
+    "topic": "Guias",
+    "summary": "Entenda como o Dependabot automatiza o monitoramento de vulnerabilidades e a atualização de dependências diretamente no GitHub."
+  },
+  {
     "title": "Dependabot: automating dependency updates on GitHub",
+    "lang": "en",
     "url": "https://blog.lesis.lat/blog/dependabot-automating-dependency-updates-on-github/",
     "date": "2026-06-25",
     "topic": "Guides",
     "summary": "Understand how Dependabot automates vulnerability monitoring and dependency updates directly on GitHub."
   },
   {
+    "title": "Escolhendo o método correto para compartilhar identificadores",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/blog/escolhendo-o-metodo-correto-para-compartilhar-identificadores/",
+    "date": "2026-05-05",
+    "topic": "Estudo de Caso",
+    "summary": "Como escolher entre criptografia, hash, HMAC e PSI ao comparar bases com identificadores pessoais."
+  },
+  {
+    "title": "Elegir el método correcto para compartir identificadores",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/blog/elegir-el-metodo-correcto-para-compartir-identificadores/",
+    "date": "2026-05-05",
+    "topic": "Estudio de Caso",
+    "summary": "Cómo elegir entre criptografía, hash, HMAC, APIs y PSI al comparar bases con identificadores personales."
+  },
+  {
     "title": "Choosing the right method for sharing identifiers",
+    "lang": "en",
     "url": "https://blog.lesis.lat/blog/choosing-the-right-method-for-sharing-identifiers/",
     "date": "2026-05-05",
     "topic": "Case Study",
     "summary": "How to choose between encryption, hashes, HMAC, APIs, and PSI when comparing datasets with personal identifiers."
   },
   {
+    "title": "Orientações para ofuscação e mascaramento de PII",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/blog/orientacoes-para-ofuscacao-e-mascaramento-de-pii/",
+    "date": "2026-05-04",
+    "topic": "Guias",
+    "summary": "Recomendações práticas para mascarar tipos comuns de informações pessoais sem expor fragmentos úteis entre sistemas."
+  },
+  {
     "title": "Orientations for PII obfuscation and masking",
+    "lang": "en",
     "url": "https://blog.lesis.lat/blog/orientations-for-pii-obfuscation-and-masking/",
     "date": "2026-05-04",
     "topic": "Guides",
     "summary": "Practical recommendations for masking common types of personally identifiable information without exposing useful fragments across systems."
   },
   {
+    "title": "Orientaciones para ofuscación y enmascaramiento de PII",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/blog/orientaciones-para-ofuscacion-y-enmascaramiento-de-pii/",
+    "date": "2026-05-04",
+    "topic": "Guias",
+    "summary": "Recomendaciones prácticas para enmascarar tipos comunes de información personal sin exponer fragmentos útiles entre sistemas."
+  },
+  {
+    "title": "Seguridad digital para niños: preparando a la próxima generación",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/comunidad/2026/04/26/o-cibernauta-seguridad-digital-para-la-proxima-generacion-es.html",
+    "date": "2026-04-26",
+    "topic": "Comunidad",
+    "summary": "La seguridad de la información necesita llegar antes a las personas. Durante mucho tiempo, este tema fue tratado como algo restringido a profesionales, empresas y equipos técnicos. Pero la realidad cambió: los niños…"
+  },
+  {
+    "title": "Segurança digital para crianças: preparando a próxima geração",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/comunidade/2026/04/26/o-cibernauta-seguranca-digital-para-proxima-geracao.html",
+    "date": "2026-04-26",
+    "topic": "Comunidade",
+    "summary": "A segurança da informação precisa chegar mais cedo às pessoas. Durante muito tempo, tratamos esse tema como algo restrito a profissionais, empresas e equipes técnicas. Mas a realidade mudou: crianças crescem conectadas…"
+  },
+  {
     "title": "Primitives and vulnerabilities",
+    "lang": "en",
     "url": "https://blog.lesis.lat/research/2026/04/26/primitives-and-vulnerabilities-en.html",
     "date": "2026-04-26",
     "topic": "Research",
     "summary": "How thinking in primitives helps turn discrepancies between intent and real behavior into impact analysis."
   },
   {
+    "title": "Primitivas y vulnerabilidades",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/investigacion/2026/04/26/primitivas-y-vulnerabilidades-es.html",
+    "date": "2026-04-26",
+    "topic": "Investigacion",
+    "summary": "Cómo pensar en primitivas ayuda a transformar discrepancias entre intención y comportamiento real en análisis de impacto."
+  },
+  {
+    "title": "Primitivas e vulnerabilidades",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/pesquisa/2026/04/26/primitivas-e-vulnerabilidades.html",
+    "date": "2026-04-26",
+    "topic": "Pesquisa",
+    "summary": "Como pensar em primitivas ajuda a transformar discrepâncias entre intenção e comportamento real em análise de impacto."
+  },
+  {
     "title": "Digital safety for children: preparing the next generation",
+    "lang": "en",
     "url": "https://blog.lesis.lat/community/2026/04/26/o-cibernauta-digital-safety-for-the-next-generation-en.html",
     "date": "2026-04-26",
     "topic": "Community",
@@ -43,44 +145,146 @@
   },
   {
     "title": "State machine for vulnerability management",
+    "lang": "en",
     "url": "https://blog.lesis.lat/research/2026/04/09/vuln-state-machine-en.html",
     "date": "2026-04-09",
     "topic": "Research",
     "summary": "In many organizations, the vulnerability management process suffers from a recurring — yet frequently overlooked — problem: inconsistency in the definition and use of statuses. It is common to see the same statuses used…"
   },
   {
+    "title": "Máquina de estados para la gestión de vulnerabilidades",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/investigacion/2026/04/09/vuln-state-machine-es.html",
+    "date": "2026-04-09",
+    "topic": "Investigacion",
+    "summary": "En muchas organizaciones, el proceso de gestión de vulnerabilidades sufre un problema recurrente — pero frecuentemente ignorado: la inconsistencia en la definición y el uso de los estados. Es común ver los mismos…"
+  },
+  {
+    "title": "Máquina de estados para gestão de vulnerabilidades",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/pesquisa/2026/04/09/vuln-state-machine.html",
+    "date": "2026-04-09",
+    "topic": "Pesquisa",
+    "summary": "Em muitas organizações, o processo de gestão de vulnerabilidades sofre com um problema recorrente — mas frequentemente negligenciado: a inconsistência na definição e no uso de status. É comum ver os mesmos status sendo…"
+  },
+  {
+    "title": "Taxonomía económica de las vulnerabilidades",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/investigacion/2026/02/08/vulnerability-price-es.html",
+    "date": "2026-02-08",
+    "topic": "Investigacion",
+    "summary": "En ciberseguridad, una de las preguntas más relevantes y, al mismo tiempo, más difíciles de responder con precisión es: ¿cuál es el costo financiero de una vulnerabilidad? Aunque existen diversos programas y prácticas…"
+  },
+  {
+    "title": "Taxonomia econômica de vulnerabilidades",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/pesquisa/2026/02/08/vulnerability-price.html",
+    "date": "2026-02-08",
+    "topic": "Pesquisa",
+    "summary": "No campo da cibersegurança, uma das perguntas mais relevantes — e, simultaneamente, uma das mais difíceis de responder com precisão — é: qual é o custo financeiro de uma vulnerabilidade? Embora existam diversos…"
+  },
+  {
     "title": "Economic taxonomy of vulnerabilities",
+    "lang": "en",
     "url": "https://blog.lesis.lat/research/2026/02/08/vulnerability-price-en.html",
     "date": "2026-02-08",
     "topic": "Research",
     "summary": "In cybersecurity, one of the most relevant questions and, at the same time, one of the hardest to answer precisely is: what is the financial cost of a vulnerability? Although there are several programs and practices…"
   },
   {
+    "title": "Considerações sobre a elaboração de relatórios de segurança",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/guias/2026/01/15/considerations-for-writing-security-reports.html",
+    "date": "2026-01-15",
+    "topic": "Guias",
+    "summary": "Após dias ou semanas de trabalho, você identificou falhas relevantes, compreendeu a superfície de ataque do ambiente avaliado e reuniu evidências suficientes para demonstrar riscos reais ao negócio. Tecnicamente, a…"
+  },
+  {
     "title": "Considerations for writing security reports",
+    "lang": "en",
     "url": "https://blog.lesis.lat/guides/2026/01/15/considerations-for-writing-security-reports-en.html",
     "date": "2026-01-15",
     "topic": "Guides",
     "summary": "After days or weeks of work, you have identified relevant security issues, gained a solid understanding of the assessed environment’s attack surface, and gathered sufficient evidence to demonstrate real business risks…"
   },
   {
+    "title": "Consideraciones para la elaboración de informes de seguridad",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/guias/2026/01/15/considerations-for-writing-security-reports-es.html",
+    "date": "2026-01-15",
+    "topic": "Guias",
+    "summary": "Después de días o semanas de trabajo, identificaste fallas relevantes, comprendiste la superficie de ataque del entorno evaluado y reuniste evidencia suficiente para demostrar riesgos reales para el negocio. Desde el…"
+  },
+  {
     "title": "Strengthening the Brazilian cybersecurity community through education",
+    "lang": "en",
     "url": "https://blog.lesis.lat/community/2026/01/14/commitiment-to-strengthening-community-en.html",
     "date": "2026-01-14",
     "topic": "Community",
     "summary": "In 2026, LESIS will take another concrete step in its commitment to the sustainable development of the technology and information security ecosystem in Brazil. We will make a financial donation to the NGO Mente Binária…"
   },
   {
+    "title": "Fortaleciendo la comunidad de ciberseguridad en Brasil a través de la educación",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/comunidad/2026/01/14/commitiment-to-strengthening-community-es.html",
+    "date": "2026-01-14",
+    "topic": "Comunidad",
+    "summary": "En 2026, LESIS dará un paso más concreto en su compromiso con el desarrollo sostenible del ecosistema de tecnología y seguridad de la información en Brasil. Realizaremos una donación financiera a la ONG Mente Binária…"
+  },
+  {
+    "title": "Fortalecendo a comunidade brasileira de cibersegurança através da educação",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/comunidade/2026/01/14/commitiment-to-strengthening-community.html",
+    "date": "2026-01-14",
+    "topic": "Comunidade",
+    "summary": "Em 2026, a LESIS dará mais um passo concreto no seu compromisso com o desenvolvimento sustentável do ecossistema de tecnologia e segurança da informação no Brasil. Realizaremos uma doação financeira para a ONG Mente…"
+  },
+  {
     "title": "Why we sponsor information security events",
+    "lang": "en",
     "url": "https://blog.lesis.lat/community/2025/11/30/sposoring-events-en.html",
     "date": "2025-11-30",
     "topic": "Community",
     "summary": "The year 2025 has been a milestone for LESIS. Between projects, research, and the growth of our presence in the market, we have also taken on a commitment we consider essential: to directly contribute to and with the…"
   },
   {
+    "title": "Porque patrocinamos eventos de Segurança da Informação",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/comunidade/2025/11/30/sposoring-events.html",
+    "date": "2025-11-30",
+    "topic": "Comunidade",
+    "summary": "O ano de 2025 tem sido marcante para a LESIS. Entre projetos, pesquisas e o crescimento de nossa atuação no mercado, também assumimos um compromisso que consideramos fundamental: contribuir diretamente para e com a…"
+  },
+  {
+    "title": "Por qué patrocinamos eventos de Seguridad de la Información",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/comunidad/2025/11/30/sposoring-events-es.html",
+    "date": "2025-11-30",
+    "topic": "Comunidad",
+    "summary": "El año 2025 ha sido marcante para LESIS. Entre proyectos, investigaciones y el crecimiento de nuestra actuación en el mercado, también asumimos un compromiso que consideramos fundamental: contribuir directa y…"
+  },
+  {
+    "title": "Saldo fantasma, rebajas eternas: la trampa de los gift cards",
+    "lang": "es",
+    "url": "https://blog.lesis.lat/vulnerabilidad/2025/10/04/rocking-gift-card-es.html",
+    "date": "2025-10-04",
+    "topic": "Vulnerabilidad",
+    "summary": "Con cierta frecuencia surge la oportunidad de realizar investigaciones de vulnerabilidades en comercios electrónicos. Aunque el contexto sea el mismo, cada una de esas oportunidades es única, ya que siempre existen…"
+  },
+  {
     "title": "Money for nothing, discounts for free: rocking the gift card loop",
+    "lang": "en",
     "url": "https://blog.lesis.lat/vulnerability/2025/10/04/rocking-gift-card-en.html",
     "date": "2025-10-04",
     "topic": "Vulnerability",
     "summary": "From time to time, the opportunity arises to conduct vulnerability research on e-commerce platforms. Although the context is similar, each opportunity is unique, as there are always peculiarities in every application…"
+  },
+  {
+    "title": "Dinheiro de graça, descontos sem esforço: hackeando o loop dos gift cards",
+    "lang": "pt",
+    "url": "https://blog.lesis.lat/vulnerabilidade/2025/10/04/rocking-gift-card.html",
+    "date": "2025-10-04",
+    "topic": "Vulnerabilidade",
+    "summary": "Com certa frequência, surge a oportunidade de realizar pesquisas de vulnerabilidades em e-commerces. Apesar do contexto ser o mesmo, cada uma das oportunidades é única, pois sempre há peculiaridades em cada aplicação…"
   }
 ]

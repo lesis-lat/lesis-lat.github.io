@@ -5,24 +5,56 @@
 # topic        short label shown before the date
 # date         publication date
 # url          the English version on blog.lesis.lat
+# pt, es       the same fields (title, url, topic, description) for the
+#              Portuguese and Spanish home pages; English is used where missing
 
 - title: "Choosing the right method for sharing identifiers"
   description: "Encrypting a customer list before sending it is not the same as revealing only what the other side needs."
   topic: "Privacy engineering"
   date: 2026-05-05
   url: "https://blog.lesis.lat/blog/choosing-the-right-method-for-sharing-identifiers/"
+  pt:
+    title: "Escolhendo o método correto para compartilhar identificadores"
+    description: "Criptografar uma lista de clientes antes de enviá-la não é o mesmo que revelar apenas o que o outro lado precisa."
+    topic: "Engenharia de privacidade"
+    url: "https://blog.lesis.lat/blog/escolhendo-o-metodo-correto-para-compartilhar-identificadores/"
+  es:
+    title: "Elegir el método correcto para compartir identificadores"
+    description: "Cifrar una lista de clientes antes de enviarla no es lo mismo que revelar solo lo que la otra parte necesita."
+    topic: "Ingeniería de privacidad"
+    url: "https://blog.lesis.lat/blog/elegir-el-metodo-correcto-para-compartir-identificadores/"
 
 - title: "Orientations for PII obfuscation and masking"
   description: "When each application masks the same field differently, the fragments can be recombined into the original value."
   topic: "Privacy engineering"
   date: 2026-05-04
   url: "https://blog.lesis.lat/blog/orientations-for-pii-obfuscation-and-masking/"
+  pt:
+    title: "Orientações para ofuscação e mascaramento de PII"
+    description: "Quando cada aplicação mascara o mesmo campo de um jeito diferente, os fragmentos podem ser recombinados no valor original."
+    topic: "Engenharia de privacidade"
+    url: "https://blog.lesis.lat/blog/orientacoes-para-ofuscacao-e-mascaramento-de-pii/"
+  es:
+    title: "Orientaciones para ofuscación y enmascaramiento de PII"
+    description: "Cuando cada aplicación enmascara el mismo campo de forma distinta, los fragmentos pueden recombinarse en el valor original."
+    topic: "Ingeniería de privacidad"
+    url: "https://blog.lesis.lat/blog/orientaciones-para-ofuscacion-y-enmascaramiento-de-pii/"
 
 - title: "Money for nothing, discounts for free: rocking the gift card loop"
   description: "A coupon that applied to gift cards, and gift cards that could buy more gift cards: credit out of nothing."
   topic: "Vulnerability"
   date: 2025-10-04
   url: "https://blog.lesis.lat/vulnerability/2025/10/04/rocking-gift-card-en.html"
+  pt:
+    title: "Dinheiro de graça, descontos sem esforço: hackeando o loop dos gift cards"
+    description: "Um cupom que valia para gift cards, e gift cards que podiam comprar mais gift cards: crédito a partir do nada."
+    topic: "Vulnerabilidade"
+    url: "https://blog.lesis.lat/vulnerabilidade/2025/10/04/rocking-gift-card.html"
+  es:
+    title: "Saldo fantasma, rebajas eternas: la trampa de los gift cards"
+    description: "Un cupón que se aplicaba a gift cards, y gift cards que podían comprar más gift cards: crédito de la nada."
+    topic: "Vulnerabilidad"
+    url: "https://blog.lesis.lat/vulnerabilidad/2025/10/04/rocking-gift-card-es.html"
 
 # --- not shown today; move one up to swap it into the selection --------------
 
@@ -31,27 +63,77 @@
   topic: "Threat research"
   date: 2026-06-29
   url: "https://blog.lesis.lat/blog/our-first-observation-of-an-ai-assisted-malicious-group/"
+  pt:
+    title: "Nossa primeira observação de um grupo malicioso assistido por IA mirando fintechs brasileiras de pequeno e médio porte"
+    description: "Um grupo com motivação financeira usando ferramentas de IA contra fintechs brasileiras, por meio de falhas em aplicações e credenciais roubadas."
+    topic: "Pesquisa de ameaças"
+    url: "https://blog.lesis.lat/blog/nossa-primeira-observa%C3%A7%C3%A3o-de-um-grupo-malicioso-assistido-por-ia/"
+  es:
+    title: "Nuestra primera detección de un grupo malicioso que utiliza inteligencia artificial y que tiene como objetivo a las empresas fintech brasileñas de pequeño y mediano tamaño"
+    description: "Un grupo con motivación financiera que usa herramientas de IA contra fintechs brasileñas, a través de fallas en aplicaciones y credenciales robadas."
+    topic: "Investigación de amenazas"
+    url: "https://blog.lesis.lat/blog/nuestra-primera-observacion-de-un-grupo-malicioso-asistido-por-ia/"
 
 - title: "State machine for vulnerability management"
   description: "A finding's status means different things to different teams. A formal state machine settles what each one is."
   topic: "Research"
   date: 2026-04-09
   url: "https://blog.lesis.lat/research/2026/04/09/vuln-state-machine-en.html"
+  pt:
+    title: "Máquina de estados para gestão de vulnerabilidades"
+    description: "O status de um achado significa coisas diferentes para equipes diferentes. Uma máquina de estados formal define o que cada um é."
+    topic: "Pesquisa"
+    url: "https://blog.lesis.lat/pesquisa/2026/04/09/vuln-state-machine.html"
+  es:
+    title: "Máquina de estados para la gestión de vulnerabilidades"
+    description: "El estado de un hallazgo significa cosas distintas para equipos distintos. Una máquina de estados formal define qué es cada uno."
+    topic: "Investigación"
+    url: "https://blog.lesis.lat/investigacion/2026/04/09/vuln-state-machine-es.html"
 
 - title: "Economic taxonomy of vulnerabilities"
   description: "What bug bounty programmes pay, read as a market price attached to each level of severity."
   topic: "Research"
   date: 2026-02-08
   url: "https://blog.lesis.lat/research/2026/02/08/vulnerability-price-en.html"
+  pt:
+    title: "Taxonomia econômica de vulnerabilidades"
+    description: "O que os programas de bug bounty pagam, lido como um preço de mercado associado a cada nível de severidade."
+    topic: "Pesquisa"
+    url: "https://blog.lesis.lat/pesquisa/2026/02/08/vulnerability-price.html"
+  es:
+    title: "Taxonomía económica de las vulnerabilidades"
+    description: "Lo que pagan los programas de bug bounty, leído como un precio de mercado asociado a cada nivel de severidad."
+    topic: "Investigación"
+    url: "https://blog.lesis.lat/investigacion/2026/02/08/vulnerability-price-es.html"
 
 - title: "Primitives and vulnerabilities"
   description: "Three questions about a piece of code: what it should do, what it does, and what it can be made to do."
   topic: "Research"
   date: 2026-04-26
   url: "https://blog.lesis.lat/research/2026/04/26/primitives-and-vulnerabilities-en.html"
+  pt:
+    title: "Primitivas e vulnerabilidades"
+    description: "Três perguntas sobre um trecho de código: o que ele deveria fazer, o que ele faz e o que se pode fazê-lo fazer."
+    topic: "Pesquisa"
+    url: "https://blog.lesis.lat/pesquisa/2026/04/26/primitivas-e-vulnerabilidades.html"
+  es:
+    title: "Primitivas y vulnerabilidades"
+    description: "Tres preguntas sobre un fragmento de código: qué debería hacer, qué hace y qué se le puede hacer hacer."
+    topic: "Investigación"
+    url: "https://blog.lesis.lat/investigacion/2026/04/26/primitivas-y-vulnerabilidades-es.html"
 
 - title: "Considerations for writing security reports"
   description: "A report is read by people who did not do the work. What that demands of the way it is written."
   topic: "Guide"
   date: 2026-01-15
   url: "https://blog.lesis.lat/guides/2026/01/15/considerations-for-writing-security-reports-en.html"
+  pt:
+    title: "Considerações sobre a elaboração de relatórios de segurança"
+    description: "Um relatório é lido por pessoas que não fizeram o trabalho. O que isso exige da forma como ele é escrito."
+    topic: "Guia"
+    url: "https://blog.lesis.lat/guias/2026/01/15/considerations-for-writing-security-reports.html"
+  es:
+    title: "Consideraciones para la elaboración de informes de seguridad"
+    description: "Un informe lo leen personas que no hicieron el trabajo. Lo que eso exige de la forma en que se escribe."
+    topic: "Guía"
+    url: "https://blog.lesis.lat/guias/2026/01/15/considerations-for-writing-security-reports-es.html"

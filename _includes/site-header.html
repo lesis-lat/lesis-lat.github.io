@@ -1,14 +1,17 @@
+  {%- capture home_url %}{% include localized-url.html path="/" %}{% endcapture %}
+  {%- assign start_project_subject = t.cta.start_project_subject | uri_escape %}
   <header class="site-header" data-chrome="light">
     <div class="site-header-inner">
-      <a class="site-logo" href="{{ '/' | relative_url }}" aria-label="LESIS home">
+      <a class="site-logo" href="{{ home_url }}" aria-label="{{ t.header.home }}">
         <img src="{{ '/assets/images/logo-horizontal-branco-640.png' | relative_url }}" alt="LESIS" width="640" height="215">
       </a>
-      <nav class="site-nav" id="site-nav" aria-label="Main">
-        <a href="{{ '/' | relative_url }}#what">About</a>
-        <a href="{{ '/' | relative_url }}#services">Services</a>
-        <a href="{{ '/' | relative_url }}#contact">Contact</a>
-        <a class="site-nav-cta" href="mailto:contact@lesis.lat?subject=Start%20a%20project">Start a project</a>
+      <nav class="site-nav" id="site-nav" aria-label="{{ t.header.nav }}">
+        <a href="{{ home_url }}#what">{{ t.header.about }}</a>
+        <a href="{{ home_url }}#services">{{ t.header.services }}</a>
+        <a href="{{ home_url }}#contact">{{ t.header.contact }}</a>
+        <a class="site-nav-cta" href="mailto:contact@lesis.lat?subject={{ start_project_subject }}">{{ t.cta.start_project }}</a>
+        {% include language-switcher.html variant="menu" %}
       </nav>
-      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-label-open="{{ t.header.menu }}" data-label-close="{{ t.header.close }}">{{ t.header.menu }}</button>
     </div>
   </header>

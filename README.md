@@ -60,6 +60,14 @@ KIT_API_KEY="your-api-key" bundle exec ruby script/sync_newsletters.rb
 
 The daily GitHub Actions workflow reads the same value from the `KIT_API_KEY` repository secret, commits the generated data and internal newsletter pages only when they change, and requests a new GitHub Pages build. Never commit the key or add it to Jekyll configuration or data files.
 
+### Languages
+
+The site is published in English at the root, Portuguese (Brazil) under `/pt/` and Spanish (Latin America) under `/es/`, as static pages with `hreflang` links between them. Page markup lives once in `_includes/pages/`; each language's copy lives in `_data/i18n/en.yml`, `pt.yml` and `es.yml`, and the files in `pt/` and `es/` only set the page's title and description. Blog posts are listed in each language from the blog's feed; newsletter editions are published in English only. When copy changes, update the three files together:
+
+```bash
+ruby script/check_i18n.rb   # fails if a key, list item or {placeholder} is missing in a language
+```
+
 ### Project Structure
 
 ```

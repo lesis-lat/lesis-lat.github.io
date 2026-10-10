@@ -1,0 +1,30 @@
+name: Check translations
+
+on:
+  pull_request:
+    paths:
+      - "_data/i18n/**"
+      - "script/check_i18n.rb"
+  push:
+    branches:
+      - main
+    paths:
+      - "_data/i18n/**"
+      - "script/check_i18n.rb"
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+
+      - name: Compare every language file with en.yml
+        run: ruby script/check_i18n.rb

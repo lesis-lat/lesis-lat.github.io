@@ -1,0 +1,30 @@
+{%- comment -%}
+  Privacy policy and terms of use, shared by every language.
+  include.doc is "privacy" or "terms"; the copy is t.privacy or t.terms.
+{%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign doc = t[include.doc] -%}
+{%- assign updated = t.legal_updated | replace: "{date}", t.legal_date -%}
+<section class="page-head" data-chrome="light" aria-labelledby="{{ include.doc }}-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">{{ doc.eyebrow }}</p>
+    <div class="page-head-grid">
+      <h1 id="{{ include.doc }}-title" class="page-title reveal">{{ doc.title }}</h1>
+      <div class="reveal" style="--i:1">
+        <p class="page-lead">{{ doc.lead }}</p>
+        <p class="page-lead">{{ updated }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section legal-content" data-chrome="light">
+  <div class="wrap legal-wrap">
+    {%- for section in doc.sections %}
+    <h2>{{ section.title }}</h2>
+    {%- for paragraph in section.text %}
+    <p>{{ paragraph }}</p>
+    {%- endfor %}
+    {%- endfor %}
+  </div>
+</section>

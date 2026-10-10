@@ -29,7 +29,7 @@ jobs:
           ruby-version: "3.2"
           bundler-cache: true
 
-      - name: Fetch English posts from blog.lesis.lat
+      - name: Fetch posts from blog.lesis.lat
         run: bundle exec ruby script/sync_blog.rb
 
       - name: Validate generated data
@@ -37,6 +37,7 @@ jobs:
           ruby -rjson -e 'data = JSON.parse(File.read(ARGV.fetch(0)));
           abort("Expected a non-empty JSON array") unless data.is_a?(Array) && !data.empty?;
           invalid = data.reject { |item| item["title"].is_a?(String) && !item["title"].empty? &&
+          %w[en pt es].include?(item["lang"]) &&
           item["url"].to_s.start_with?("https://blog.lesis.lat/") &&
           item["date"].to_s.match?(/\A\d{4}-\d{2}-\d{2}\z/) };
           abort("Invalid blog entries") unless invalid.empty?'
@@ -60,6 +61,6 @@ jobs:
           commit-message: "chore: sync blog posts from blog.lesis.lat"
           branch: "automation/sync-blog"
           title: "chore: sync blog posts from blog.lesis.lat"
-          body: "Automated sync of the English post list from https://blog.lesis.lat/feed.xml."
+          body: "Automated sync of the English, Portuguese and Spanish post lists from https://blog.lesis.lat/feed.xml."
           add-paths: |
             _data/blog.json

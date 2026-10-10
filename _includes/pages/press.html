@@ -1,0 +1,99 @@
+{%- comment -%}Press kit page, shared by every language.{%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign pk = t.press -%}
+{%- assign a = pk.assets -%}
+<section class="page-head" data-chrome="light" aria-labelledby="press-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">{{ pk.eyebrow }}</p>
+    <div class="page-head-grid">
+      <h1 id="press-title" class="page-title reveal">{{ pk.title }}</h1>
+      <div class="reveal" style="--i:1">
+        {%- for paragraph in pk.lead %}
+        <p class="page-lead">{{ paragraph }}</p>
+        {%- endfor %}
+        <div class="hero-actions">
+          <a class="button button-dark" href="#assets">{{ pk.assets_link }}</a>
+          <a class="button button-outline-dark" href="mailto:media@lesis.lat">media@lesis.lat</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="section" id="assets" data-chrome="light" aria-labelledby="assets-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="assets-title" class="eyebrow reveal">{{ a.title }}</h2>
+      <p class="section-intro reveal">{{ a.intro }}</p>
+    </div>
+    <ul class="kit">
+      {%- assign alt = a.alt | replace: "{asset}", a.alt_horizontal | replace: "{color}", a.alt_black %}
+      <li class="reveal" style="--i:0">
+        <div class="kit-preview"><img src="{{ '/assets/images/logo-horizontal-preto-preview.webp' | relative_url }}" width="1050" height="353" alt="{{ alt }}" loading="lazy"></div>
+        <h3>{{ a.horizontal }}</h3>
+        <p class="kit-meta">{{ a.black }} &middot; PNG</p>
+        <a class="text-link" href="{{ '/assets/images/logo-horizontal-preto.png' | relative_url }}" download>{{ a.download }}</a>
+      </li>
+      {%- assign alt = a.alt | replace: "{asset}", a.alt_horizontal | replace: "{color}", a.alt_white %}
+      <li class="reveal" style="--i:1">
+        <div class="kit-preview kit-preview-dark"><img src="{{ '/assets/images/logo-horizontal-branco-preview.webp' | relative_url }}" width="1050" height="353" alt="{{ alt }}" loading="lazy"></div>
+        <h3>{{ a.horizontal }}</h3>
+        <p class="kit-meta">{{ a.white }} &middot; PNG</p>
+        <a class="text-link" href="{{ '/assets/images/logo-horizontal-branco.png' | relative_url }}" download>{{ a.download }}</a>
+      </li>
+      {%- assign alt = a.alt | replace: "{asset}", a.alt_logo | replace: "{color}", a.alt_black %}
+      <li class="reveal" style="--i:2">
+        <div class="kit-preview kit-preview-stacked"><img src="{{ '/assets/images/logo-black-preview.webp' | relative_url }}" width="500" height="638" alt="{{ alt }}" loading="lazy"></div>
+        <h3>{{ a.logo }}</h3>
+        <p class="kit-meta">{{ a.black }} &middot; PNG</p>
+        <a class="text-link" href="{{ '/assets/images/logo-black.png' | relative_url }}" download>{{ a.download }}</a>
+      </li>
+      {%- assign alt = a.alt | replace: "{asset}", a.alt_logo | replace: "{color}", a.alt_white %}
+      <li class="reveal" style="--i:3">
+        <div class="kit-preview kit-preview-dark kit-preview-stacked"><img src="{{ '/assets/images/logo-branco-preview.webp' | relative_url }}" width="500" height="638" alt="{{ alt }}" loading="lazy"></div>
+        <h3>{{ a.logo }}</h3>
+        <p class="kit-meta">{{ a.white }} &middot; PNG</p>
+        <a class="text-link" href="{{ '/assets/images/logo-branco.png' | relative_url }}" download>{{ a.download }}</a>
+      </li>
+      {%- assign alt = a.alt | replace: "{asset}", a.alt_symbol | replace: "{color}", a.alt_black %}
+      <li class="reveal" style="--i:4">
+        <div class="kit-preview kit-preview-symbol"><img src="{{ '/assets/images/favicon-preview.webp' | relative_url }}" width="480" height="508" alt="{{ alt }}" loading="lazy"></div>
+        <h3>{{ a.symbol }}</h3>
+        <p class="kit-meta">{{ a.black }} &middot; PNG</p>
+        <a class="text-link" href="{{ '/assets/images/favicon.png' | relative_url }}" download>{{ a.download }}</a>
+      </li>
+      {%- assign alt = a.alt | replace: "{asset}", a.alt_symbol | replace: "{color}", a.alt_white %}
+      <li class="reveal" style="--i:5">
+        <div class="kit-preview kit-preview-dark kit-preview-symbol"><img src="{{ '/assets/images/favicon-white-preview.webp' | relative_url }}" width="480" height="508" alt="{{ alt }}" loading="lazy"></div>
+        <h3>{{ a.symbol }}</h3>
+        <p class="kit-meta">{{ a.white }} &middot; PNG</p>
+        <a class="text-link" href="{{ '/assets/images/favicon-white.png' | relative_url }}" download>{{ a.download }}</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section-rule" id="usage" data-chrome="light" aria-labelledby="usage-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="usage-title" class="eyebrow reveal">{{ pk.usage.title }}</h2>
+      <p class="section-intro reveal">{{ pk.usage.intro }}</p>
+    </div>
+    <ol class="rules">
+      {%- for rule in pk.usage.rules %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}">{{ rule }}</li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="cta-band" id="media" data-chrome="dark" aria-labelledby="media-title">
+  <div class="wrap cta-band-row reveal">
+    <div>
+      <h2 id="media-title">{{ pk.media.title }}</h2>
+      <p>{{ pk.media.text }}</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button button-light" href="mailto:media@lesis.lat">media@lesis.lat</a>
+    </div>
+  </div>
+</section>

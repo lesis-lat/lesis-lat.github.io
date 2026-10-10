@@ -86,12 +86,32 @@
     toggle.addEventListener("click", function () {
       var open = nav.classList.toggle("is-open");
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      toggle.textContent = open ? "Close" : "Menu";
+      toggle.textContent = toggle.getAttribute(open ? "data-label-close" : "data-label-open");
     });
     nav.addEventListener("click", function (event) {
       if (event.target.tagName === "A" && nav.classList.contains("is-open")) {
         toggle.click();
       }
+    });
+  }
+
+  var lang = document.querySelector(".site-lang");
+  if (lang) {
+    var compact = window.matchMedia("(max-width: 760px)");
+    var langToggle = lang.querySelector("summary");
+    function layoutLang() {
+      lang.classList.toggle("is-inline", compact.matches);
+      lang.open = compact.matches;
+    }
+    layoutLang();
+    if (compact.addEventListener) compact.addEventListener("change", layoutLang);
+    document.addEventListener("click", function (event) {
+      if (lang.open && !compact.matches && !lang.contains(event.target)) lang.open = false;
+    });
+    lang.addEventListener("keydown", function (event) {
+      if (event.key !== "Escape" || !lang.open || compact.matches) return;
+      lang.open = false;
+      langToggle.focus();
     });
   }
 
