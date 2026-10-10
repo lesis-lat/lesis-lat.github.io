@@ -1857,6 +1857,57 @@
     font-size: 1.1rem;
   }
 
+  .site-footer-ai {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .site-footer-ai-label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: max(0.72rem, 11px);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .site-footer-ai-links {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .site-footer-ai-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.375rem;
+    height: 2.375rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 1.1rem;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .site-footer-ai-links a:hover,
+  .site-footer-ai-links a:focus-visible {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: #fff;
+  }
+
+  .site-footer-ai-links a:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+  .site-footer-ai-links .icon {
+    vertical-align: 0;
+  }
+
   .site-footer-legal {
     margin: 3rem 0 0;
     font-family: "IBM Plex Mono", monospace;
