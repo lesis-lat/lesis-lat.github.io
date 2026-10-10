@@ -3,6 +3,8 @@
   {%- assign social_twitter = t.footer.social | replace: "{network}", "Twitter" %}
   {%- assign social_github = t.footer.social | replace: "{network}", "GitHub" %}
   {%- assign social_linkedin = t.footer.social | replace: "{network}", "LinkedIn" %}
+  {%- assign ask_ai_url = page.url | replace: 'index.html', '' | prepend: site.url %}
+  {%- assign ask_ai_query = t.footer.ask_ai_prompt | replace: "{title}", page.title | replace: "{url}", ask_ai_url | url_encode | replace: "+", "%20" %}
   <footer class="site-footer" data-chrome="dark">
     <div class="wrap site-footer-inner">
       <div class="site-footer-cols">
@@ -36,6 +38,16 @@
             <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank" rel="noopener noreferrer" aria-label="{{ social_linkedin }}">{% include icon.html name="linkedin" %}</a></li>
           </ul>
         </div>
+      </div>
+      <div class="site-footer-ai" role="group" aria-labelledby="site-footer-ai-label">
+        <span id="site-footer-ai-label" class="site-footer-ai-label">{{ t.footer.ask_ai }}</span>
+        <ul class="site-footer-ai-links">
+          <li><a href="https://chatgpt.com/?q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="ChatGPT" title="ChatGPT">{% include icon.html name="chatgpt" %}</a></li>
+          <li><a href="https://claude.ai/new?q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="Claude" title="Claude">{% include icon.html name="claude" %}</a></li>
+          <li><a href="https://www.perplexity.ai/search/new?q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="Perplexity" title="Perplexity">{% include icon.html name="perplexity" %}</a></li>
+          <li><a href="https://grok.com/?q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="Grok" title="Grok">{% include icon.html name="grok" %}</a></li>
+          <li><a href="https://www.google.com/search?udm=50&amp;q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="Google" title="Google">{% include icon.html name="google" %}</a></li>
+        </ul>
       </div>
       <div class="site-footer-meta">
         <p class="site-footer-legal">{{ t.footer.legal }}</p>
