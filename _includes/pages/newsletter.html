@@ -1,0 +1,69 @@
+{%- comment -%}Newsletter index, shared by every language. Editions are published in English.{%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign n = t.newsletter -%}
+<section class="page-head" data-chrome="light" aria-labelledby="newsletter-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">{{ n.eyebrow }}</p>
+    <div class="page-head-grid">
+      <h1 id="newsletter-title" class="page-title reveal">{{ n.title }}</h1>
+      <div class="reveal" style="--i:1">
+        <p class="page-lead">{{ n.lead }}</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="https://lesis.kit.com/" target="_blank" rel="noopener noreferrer">{{ t.subscribe }}</a>
+          <a class="button button-outline-dark" href="#editions">{{ n.all_editions }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% assign newsletters = site.data.newsletters | sort: "published_at" | reverse %}
+<section class="section" id="editions" data-chrome="light" aria-labelledby="editions-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="editions-title" class="eyebrow reveal">{{ n.all_editions }}</h2>
+      <p class="section-intro reveal">{{ n.intro }}</p>
+    </div>
+    {% if newsletters.size > 0 %}
+    <ul class="insights">
+      {% for newsletter in newsletters %}
+      {% assign full_title = newsletter.title | default: n.untitled %}
+      {% assign parts = full_title | split: " - " %}
+      {% if parts.size > 1 %}
+        {% assign label = parts[0] | replace: "LESIS ", "" %}
+        {% assign heading = parts | shift | join: " - " %}
+      {% else %}
+        {% assign label = "Newsletter" %}
+        {% assign heading = full_title | replace: "LESIS ", "" %}
+      {% endif %}
+      {% assign excerpt = newsletter.excerpt | default: "" | replace: "​", "" | split: "Introduction" | last | strip | truncate: 180 %}
+      <li class="reveal" style="--i:{{ forloop.index0 | modulo: 3 }}">
+        <time datetime="{{ newsletter.published_at | escape }}">{{ label | escape }}{% if newsletter.published_at and newsletter.published_at != "" %} &middot; {% include month-year.html date=newsletter.published_at %}{% endif %}</time>
+        <h3>
+          {% if newsletter.slug and newsletter.slug != "" %}
+          <a href="{{ '/newsletter/' | append: newsletter.slug | append: '/' | relative_url | escape }}"{% if page.lang != "en" %} hreflang="en" lang="en"{% endif %}>{{ heading | escape }}</a>
+          {% else %}
+          {{ heading | escape }}
+          {% endif %}
+        </h3>
+        {% if excerpt != "" %}<p{% if page.lang != "en" %} lang="en"{% endif %}>{{ excerpt | escape }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="section-intro reveal">{{ n.empty }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="cta-band" id="subscribe" data-chrome="dark" aria-labelledby="subscribe-title">
+  <div class="wrap cta-band-row reveal">
+    <div>
+      <h2 id="subscribe-title">{{ n.next_title }}</h2>
+      <p>{{ n.next_text }}</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button button-light" href="https://lesis.kit.com/" target="_blank" rel="noopener noreferrer">{{ t.subscribe }}</a>
+    </div>
+  </div>
+</section>

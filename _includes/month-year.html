@@ -1,0 +1,7 @@
+{%- comment -%}"June 2026", "junho de 2026", "junio de 2026" for include.date.{%- endcomment -%}
+{%- assign my_t = site.data.i18n[page.lang] -%}
+{%- assign my_index = include.date | date: "%-m" | minus: 1 -%}
+{%- assign my_month = my_t.months[my_index] -%}
+{%- assign my_year = include.date | date: "%Y" -%}
+{%- assign my_label = my_t.month_year | replace: "{month}", my_month | replace: "{year}", my_year -%}
+{{- my_label -}}

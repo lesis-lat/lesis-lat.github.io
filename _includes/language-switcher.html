@@ -1,0 +1,36 @@
+{%- comment -%}
+  Links to the current page in each language. A page with no translation (a
+  newsletter edition) links to its parent page in that language, or to that
+  language's home page. include.variant="menu" renders the header's globe
+  button with the list behind it; otherwise a plain list with include.class.
+{%- endcomment -%}
+{%- capture ls_items -%}
+  {%- for code in site.languages -%}
+  {%- assign ls_lang = site.data.i18n[code] -%}
+  {%- if code == page.lang -%}
+    {%- assign ls_href = page.url -%}
+  {%- elsif alt_codes contains code -%}
+    {%- assign ls_href = ls_lang.prefix | append: base_path -%}
+  {%- else -%}
+    {%- assign ls_parent = base_path | split: "/" | pop | join: "/" | append: "/" -%}
+    {%- assign ls_parent_url = ls_lang.prefix | append: ls_parent -%}
+    {%- assign ls_parent_page = site.pages | where: "url", ls_parent_url | first -%}
+    {%- if ls_parent_page -%}
+      {%- assign ls_href = ls_parent_url -%}
+    {%- else -%}
+      {%- assign ls_href = ls_lang.prefix | append: "/" -%}
+    {%- endif -%}
+  {%- endif %}
+  <li{% if code == page.lang %} class="is-current"{% endif %}><a href="{{ ls_href | relative_url }}" hreflang="{{ ls_lang.hreflang }}" lang="{{ ls_lang.html_lang }}"{% if code == page.lang %} aria-current="page"{% endif %}>{{ ls_lang.name }}</a></li>
+  {%- endfor %}
+{%- endcapture -%}
+{%- if include.variant == "menu" -%}
+<details class="site-lang">
+  <summary aria-label="{{ t.language }} ({{ t.label }})">{% include icon.html name="globe" %}<span>{{ t.label }}</span><i aria-hidden="true"></i></summary>
+  <ul class="site-lang-list">{{ ls_items }}
+  </ul>
+</details>
+{%- else -%}
+<ul class="{{ include.class }}" aria-label="{{ t.language }}">{{ ls_items }}
+</ul>
+{%- endif -%}

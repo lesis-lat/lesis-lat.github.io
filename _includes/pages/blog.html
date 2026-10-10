@@ -1,0 +1,53 @@
+{%- comment -%}Blog page, shared by every language (blog.html, pt/blog.html, es/blog.html).{%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign b = t.blog -%}
+<section class="page-head" data-chrome="light" aria-labelledby="blog-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">{{ b.eyebrow }}</p>
+    <div class="page-head-grid">
+      <h1 id="blog-title" class="page-title reveal">{{ b.title }}</h1>
+      <div class="reveal" style="--i:1">
+        <p class="page-lead">{{ b.lead }}</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="{{ t.blog_home }}" target="_blank" rel="noopener noreferrer">{{ b.visit }}</a>
+          <a class="button button-outline-dark" href="#posts">{{ b.all_posts }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% assign posts = site.data.blog | where: "lang", page.lang | sort: "date" | reverse %}
+<section class="section" id="posts" data-chrome="light" aria-labelledby="posts-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="posts-title" class="eyebrow reveal">{{ b.all_posts }}</h2>
+      <p class="section-intro reveal">{{ b.intro }}</p>
+    </div>
+    {% if posts.size > 0 %}
+    <ul class="insights">
+      {% for post in posts %}
+      <li class="reveal" style="--i:{{ forloop.index0 | modulo: 3 }}">
+        <time datetime="{{ post.date | escape }}">{% if post.topic and post.topic != "" %}{{ post.topic | escape }} &middot; {% endif %}{% include month-year.html date=post.date %}</time>
+        <h3><a href="{{ post.url | escape }}" target="_blank" rel="noopener noreferrer">{{ post.title | escape }}</a></h3>
+        {% if post.summary and post.summary != "" %}<p>{{ post.summary | escape }}</p>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="section-intro reveal">{{ b.empty }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="cta-band" id="subscribe" data-chrome="dark" aria-labelledby="subscribe-title">
+  <div class="wrap cta-band-row reveal">
+    <div>
+      <h2 id="subscribe-title">{{ b.follow_title }}</h2>
+      <p>{{ b.follow_text }}</p>
+    </div>
+    <div class="hero-actions">
+      <a class="button button-light" href="https://lesis.kit.com/" target="_blank" rel="noopener noreferrer">{{ t.subscribe }}</a>
+    </div>
+  </div>
+</section>

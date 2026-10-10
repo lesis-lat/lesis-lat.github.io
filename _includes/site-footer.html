@@ -1,38 +1,58 @@
+  {%- capture home_url %}{% include localized-url.html path="/" %}{% endcapture %}
+  {%- assign social_instagram = t.footer.social | replace: "{network}", "Instagram" %}
+  {%- assign social_twitter = t.footer.social | replace: "{network}", "Twitter" %}
+  {%- assign social_github = t.footer.social | replace: "{network}", "GitHub" %}
+  {%- assign social_linkedin = t.footer.social | replace: "{network}", "LinkedIn" %}
+  {%- assign ask_ai_url = page.url | replace: 'index.html', '' | prepend: site.url %}
+  {%- assign ask_ai_query = t.footer.ask_ai_prompt | replace: "{title}", page.title | replace: "{url}", ask_ai_url | url_encode | replace: "+", "%20" %}
   <footer class="site-footer" data-chrome="dark">
     <div class="wrap site-footer-inner">
       <div class="site-footer-cols">
         <div>
-          <h3>Navigation</h3>
-          <a href="{{ '/' | relative_url }}#services">Services</a>
-          <a href="{{ '/' | relative_url }}#how">Methodology</a>
+          <h3>{{ t.footer.navigation }}</h3>
+          <a href="{{ home_url }}#services">{{ t.footer.services }}</a>
+          <a href="{{ home_url }}#how">{{ t.footer.methodology }}</a>
           {% comment %}<a href="{{ '/team.html' | relative_url }}">Team</a>{% endcomment %}
-          <a href="{{ '/blog.html' | relative_url }}">Blog</a>
-          <a href="{{ '/newsletter/' | relative_url }}">Newsletter</a>
-          <a href="{{ '/privacy-policy.html' | relative_url }}">Privacy policy</a>
-          <a href="{{ '/terms-of-use.html' | relative_url }}">Terms of use</a>
+          <a href="{% include localized-url.html path="/blog.html" %}">{{ t.footer.blog }}</a>
+          <a href="{% include localized-url.html path="/newsletter/" %}">{{ t.footer.newsletter }}</a>
+          <a href="{% include localized-url.html path="/privacy-policy.html" %}">{{ t.footer.privacy }}</a>
+          <a href="{% include localized-url.html path="/terms-of-use.html" %}">{{ t.footer.terms }}</a>
         </div>
         <div>
-          <h3>Company</h3>
-          <a href="{{ '/partnership/' | relative_url }}">Partnership</a>
-          <a href="{{ '/press.html' | relative_url }}">Press kit</a>
-          <a href="https://trainings.lesis.lat/">Trainings</a>
-          <a href="https://platform.lesis.lat/app/login" target="_blank" rel="noopener noreferrer">Client login</a>
+          <h3>{{ t.footer.company }}</h3>
+          <a href="{% include localized-url.html path="/partnership/" %}">{{ t.footer.partnership }}</a>
+          <a href="{% include localized-url.html path="/press.html" %}">{{ t.footer.press }}</a>
+          <a href="https://trainings.lesis.lat/">{{ t.footer.trainings }}</a>
+          <a href="https://platform.lesis.lat/app/login" target="_blank" rel="noopener noreferrer">{{ t.footer.client_login }}</a>
         </div>
         <div>
-          <h3>Contact</h3>
+          <h3>{{ t.footer.contact }}</h3>
           <a href="mailto:contact@lesis.lat">contact@lesis.lat</a>
           <a href="mailto:business@lesis.lat">business@lesis.lat</a>
           <a href="mailto:media@lesis.lat">media@lesis.lat</a>
           <a href="mailto:security@lesis.lat">security@lesis.lat</a>
           <ul class="social-icons">
-            <li><a href="https://www.instagram.com/lesis.lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Instagram">{% include icon.html name="instagram" %}</a></li>
-            <li><a href="https://x.com/lesis_lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on Twitter">{% include icon.html name="twitter" %}</a></li>
-            <li><a href="https://github.com/lesis-lat" target="_blank" rel="noopener noreferrer" aria-label="LESIS on GitHub">{% include icon.html name="github" %}</a></li>
-            <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank" rel="noopener noreferrer" aria-label="LESIS on LinkedIn">{% include icon.html name="linkedin" %}</a></li>
+            <li><a href="https://www.instagram.com/lesis.lat/" target="_blank" rel="noopener noreferrer" aria-label="{{ social_instagram }}">{% include icon.html name="instagram" %}</a></li>
+            <li><a href="https://x.com/lesis_lat" target="_blank" rel="noopener noreferrer" aria-label="{{ social_twitter }}">{% include icon.html name="twitter" %}</a></li>
+            <li><a href="https://github.com/lesis-lat" target="_blank" rel="noopener noreferrer" aria-label="{{ social_github }}">{% include icon.html name="github" %}</a></li>
+            <li><a href="https://www.linkedin.com/company/lesis-lat/" target="_blank" rel="noopener noreferrer" aria-label="{{ social_linkedin }}">{% include icon.html name="linkedin" %}</a></li>
           </ul>
         </div>
       </div>
-      <p class="site-footer-legal">Crafted worldwide &middot; Laboratory of Engineering Studies in Information Security &middot; 2023 - 2026</p>
+      <div class="site-footer-ai" role="group" aria-labelledby="site-footer-ai-label">
+        <span id="site-footer-ai-label" class="site-footer-ai-label">{{ t.footer.ask_ai }}</span>
+        <ul class="site-footer-ai-links">
+          <li><a href="https://chatgpt.com/?q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="ChatGPT" title="ChatGPT">{% include icon.html name="chatgpt" %}</a></li>
+          <li><a href="https://claude.ai/new?q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="Claude" title="Claude">{% include icon.html name="claude" %}</a></li>
+          <li><a href="https://www.perplexity.ai/search/new?q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="Perplexity" title="Perplexity">{% include icon.html name="perplexity" %}</a></li>
+          <li><a href="https://grok.com/?q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="Grok" title="Grok">{% include icon.html name="grok" %}</a></li>
+          <li><a href="https://www.google.com/search?udm=50&amp;q={{ ask_ai_query }}" target="_blank" rel="noopener noreferrer" aria-label="Google" title="Google">{% include icon.html name="google" %}</a></li>
+        </ul>
+      </div>
+      <div class="site-footer-meta">
+        <p class="site-footer-legal">{{ t.footer.legal }}</p>
+        {% include language-switcher.html class="site-footer-lang" %}
+      </div>
     </div>
     <div class="site-footer-mark" aria-hidden="true">
     <img src="{{ '/assets/images/wordmark-branco.png' | relative_url }}" alt="" width="1348" height="545" loading="lazy" decoding="async">
