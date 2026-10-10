@@ -55,7 +55,7 @@ Where the traditional model puts a single analyst on an assessment, LESIS runs e
 
 ## Track record
 
-Vulnerabilities reported to Adobe, Oracle, Ford, D-Link (CVE-2020-9376, CVE-2020-9377), UOL, OLX, TIM, Smart Fit, Rentcars, 123milhas, Apple, Activision and MISP (CVE-2020-28043). Sectors served include fintechs, retail, healthcare, telecommunications and lawtechs.
+Vulnerabilities reported to Adobe, Oracle, Ford, D-Link (CVE-2020-9376, CVE-2020-9377), UOL, OLX, TIM, Smart Fit, Rentcars, 123milhas, Apple, Activision and MISP (CVE-2020-28043). Sectors LESIS has worked with include fintech, retail, healthcare, telecommunications and lawtech.
 
 ---
 
