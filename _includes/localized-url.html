@@ -1,0 +1,9 @@
+{%- comment -%}
+  The URL of a site path in the current language: /pt/partnership/ for
+  path="/partnership/" on a Portuguese page, when that page exists, and the
+  English path otherwise (pages not translated, newsletter editions).
+{%- endcomment -%}
+{%- assign lu_prefix = site.data.i18n[page.lang].prefix -%}
+{%- assign lu_url = lu_prefix | append: include.path -%}
+{%- assign lu_page = site.pages | where: "url", lu_url | first -%}
+{%- if lu_prefix != "" and lu_page -%}{{ lu_url | relative_url }}{%- else -%}{{ include.path | relative_url }}{%- endif -%}

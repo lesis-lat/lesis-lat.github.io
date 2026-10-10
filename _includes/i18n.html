@@ -1,0 +1,15 @@
+{%- comment -%}
+  Sets up the current language for a layout: its strings (t), the page path
+  without the language prefix (base_path) and the languages the page exists
+  in (alt_codes). Layouts include it first; the includes rendered after it
+  (head, header, footer) read these variables.
+{%- endcomment -%}
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign base_path = page.url -%}
+{%- if t.prefix != "" -%}{%- assign base_path = page.url | remove_first: t.prefix -%}{%- endif -%}
+{%- assign alt_codes = "" | split: "" -%}
+{%- for code in site.languages -%}
+  {%- assign alt_url = site.data.i18n[code].prefix | append: base_path -%}
+  {%- assign alt_page = site.pages | where: "url", alt_url | first -%}
+  {%- if alt_page -%}{%- assign alt_codes = alt_codes | push: code -%}{%- endif -%}
+{%- endfor -%}

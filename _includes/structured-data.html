@@ -16,7 +16,7 @@
   ]
 }
 {%- endcapture -%}
-{%- if page.url == "/" %}
+{%- if base_path == "/" %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -24,9 +24,10 @@
     {{ organization }},
     {
       "@type": "WebSite",
-      "@id": "{{ site.url }}/#website",
+      "@id": "{{ site.url }}{{ t.prefix }}/#website",
       "name": "LESIS",
-      "url": "{{ site.url }}/",
+      "url": "{{ site.url }}{{ t.prefix }}/",
+      "inLanguage": "{{ t.html_lang }}",
       "publisher": { "@id": "{{ site.url }}/#organization" }
     }
   ]
@@ -42,6 +43,7 @@
   "url": {{ include.canonical_url | jsonify }},
   "mainEntityOfPage": {{ include.canonical_url | jsonify }},
   "datePublished": "{{ page.published_at | date_to_xmlschema }}",
+  "inLanguage": "{{ t.html_lang }}",
   "image": "{{ site.url }}/assets/images/SitePreview.png",
   "author": {{ organization }},
   "publisher": {{ organization }}

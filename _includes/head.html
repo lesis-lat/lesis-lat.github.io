@@ -11,8 +11,17 @@
 <meta name="keywords" content="{{ page.keywords | escape }}">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="{{ canonical_url | escape }}">
+{%- if alt_codes.size > 1 %}
+{%- for code in alt_codes %}
+<link rel="alternate" hreflang="{{ site.data.i18n[code].hreflang }}" href="{{ site.url }}{{ site.data.i18n[code].prefix }}{{ base_path }}">
+{%- endfor %}
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ base_path }}">
+{%- endif %}
 <meta property="og:site_name" content="{{ site.title | escape }}">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="{{ t.og_locale }}">
+{%- for code in alt_codes %}{% if code != page.lang %}
+<meta property="og:locale:alternate" content="{{ site.data.i18n[code].og_locale }}">
+{%- endif %}{% endfor %}
 <meta property="og:title" content="{{ page.title | escape }}">
 <meta property="og:description" content="{{ meta_description | escape }}">
 <meta property="og:url" content="{{ canonical_url | escape }}">
@@ -36,7 +45,7 @@
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 {% assign stylesheet_version = site.time | date: '%s' %}
 <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}?v={{ stylesheet_version }}">
-{% if page.url == "/" %}<link rel="preload" href="{{ '/assets/images/bell-labs.avif' | relative_url }}" as="image" type="image/avif" fetchpriority="high">
+{% if base_path == "/" %}<link rel="preload" href="{{ '/assets/images/bell-labs.avif' | relative_url }}" as="image" type="image/avif" fetchpriority="high">
 {% endif %}
 <link rel="preload" href="{{ '/assets/fonts/woff2/plex-sans-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ '/assets/fonts/woff2/plex-mono-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>

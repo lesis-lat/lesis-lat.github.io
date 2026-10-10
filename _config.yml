@@ -17,3 +17,22 @@ exclude:
   - SECURITY.md
   - .editorconfig
   - script
+
+# Site languages, in the order the language switcher lists them. English is the
+# default and lives at the root; each other language mirrors the same paths
+# under its prefix (/pt/, /es/). Strings live in _data/i18n/<code>.yml.
+languages: ["en", "pt", "es"]
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: "en"
+  - scope:
+      path: "pt"
+    values:
+      lang: "pt"
+  - scope:
+      path: "es"
+    values:
+      lang: "es"

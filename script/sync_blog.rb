@@ -13,7 +13,7 @@ require "uri"
 module BlogSync
   FEED_URL = URI("https://blog.lesis.lat/feed.xml")
   BLOG_HOST = "blog.lesis.lat"
-  LANGUAGE = "en"
+  LANGUAGES = %w[en pt es].freeze
   OUTPUT_PATH = File.expand_path("../_data/blog.json", __dir__)
   SUMMARY_LENGTH = 220
   ATOM = { "atom" => "http://www.w3.org/2005/Atom" }.freeze
@@ -39,7 +39,8 @@ module BlogSync
   end
 
   def normalize(entry)
-    return unless entry.attributes["xml:lang"] == LANGUAGE
+    language = entry.attributes["xml:lang"]
+    return unless LANGUAGES.include?(language)
 
     url = blog_url(REXML::XPath.first(entry, "atom:link[@rel='alternate']/@href", ATOM)&.value)
     title = clean_text(text_of(entry, "atom:title"))
@@ -48,6 +49,7 @@ module BlogSync
 
     {
       "title" => title,
+      "lang" => language,
       "url" => url,
       "date" => date,
       "topic" => clean_text(REXML::XPath.first(entry, "atom:category/@term", ATOM)&.value),
@@ -102,10 +104,12 @@ module BlogSync
 
   def run(xml: nil, data_path: OUTPUT_PATH)
     posts = sort_posts(parse(xml || fetch_feed))
-    raise Error, "Blog feed has no #{LANGUAGE} posts; no blog data was changed." if posts.empty?
+    missing = LANGUAGES.reject { |language| posts.any? { |post| post["lang"] == language } }
+    raise Error, "Blog feed has no #{missing.join(', ')} posts; no blog data was changed." unless missing.empty?
 
     atomic_write(data_path, "#{JSON.pretty_generate(posts)}\n")
-    puts "Synced #{posts.length} #{LANGUAGE} blog post#{posts.length == 1 ? '' : 's'} from #{FEED_URL}."
+    counts = LANGUAGES.map { |language| "#{posts.count { |post| post['lang'] == language }} #{language}" }
+    puts "Synced #{counts.join(', ')} blog posts from #{FEED_URL}."
   rescue SystemCallError, SocketError, Timeout::Error, OpenSSL::SSL::SSLError => e
     raise Error, "Blog sync failed (#{e.class}). Existing blog data was preserved."
   end
