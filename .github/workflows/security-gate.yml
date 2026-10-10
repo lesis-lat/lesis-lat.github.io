@@ -12,7 +12,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       MAX_CRITICAL: 0
       MAX_HIGH: 0
@@ -24,11 +24,11 @@ jobs:
       uses: actions/checkout@v7
 
     - name: Pull Docker image from GitHub Container Registry
-      run: docker pull ghcr.io/instriq/security-gate/security-gate:latest
+      run: docker pull ghcr.io/lesis-lat/security-gate/security-gate:latest
 
     - name: Verify security alerts from GHAS
       run: |
-        docker run ghcr.io/instriq/security-gate/security-gate:latest \
+        docker run ghcr.io/lesis-lat/security-gate/security-gate:latest \
         -t "$GITHUB_TOKEN" \
         -r "${{ github.repository }}" \
         -c "$MAX_CRITICAL" \
