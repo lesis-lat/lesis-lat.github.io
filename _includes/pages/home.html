@@ -112,6 +112,37 @@
   </div>
 </section>
 
+<section class="ways" id="services" data-chrome="light" aria-labelledby="ways-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <h2 id="ways-title" class="eyebrow reveal">{{ h.ways.title }}</h2>
+      <p class="section-intro reveal">{{ h.ways.intro }}</p>
+    </div>
+    <div class="ways-grid">
+      <div class="way way-projects reveal" style="--i:0">
+        <h3>{{ h.ways.projects.title }}</h3>
+        <p class="way-lead">{{ h.ways.projects.lead }}</p>
+        {%- for service in h.ways.projects.services %}
+        <details class="svc">
+          <summary><span>{{ service.title }}</span><i aria-hidden="true"></i></summary>
+          <div class="svc-body"><p class="svc-summary">{{ service.summary }}</p>{% for paragraph in service.body %}<p>{{ paragraph }}</p>{% endfor %}</div>
+        </details>
+        {%- endfor %}
+        <a class="button button-dark" href="{{ start_project_href }}">{{ t.cta.request_proposal }}</a>
+      </div>
+      <div class="way way-program reveal" style="--i:1">
+        <h3>{{ h.ways.program.title }}</h3>
+        {%- for paragraph in h.ways.program.lead %}
+        <p class="way-lead">{{ paragraph }}</p>
+        {%- endfor %}
+        <a class="button button-light" href="mailto:contact@lesis.lat?subject={{ t.cta.managed_program_subject | uri_escape }}">{{ t.cta.start_conversation }}</a>
+      </div>
+    </div>
+    {% assign partners_text = h.ways.partners | replace: "{partnership_url}", partnership_url %}
+    <p class="ways-partners reveal">{{ partners_text }}</p>
+  </div>
+</section>
+
 <section class="journey section-rule" id="how" data-chrome="light" aria-labelledby="how-title">
   <div class="wrap">
     <div class="section-heading">
@@ -208,37 +239,6 @@
         </li>
       </ol>
     </div>
-  </div>
-</section>
-
-<section class="ways" id="services" data-chrome="light" aria-labelledby="ways-title">
-  <div class="wrap">
-    <div class="section-heading">
-      <h2 id="ways-title" class="eyebrow reveal">{{ h.ways.title }}</h2>
-      <p class="section-intro reveal">{{ h.ways.intro }}</p>
-    </div>
-    <div class="ways-grid">
-      <div class="way way-projects reveal" style="--i:0">
-        <h3>{{ h.ways.projects.title }}</h3>
-        <p class="way-lead">{{ h.ways.projects.lead }}</p>
-        {%- for service in h.ways.projects.services %}
-        <details class="svc">
-          <summary><span>{{ service.title }}</span><i aria-hidden="true"></i></summary>
-          <div class="svc-body"><p class="svc-summary">{{ service.summary }}</p>{% for paragraph in service.body %}<p>{{ paragraph }}</p>{% endfor %}</div>
-        </details>
-        {%- endfor %}
-        <a class="button button-dark" href="{{ start_project_href }}">{{ t.cta.request_proposal }}</a>
-      </div>
-      <div class="way way-program reveal" style="--i:1">
-        <h3>{{ h.ways.program.title }}</h3>
-        {%- for paragraph in h.ways.program.lead %}
-        <p class="way-lead">{{ paragraph }}</p>
-        {%- endfor %}
-        <a class="button button-light" href="mailto:contact@lesis.lat?subject={{ t.cta.managed_program_subject | uri_escape }}">{{ t.cta.start_conversation }}</a>
-      </div>
-    </div>
-    {% assign partners_text = h.ways.partners | replace: "{partnership_url}", partnership_url %}
-    <p class="ways-partners reveal">{{ partners_text }}</p>
   </div>
 </section>
 
