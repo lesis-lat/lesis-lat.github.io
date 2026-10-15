@@ -20,6 +20,7 @@ module BlogSync
   ATOM = { "atom" => "http://www.w3.org/2005/Atom" }.freeze
 
   class Error < StandardError; end
+  class FeedForbiddenError < Error; end
 
   module_function
 
@@ -31,6 +32,10 @@ module BlogSync
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 10, read_timeout: 30) do |http|
       http.request(request)
     end
+    if response.code == "403"
+      raise FeedForbiddenError, "Blog feed returned HTTP 403; skipping sync and preserving existing blog data."
+    end
+
     raise Error, "Blog feed returned HTTP #{response.code}; no blog data was changed." unless response.is_a?(Net::HTTPSuccess)
 
     response.body
@@ -115,6 +120,8 @@ module BlogSync
     atomic_write(data_path, "#{JSON.pretty_generate(posts)}\n")
     counts = LANGUAGES.map { |language| "#{posts.count { |post| post['lang'] == language }} #{language}" }
     puts "Synced #{counts.join(', ')} blog posts from #{FEED_URL}."
+  rescue FeedForbiddenError => e
+    warn "Warning: #{e.message}"
   rescue SystemCallError, SocketError, Timeout::Error, OpenSSL::SSL::SSLError => e
     raise Error, "Blog sync failed (#{e.class}). Existing blog data was preserved."
   end
