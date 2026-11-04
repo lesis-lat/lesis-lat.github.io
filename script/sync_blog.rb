@@ -31,9 +31,10 @@ module BlogSync
     response = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 10, read_timeout: 30) do |http|
       http.request(request)
     end
-    raise Error, "Blog feed returned HTTP #{response.code}; no blog data was changed." unless response.is_a?(Net::HTTPSuccess)
+    return response.body if response.is_a?(Net::HTTPSuccess)
+    return nil if response.is_a?(Net::HTTPForbidden)
 
-    response.body
+    raise Error, "Blog feed returned HTTP #{response.code}; no blog data was changed."
   end
 
   def parse(xml)
@@ -108,7 +109,13 @@ module BlogSync
   end
 
   def run(xml: nil, data_path: OUTPUT_PATH)
-    posts = sort_posts(parse(xml || fetch_feed))
+    feed = xml || fetch_feed
+    if feed.nil?
+      puts "Skipped blog sync because #{FEED_URL} returned HTTP 403."
+      return
+    end
+
+    posts = sort_posts(parse(feed))
     missing = LANGUAGES.reject { |language| posts.any? { |post| post["lang"] == language } }
     raise Error, "Blog feed has no #{missing.join(', ')} posts; no blog data was changed." unless missing.empty?
 
