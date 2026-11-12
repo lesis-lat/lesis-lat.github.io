@@ -17,10 +17,9 @@ months: ["January", "February", "March", "April", "May", "June", "July", "August
 
 # --- Calls to action ------------------------------------------------------------
 cta:
-  start_project: "Start a project"
-  start_project_subject: "Start a project"
+  book_demo: "Book a demo"
+  book_demo_subject: "LESIS demo"
   talk_to_team: "Talk to the team"
-  request_proposal: "Request a proposal"
   start_conversation: "Start a conversation"
   managed_program_subject: "Managed program"
 
@@ -29,7 +28,7 @@ header:
   home: "LESIS home"
   nav: "Main"
   about: "About"
-  services: "Services"
+  services: "Platform"
   contact: "Contact"
   menu: "Menu"
   close: "Close"
@@ -37,8 +36,8 @@ header:
 # --- Footer -------------------------------------------------------------------
 footer:
   navigation: "Navigation"
-  services: "Services"
-  methodology: "Methodology"
+  services: "Platform"
+  methodology: "How it works"
   blog: "Blog"
   newsletter: "Newsletter"
   privacy: "Privacy policy"
@@ -57,238 +56,194 @@ footer:
 # --- Home page ----------------------------------------------------------------
 home:
   hero:
-    title: "Cybersecurity, tailored <br>to your mission."
+    eyebrow: "The LESIS Platform"
+    title: "One AI-native cybersecurity platform <span class='hero-title-sub'>for your entire program.</span>"
     lead: >-
-      LESIS is a partner, not a product. We are a security engineering team that works closely with each client and shapes the scope, the method and the tools around the system in question. No two engagements are alike.
-    see_how: "See how an engagement runs"
-    cards:
-      - label: "Finding &middot; VUL-0417"
-        title: "Account takeover via stored XSS"
-        meta: ["Critical severity, fixing", "Deadline in 2 days", "Linked to portal.example.com"]
-        badge: "Critical"
-      - label: "Investigation &middot; INV-0042"
-        title: "Unexplained admin actions in the audit log"
-        meta: ["High severity, under investigation", "Entry point reproduced, evidence attached", "Linked to 2 findings and the admin console"]
-        badge: "High"
-        note: "Timeline open"
-      - label: "Research &middot; TOOL-0031"
-        title: "Custom fuzzer for the partner API"
-        meta: ["4.2M cases over 19 hours", "3 crashes triaged, 1 reproducible", "Raised as VUL-0429, critical"]
-        badge: "Fuzzing"
+      Vulnerabilities, code, attack surface, knowledge and incidents.<br>AI verifies every finding before it reaches your team, and LESIS engineers stand behind every decision.
+    see_platform: "See the platform"
+    screen: "Security posture"
+    alt: "The LESIS security posture page: findings past their deadline, time to fix and the attention points that need a decision."
+    video_alt: "A walkthrough of LESIS: from the security posture page to the vulnerabilities list, a critical finding with its attack tree and evidence, the remediation analytics, and back to the posture page."
+    caption: "Screens from the product, shown with a fictional organization"
 
   clients:
-    label: "Organizations LESIS has reported vulnerabilities to"
-    title: "Who we have helped protect"
+    label: "Organizations LESIS has helped protect"
+    title: "Organizations we've helped protect"
     empty: "Fintechs, retail, healthcare, telecommunications and lawtechs"
 
   what:
-    eyebrow: "Your security R&amp;D partner"
-    display: "The future of the internet is still unwritten. We are here to make sure the next chapter is written securely."
+    eyebrow: "Why LESIS"
+    display: "Security teams don't need more alerts. They need findings someone stands behind."
     text:
       - >-
-        Our approach is grounded in a thorough attacker's perspective and in research-driven thinking. We understand what each organization needs and adapt to requirements that differ from one to the next, so that the investment in security becomes a differentiator for the business, and the investments already made are preserved. LESIS works with fintechs, retail, healthcare, telecommunications and lawtechs.
+        Most security programs run on a patchwork: a scanner here, a spreadsheet of findings there, a consultancy's PDF, a runbook in someone's drive. Nobody can say, at any given moment, what is open, who owns it and whether it is getting better.
       - >-
-        As an independent institution, with no ties to other companies or investors, we are neutral when we evaluate products and technology, and our work is judged on its quality alone. Our consultants bring more than ten years of experience and have reported vulnerabilities to D-Link (CVE-2020-9376 and CVE-2020-9377), Apple, Activision, Oracle and MISP (CVE-2020-28043).
+        LESIS replaces the patchwork with one record. Every finding carries evidence, an owner and a deadline. AI reads your code and reports only what it can prove. LESIS engineers decide what needs a person. Leadership sees posture, not noise.
 
-  execution:
-    eyebrow: "How we execute"
-    display: "Security is not linear. Neither is our execution."
+  media:
+    pause: "Pause animation"
+    play: "Play animation"
+
+  platform:
+    eyebrow: "The platform"
+    title: "Everything your security program runs on."
+    intro: >-
+      Every capability runs on the same data, so a finding in code, a threat model and an incident all point to the same systems and the same people.
+    features:
+      - label: "Posture and analytics"
+        title: "Know where you stand at any moment."
+        text: "Twelve months of findings opened, fixed and closed, time to fix by severity, and the attention points that need a decision now, each with why it matters and what to do next."
+        points: ["Security posture and remediation health", "Attention points with a next step", "What your program found is worth", "Benchmark against comparable organizations"]
+        image: "analytics"
+        height: 1100
+        screen: "Analytics"
+        alt: "The LESIS analytics page: moving across twelve months of findings opened, resolved and closed shows each month's numbers, then the average time to fix by severity."
+      - label: "Vulnerability management"
+        title: "Every finding, from first evidence to proof of fix."
+        text: "An eight-state lifecycle, a deadline set by severity, evidence and comments on the finding itself, and attack trees drawn from the analysis. Remediators move findings forward; closing one takes an analyst."
+        points: ["Deadlines per severity, set by your organization", "Attack trees on the finding", "Share one finding with an outside guest", "Automatic retests for code findings"]
+        image: "finding"
+        height: 1280
+        screen: "Vulnerabilities"
+        alt: "A critical finding in LESIS: it moves from Identified to Fixing, then the evidence, impact, recommendation, state history and the comment thread between the LESIS analyst, the security lead and the engineer."
+      - label: "Code security"
+        title: "Code review that has to prove it."
+        text: "Connect GitHub, GitLab or Bitbucket with read-only access. AI maps each application, follows the data to where it is used and reports only what a second, stronger review confirms. Secrets are judged without the value ever being read."
+        points: ["Read-only connections, kept in sync", "AI code review, verified before it reports", "Secret scanning that never sees the value", "Only what changed is read again"]
+        image: "repositories"
+        height: 900
+        screen: "Code repositories"
+        alt: "LESIS code repositories: opening payments-api shows its secret scan and the AI code review, where five possible vulnerabilities were checked by a second review and one was confirmed, then the findings linked to it."
+      - label: "Exploit chains and root causes"
+        title: "See how findings chain into real attacks."
+        text: "AI correlates open findings into attack paths and groups them by the correction they share. Analysts edit, add or dismiss each step, and every change is marked with who made it."
+        points: ["Attack paths across findings and assets", "Root causes that close several findings at once", "Steps edited or added by people, marked as such", "Present mode and YAML export"]
+        image: "exploit-chains"
+        height: 950
+        screen: "Exploit chains"
+        alt: "LESIS exploit chains: selecting an attack path from merchant admin takeover to card data highlights it in the graph, a step shows how it is reached and where it leads, and the path opens with its seven steps and evidence."
+      - label: "Attack surface"
+        title: "Every asset, repository and how they connect."
+        text: "An inventory of what you own and where the code lives, drawn as a graph with the open findings on each resource. Internet-facing systems are marked, and links you record are kept apart from links the analysis derives."
+        points: ["Assets and repositories, linked", "Open findings on each resource", "Internet-facing systems marked", "Recorded and derived relationships kept apart"]
+        image: "resource-graph"
+        height: 1000
+        screen: "Resource graph"
+        alt: "The LESIS resource graph in use: selecting the payments gateway shows its environment, criticality and connections; with vulnerabilities shown as nodes, one linked to the gateway opens as a finding with its evidence."
+      - label: "Knowledge"
+        title: "Your policies and threat models, linked to the work."
+        text: "Policies, procedures, playbooks, runbooks and threat models live next to the findings they explain. Mention a finding, asset, repository or investigation and it is linked to the document. Attack trees are drawn in the page and can be presented or exported."
+        points: ["Policies, procedures, playbooks, runbooks and threat models", "Mentions that link findings, assets and repositories", "Attack trees drawn in the document", "Search every document in plain words"]
+        image: "knowledge"
+        height: 1300
+        screen: "Knowledge"
+        alt: "A threat model in LESIS Knowledge: hovering the assets and findings it mentions shows a preview of each, with severity, status and a short description."
+      - label: "Your advisor"
+        title: "A named engineer, one click away."
+        text: "Your organization gets a LESIS advisor inside the platform: a security engineer who knows your systems, reviews what the AI proposes and joins your team when a fix needs a second pair of eyes. Email them or book a call without leaving LESIS."
+        points: ["A named LESIS engineer for your organization", "Profile, e-mail and booking link in the app", "Reviews AI proposals and fixes with your team", "Next to the assistant, on the home screen"]
+        image: "advisor"
+        height: 900
+        screen: "Home"
+        alt: "The LESIS home screen: selecting the organization's advisor opens her profile beside it, with a bio, e-mail and booking options."
+
+  ai:
+    eyebrow: "AI with guardrails"
+    title: "AI that has to prove it <br>before it tells you."
+    intro: >-
+      Every AI feature in LESIS works under the same rules. They are why a short list of findings can be trusted, and why the AI never becomes the place where a decision is made.
+    items:
+      - title: "Proof before a finding"
+        text: "A suspicion becomes a finding only when every review confirms how an attacker reaches it. High and critical ones are checked twice."
+      - title: "It never sees a secret"
+        text: "Candidate credentials are judged from the code around them. The value is masked on screen and removed before code reaches a model."
+      - title: "AI spend in the open"
+        text: "Tokens and estimated cost for every AI feature, per organization and model, so usage is never a surprise."
+      - title: "AI proposes, people decide"
+        text: "Exploit chains, root causes and suggested records stay drafts until an analyst confirms, edits or dismisses them, and every change shows who made it."
+      - title: "Proof of fix, too"
+        text: "When a code finding moves to Retest, AI checks it against the current code and posts the result on the finding."
+
+  api:
+    eyebrow: "API"
+    title: "Your program, programmable."
+    intro: >-
+      A documented REST API covers the platform, so findings flow into your tickets, your SIEM and your data warehouse, and your own AI agents work with the same records your team sees, under the same permissions.
+    points: ["A documented REST API for every module", "Keys bound to one organization and their owner's permissions", "Read and write scopes, expiry and revocation", "A guide for AI agents, downloadable as Markdown"]
+    soon_label: "Coming soon"
+    soon_tag: "Soon"
+    soon:
+      - title: "LESIS CLI"
+        text: "Query and update your program from the terminal and from your CI pipelines."
+      - title: "LESIS MCP server"
+        text: "Give your AI assistants and coding agents governed access to your findings, within the permissions of the key."
+    code_title: "List critical and high findings past their SLA"
+    code_label: "Example API request listing critical and high findings past their SLA, and its JSON response."
+
+  enterprise:
+    eyebrow: "Enterprise"
+    title: "Built for organizations <br>with more than one of everything."
+    intro: >-
+      Subsidiaries, business units, outside researchers and auditors, each with exactly the access they need, and a record of everything they did.
+    items:
+      - title: "Multi-organization"
+        text: "Run each business unit or subsidiary as its own organization, with its own deadlines, and see them all together when you need to."
+      - title: "Roles that match how you work"
+        text: "Eight roles, from administrator to analyst, remediator and guest. The server enforces every one of them."
+      - title: "A complete audit trail"
+        text: "Every write in every module, recorded with the account that made it and when."
+      - title: "Guest access"
+        text: "Share a single finding or investigation with an outside guest, read-only, without opening the rest of the program."
+      - title: "Benchmark"
+        text: "Remediation metrics set beside comparable organizations on the platform, without naming any of them."
+      - title: "The value of the program"
+        text: "What your program has found is worth, calculated from the value your organization puts on each severity."
+      - title: "Two-step sign-in"
+        text: "A password and a one-time code, with new accounts approved by an administrator before they can sign in."
+      - title: "Least privilege on your code"
+        text: "Read-only repository access, scan tokens limited to one repository, and credentials stored encrypted."
+      - title: "Deadlines you set"
+        text: "Remediation windows per severity for each organization, with every overdue finding flagged before anyone asks."
+
+  people:
+    eyebrow: "Experts on call"
+    display: "Engineers behind every finding."
     text: >-
-      In the traditional model, a single analyst conducts the whole assessment. LESIS runs each project as a collaborative effort, with several specialists working on the same system at the same time, each bringing a different background to it.
+      LESIS is built and backed by a security research lab. Your organization has a named LESIS advisor, and the same engineers review what the AI proposes, triage what outside researchers send and run deeper assessments when a system needs one.
     items:
-      - title: "Greater technical coverage"
-        text: "More components examined, and more than one way of examining each of them."
-      - title: "Fewer individual biases"
-        text: "No single assumption about the system goes unchallenged."
-      - title: "Cross-validation of findings"
-        text: "Each vulnerability is confirmed by more than one engineer before it is recorded."
-      - title: "Deeper scenarios"
-        text: "Time to follow a chain of weaknesses to what it actually exposes."
-
-  engineering:
-    eyebrow: "What we do"
-    title: "We follow security problems from design to code to execution."
-    intro: >-
-      Application security, architecture review and software supply chain security, supported by static analysis, fuzzing, reverse engineering and exploit development. We bring these disciplines together to investigate your system.
-    items:
-      - title: "Review the system's design"
-        text: "Map trust boundaries, review architecture and assess security controls to understand how design decisions affect the system's exposure to attacks."
-      - title: "Investigate how it can fail"
-        text: "Combine pentesting, code review, static analysis and reverse engineering to find weaknesses, then develop exploits to verify how they can be used and establish their impact."
-      - title: "Build tools to look deeper"
-        text: "Build fuzzing harnesses, custom analyzers and instrumentation to reach complex code paths, examine runtime behavior and investigate weaknesses that need a closer look."
-
-  # The six steps of "How an engagement runs". Each one has its text and the
-  # labels of its illustration (d); the illustration's boxes have fixed widths,
-  # so translated labels must stay about as short as these.
-  journey:
-    eyebrow: "How an engagement runs"
-    title: "Understand the system. Leave your team stronger."
-    intro: >-
-      We work with your engineers to turn a security question into a result they can use: a design, a technical decision, a research finding or a working tool. The methods and deliverables follow the problem. Throughout the engagement, we build the understanding your team needs to carry the work forward.
-    steps:
-      - label: "Context"
-        title: "Understand the context"
-        text: >-
-          Study the systems, workflows and requirements the work depends on. We examine existing research and available approaches, identify assumptions and establish which questions need further investigation.
-        toolbar: "Context &middot; system map"
-        count: "12 components"
-        subhead: "Where the work rests on assumptions"
-        links: ["4 trust boundaries", "1 assumption to test", "2 prior reports"]
-        d:
-          network: "INTERNAL NETWORK"
-          partners: "PARTNERS"
-          gateway: "GATEWAY"
-          payments: "PAYMENTS API"
-          ci: "CI PIPELINE"
-          ledger: "LEDGER"
-          database: "DATABASE"
-          trusts: ["TRUSTS THE", "CALLER HEADER"]
-      - label: "Scope"
-        title: "Define the outcome together"
-        text: >-
-          Start with what your team needs to understand, decide or build. We agree on the objectives, constraints and deliverables, whether the work concerns an architecture, a security control, a technical investigation or a new tool.
-        toolbar: "Scope &middot; engagement brief"
-        count: "v1 agreed"
-        subhead: "Many questions, one agreed outcome"
-        links: ["agreed before work starts", "owners named"]
-        d:
-          needs: "YOUR TEAM NEEDS TO"
-          understand: "UNDERSTAND"
-          decide: "DECIDE"
-          build: "BUILD"
-          outcome: "AGREED OUTCOME"
-          objectives: "OBJECTIVES"
-          constraints: "CONSTRAINTS"
-          deliverables: "DELIVERABLES"
-          brief: "THE BRIEF, WRITTEN TOGETHER"
-      - label: "Approach"
-        title: "Choose an approach we can evaluate"
-        text: >-
-          Work through the technical options and tradeoffs with your engineers. Define the methods, interfaces and success criteria so we can assess the result against the problem it needs to solve.
-        toolbar: "Approach &middot; service authentication"
-        count: "3 options"
-        subhead: "Options weighed against agreed criteria"
-        links: ["tradeoffs recorded", "criteria set together"]
-        d:
-          question: "THE QUESTION"
-          mtls: "MTLS"
-          tokens: "SIGNED TOKENS"
-          network: "NETWORK RULES"
-          criteria: "ACCEPTANCE CRITERIA"
-          later: "LATER"
-          "no": "NO"
-          chosen: "CHOSEN APPROACH"
-      - label: "Development"
-        title: "Develop the solution through evidence"
-        text: >-
-          Research, experiment and build in iterations, adjusting the approach as the evidence develops. When the scope includes custom harnesses, analyzers or instrumentation, we build them for your engineers to keep using, with instructions for running them and interpreting the results.
-        toolbar: "Development &middot; iteration log"
-        count: "week 3 of 5"
-        subhead: "Build, observe, adjust"
-        links: ["2 tools built", "1 finding", "kept by your team"]
-        d:
-          iteration: "ITERATION 3"
-          evidence: "EVIDENCE-LED"
-          build: "BUILD"
-          observe: "OBSERVE"
-          adjust: "ADJUST"
-          kept: "KEPT BY YOUR TEAM"
-          harness: "HARNESS"
-          fuzzer: "FUZZER"
-          runbook: "RUNBOOK"
-          rounds: "EACH ROUND CHANGES THE NEXT"
-      - label: "Validation"
-        title: "Test it against real requirements"
-        text: >-
-          Evaluate the result against the agreed criteria and real operating conditions. Document its behavior, limitations and tradeoffs, and resolve gaps with your engineers. Where applicable, deliver reproducible test cases and regression checks so your team can verify fixes and detect recurring weaknesses.
-        toolbar: "Validation &middot; signed service tokens"
-        count: "14 checks"
-        subhead: "Every criterion, under real conditions"
-        links: ["reproducible", "regression checks in CI", "limits documented"]
-        d:
-          unit: "UNIT"
-          stage: "STAGE"
-          replay: "REPLAY"
-          ci: "CI"
-          result: "RESULT"
-          forged: "FORGED HEADER"
-          audience: "WRONG AUDIENCE"
-          rotation: "KEY ROTATION"
-          revocation: "REVOCATION"
-          retest: "FIX RETEST"
-          pass: "PASS"
-          limit: "LIMIT"
-          fixed: "FIXED"
-          passes: "PASSES"
-          documented: "DOCUMENTED LIMIT"
-          na: "NOT APPLICABLE"
-      - label: "Handover"
-        title: "Equip your team to carry it forward"
-        text: >-
-          Deliver the agreed artifacts and explain the reasoning through technical walkthroughs. Depending on the scope, these include threat models, root-cause analysis and documented design decisions your engineers can apply as the system evolves. Suitable results can also become public research or open-source contributions, when agreed.
-        toolbar: "Handover &middot; ownership"
-        count: "6 artifacts"
-        subhead: "Who can carry the work, week by week"
-        links: ["owned by your engineers", "runs without us"]
-        d:
-          week: "WK"
-          after: "AFTER"
-          artifacts: ["SCOPE", "MAP", "ADR", "TOOLS", "TESTS", "GUIDE"]
-          your_team: "YOUR TEAM"
-          lesis: "LESIS"
+      - title: "Your advisor"
+        text: "A named LESIS engineer for your organization, reachable from inside the platform, who knows your context."
+      - title: "Decisions AI cannot make"
+        text: "Analysts confirm or dismiss what the AI proposes, and test what code review cannot reach."
+      - title: "Disclosure triage"
+        text: "Every report from an outside researcher is triaged by LESIS before it reaches your team."
+      - title: "Assessments"
+        text: "Vulnerability research, architecture review and incident investigations, with every finding landing in the same record."
 
   ways:
-    title: "Ways of working with LESIS"
+    title: "Ways to run LESIS"
     intro: >-
-      Work with us on a defined technical problem or through an ongoing engineering collaboration. Both bring research, practical guidance and follow-up on the findings.
-    projects:
-      title: "Projects"
-      lead: "A scoped engagement with a defined system, technical objective, method and timeline."
-      services:
-        - title: "Security Engineering"
-          summary: "Work alongside our engineers on architecture, security controls and the secure development lifecycle of a product as it evolves."
-          body:
-            - >-
-              We review designs, map trust boundaries and data flows, and help your team assess security decisions before and during implementation. The collaboration can cover a new system, a migration or changes to an existing product, with focused investigation and validation where needed.
-            - >-
-              We also build application security into your development cycle (SSDLC). We select, implement and tune SAST, DAST and SCA for your stack and CI/CD pipeline, define the thresholds at which a build fails, and triage what the tools report, so engineers receive findings that are real and actionable rather than a queue of alerts. Where it fits, we use tooling we maintain, such as <a href="https://github.com/lesis-lat/security-gate" target="_blank" rel="noopener noreferrer">Security Gate</a>.
-        - title: "Vulnerability Research"
-          summary: "Investigate how your system can be compromised, with reproducible evidence and guidance for remediation."
-          body:
-            - >-
-              We scope the assessment around the product's threat model and attack surface. Depending on the system, the work combines application and infrastructure testing, architecture and code review, and reverse engineering. We investigate attack chains, explain their impact and retest the fixes.
-        - title: "Custom Security Tooling"
-          summary: "Build the fuzzers, analyzers and instrumentation needed to investigate your system."
-          body:
-            - >-
-              We develop tools around specific formats, interfaces and behaviors, from test harnesses to custom analysis. The scope defines what the tool must examine and how your team will use it, whether for a focused investigation or repeated testing.
-            - >-
-              Some of that work runs on language models where they do better than a fixed rule: reviewing code changes for security-relevant behavior before they merge, triaging analyzer output against the code it points to, or testing your own model-based features for prompt injection and data exposure. Each one is measured against the cases it must catch before your team relies on it.
-        - title: "Incident Investigations"
-          summary: "We do not run the response; we join the team that does, for one part of it: establishing how the intrusion began, and proving it rather than asserting it."
-          body:
-            - >-
-              Most of what an incident demands belongs to the team already handling it: containment, eradication, communication. We do not take that over. We join for the way in. We take the evidence back to the specific weakness that made the intrusion possible and then demonstrate that weakness, reproducing the path instead of naming a probable cause, so the conclusion still holds when someone questions it. What comes out is not a narrative but a finding: an entry point with evidence, a severity, a deadline and a retest, linked on the platform to the affected systems and to the timeline of the investigation it came from. This is worth commissioning for a narrow set of incidents. When the way in is already understood, or when nothing technical was exploited at all, there is nothing for us to prove, and we say so before the work starts rather than after.
-        - title: "Due Diligence"
-          summary: "We assess what a transaction brings with it, a company, a codebase or a product you are about to adopt, on the timeline the transaction allows."
-          body:
-            - >-
-              A decision to acquire, invest in or adopt something is made against a deadline, and usually with less access than an ordinary engagement. We work within both. Before a deal closes we establish the security posture of what is being bought to the depth the available access permits, and separate what is merely untidy from what becomes expensive later. Once it closes, the same engineers examine the acquired systems with the access ownership now allows, and state what has to be resolved before the environments are joined. The same work applies when you are evaluating a product rather than a company: we assess it on your behalf, with no relationship to its vendor. In each case the result is a record on the platform, where every finding carries evidence, severity and a deadline and stays open until it is fixed, so the assessment keeps working for whoever owns the system afterwards.
-    program:
-      title: "Ongoing collaboration"
+      Run the platform with your own team, or have LESIS run your program on it with you. Either way the record is yours, and the engineers behind it are the same.
+    platform:
+      title: "Platform"
       lead:
-        - "Work with a security engineering team that builds knowledge of your systems over time."
+        - "Your team runs the program on LESIS."
         - >-
-          Together we define priorities and a cadence for design reviews, focused assessments and technical investigation. As your product changes, we revisit its assumptions and help your engineers address new risks. The platform is where that work accumulates: context from every review, assessment and investigation carries into the next, so your security operation stops rebuilding what is already known and each cycle goes deeper into the problem.
+          Every capability for your organization: posture and analytics, vulnerability management, code security, exploit chains and root causes, your attack surface and knowledge. AI does the reading, and your LESIS advisor is there when a decision needs a second opinion.
+    managed:
+      title: "Managed"
+      lead:
+        - "LESIS runs your security program on the platform, alongside your team."
+        - >-
+          Findings triaged, chased, retested and closed. Disclosure reports triaged as they arrive. Inventory, runbooks and policies kept current; awareness campaigns and training run to completion; the trust center kept ready; posture reported against comparable organizations. What you contribute is not headcount but access: your engineers act when acting matters, and what they learn goes into the record as they work.
     partners: >-
-      Consultancies can deliver our assessments and research under their own brand, or refer clients to us, through the <a href="{partnership_url}">LESIS Partnership Program</a>, without building an internal team.
+      Consultancies can deliver LESIS under their own brand, or refer clients to us, through the <a href="{partnership_url}">LESIS Partnership Program</a>, without building an internal team.
 
   record:
-    eyebrow: "Research, experience &amp; community"
-    title: "Work you can verify"
+    eyebrow: "Track record"
+    title: "Engineers you can verify"
     intro: >-
-      Public vulnerability disclosures, experience inside major technology companies and contributions to the security community through competitions and conference talks.
+      The judgment in LESIS comes from people with a public record: vulnerability disclosures, experience inside major technology companies, and contributions to the security community through competitions and conference talks.
     items:
       - title: "Published vulnerability research"
         text: >-
@@ -315,9 +270,9 @@ home:
     explore_tools: "Explore our tools &rarr;"
 
   closing:
-    title: ["Every engagement begins", "with the question", "you actually have."]
+    title: ["One platform", "for the whole program.", "See it on yours."]
     text: >-
-      Tell us what you need to find out: about a system you run, a company you are about to buy, a design nobody has built yet, or something that already happened. We come back with the scope, the method and the timeline.
+      In a demo we walk through the platform with a fictional organization, then talk about yours: what you run, who looks after it and where your findings live today.
 
 # --- Shared page pieces ---------------------------------------------------------
 subscribe: "Subscribe"

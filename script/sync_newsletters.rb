@@ -185,12 +185,23 @@ module NewsletterSync
     sanitized = Sanitize.fragment(value.to_s, SANITIZE_CONFIG)
     fragment = Nokogiri::HTML5.fragment(sanitized)
 
-    fragment.css("h1").each { |heading| heading.name = "h2" }
+    normalize_headings(fragment)
     fragment.css("a").each { |link| secure_link(link, base_url) }
     fragment.css("img").each { |image| secure_image(image, base_url) }
     remove_kit_template_chrome(fragment, newsletter_title)
 
     neutralize_liquid(fragment.to_html.strip)
+  end
+
+  def normalize_headings(fragment)
+    # The page layout owns h1. Keep Kit's section/article hierarchy beneath it;
+    # standalone introductory headings before the first section stay at h2.
+    inside_section = false
+    fragment.css("h1, h2, h3, h4, h5, h6").each do |heading|
+      level = heading.name.delete_prefix("h").to_i
+      inside_section = true if level == 1
+      heading.name = "h#{[level + 1, 6].min}" if inside_section
+    end
   end
 
   def remove_kit_template_chrome(fragment, newsletter_title)

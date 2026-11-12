@@ -115,24 +115,6 @@
     });
   }
 
-  function countUp(el) {
-    var target = parseInt(el.getAttribute("data-count"), 10) || 0;
-    if (reduceMotion) {
-      el.textContent = target;
-      return;
-    }
-    var start = null;
-    var duration = 1400;
-    function step(ts) {
-      if (start === null) start = ts;
-      var t = Math.min((ts - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = Math.round(target * eased);
-      if (t < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
   var stack = document.querySelector(".journey-stack");
   var steps = Array.prototype.slice.call(document.querySelectorAll(".steps .step"));
   var wide = window.matchMedia("(min-width: 1081px)");
@@ -238,7 +220,6 @@
   if (!("IntersectionObserver" in window)) {
     Array.prototype.forEach.call(targets, function (el) {
       el.classList.add("is-visible");
-      Array.prototype.forEach.call(el.querySelectorAll("[data-count]"), countUp);
     });
     return;
   }
@@ -247,14 +228,80 @@
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("is-visible");
-      Array.prototype.forEach.call(entry.target.querySelectorAll("[data-count]"), function (el) {
-        setTimeout(function () { countUp(el); }, 500);
-      });
       observer.unobserve(entry.target);
     });
   }, { threshold: 0.2, rootMargin: "0px 0px -5% 0px" });
 
   Array.prototype.forEach.call(targets, function (el) {
     observer.observe(el);
+  });
+})();
+
+// Product walkthroughs: play only while on screen, never for people who ask
+// for reduced motion, and always with a pause control.
+(function () {
+  var videos = document.querySelectorAll("video[data-product-video]");
+  if (!videos.length) return;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function toggleFor(video) {
+    var frame = video.closest(".product-frame");
+    return frame ? frame.querySelector("[data-video-toggle]") : null;
+  }
+
+  function show(video) {
+    var button = toggleFor(video);
+    if (!button) return;
+    var playing = video.dataset.wanted === "1";
+    button.classList.toggle("is-paused", !playing);
+    button.setAttribute("aria-label", playing ? button.dataset.pauseLabel : button.dataset.playLabel);
+  }
+
+  // Posters load only when their screen is near, or right away when it is
+  // already on screen; a hidden video (the hero on phones) never loads one.
+  function loadPoster(video) {
+    if (video.dataset.poster && !video.getAttribute("poster")) video.setAttribute("poster", video.dataset.poster);
+  }
+
+  var posterObserver = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      loadPoster(entry.target);
+      posterObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: "1200px 0px" }) : null;
+
+  function play(video) {
+    if (video.preload !== "auto") video.preload = "auto";
+    var attempt = video.play();
+    if (attempt && attempt.catch) attempt.catch(function () {});
+  }
+
+  var visible = new WeakMap();
+  var observer = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var video = entry.target;
+      visible.set(video, entry.isIntersecting);
+      if (entry.isIntersecting && video.dataset.wanted === "1") play(video);
+      else if (!entry.isIntersecting) video.pause();
+    });
+  }, { threshold: 0.35 }) : null;
+
+  Array.prototype.forEach.call(videos, function (video) {
+    video.dataset.wanted = reduceMotion ? "0" : "1";
+    show(video);
+    var button = toggleFor(video);
+    if (button) {
+      button.addEventListener("click", function () {
+        video.dataset.wanted = video.dataset.wanted === "1" ? "0" : "1";
+        if (video.dataset.wanted === "1" && (visible.get(video) || !observer)) play(video);
+        else video.pause();
+        show(video);
+      });
+    }
+    if (posterObserver) posterObserver.observe(video);
+    else loadPoster(video);
+    if (observer) observer.observe(video);
+    else if (video.dataset.wanted === "1") play(video);
   });
 })();

@@ -45,7 +45,7 @@
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
 {% assign stylesheet_version = site.time | date: '%s' %}
 <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}?v={{ stylesheet_version }}">
-{% if base_path == "/" %}<link rel="preload" href="{{ '/assets/images/bell-labs.avif' | relative_url }}" as="image" type="image/avif" fetchpriority="high">
+{% if base_path == "/" %}<link rel="preload" href="{{ '/assets/video/hero-poster.webp' | relative_url }}" as="image" type="image/webp" media="(min-width: 761px)" fetchpriority="high"><link rel="preload" href="{{ '/assets/images/product/posture-main-1120.webp' | relative_url }}" as="image" type="image/webp" media="(max-width: 760px)" fetchpriority="high">
 {% endif %}
 <link rel="preload" href="{{ '/assets/fonts/woff2/plex-sans-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{{ '/assets/fonts/woff2/plex-mono-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>

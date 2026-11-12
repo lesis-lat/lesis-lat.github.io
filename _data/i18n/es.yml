@@ -15,10 +15,9 @@ months: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto
 
 # --- Calls to action ------------------------------------------------------------
 cta:
-  start_project: "Iniciar un proyecto"
-  start_project_subject: "Iniciar un proyecto"
+  book_demo: "Agendar una demo"
+  book_demo_subject: "Demo de LESIS"
   talk_to_team: "Hablar con el equipo"
-  request_proposal: "Solicitar una propuesta"
   start_conversation: "Iniciar una conversación"
   managed_program_subject: "Programa gestionado"
 
@@ -27,7 +26,7 @@ header:
   home: "Inicio de LESIS"
   nav: "Principal"
   about: "Nosotros"
-  services: "Servicios"
+  services: "Plataforma"
   contact: "Contacto"
   menu: "Menú"
   close: "Cerrar"
@@ -35,8 +34,8 @@ header:
 # --- Footer -------------------------------------------------------------------
 footer:
   navigation: "Navegación"
-  services: "Servicios"
-  methodology: "Metodología"
+  services: "Plataforma"
+  methodology: "Cómo funciona"
   blog: "Blog"
   newsletter: "Newsletter"
   privacy: "Política de privacidad"
@@ -55,235 +54,194 @@ footer:
 # --- Home page ----------------------------------------------------------------
 home:
   hero:
-    title: "Ciberseguridad a la medida <br>de tu misión."
+    eyebrow: "La Plataforma LESIS"
+    title: "Una plataforma de ciberseguridad AI-native <span class='hero-title-sub'>para todo tu programa.</span>"
     lead: >-
-      LESIS es un aliado, no un producto. Somos un equipo de ingeniería de seguridad que trabaja de cerca con cada cliente y define el alcance, el método y las herramientas en función del sistema en cuestión. No hay dos proyectos iguales.
-    see_how: "Mira cómo trabajamos"
-    cards:
-      - label: "Hallazgo &middot; VUL-0417"
-        title: "Toma de control de cuentas vía XSS almacenado"
-        meta: ["Severidad crítica, en corrección", "Vence en 2 días", "Vinculado a portal.example.com"]
-        badge: "Crítica"
-      - label: "Investigación &middot; INV-0042"
-        title: "Acciones de administrador sin explicación en el log de auditoría"
-        meta: ["Severidad alta, en investigación", "Punto de entrada reproducido, evidencia adjunta", "Vinculada a 2 hallazgos y a la consola de administración"]
-        badge: "Alta"
-        note: "Línea de tiempo abierta"
-      - label: "I+D &middot; TOOL-0031"
-        title: "Fuzzer a la medida para la API de socios"
-        meta: ["4,2 millones de casos en 19 horas", "3 crashes analizados, 1 reproducible", "Registrado como VUL-0429, crítica"]
-        badge: "Fuzzing"
+      Vulnerabilidades, código, superficie de ataque, conocimiento e incidentes.<br>La IA verifica cada hallazgo antes de que llegue a tu equipo, y los ingenieros de LESIS responden por cada decisión.
+    see_platform: "Conoce la plataforma"
+    screen: "Security posture"
+    alt: "La página de postura de seguridad de LESIS: hallazgos con plazo vencido, tiempo de corrección y los puntos de atención que piden una decisión."
+    video_alt: "Un recorrido por LESIS: de la página de postura de seguridad a la lista de vulnerabilidades, un hallazgo crítico con su árbol de ataque y evidencia, los indicadores de corrección y de vuelta a la postura."
+    caption: "Pantallas del producto, con una organización ficticia"
 
   clients:
-    label: "Organizaciones a las que LESIS ha reportado vulnerabilidades"
-    title: "A quiénes hemos ayudado a proteger"
+    label: "Organizaciones que LESIS ya ayudó a proteger"
+    title: "A quiénes ya ayudamos a proteger"
     empty: "Fintechs, retail, salud, telecomunicaciones y lawtechs"
 
   what:
-    eyebrow: "Tu aliado de I+D en seguridad"
-    display: "El futuro de internet todavía no está escrito. Estamos aquí para asegurarnos de que el próximo capítulo se escriba de forma segura."
+    eyebrow: "Por qué LESIS"
+    display: "Los equipos de seguridad no necesitan más alertas. Necesitan hallazgos con alguien detrás."
     text:
       - >-
-        Nuestro enfoque parte de una perspectiva rigurosa de atacante y de un pensamiento guiado por la investigación. Entendemos lo que cada organización necesita y nos adaptamos a requisitos que cambian de una a otra, para que la inversión en seguridad se convierta en un diferencial para el negocio y se preserven las inversiones ya hechas. LESIS trabaja con fintechs, retail, salud, telecomunicaciones y lawtechs.
+        La mayoría de los programas de seguridad funciona como un mosaico: un escáner aquí, una planilla de hallazgos allá, el PDF de una consultora, un runbook en el drive de alguien. Nadie puede decir, en cualquier momento, qué está abierto, quién es responsable y si está mejorando.
       - >-
-        Como institución independiente, sin vínculos con otras empresas ni inversionistas, somos neutrales al evaluar productos y tecnología, y nuestro trabajo se juzga solo por su calidad. Nuestros consultores tienen más de diez años de experiencia y han reportado vulnerabilidades a D-Link (CVE-2020-9376 y CVE-2020-9377), Apple, Activision, Oracle y MISP (CVE-2020-28043).
+        LESIS reemplaza el mosaico por un solo registro. Cada hallazgo tiene evidencia, un responsable y un plazo. La IA lee tu código y reporta solo lo que puede probar. Los ingenieros de LESIS deciden lo que necesita a una persona. La dirección ve postura, no ruido.
 
-  execution:
-    eyebrow: "Cómo ejecutamos"
-    display: "La seguridad no es lineal. Nuestra ejecución tampoco."
+  media:
+    pause: "Pausar animación"
+    play: "Reproducir animación"
+
+  platform:
+    eyebrow: "La plataforma"
+    title: "Todo sobre lo que funciona tu programa de seguridad."
+    intro: >-
+      Todas las capacidades funcionan sobre los mismos datos, para que un hallazgo en el código, un threat model y un incidente apunten a los mismos sistemas y a las mismas personas.
+    features:
+      - label: "Postura y analítica"
+        title: "Sabe dónde estás, en cualquier momento."
+        text: "Doce meses de hallazgos abiertos, corregidos y cerrados, tiempo de corrección por severidad y los puntos de atención que piden una decisión ahora, cada uno con su motivo y el siguiente paso."
+        points: ["Postura de seguridad y salud de la remediación", "Puntos de atención con siguiente paso", "Cuánto vale lo que encontró tu programa", "Benchmark con organizaciones comparables"]
+        image: "analytics"
+        height: 1100
+        screen: "Analytics"
+        alt: "La página de analítica de LESIS: al recorrer doce meses de hallazgos abiertos, resueltos y cerrados aparecen las cifras de cada mes y, después, el tiempo medio de corrección por severidad."
+      - label: "Gestión de vulnerabilidades"
+        title: "Cada hallazgo, de la primera evidencia a la prueba de la corrección."
+        text: "Un ciclo de vida de ocho estados, un plazo según la severidad, evidencias y comentarios en el propio hallazgo y árboles de ataque dibujados a partir del análisis. Los remediadores hacen avanzar los hallazgos; cerrarlos le corresponde a un analista."
+        points: ["Plazos por severidad, definidos por tu organización", "Árboles de ataque en el hallazgo", "Comparte un hallazgo con un invitado externo", "Retests automáticos para hallazgos de código"]
+        image: "finding"
+        height: 1280
+        screen: "Vulnerabilities"
+        alt: "Un hallazgo crítico en LESIS: pasa de Identified a Fixing y después muestra evidencia, impacto, recomendación, historial de estados y la conversación entre la analista de LESIS, la líder de seguridad y el ingeniero."
+      - label: "Seguridad de código"
+        title: "Revisión de código que tiene que probarlo."
+        text: "Conecta GitHub, GitLab o Bitbucket con acceso de solo lectura. La IA mapea cada aplicación, sigue los datos hasta donde se usan y reporta solo lo que una segunda revisión, más fuerte, confirma. Los secretos se evalúan sin leer nunca su valor."
+        points: ["Conexiones de solo lectura, siempre sincronizadas", "Revisión de código con IA, verificada antes de reportar", "Búsqueda de secretos que nunca ve el valor", "Solo se vuelve a leer lo que cambió"]
+        image: "repositories"
+        height: 900
+        screen: "Code repositories"
+        alt: "Repositorios de código en LESIS: al abrir payments-api aparecen la búsqueda de secretos y la revisión de código con IA, donde cinco posibles vulnerabilidades pasaron por una segunda revisión y una se confirmó, y después los hallazgos vinculados."
+      - label: "Cadenas de explotación y causas raíz"
+        title: "Mira cómo los hallazgos se vuelven ataques reales."
+        text: "La IA encadena hallazgos abiertos en caminos de ataque y los agrupa por la corrección que comparten. Los analistas editan, agregan o descartan cada paso, y cada cambio queda marcado con quién lo hizo."
+        points: ["Caminos de ataque entre hallazgos y activos", "Causas raíz que cierran varios hallazgos a la vez", "Pasos editados o creados por personas, señalados", "Modo presentación y exportación en YAML"]
+        image: "exploit-chains"
+        height: 950
+        screen: "Exploit chains"
+        alt: "Cadenas de explotación en LESIS: al seleccionar un camino de ataque que va del control del admin del comercio a los datos de tarjeta, se resalta en el grafo; un paso muestra desde dónde se alcanza y adónde lleva; y el camino se abre con sus siete pasos y evidencias."
+      - label: "Superficie de ataque"
+        title: "Cada activo, cada repositorio y cómo se conectan."
+        text: "Un inventario de lo que tienes y de dónde vive el código, dibujado como un grafo con los hallazgos abiertos en cada recurso. Los sistemas expuestos a internet quedan marcados, y los vínculos que registras se separan de los que deduce el análisis."
+        points: ["Activos y repositorios, vinculados", "Hallazgos abiertos en cada recurso", "Sistemas expuestos a internet marcados", "Vínculos registrados y deducidos, separados"]
+        image: "resource-graph"
+        height: 1000
+        screen: "Resource graph"
+        alt: "El grafo de recursos de LESIS en uso: al seleccionar el gateway de pagos aparecen su entorno, criticidad y conexiones; con las vulnerabilidades como nodos, una vinculada al gateway se abre como hallazgo, con su evidencia."
+      - label: "Conocimiento"
+        title: "Tus políticas y threat models, vinculados al trabajo."
+        text: "Políticas, procedimientos, playbooks, runbooks y threat models viven junto a los hallazgos que explican. Menciona un hallazgo, activo, repositorio o investigación y queda vinculado al documento. Los árboles de ataque se dibujan en la propia página y pueden presentarse o exportarse."
+        points: ["Políticas, procedimientos, playbooks, runbooks y threat models", "Menciones que vinculan hallazgos, activos y repositorios", "Árboles de ataque dibujados en el documento", "Búsqueda en lenguaje simple en todos los documentos"]
+        image: "knowledge"
+        height: 1300
+        screen: "Knowledge"
+        alt: "Un threat model en el Knowledge de LESIS: al pasar el cursor sobre los activos y hallazgos mencionados aparece una vista previa de cada uno, con severidad, estado y una descripción breve."
+      - label: "Tu asesor"
+        title: "Un ingeniero con nombre, a un clic."
+        text: "Tu organización tiene un asesor de LESIS dentro de la plataforma: un ingeniero de seguridad que conoce tus sistemas, revisa lo que propone la IA y se suma a tu equipo cuando una corrección necesita otro par de ojos. Escríbele o agenda una llamada sin salir de LESIS."
+        points: ["Un ingeniero de LESIS con nombre, dedicado a tu organización", "Perfil, correo y enlace de agenda en la app", "Revisa propuestas de la IA y correcciones con tu equipo", "Junto al asistente, en la pantalla de inicio"]
+        image: "advisor"
+        height: 900
+        screen: "Home"
+        alt: "La pantalla de inicio de LESIS: al seleccionar a la asesora de la organización, su perfil se abre al lado, con bio, correo y opciones de agenda."
+
+  ai:
+    eyebrow: "IA con salvaguardas"
+    title: "IA que tiene que probarlo <br>antes de avisarte."
+    intro: >-
+      Toda función de IA en LESIS sigue las mismas reglas. Por ellas una lista corta de hallazgos merece confianza, y la IA nunca se vuelve el lugar donde se toma una decisión.
+    items:
+      - title: "Prueba antes del hallazgo"
+        text: "Una sospecha se vuelve hallazgo solo cuando todas las revisiones confirman cómo llega un atacante. Las de severidad alta y crítica se revisan dos veces."
+      - title: "Nunca ve un secreto"
+        text: "Las credenciales candidatas se evalúan por el código que las rodea. El valor queda enmascarado en pantalla y se elimina antes de que el código llegue a un modelo."
+      - title: "Costo de IA a la vista"
+        text: "Tokens y costo estimado de cada función de IA, por organización y modelo, para que el uso nunca sea una sorpresa."
+      - title: "La IA propone, las personas deciden"
+        text: "Cadenas de explotación, causas raíz y registros sugeridos quedan como borrador hasta que un analista los confirme, edite o descarte, y cada cambio muestra quién lo hizo."
+      - title: "Prueba de la corrección también"
+        text: "Cuando un hallazgo de código pasa a Retest, la IA lo verifica contra el código actual y publica el resultado en el propio hallazgo."
+
+  api:
+    eyebrow: "API"
+    title: "Tu programa, programable."
+    intro: >-
+      Una API REST documentada cubre la plataforma, para que los hallazgos fluyan a tus tickets, tu SIEM y tu data warehouse, y para que tus propios agentes de IA trabajen con los mismos registros que ve tu equipo, con los mismos permisos.
+    points: ["Una API REST documentada para cada módulo", "Claves vinculadas a una organización y a los permisos de su dueño", "Alcances de lectura y escritura, vencimiento y revocación", "Una guía para agentes de IA, descargable en Markdown"]
+    soon_label: "Próximamente"
+    soon_tag: "Pronto"
+    soon:
+      - title: "LESIS CLI"
+        text: "Consulta y actualiza tu programa desde la terminal y tus pipelines de CI."
+      - title: "Servidor MCP de LESIS"
+        text: "Da a tus asistentes de IA y agentes de código acceso gobernado a tus hallazgos, dentro de los permisos de la clave."
+    code_title: "Listar hallazgos críticos y altos fuera de SLA"
+    code_label: "Ejemplo de solicitud a la API que lista hallazgos críticos y altos fuera de SLA, y su respuesta en JSON."
+
+  enterprise:
+    eyebrow: "Enterprise"
+    title: "Hecha para organizaciones <br>con más de uno de todo."
+    intro: >-
+      Subsidiarias, unidades de negocio, investigadores externos y auditores, cada uno con exactamente el acceso que necesita, y un registro de todo lo que hicieron.
+    items:
+      - title: "Multiorganización"
+        text: "Opera cada unidad de negocio o subsidiaria como su propia organización, con sus plazos, y míralas todas juntas cuando lo necesites."
+      - title: "Roles que reflejan tu forma de trabajar"
+        text: "Ocho roles, de administrador a analista, remediador e invitado. El servidor garantiza cada uno de ellos."
+      - title: "Pista de auditoría completa"
+        text: "Cada escritura en cada módulo, registrada con la cuenta que la hizo y cuándo."
+      - title: "Acceso para invitados"
+        text: "Comparte un solo hallazgo o investigación con un invitado externo, solo lectura, sin abrir el resto del programa."
+      - title: "Benchmark"
+        text: "Métricas de remediación comparadas con organizaciones similares en la plataforma, sin nombrar a ninguna."
+      - title: "El valor del programa"
+        text: "Cuánto vale lo que encontró tu programa, calculado a partir del valor que tu organización asigna a cada severidad."
+      - title: "Inicio de sesión en dos pasos"
+        text: "Contraseña y código de un solo uso, con cuentas nuevas aprobadas por un administrador antes de poder entrar."
+      - title: "Mínimo privilegio en tu código"
+        text: "Acceso de solo lectura a los repositorios, tokens de escaneo limitados a un repositorio y credenciales guardadas cifradas."
+      - title: "Plazos que tú defines"
+        text: "Ventanas de corrección por severidad en cada organización, con cada hallazgo vencido señalado antes de que alguien pregunte."
+
+  people:
+    eyebrow: "Especialistas disponibles"
+    display: "Ingenieros detrás de cada hallazgo."
     text: >-
-      En el modelo tradicional, un solo analista conduce toda la evaluación. LESIS lleva cada proyecto como un esfuerzo colaborativo, con varios especialistas trabajando sobre el mismo sistema al mismo tiempo, cada uno con una formación distinta.
+      LESIS está construida y respaldada por un laboratorio de investigación en seguridad. Tu organización tiene un asesor de LESIS con nombre, y los mismos ingenieros revisan lo que la IA propone, hacen el triaje de lo que envían investigadores externos y conducen evaluaciones más profundas cuando un sistema lo necesita.
     items:
-      - title: "Mayor cobertura técnica"
-        text: "Más componentes examinados, y más de una forma de examinar cada uno."
-      - title: "Menos sesgos individuales"
-        text: "Ningún supuesto sobre el sistema queda sin cuestionar."
-      - title: "Validación cruzada de hallazgos"
-        text: "Más de un ingeniero confirma cada vulnerabilidad antes de registrarla."
-      - title: "Escenarios más profundos"
-        text: "Tiempo para seguir una cadena de debilidades hasta lo que realmente expone."
-
-  engineering:
-    eyebrow: "Qué hacemos"
-    title: "Seguimos los problemas de seguridad del diseño al código y a la ejecución."
-    intro: >-
-      Seguridad de aplicaciones, revisión de arquitectura y seguridad de la cadena de suministro de software, apoyadas en análisis estático, fuzzing, ingeniería inversa y desarrollo de exploits. Reunimos estas disciplinas para investigar tu sistema.
-    items:
-      - title: "Revisar el diseño del sistema"
-        text: "Mapear los límites de confianza, revisar la arquitectura y evaluar los controles de seguridad para entender cómo las decisiones de diseño afectan la exposición del sistema a ataques."
-      - title: "Investigar cómo puede fallar"
-        text: "Combinar pentesting, revisión de código, análisis estático e ingeniería inversa para encontrar debilidades, y luego desarrollar exploits para verificar cómo pueden usarse y establecer su impacto."
-      - title: "Construir herramientas para ir más a fondo"
-        text: "Construir harnesses de fuzzing, analizadores a la medida e instrumentación para alcanzar rutas de código complejas, examinar el comportamiento en tiempo de ejecución e investigar debilidades que requieren una mirada más cercana."
-
-  journey:
-    eyebrow: "Cómo se desarrolla un proyecto"
-    title: "Entender el sistema. Dejar a tu equipo más fuerte."
-    intro: >-
-      Trabajamos con tus ingenieros para convertir una pregunta de seguridad en un resultado que puedan usar: un diseño, una decisión técnica, un hallazgo de investigación o una herramienta funcionando. Los métodos y los entregables siguen al problema. A lo largo del proyecto, construimos el entendimiento que tu equipo necesita para llevar el trabajo adelante.
-    steps:
-      - label: "Contexto"
-        title: "Entender el contexto"
-        text: >-
-          Estudiar los sistemas, los flujos de trabajo y los requisitos de los que depende el trabajo. Examinamos la investigación existente y los enfoques disponibles, identificamos supuestos y establecemos qué preguntas requieren más investigación.
-        toolbar: "Contexto &middot; mapa del sistema"
-        count: "12 componentes"
-        subhead: "Dónde el trabajo se apoya en supuestos"
-        links: ["4 límites de confianza", "1 supuesto por probar", "2 informes previos"]
-        d:
-          network: "RED INTERNA"
-          partners: "SOCIOS"
-          gateway: "GATEWAY"
-          payments: "PAYMENTS API"
-          ci: "CI PIPELINE"
-          ledger: "LEDGER"
-          database: "DATABASE"
-          trusts: ["CONFÍA EN EL HEADER", "DEL LLAMADOR"]
-      - label: "Alcance"
-        title: "Definir el resultado en conjunto"
-        text: >-
-          Empezar por lo que tu equipo necesita entender, decidir o construir. Acordamos los objetivos, los límites y los entregables, ya sea que el trabajo trate sobre una arquitectura, un control de seguridad, una investigación técnica o una nueva herramienta.
-        toolbar: "Alcance &middot; brief del proyecto"
-        count: "v1 acordada"
-        subhead: "Muchas preguntas, un resultado acordado"
-        links: ["acordado antes de empezar", "responsables definidos"]
-        d:
-          needs: "TU EQUIPO NECESITA"
-          understand: "ENTENDER"
-          decide: "DECIDIR"
-          build: "CONSTRUIR"
-          outcome: "RESULTADO ACORDADO"
-          objectives: "OBJETIVOS"
-          constraints: "LÍMITES"
-          deliverables: "ENTREGABLES"
-          brief: "EL ALCANCE, ESCRITO EN CONJUNTO"
-      - label: "Enfoque"
-        title: "Elegir un enfoque que podamos evaluar"
-        text: >-
-          Analizar con tus ingenieros las opciones técnicas y sus tradeoffs. Definir los métodos, las interfaces y los criterios de éxito para poder evaluar el resultado frente al problema que necesita resolver.
-        toolbar: "Enfoque &middot; autenticación entre servicios"
-        count: "3 opciones"
-        subhead: "Opciones frente a criterios acordados"
-        links: ["tradeoffs registrados", "criterios definidos en conjunto"]
-        d:
-          question: "LA PREGUNTA"
-          mtls: "MTLS"
-          tokens: "TOKEN FIRMADO"
-          network: "REGLAS DE RED"
-          criteria: "CRITERIOS DE ACEPTACIÓN"
-          later: "DESPUÉS"
-          "no": "NO"
-          chosen: "ENFOQUE ELEGIDO"
-      - label: "Desarrollo"
-        title: "Desarrollar la solución a partir de la evidencia"
-        text: >-
-          Investigar, experimentar y construir en iteraciones, ajustando el enfoque a medida que surge la evidencia. Cuando el alcance incluye harnesses, analizadores o instrumentación a la medida, los construimos para que tus ingenieros sigan usándolos, con instrucciones para ejecutarlos e interpretar los resultados.
-        toolbar: "Desarrollo &middot; registro de iteraciones"
-        count: "semana 3 de 5"
-        subhead: "Crear, observar, ajustar"
-        links: ["2 herramientas creadas", "1 hallazgo", "en manos de tu equipo"]
-        d:
-          iteration: "ITERACIÓN 3"
-          evidence: "CON EVIDENCIA"
-          build: "CREAR"
-          observe: "OBSERVAR"
-          adjust: "AJUSTAR"
-          kept: "QUEDA CON TU EQUIPO"
-          harness: "HARNESS"
-          fuzzer: "FUZZER"
-          runbook: "RUNBOOK"
-          rounds: "CADA RONDA CAMBIA LA SIGUIENTE"
-      - label: "Validación"
-        title: "Probarlo frente a requisitos reales"
-        text: >-
-          Evaluar el resultado frente a los criterios acordados y las condiciones reales de operación. Documentar su comportamiento, sus limitaciones y sus tradeoffs, y resolver las brechas con tus ingenieros. Cuando corresponda, entregar casos de prueba reproducibles y pruebas de regresión para que tu equipo pueda verificar correcciones y detectar debilidades recurrentes.
-        toolbar: "Validación &middot; tokens firmados"
-        count: "14 verificaciones"
-        subhead: "Cada criterio, en condiciones reales"
-        links: ["reproducible", "pruebas de regresión en CI", "límites documentados"]
-        d:
-          unit: "UNIT"
-          stage: "STAGE"
-          replay: "REPLAY"
-          ci: "CI"
-          result: "RESULTADO"
-          forged: "HEADER FALSO"
-          audience: "OTRA AUDIENCIA"
-          rotation: "CAMBIO DE CLAVES"
-          revocation: "REVOCACIÓN"
-          retest: "RETEST DEL PARCHE"
-          pass: "APROBADO"
-          limit: "LÍMITE"
-          fixed: "CORREGIDO"
-          passes: "APROBADO"
-          documented: "LÍMITE DOCUMENTADO"
-          na: "NO APLICA"
-      - label: "Entrega"
-        title: "Preparar a tu equipo para llevarlo adelante"
-        text: >-
-          Entregar los artefactos acordados y explicar el razonamiento en sesiones técnicas. Según el alcance, incluyen modelos de amenazas, análisis de causa raíz y decisiones de diseño documentadas que tus ingenieros pueden aplicar a medida que el sistema evoluciona. Los resultados que lo permitan también pueden convertirse en investigación pública o contribuciones de código abierto, cuando se acuerde.
-        toolbar: "Entrega &middot; autonomía"
-        count: "6 artefactos"
-        subhead: "Quién lleva el trabajo, semana a semana"
-        links: ["en manos de tus ingenieros", "funciona sin nosotros"]
-        d:
-          week: "SEM"
-          after: "DESPUÉS"
-          artifacts: ["PLAN", "MAPA", "ADR", "REPO", "TESTS", "GUÍA"]
-          your_team: "TU EQUIPO"
-          lesis: "LESIS"
+      - title: "Tu asesor"
+        text: "Un ingeniero de LESIS con nombre, dedicado a tu organización, accesible desde la plataforma y que conoce tu contexto."
+      - title: "Decisiones que la IA no toma"
+        text: "Los analistas confirman o descartan lo que la IA propone, y prueban lo que la revisión de código no alcanza."
+      - title: "Triaje de la divulgación"
+        text: "Cada reporte de un investigador externo pasa por el triaje de LESIS antes de llegar a tu equipo."
+      - title: "Evaluaciones"
+        text: "Investigación de vulnerabilidades, revisión de arquitectura e investigación de incidentes, con cada hallazgo entrando en el mismo registro."
 
   ways:
-    title: "Formas de trabajar con LESIS"
+    title: "Formas de usar LESIS"
     intro: >-
-      Trabaja con nosotros en un problema técnico definido o mediante una colaboración continua de ingeniería. Ambas incluyen investigación, orientación práctica y seguimiento de los hallazgos.
-    projects:
-      title: "Proyectos"
-      lead: "Un trabajo con alcance cerrado: un sistema, un objetivo técnico, un método y un cronograma definidos."
-      services:
-        - title: "Ingeniería de Seguridad"
-          summary: "Trabajamos junto a tus ingenieros en la arquitectura, los controles de seguridad y el ciclo de desarrollo seguro de un producto a medida que evoluciona."
-          body:
-            - >-
-              Revisamos diseños, mapeamos límites de confianza y flujos de datos, y ayudamos a tu equipo a evaluar decisiones de seguridad antes y durante la implementación. La colaboración puede abarcar un sistema nuevo, una migración o cambios en un producto existente, con investigación y validación focalizadas cuando hace falta.
-            - >-
-              También incorporamos la seguridad de aplicaciones a tu ciclo de desarrollo (SSDLC). Seleccionamos, implementamos y ajustamos SAST, DAST y SCA para tu stack y tu pipeline de CI/CD, definimos los umbrales a partir de los cuales un build falla y hacemos el triage de lo que reportan las herramientas, para que los ingenieros reciban hallazgos reales y accionables en lugar de una cola de alertas. Cuando encaja, usamos herramientas que mantenemos, como <a href="https://github.com/lesis-lat/security-gate" target="_blank" rel="noopener noreferrer">Security Gate</a>.
-        - title: "Investigación de Vulnerabilidades"
-          summary: "Investigamos cómo puede comprometerse tu sistema, con evidencia reproducible y orientación para la remediación."
-          body:
-            - >-
-              Definimos el alcance de la evaluación a partir del modelo de amenazas y la superficie de ataque del producto. Según el sistema, el trabajo combina pruebas de aplicaciones e infraestructura, revisión de arquitectura y de código, e ingeniería inversa. Investigamos cadenas de ataque, explicamos su impacto y volvemos a probar las correcciones.
-        - title: "Herramientas de Seguridad a la Medida"
-          summary: "Construimos los fuzzers, analizadores e instrumentación necesarios para investigar tu sistema."
-          body:
-            - >-
-              Desarrollamos herramientas en torno a formatos, interfaces y comportamientos específicos, desde harnesses de prueba hasta análisis a la medida. El alcance define qué debe examinar la herramienta y cómo la usará tu equipo, ya sea para una investigación focalizada o para pruebas recurrentes.
-            - >-
-              Parte de ese trabajo funciona sobre modelos de lenguaje, donde rinden mejor que una regla fija: revisar cambios de código en busca de comportamiento relevante para la seguridad antes del merge, hacer el triage de la salida de los analizadores frente al código al que apunta, o probar las funcionalidades basadas en modelos de tu propio producto contra prompt injection y exposición de datos. Cada una se mide frente a los casos que debe detectar antes de que tu equipo dependa de ella.
-        - title: "Investigación de Incidentes"
-          summary: "No conducimos la respuesta; nos sumamos al equipo que la conduce, para una parte de ella: establecer cómo comenzó la intrusión, y demostrarlo en lugar de afirmarlo."
-          body:
-            - >-
-              La mayor parte de lo que exige un incidente le corresponde al equipo que ya lo está atendiendo: contención, erradicación, comunicación. No tomamos eso a nuestro cargo. Nuestro papel es la puerta de entrada. Llevamos la evidencia hasta la debilidad específica que hizo posible la intrusión y luego demostramos esa debilidad, reproduciendo el camino en lugar de señalar una causa probable, para que la conclusión se sostenga cuando alguien la cuestione. Lo que resulta no es un relato sino un hallazgo: un punto de entrada con evidencia, una severidad, un plazo y un retest, vinculado en la plataforma a los sistemas afectados y a la línea de tiempo de la investigación de la que surgió. Vale la pena contratarlo para un conjunto acotado de incidentes. Cuando la puerta de entrada ya se conoce, o cuando no se explotó nada técnico, no hay nada que debamos demostrar, y lo decimos antes de que empiece el trabajo, no después.
-        - title: "Due Diligence"
-          summary: "Evaluamos lo que trae consigo una transacción, ya sea una empresa, una base de código o un producto que estás por adoptar, en los plazos que la transacción permite."
-          body:
-            - >-
-              La decisión de adquirir, invertir o adoptar algo se toma contra un plazo, y por lo general con menos acceso que en un proyecto común. Trabajamos dentro de ambas condiciones. Antes del cierre, establecemos la postura de seguridad de lo que se está comprando hasta donde lo permite el acceso disponible, y separamos lo que simplemente está desordenado de lo que saldrá caro después. Después del cierre, los mismos ingenieros examinan los sistemas adquiridos con el acceso que ahora permite la propiedad, y señalan lo que hay que resolver antes de integrar los entornos. El mismo trabajo aplica cuando estás evaluando un producto en lugar de una empresa: lo evaluamos en tu nombre, sin ninguna relación con su proveedor. En todos los casos, el resultado es un registro en la plataforma, donde cada hallazgo tiene evidencia, severidad y un plazo, y permanece abierto hasta que se corrige, para que la evaluación siga sirviendo a quien sea responsable del sistema después.
-    program:
-      title: "Colaboración continua"
+      Usa la plataforma con tu propio equipo, o deja que LESIS opere tu programa en ella, junto contigo. En ambos casos el registro es tuyo, y los ingenieros detrás de él son los mismos.
+    platform:
+      title: "Plataforma"
       lead:
-        - "Trabaja con un equipo de ingeniería de seguridad que acumula conocimiento de tus sistemas a lo largo del tiempo."
+        - "Tu equipo opera el programa en LESIS."
         - >-
-          Juntos definimos prioridades y una cadencia de revisiones de diseño, evaluaciones focalizadas e investigación técnica. A medida que tu producto cambia, revisamos sus supuestos y ayudamos a tus ingenieros a enfrentar nuevos riesgos. La plataforma es donde ese trabajo se acumula: el contexto de cada revisión, evaluación e investigación pasa a la siguiente, para que tu operación de seguridad deje de reconstruir lo que ya se sabe y cada ciclo profundice más en el problema.
+          Todas las capacidades para tu organización: postura y analítica, gestión de vulnerabilidades, seguridad de código, cadenas de explotación y causas raíz, superficie de ataque y conocimiento. La IA hace la lectura, y tu asesor de LESIS está cerca cuando una decisión necesita una segunda opinión.
+    managed:
+      title: "Gestionado"
+      lead:
+        - "LESIS opera tu programa de seguridad en la plataforma, junto a tu equipo."
+        - >-
+          Hallazgos triados, perseguidos, vueltos a probar y cerrados. Reportes de divulgación triados a medida que llegan. Inventario, runbooks y políticas al día; campañas de concientización y capacitaciones llevadas hasta el final; el trust center siempre listo; la postura reportada frente a organizaciones comparables. Lo que aportas no es headcount sino acceso: tus ingenieros actúan cuando actuar importa, y lo que aprenden entra en el registro mientras trabajan.
     partners: >-
-      Las consultoras pueden entregar nuestras evaluaciones e investigaciones con su propia marca, o referirnos clientes, a través del <a href="{partnership_url}">Programa de Alianzas de LESIS</a>, sin necesidad de armar un equipo interno.
+      Las consultoras pueden entregar LESIS con su propia marca, o referirnos clientes, a través del <a href="{partnership_url}">Programa de Partners de LESIS</a>, sin armar un equipo interno.
 
   record:
-    eyebrow: "Investigación, experiencia &amp; comunidad"
-    title: "Trabajo que puedes verificar"
+    eyebrow: "Trayectoria"
+    title: "Ingenieros que puedes verificar"
     intro: >-
-      Divulgaciones públicas de vulnerabilidades, experiencia dentro de grandes empresas de tecnología y contribuciones a la comunidad de seguridad a través de competencias y charlas en conferencias.
+      El criterio en LESIS viene de personas con un historial público: divulgaciones de vulnerabilidades, experiencia dentro de grandes empresas de tecnología y contribuciones a la comunidad de seguridad a través de competencias y charlas en conferencias.
     items:
       - title: "Vulnerabilidades publicadas"
         text: >-
@@ -310,9 +268,9 @@ home:
     explore_tools: "Explora nuestras herramientas &rarr;"
 
   closing:
-    title: ["Todo proyecto empieza", "con la pregunta", "que realmente tienes."]
+    title: ["Una plataforma", "para todo el programa.", "Mírala en el tuyo."]
     text: >-
-      Cuéntanos qué necesitas averiguar: sobre un sistema que operas, una empresa que estás por comprar, un diseño que nadie ha construido todavía, o algo que ya ocurrió. Te respondemos con el alcance, el método y el cronograma.
+      En la demo te mostramos la plataforma con una organización ficticia y luego hablamos de la tuya: qué operas, quién lo cuida y dónde están hoy tus hallazgos.
 
 # --- Shared page pieces ---------------------------------------------------------
 subscribe: "Suscribirse"
