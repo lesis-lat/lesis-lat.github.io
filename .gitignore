@@ -4,3 +4,4 @@ vendor/
 *.log
 *.tmp
 /newsletter-preview.png
+.claude/

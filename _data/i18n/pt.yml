@@ -308,7 +308,7 @@ home:
     explore_tools: "Conheça nossas ferramentas &rarr;"
 
   closing:
-    title: ["Todo projeto começa", "pela pergunta", "que você realmente tem."]
+    title: ["Pergunta difícil?", "Diga o que você precisa saber.", "A gente descobre como."]
     text: >-
       Conte o que você precisa descobrir: sobre um sistema que você opera, uma empresa que está prestes a comprar, um design que ninguém construiu ainda, ou algo que já aconteceu. Voltamos com o escopo, o método e o cronograma.
 

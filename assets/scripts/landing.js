@@ -115,24 +115,6 @@
     });
   }
 
-  function countUp(el) {
-    var target = parseInt(el.getAttribute("data-count"), 10) || 0;
-    if (reduceMotion) {
-      el.textContent = target;
-      return;
-    }
-    var start = null;
-    var duration = 1400;
-    function step(ts) {
-      if (start === null) start = ts;
-      var t = Math.min((ts - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - t, 3);
-      el.textContent = Math.round(target * eased);
-      if (t < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-
   var stack = document.querySelector(".journey-stack");
   var steps = Array.prototype.slice.call(document.querySelectorAll(".steps .step"));
   var wide = window.matchMedia("(min-width: 1081px)");
@@ -238,7 +220,6 @@
   if (!("IntersectionObserver" in window)) {
     Array.prototype.forEach.call(targets, function (el) {
       el.classList.add("is-visible");
-      Array.prototype.forEach.call(el.querySelectorAll("[data-count]"), countUp);
     });
     return;
   }
@@ -247,9 +228,6 @@
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("is-visible");
-      Array.prototype.forEach.call(entry.target.querySelectorAll("[data-count]"), function (el) {
-        setTimeout(function () { countUp(el); }, 500);
-      });
       observer.unobserve(entry.target);
     });
   }, { threshold: 0.2, rootMargin: "0px 0px -5% 0px" });
