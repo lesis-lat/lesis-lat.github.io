@@ -13,6 +13,7 @@ require "uri"
 module BlogSync
   FEED_URL = URI("https://blog.lesis.lat/feed.xml")
   BLOG_HOST = "blog.lesis.lat"
+  USER_AGENT = "lesis-lat-blog-sync/1.0 (+https://lesis.lat)".freeze
   LANGUAGES = %w[en pt es].freeze
   OUTPUT_PATH = File.expand_path("../_data/blog.json", __dir__)
   SUMMARY_LENGTH = 220
@@ -23,12 +24,17 @@ module BlogSync
   module_function
 
   def fetch_feed(uri = FEED_URL)
-    response = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 10, read_timeout: 30) do |http|
-      http.request(Net::HTTP::Get.new(uri))
-    end
-    raise Error, "Blog feed returned HTTP #{response.code}; no blog data was changed." unless response.is_a?(Net::HTTPSuccess)
+    request = Net::HTTP::Get.new(uri)
+    request["User-Agent"] = USER_AGENT
+    request["Accept"] = "application/atom+xml,application/xml;q=0.9,*/*;q=0.8"
 
-    response.body
+    response = Net::HTTP.start(uri.host, uri.port, use_ssl: true, open_timeout: 10, read_timeout: 30) do |http|
+      http.request(request)
+    end
+    return response.body if response.is_a?(Net::HTTPSuccess)
+    return nil if response.is_a?(Net::HTTPForbidden)
+
+    raise Error, "Blog feed returned HTTP #{response.code}; no blog data was changed."
   end
 
   def parse(xml)
@@ -103,7 +109,13 @@ module BlogSync
   end
 
   def run(xml: nil, data_path: OUTPUT_PATH)
-    posts = sort_posts(parse(xml || fetch_feed))
+    feed = xml || fetch_feed
+    if feed.nil?
+      puts "Skipped blog sync because #{FEED_URL} returned HTTP 403."
+      return
+    end
+
+    posts = sort_posts(parse(feed))
     missing = LANGUAGES.reject { |language| posts.any? { |post| post["lang"] == language } }
     raise Error, "Blog feed has no #{missing.join(', ')} posts; no blog data was changed." unless missing.empty?
 
