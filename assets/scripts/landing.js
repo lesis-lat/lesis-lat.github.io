@@ -236,3 +236,72 @@
     observer.observe(el);
   });
 })();
+
+// Product walkthroughs: play only while on screen, never for people who ask
+// for reduced motion, and always with a pause control.
+(function () {
+  var videos = document.querySelectorAll("video[data-product-video]");
+  if (!videos.length) return;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function toggleFor(video) {
+    var frame = video.closest(".product-frame");
+    return frame ? frame.querySelector("[data-video-toggle]") : null;
+  }
+
+  function show(video) {
+    var button = toggleFor(video);
+    if (!button) return;
+    var playing = video.dataset.wanted === "1";
+    button.classList.toggle("is-paused", !playing);
+    button.setAttribute("aria-label", playing ? button.dataset.pauseLabel : button.dataset.playLabel);
+  }
+
+  // Posters load only when their screen is near, or right away when it is
+  // already on screen; a hidden video (the hero on phones) never loads one.
+  function loadPoster(video) {
+    if (video.dataset.poster && !video.getAttribute("poster")) video.setAttribute("poster", video.dataset.poster);
+  }
+
+  var posterObserver = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      loadPoster(entry.target);
+      posterObserver.unobserve(entry.target);
+    });
+  }, { rootMargin: "1200px 0px" }) : null;
+
+  function play(video) {
+    if (video.preload !== "auto") video.preload = "auto";
+    var attempt = video.play();
+    if (attempt && attempt.catch) attempt.catch(function () {});
+  }
+
+  var visible = new WeakMap();
+  var observer = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      var video = entry.target;
+      visible.set(video, entry.isIntersecting);
+      if (entry.isIntersecting && video.dataset.wanted === "1") play(video);
+      else if (!entry.isIntersecting) video.pause();
+    });
+  }, { threshold: 0.35 }) : null;
+
+  Array.prototype.forEach.call(videos, function (video) {
+    video.dataset.wanted = reduceMotion ? "0" : "1";
+    show(video);
+    var button = toggleFor(video);
+    if (button) {
+      button.addEventListener("click", function () {
+        video.dataset.wanted = video.dataset.wanted === "1" ? "0" : "1";
+        if (video.dataset.wanted === "1" && (visible.get(video) || !observer)) play(video);
+        else video.pause();
+        show(video);
+      });
+    }
+    if (posterObserver) posterObserver.observe(video);
+    else loadPoster(video);
+    if (observer) observer.observe(video);
+    else if (video.dataset.wanted === "1") play(video);
+  });
+})();

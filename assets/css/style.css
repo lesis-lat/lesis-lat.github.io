@@ -1530,7 +1530,7 @@
   .ways-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    align-items: start;
+    align-items: stretch;
     gap: 2rem;
   }
 
@@ -2661,4 +2661,389 @@
     .levels-grid { gap: 1.5rem; }
     .kit { gap: 2rem; }
     .cta-band .hero-actions .button { width: 100%; justify-content: center; }
+  }
+
+  /* Product hero: the headline over a real screen of the platform. */
+  .product-hero {
+    padding: calc(var(--header-h) + 4.5rem) 0 0;
+    background: var(--paper-soft);
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .product-hero .eyebrow {
+    margin-bottom: 1.75rem;
+  }
+
+  .product-hero .hero-title {
+    max-width: none;
+    margin: 0 auto 1.5rem;
+    font-size: clamp(2.4rem, 4.3vw, 4.2rem);
+  }
+
+  /* The second line of the headline reads as its subtitle. */
+  .product-hero .hero-title-sub {
+    display: block;
+    margin-top: 0.35em;
+    font-size: 0.56em;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: #333;
+  }
+
+  .product-hero .hero-lead {
+    max-width: 60rem;
+    margin: 0 auto 2.5rem;
+    font-size: 1.15rem;
+  }
+
+  .product-hero .hero-actions {
+    justify-content: center;
+  }
+
+  .product-hero-shot {
+    position: relative;
+    max-width: 76rem;
+    margin: 4.5rem auto 0;
+    padding: 0 3rem;
+  }
+
+  .product-caption {
+    margin: 1rem 0 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: max(0.7rem, 11px);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .product-hero .product-caption {
+    padding-bottom: 2.5rem;
+  }
+
+  /* A screen of the product, framed like the app's own window. */
+  .product-frame {
+    margin: 0;
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+    text-align: left;
+  }
+
+  .product-frame-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: max(0.7rem, 11px);
+    color: var(--muted);
+  }
+
+  .product-frame-bar i {
+    width: 0.55rem;
+    height: 0.55rem;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+  }
+
+  .product-frame-bar span {
+    margin-left: 0.6rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .product-frame img,
+  .product-frame video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Recorded walkthroughs: a quiet pause control in the window bar. */
+  .product-frame {
+    position: relative;
+  }
+
+  .video-toggle {
+    position: absolute;
+    top: 0.3rem;
+    right: 0.45rem;
+    display: grid;
+    place-items: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    padding: 0;
+    color: var(--muted);
+    background: transparent;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .video-toggle:hover {
+    color: #000;
+    background: var(--paper-soft);
+  }
+
+  .video-toggle:focus-visible {
+    outline: 2px solid #000;
+    outline-offset: 1px;
+  }
+
+  /* Two bars while playing, a triangle while paused. */
+  .video-toggle::before {
+    content: "";
+    width: 0.62rem;
+    height: 0.7rem;
+    border-left: 0.2rem solid currentColor;
+    border-right: 0.2rem solid currentColor;
+    box-sizing: border-box;
+  }
+
+  .video-toggle.is-paused::before {
+    width: 0;
+    height: 0;
+    margin-left: 0.15rem;
+    border-top: 0.36rem solid transparent;
+    border-bottom: 0.36rem solid transparent;
+    border-left: 0.6rem solid currentColor;
+    border-right: 0;
+  }
+
+  /* Product tour: one row per capability, text beside its screen. */
+  .tour-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 4.5rem;
+    align-items: center;
+    padding: 5rem 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .feature:first-child {
+    padding-top: 1rem;
+    border-top: 0;
+  }
+
+  .feature:nth-child(even) {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+
+  .feature:nth-child(even) .feature-text {
+    order: 2;
+  }
+
+  .feature-label {
+    margin: 0 0 1.25rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: max(0.72rem, 11px);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .feature h3 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.6rem, 2.4vw, 2.15rem);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+
+  .feature-text > p:not(.feature-label) {
+    margin: 0 0 1.75rem;
+    font-weight: 300;
+    color: #333;
+  }
+
+  .feature-points {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .feature-points li {
+    padding: 0.65rem 0;
+    border-top: 1px solid #000;
+    font-size: 0.95rem;
+  }
+
+  .feature-points li:last-child {
+    border-bottom: 1px solid #000;
+  }
+
+  .feature .product-frame {
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+  }
+
+  .feature-shot {
+    max-height: 47rem;
+    overflow: hidden;
+  }
+
+  @media (max-width: 1080px) {
+    .feature,
+    .feature:nth-child(even) { grid-template-columns: 1fr; gap: 2.5rem; padding: 3.5rem 0; }
+    .feature:nth-child(even) .feature-text { order: 0; }
+  }
+
+  @media (max-width: 760px) {
+    .product-hero { padding-top: calc(var(--header-h) + 2.5rem); }
+    .product-hero .hero-actions .button { width: 100%; justify-content: center; }
+    .product-hero-shot { margin-top: 3rem; padding: 0 1rem; }
+    .feature-shot { max-height: 22rem; }
+  }
+
+  /* Short labels are not running text: centre or left-align them instead of
+     justifying, and never hyphenate them. */
+  body.landing .strip-label,
+  body.landing .product-hero .eyebrow,
+  body.landing .product-hero .product-caption {
+    text-align: center;
+    text-wrap: balance;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+
+  body.landing .feature-label {
+    text-align: left;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+
+  /* The product hero lead is two centred lines, not justified running text. */
+  body.landing .product-hero .hero-lead {
+    text-align: center;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+
+  /* API section: text and roadmap beside a request against the real API. */
+  .api-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: 4.5rem;
+    align-items: start;
+  }
+
+  .api-grid > * {
+    min-width: 0;
+  }
+
+  .api-grid .feature-points {
+    margin-bottom: 2.5rem;
+  }
+
+  .code-frame {
+    margin: 0;
+    background: #0a0a0a;
+    color: #e8e8e8;
+    border: 1px solid #0a0a0a;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+  }
+
+  .code-frame .product-frame-bar {
+    border-bottom-color: rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .code-frame .product-frame-bar i {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .code-frame pre {
+    margin: 0;
+    padding: 1.5rem 1.6rem 1.75rem;
+    overflow-x: auto;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: max(0.8rem, 12px);
+    line-height: 1.7;
+    white-space: pre;
+  }
+
+  .code-frame .c-prompt { color: rgba(255, 255, 255, 0.45); }
+  .code-frame .c-str { color: #e9c58f; }
+  .code-frame .c-key { color: #9ec3e6; }
+  .code-frame .c-dim { color: rgba(255, 255, 255, 0.45); }
+
+  .soon {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .soon li {
+    padding: 1.25rem;
+    border: 1px dashed #000;
+    background: #fff;
+  }
+
+  .soon-tag {
+    display: inline-block;
+    margin: 0 0 0.75rem;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid #000;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: max(0.65rem, 10px);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .soon h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+  }
+
+  body.landing .soon p:not(.soon-tag) {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #333;
+    text-align: left;
+    -webkit-hyphens: none;
+    hyphens: none;
+  }
+
+  /* Track record links sit side by side, with room between them. */
+  #track-record .section-foot {
+    flex-wrap: wrap;
+    gap: 1rem 2.5rem;
+  }
+
+  @media (max-width: 1080px) {
+    .api-grid { grid-template-columns: 1fr; gap: 3rem; }
+  }
+
+  @media (max-width: 760px) {
+    .soon { grid-template-columns: 1fr; }
+    .code-frame pre { padding: 1.1rem; font-size: 11px; }
+  }
+
+  /* Hero: the walkthrough on wide screens, the still on phones. */
+  .product-hero .hero-still {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    .product-hero .hero-video,
+    .product-hero .hero-video-toggle {
+      display: none;
+    }
+
+    .product-hero .hero-still {
+      display: block;
+    }
   }
