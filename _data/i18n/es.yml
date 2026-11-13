@@ -119,7 +119,7 @@ home:
         image: "exploit-chains"
         height: 950
         screen: "Exploit chains"
-        alt: "Cadenas de explotación en LESIS: al seleccionar un camino de ataque que va del control del admin del comercio a los datos de tarjeta, se resalta en el grafo; un paso muestra desde dónde se alcanza y adónde lleva; y el camino se abre con sus siete pasos y evidencias."
+        alt: "Cadenas de explotación en LESIS: un camino de ataque propuesto por la IA en el que una race condition en reembolsos y un reembolso parcial negativo inflan el saldo de un comercio, retirado el mismo día; un paso muestra su evaluación y conexiones, y el camino se abre con sus seis pasos."
       - label: "Superficie de ataque"
         title: "Cada activo, cada repositorio y cómo se conectan."
         text: "Un inventario de lo que tienes y de dónde vive el código, dibujado como un grafo con los hallazgos abiertos en cada recurso. Los sistemas expuestos a internet quedan marcados, y los vínculos que registras se separan de los que deduce el análisis."

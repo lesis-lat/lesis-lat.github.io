@@ -121,7 +121,7 @@ home:
         image: "exploit-chains"
         height: 950
         screen: "Exploit chains"
-        alt: "LESIS exploit chains: selecting an attack path from merchant admin takeover to card data highlights it in the graph, a step shows how it is reached and where it leads, and the path opens with its seven steps and evidence."
+        alt: "LESIS exploit chains: an AI-proposed attack path where a refund race and a negative partial refund inflate a merchant balance that is paid out the same day; a step shows its assessment and connections, and the path opens with its six steps."
       - label: "Attack surface"
         title: "Every asset, repository and how they connect."
         text: "An inventory of what you own and where the code lives, drawn as a graph with the open findings on each resource. Internet-facing systems are marked, and links you record are kept apart from links the analysis derives."

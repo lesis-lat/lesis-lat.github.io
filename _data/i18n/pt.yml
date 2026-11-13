@@ -117,7 +117,7 @@ home:
         image: "exploit-chains"
         height: 950
         screen: "Exploit chains"
-        alt: "Cadeias de exploração na LESIS: ao selecionar um caminho de ataque que vai do controle do admin do lojista aos dados de cartão, ele se destaca no grafo; um passo mostra de onde é alcançado e para onde leva; e o caminho abre com seus sete passos e evidências."
+        alt: "Cadeias de exploração na LESIS: um caminho de ataque proposto pela IA em que uma race condition em reembolsos e um reembolso parcial negativo inflam o saldo de um lojista, sacado no mesmo dia; um passo mostra sua avaliação e conexões, e o caminho abre com seus seis passos."
       - label: "Superfície de ataque"
         title: "Cada ativo, cada repositório e como eles se ligam."
         text: "Um inventário do que você tem e de onde o código vive, desenhado como um grafo com os achados abertos em cada recurso. Sistemas expostos à internet ficam marcados, e os vínculos que você registra ficam separados dos que a análise deduz."
