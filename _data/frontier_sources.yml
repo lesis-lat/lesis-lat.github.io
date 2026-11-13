@@ -1,0 +1,21 @@
+# Source links for the frontier model pages (/mythos/, /daybreak/,
+# /frontier-models/). The same in every language.
+mythos:
+  - label: "Anthropic · Project Glasswing"
+    url: "https://www.anthropic.com/glasswing"
+  - label: "Anthropic · Expanding Project Glasswing"
+    url: "https://www.anthropic.com/news/expanding-project-glasswing"
+daybreak:
+  - label: "OpenAI · Expanding Daybreak as the cyber defense window narrows"
+    url: "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+  - label: "CNBC · OpenAI expands Daybreak cybersecurity initiative"
+    url: "https://www.cnbc.com/2026/08/10/open-ai-daybreak-cybersecurity.html"
+  - label: "TechCrunch · OpenAI released a new cybersecurity model"
+    url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/"
+both:
+  - label: "Anthropic · Project Glasswing"
+    url: "https://www.anthropic.com/glasswing"
+  - label: "OpenAI · Expanding Daybreak as the cyber defense window narrows"
+    url: "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/"
+  - label: "TechCrunch · OpenAI released a new cybersecurity model"
+    url: "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/"

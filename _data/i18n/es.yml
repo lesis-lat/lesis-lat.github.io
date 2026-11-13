@@ -349,6 +349,146 @@ partnership:
     text: "Ya sea que quieras ampliar tu portafolio de servicios, entregar proyectos de ciberseguridad con tu propia marca o conectar a tus clientes con experiencia especializada en seguridad, podemos ayudarte a definir el modelo de alianza adecuado."
     button: "Conviértete en socio de LESIS"
 
+# --- Modelos de frontera: /mythos/, /daybreak/, /frontier-models/ -------------
+frontier:
+  request: "Solicitar acceso"
+  how_link: "Cómo funciona"
+  stats_eyebrow: "Las cifras"
+  access_eyebrow: "Acceso"
+  sources_title: "Fuentes"
+  note: "Claude Mythos es desarrollado por Anthropic y Daybreak es un programa de OpenAI. Sus nombres aparecen aquí solo para describir el acceso que ofrece LESIS. Las cifras son las publicadas por Anthropic y OpenAI o reportadas por la prensa."
+  how:
+    eyebrow: "Cómo lo opera LESIS"
+    title: "Tú recibes los hallazgos. <br>Nosotros nos ocupamos del modelo."
+    intro: >-
+      El acceso, el alcance, la capacidad de cómputo y los ingenieros que revisan cada resultado los pone LESIS. Lo que llega a tu equipo es una lista corta de vulnerabilidades probadas, cada una con una forma de corregirla.
+    steps:
+      - title: "Alcance y autorización"
+        text: "Acordamos qué entra en el alcance, de repositorios a aplicaciones e infraestructura, con la autorización por escrito que estos programas exigen. Nada corre fuera de él."
+      - title: "La IA encuentra, LESIS prueba"
+        text: "El modelo lee tu código y tus sistemas como lo haría un atacante. Los ingenieros de LESIS reproducen cada resultado antes de que cuente, así que recibes vulnerabilidades, no sospechas."
+      - title: "Directo a tu registro"
+        text: "Cada hallazgo probado entra en la plataforma LESIS con su evidencia, severidad, un responsable y un plazo, junto al resto de tu programa."
+      - title: "Corregido y vuelto a probar"
+        text: "Cuando tu equipo publica la corrección, volvemos a correr la verificación y solo cerramos el hallazgo cuando la brecha ya no existe."
+  pages:
+    mythos:
+      subject: "Acceso a Mythos"
+      eyebrow: "Claude Mythos, operado por LESIS"
+      title: "Tu camino a Mythos."
+      lead:
+        - "Anthropic creó un modelo que encuentra y explota vulnerabilidades por sí solo, y decidió que el público no debía tenerlo. Claude Mythos está reservado a las empresas detrás del software crítico del mundo y a un grupo pequeño de organizaciones de seguridad verificadas."
+        - "LESIS es una de ellas. Corremos Mythos sobre tu código y tus sistemas, probamos lo que encuentra y le entregamos las correcciones a tu equipo."
+      stats:
+        - value: "Miles"
+          text: "de zero-days de alta severidad encontrados en pocas semanas, en todos los grandes sistemas operativos y navegadores."
+        - value: "27 años"
+          text: "pasó inadvertida una falla que permitía tumbar cualquier máquina OpenBSD, hasta que Mythos leyó el código."
+        - value: "5 millones"
+          text: "de veces pasaron las pruebas automatizadas por la línea de FFmpeg que escondía un bug de 16 años encontrado por Mythos."
+        - value: "83,1%"
+          text: "en reproducción de vulnerabilidades de CyberGym, frente al 66,6% de Claude Opus 4.6."
+      speech:
+        eyebrow: "Por qué importa"
+        display: "Cada línea de código que alguna vez publicaste está a punto de ser leída por algo que nunca se cansa."
+        text:
+          - >-
+            En pocas semanas, Mythos encontró miles de vulnerabilidades de alta severidad en todos los grandes sistemas operativos y navegadores. Una falla en OpenBSD, de 27 años, que dejaba a cualquiera tumbar una máquina solo con conectarse a ella. Un bug en FFmpeg, de 16 años, en una línea que las pruebas automatizadas habían ejecutado cinco millones de veces. Bugs del kernel de Linux encadenados desde un usuario común hasta el control total de la máquina. Casi todo sin ningún humano guiándolo.
+          - >-
+            Ninguno de esos bugs era nuevo. Lo que cambió fue el costo de encontrarlos. Una capacidad así no se queda mucho tiempo en un solo laboratorio, y cuando llegue a los atacantes, el tiempo entre una falla y su exploit se reduce a horas. Las organizaciones que salgan bien paradas serán aquellas cuyo código un modelo así leyó primero, de su lado.
+      access:
+        title: "Por qué no basta con registrarse."
+        text: >-
+          Anthropic no vende Mythos al público. Da acceso a los socios de Project Glasswing, las empresas que construyen y mantienen software crítico, y a organizaciones de seguridad verificadas a través de su Cyber Verification Program, con reglas sobre cómo se usa el modelo. LESIS participa en el Cyber Verification Program, así que recibes lo que encuentra Mythos sin postularte, esperar una aprobación ni armar un equipo para operarlo.
+      closing:
+        title: ["Deja que Mythos lea tu código", "antes de que lo haga", "el modelo de otro."]
+        text: "Cuéntanos qué operas. Te diremos por dónde debe empezar Mythos y en cuánto tiempo puede correr."
+    daybreak:
+      subject: "Acceso a Daybreak"
+      eyebrow: "OpenAI Daybreak, operado por LESIS"
+      title: "Tu camino a Daybreak."
+      lead:
+        - "OpenAI ahora dedica una parte significativa de su cómputo de frontera a encontrar y corregir vulnerabilidades, y reserva los modelos que lo hacen para defensores aprobados. Daybreak es la forma en que esos defensores llegan a ellos."
+        - "LESIS es socio de Daybreak. Apuntamos esos modelos a tu código y tus sistemas, probamos lo que encuentran y le entregamos las correcciones a tu equipo."
+      stats:
+        - value: "948"
+          text: "posibles problemas en el kernel de Linux, cada uno con una corrección ya preparada."
+        - value: "81"
+          text: "vulnerabilidades nuevas encontradas en Firefox."
+        - value: "2 niveles"
+          text: "Daybreak Blue para descubrimiento y respuesta; Daybreak Red para modelos entrenados en ciberseguridad y validación de exploits."
+        - value: "US$ 1.000 millones"
+          text: "comprometidos por OpenAI con quienes defienden infraestructura crítica."
+      speech:
+        eyebrow: "Por qué importa"
+        display: "El cómputo de frontera ya apunta a las vulnerabilidades. La única pregunta es quién lo apunta primero a las tuyas."
+        text:
+          - >-
+            Daybreak da a defensores aprobados los modelos más capaces de OpenAI, con salvaguardas ajustadas para el trabajo de seguridad. Daybreak Blue es para descubrimiento y respuesta a incidentes. Daybreak Red suma modelos entrenados en ciberseguridad, hechos para investigación de vulnerabilidades y validación de exploits. Apuntados al kernel de Linux, prepararon correcciones para 948 posibles problemas. Apuntados a Firefox, encontraron 81 vulnerabilidades nuevas.
+          - >-
+            El objetivo declarado de OpenAI es poner inteligencia de frontera en manos de defensores de confianza antes de que los atacantes puedan usar IA ofensiva a escala, y llama al tiempo que queda para hacerlo una ventana que se está cerrando. Los bugs que encuentran estos modelos ya están en tu código. Alguien lo va a leer con un modelo así. Que seas tú.
+      access:
+        title: "Hecho para defensores aprobados."
+        text: >-
+          Daybreak solo está abierto a personas y organizaciones que OpenAI aprueba para trabajo de seguridad autorizado, y las cuentas individuales deben iniciar sesión con llaves de seguridad físicas. Como socio de Daybreak, LESIS cumple esos requisitos y hace el trabajo, así que tu equipo recibe los resultados sin la postulación ni la carga operativa.
+      closing:
+        title: ["Los modelos de frontera", "ya están leyendo código.", "Asegúrate de que lean el tuyo primero."]
+        text: "Cuéntanos qué operas. Te diremos por dónde debe empezar Daybreak y en cuánto tiempo puede correr."
+    both:
+      subject: "Acceso a modelos de frontera"
+      eyebrow: "Modelos de frontera en ciberseguridad"
+      title: "Mythos y Daybreak, trabajando para ti."
+      lead:
+        - "Anthropic y OpenAI han creado, cada una, modelos que encuentran vulnerabilidades escondidas durante décadas, y cada una los reserva para defensores verificados: Claude Mythos y OpenAI Daybreak."
+        - "LESIS tiene acceso a ambos. Los corremos sobre tu código y tus sistemas, probamos cada resultado y ponemos lo que encuentran en un solo registro, listo para que tu equipo actúe."
+      stats:
+        - value: "Miles"
+          text: "de zero-days de alta severidad encontrados por Claude Mythos en pocas semanas, en todos los grandes sistemas operativos y navegadores."
+        - value: "27 años"
+          text: "llevaba inadvertida la falla en OpenBSD que encontró Mythos."
+        - value: "948"
+          text: "posibles problemas en el kernel de Linux, con correcciones preparadas por los modelos de Daybreak, de OpenAI."
+        - value: "81"
+          text: "vulnerabilidades nuevas en Firefox encontradas por los mismos modelos."
+      speech:
+        eyebrow: "Por qué ahora"
+        display: "La economía de encontrar vulnerabilidades acaba de romperse."
+        text:
+          - >-
+            Un bug de 27 años en OpenBSD. Un bug de 16 años en FFmpeg por el que las pruebas habían pasado más de cinco millones de veces. Miles de zero-days de alta severidad en todos los grandes sistemas operativos y navegadores, de un modelo, en semanas. Correcciones para 948 posibles problemas en el kernel de Linux y 81 vulnerabilidades nuevas en Firefox, de otro.
+          - >-
+            Esos bugs no eran nuevos. Esperaban a algo lo bastante paciente para leer cada línea, y eso ahora existe en los dos lados de la pelea. Quien lo usa primero corrige lo que los atacantes habrían encontrado. Los demás se enteran por otro.
+      compare:
+        eyebrow: "Dos programas"
+        title: "Dos laboratorios, dos lecturas independientes de tu código."
+        intro: >-
+          Los modelos de laboratorios distintos se entrenan de formas distintas y se les escapan cosas distintas. Correr ambos le da a una falla que uno pasa por alto una segunda oportunidad de ser detectada, y evita que dependas de un solo proveedor.
+        access_label: "Acceso"
+        strength_label: "Conocido por"
+        lesis_label: "LESIS"
+        items:
+          - name: "Claude Mythos"
+            by: "Anthropic"
+            access: "Socios de Project Glasswing y el Cyber Verification Program."
+            strength: "Encontrar y encadenar zero-days por sí solo; 83,1% en reproducción de vulnerabilidades de CyberGym."
+            lesis: "Participa en el Cyber Verification Program."
+            path: "/mythos/"
+            link: "Tu camino a Mythos &rarr;"
+          - name: "Daybreak"
+            by: "OpenAI"
+            access: "Daybreak Blue y Daybreak Red, para defensores aprobados."
+            strength: "Modelos de frontera ajustados para el trabajo de seguridad y modelos entrenados para investigación de vulnerabilidades y validación de exploits."
+            lesis: "Socio de Daybreak."
+            path: "/daybreak/"
+            link: "Tu camino a Daybreak &rarr;"
+      access:
+        title: "Cerrado al público. <br>Abierto para ti."
+        text: >-
+          Ninguno de los dos laboratorios vende estos modelos al público. El acceso pasa por verificación, reglas de uso y, en Daybreak, llaves de seguridad físicas. LESIS ya cumple con todo eso, así que recibes el trabajo de ambos sin postularte a ninguno.
+      closing:
+        title: ["Dos modelos de frontera.", "Un solo registro.", "Tu código, leído primero."]
+        text: "Cuéntanos qué operas. Te diremos qué modelo debe empezar, por dónde y en cuánto tiempo."
+
 # --- Press kit ------------------------------------------------------------------
 press:
   eyebrow: "Kit de prensa"
