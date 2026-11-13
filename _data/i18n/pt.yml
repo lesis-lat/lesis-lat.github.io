@@ -376,7 +376,7 @@ frontier:
       title: "O seu caminho até o Mythos."
       lead:
         - "A Anthropic criou um modelo que encontra e explora vulnerabilidades sozinho e decidiu que o público não deveria tê-lo. O Claude Mythos é reservado às empresas por trás do software crítico do mundo e a um grupo pequeno de organizações de segurança verificadas."
-        - "A LESIS é uma delas. Rodamos o Mythos no seu código e nos seus sistemas, provamos o que ele encontra e entregamos as correções ao seu time."
+        - "A LESIS é uma dessas organizações, verificada pela Anthropic no seu Cyber Verification Program. Rodamos o Mythos no seu código e nos seus sistemas, provamos o que ele encontra e entregamos as correções ao seu time."
       stats:
         - value: "Milhares"
           text: "de zero-days de alta severidade encontrados em poucas semanas, em todos os grandes sistemas operacionais e navegadores."
@@ -397,7 +397,7 @@ frontier:
       access:
         title: "Por que não dá para simplesmente se cadastrar."
         text: >-
-          A Anthropic não vende o Mythos ao público. Ela dá acesso aos parceiros do Project Glasswing, as empresas que constroem e mantêm software crítico, e a organizações de segurança verificadas pelo seu Cyber Verification Program, com regras sobre como o modelo é usado. A LESIS participa do Cyber Verification Program, então você recebe o que o Mythos encontra sem se candidatar, esperar aprovação ou montar um time para operá-lo.
+          A Anthropic não vende o Mythos ao público. Ela dá acesso aos parceiros do Project Glasswing, as empresas que constroem e mantêm software crítico, e a organizações de segurança verificadas pelo seu Cyber Verification Program, com regras sobre como o modelo é usado. A LESIS passou por essa verificação, então você recebe o que o Mythos encontra sem se candidatar, esperar aprovação ou montar um time para operá-lo.
       closing:
         title: ["Deixe o Mythos ler o seu código", "antes que o modelo", "de outra pessoa leia."]
         text: "Conte o que você opera. Nós dizemos por onde o Mythos deve começar e em quanto tempo ele pode rodar."
@@ -469,7 +469,7 @@ frontier:
             by: "Anthropic"
             access: "Parceiros do Project Glasswing e o Cyber Verification Program."
             strength: "Encontrar e encadear zero-days sozinho; 83,1% na reprodução de vulnerabilidades do CyberGym."
-            lesis: "Participa do Cyber Verification Program."
+            lesis: "Verificada pela Anthropic no Cyber Verification Program."
             path: "/mythos/"
             link: "O seu caminho até o Mythos &rarr;"
           - name: "Daybreak"

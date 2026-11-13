@@ -381,7 +381,7 @@ frontier:
       title: "Your path to Mythos."
       lead:
         - "Anthropic built a model that finds and exploits vulnerabilities on its own, then decided the public should not have it. Claude Mythos is reserved for the companies behind the world's critical software and a small group of verified security organizations."
-        - "LESIS is one of them. We run Mythos on your code and systems, prove what it finds and hand your team the fixes."
+        - "LESIS is one of those organizations, verified by Anthropic through its Cyber Verification Program. We run Mythos on your code and systems, prove what it finds and hand your team the fixes."
       stats:
         - value: "Thousands"
           text: "of high-severity zero-days found in a few weeks, across every major operating system and web browser."
@@ -402,7 +402,7 @@ frontier:
       access:
         title: "Why you can't just sign up."
         text: >-
-          Anthropic does not sell Mythos to the public. It gives access to the partners of Project Glasswing, the companies that build and maintain critical software, and to vetted security organizations through its Cyber Verification Program, under rules on how the model is used. LESIS takes part in the Cyber Verification Program, so you get what Mythos finds without applying, waiting for approval or building a team to run it.
+          Anthropic does not sell Mythos to the public. It gives access to the partners of Project Glasswing, the companies that build and maintain critical software, and to vetted security organizations through its Cyber Verification Program, under rules on how the model is used. LESIS has been through that verification, so you get what Mythos finds without applying, waiting for approval or building a team to run it.
       closing:
         title: ["Let Mythos read your code", "before someone else's", "model does."]
         text: "Tell us what you run. We will tell you where Mythos should look first and how soon it can start."
@@ -474,7 +474,7 @@ frontier:
             by: "Anthropic"
             access: "Project Glasswing partners and the Cyber Verification Program."
             strength: "Finding and chaining zero-days on its own; 83.1% on CyberGym vulnerability reproduction."
-            lesis: "Takes part in the Cyber Verification Program."
+            lesis: "Verified by Anthropic through the Cyber Verification Program."
             path: "/mythos/"
             link: "Your path to Mythos &rarr;"
           - name: "Daybreak"
