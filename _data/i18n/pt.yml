@@ -147,24 +147,6 @@ home:
     title: "Ela lê tudo. <br>Só reporta o que consegue provar."
     intro: >-
       A maioria das ferramentas de segurança com IA entrega toda suspeita que tem. Na LESIS, cada uma passa por uma segunda revisão, feita por um modelo mais forte, que precisa mostrar como o atacante entra, e um analista confirma o que chega ao seu time.
-    funnel:
-      label: "Exemplo · uma revisão de uma API de pagamentos"
-      steps:
-        - value: "37"
-          text: "partes do código analisadas, seguindo os dados até onde são usados"
-          bar: 100
-        - value: "5"
-          text: "suspeitas que merecem um olhar mais de perto"
-          bar: 14
-        - value: "2ª"
-          text: "revisão, por um modelo mais forte, que precisa mostrar o caminho de ataque"
-          bar: 14
-        - value: "1"
-          text: "vulnerabilidade provada, com a requisição e a linha de código"
-          bar: 3
-        - value: "✓"
-          text: "confirmada por um analista antes de chegar ao seu time"
-          bar: 3
     items:
       - title: "Ela nunca vê um segredo"
         text: "Credenciais candidatas são avaliadas pelo código ao redor. O valor fica mascarado na tela e é removido antes de o código chegar a um modelo."

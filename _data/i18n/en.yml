@@ -151,24 +151,6 @@ home:
     title: "It reads everything. <br>It reports only what it can prove."
     intro: >-
       Most AI security tools hand you every suspicion they have. In LESIS, each one goes through a second, stronger review that has to show how an attacker gets in, and an analyst confirms what reaches your team.
-    funnel:
-      label: "Example · one review of a payments API"
-      steps:
-        - value: "37"
-          text: "parts of the code analyzed, following the data to where it is used"
-          bar: 100
-        - value: "5"
-          text: "suspicions worth a closer look"
-          bar: 14
-        - value: "2nd"
-          text: "review, by a stronger model, that has to show the attack path"
-          bar: 14
-        - value: "1"
-          text: "vulnerability proven, with the request and the line of code"
-          bar: 3
-        - value: "✓"
-          text: "confirmed by an analyst before it reaches your team"
-          bar: 3
     items:
       - title: "It never sees a secret"
         text: "Candidate credentials are judged from the code around them. The value is masked on screen and removed before code reaches a model."

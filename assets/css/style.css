@@ -3034,92 +3034,10 @@
     }
   }
 
-  /* AI section: what one review reads, suspects, proves and hands over. */
-  .ai-funnel {
-    margin: 0 0 1rem;
-    padding: 2.25rem 2.5rem 2.5rem;
-    color: #fff;
-    background: var(--night);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
-  }
-
-  .ai-funnel-label {
-    margin: 0 0 2rem;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: max(0.72rem, 11px);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.55);
-  }
-
-  .ai-funnel-steps {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .ai-funnel-steps li {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .ai-funnel-steps li + li::before {
-    content: "\2192";
-    position: absolute;
-    top: 1.1rem;
-    left: -1.55rem;
-    color: rgba(255, 255, 255, 0.4);
-  }
-
-  .ai-funnel-value {
-    font-size: clamp(2.4rem, 4vw, 3.6rem);
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -0.02em;
-  }
-
-  .ai-funnel-bar {
-    display: block;
-    width: max(var(--w), 6px);
-    height: 4px;
-    margin: 1.1rem 0 1rem;
-    background: #fff;
-  }
-
-  .ai-funnel-steps li:last-child .ai-funnel-bar {
-    background: #6fcf97;
-  }
-
-  .ai-funnel-text {
-    font-size: 0.92rem;
-    font-weight: 300;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.78);
-  }
-
-  body.landing .ai-funnel-text {
-    text-align: left;
-    -webkit-hyphens: none;
-    hyphens: none;
-  }
-
-  .ai-rules {
-    margin-top: 3rem;
-  }
-
   @media (max-width: 1080px) {
-    .ai-funnel-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 2.5rem; }
-    .ai-funnel-steps li:nth-child(4)::before { display: none; }
     .ai-rules { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 
   @media (max-width: 760px) {
-    .ai-funnel { padding: 1.75rem 1.25rem 2rem; }
-    .ai-funnel-steps { grid-template-columns: 1fr; row-gap: 1.75rem; }
-    .ai-funnel-steps li + li::before { display: none; }
     .ai-rules { grid-template-columns: 1fr; }
   }
