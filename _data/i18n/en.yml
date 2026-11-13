@@ -104,7 +104,7 @@ home:
         image: "finding"
         height: 1280
         screen: "Vulnerabilities"
-        alt: "A critical finding in LESIS: it moves from Identified to Fixing, then the evidence, impact, recommendation, state history and the comment thread between the LESIS analyst, the security lead and the engineer."
+        alt: "A critical finding in LESIS, an SSRF in the merchant webhook that leads to a full AWS account takeover: it moves from Identified to Fixing, then its attack tree, the evidence from the metadata service to AdministratorAccess, impact, recommendation and the thread between the LESIS analyst, the security lead and the engineer."
       - label: "Code security"
         title: "Code review that has to prove it."
         text: "Connect GitHub, GitLab or Bitbucket with read-only access. AI maps each application, follows the data to where it is used and reports only what a second, stronger review confirms. Secrets are judged without the value ever being read."
@@ -148,12 +148,28 @@ home:
 
   ai:
     eyebrow: "AI with guardrails"
-    title: "AI that has to prove it <br>before it tells you."
+    title: "It reads everything. <br>It reports only what it can prove."
     intro: >-
-      Every AI feature in LESIS works under the same rules. They are why a short list of findings can be trusted, and why the AI never becomes the place where a decision is made.
+      Most AI security tools hand you every suspicion they have. In LESIS, each one goes through a second, stronger review that has to show how an attacker gets in, and an analyst confirms what reaches your team.
+    funnel:
+      label: "Example · one review of a payments API"
+      steps:
+        - value: "37"
+          text: "parts of the code analyzed, following the data to where it is used"
+          bar: 100
+        - value: "5"
+          text: "suspicions worth a closer look"
+          bar: 14
+        - value: "2nd"
+          text: "review, by a stronger model, that has to show the attack path"
+          bar: 14
+        - value: "1"
+          text: "vulnerability proven, with the request and the line of code"
+          bar: 3
+        - value: "✓"
+          text: "confirmed by an analyst before it reaches your team"
+          bar: 3
     items:
-      - title: "Proof before a finding"
-        text: "A suspicion becomes a finding only when every review confirms how an attacker reaches it. High and critical ones are checked twice."
       - title: "It never sees a secret"
         text: "Candidate credentials are judged from the code around them. The value is masked on screen and removed before code reaches a model."
       - title: "AI spend in the open"

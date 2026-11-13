@@ -114,9 +114,17 @@
       <h2 id="ai-title" class="statement-display reveal">{{ h.ai.title }}</h2>
       <p class="section-intro reveal">{{ h.ai.intro }}</p>
     </div>
-    <ol class="exec-grid exec-grid-3">
+    <figure class="ai-funnel reveal">
+      <figcaption class="ai-funnel-label">{{ h.ai.funnel.label }}</figcaption>
+      <ol class="ai-funnel-steps">
+        {%- for step in h.ai.funnel.steps %}
+        <li style="--w:{{ step.bar }}%"><span class="ai-funnel-value">{{ step.value }}</span><span class="ai-funnel-bar" aria-hidden="true"></span><span class="ai-funnel-text">{{ step.text }}</span></li>
+        {%- endfor %}
+      </ol>
+    </figure>
+    <ol class="exec-grid ai-rules">
       {%- for item in h.ai.items %}
-      <li class="reveal" style="--i:{{ forloop.index0 | modulo: 3 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
+      <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
       {%- endfor %}
     </ol>
   </div>

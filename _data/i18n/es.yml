@@ -102,7 +102,7 @@ home:
         image: "finding"
         height: 1280
         screen: "Vulnerabilities"
-        alt: "Un hallazgo crítico en LESIS: pasa de Identified a Fixing y después muestra evidencia, impacto, recomendación, historial de estados y la conversación entre la analista de LESIS, la líder de seguridad y el ingeniero."
+        alt: "Un hallazgo crítico en LESIS, un SSRF en el webhook del comercio que lleva al control total de la cuenta de AWS: pasa de Identified a Fixing y después muestra el árbol de ataque, la evidencia del servicio de metadatos hasta AdministratorAccess, impacto, recomendación y la conversación entre la analista de LESIS, la líder de seguridad y el ingeniero."
       - label: "Seguridad de código"
         title: "Revisión de código que tiene que probarlo."
         text: "Conecta GitHub, GitLab o Bitbucket con acceso de solo lectura. La IA mapea cada aplicación, sigue los datos hasta donde se usan y reporta solo lo que una segunda revisión, más fuerte, confirma. Los secretos se evalúan sin leer nunca su valor."
@@ -146,12 +146,28 @@ home:
 
   ai:
     eyebrow: "IA con salvaguardas"
-    title: "IA que tiene que probarlo <br>antes de avisarte."
+    title: "Lo lee todo. <br>Solo reporta lo que puede probar."
     intro: >-
-      Toda función de IA en LESIS sigue las mismas reglas. Por ellas una lista corta de hallazgos merece confianza, y la IA nunca se vuelve el lugar donde se toma una decisión.
+      La mayoría de las herramientas de seguridad con IA te entrega cada sospecha que tiene. En LESIS, cada una pasa por una segunda revisión, hecha por un modelo más fuerte, que tiene que mostrar cómo entra el atacante, y un analista confirma lo que llega a tu equipo.
+    funnel:
+      label: "Ejemplo · una revisión de una API de pagos"
+      steps:
+        - value: "37"
+          text: "partes del código analizadas, siguiendo los datos hasta donde se usan"
+          bar: 100
+        - value: "5"
+          text: "sospechas que merecen una mirada más de cerca"
+          bar: 14
+        - value: "2.ª"
+          text: "revisión, por un modelo más fuerte, que tiene que mostrar el camino de ataque"
+          bar: 14
+        - value: "1"
+          text: "vulnerabilidad probada, con la petición y la línea de código"
+          bar: 3
+        - value: "✓"
+          text: "confirmada por un analista antes de llegar a tu equipo"
+          bar: 3
     items:
-      - title: "Prueba antes del hallazgo"
-        text: "Una sospecha se vuelve hallazgo solo cuando todas las revisiones confirman cómo llega un atacante. Las de severidad alta y crítica se revisan dos veces."
       - title: "Nunca ve un secreto"
         text: "Las credenciales candidatas se evalúan por el código que las rodea. El valor queda enmascarado en pantalla y se elimina antes de que el código llegue a un modelo."
       - title: "Costo de IA a la vista"
