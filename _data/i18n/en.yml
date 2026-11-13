@@ -32,6 +32,9 @@ header:
   contact: "Contact"
   menu: "Menu"
   close: "Close"
+  theme: "Theme"
+  theme_dark: "Dark theme"
+  theme_light: "Light theme"
 
 # --- Footer -------------------------------------------------------------------
 footer:
@@ -568,6 +571,8 @@ privacy:
           The website currently loads the Google Analytics 4 tag from Google after a visitor interacts with the page or after a short delay. It may collect page views, browser and device information, approximate location and interaction events, and may use the first-party <code>_ga</code> cookie. Google describes how it processes this information in its <a href="https://support.google.com/analytics/answer/11593727" rel="noopener noreferrer">Analytics documentation</a>. We do not intentionally send names, email addresses or message contents to Google Analytics. Other websites linked from this site have their own policies; LESIS is not responsible for their content or privacy practices.
         - >-
           You can delete or block cookies through your browser settings. Before this analytics implementation is used for visitors who require prior consent, LESIS should provide a consent mechanism or disable analytics until consent is obtained.
+        - >-
+          If you switch between the light and dark theme, your browser keeps that choice on your device (in local storage) so the site opens the same way next time. It is not a cookie and is never sent to LESIS.
     - title: "8. Changes"
       text:
         - >-

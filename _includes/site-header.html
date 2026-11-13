@@ -11,6 +11,10 @@
         <a href="{{ home_url }}#contact">{{ t.header.contact }}</a>
         <a class="site-nav-cta" href="mailto:contact@lesis.lat?subject={{ demo_subject }}">{{ t.cta.book_demo }}</a>
         {% include language-switcher.html variant="menu" %}
+        <button class="site-theme" type="button" data-theme-toggle title="{{ t.header.theme }}">
+          <span class="site-theme-to-dark">{% include icon.html name="moon" %}<span class="site-theme-label">{{ t.header.theme_dark }}</span></span>
+          <span class="site-theme-to-light">{% include icon.html name="sun" %}<span class="site-theme-label">{{ t.header.theme_light }}</span></span>
+        </button>
       </nav>
       <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-label-open="{{ t.header.menu }}" data-label-close="{{ t.header.close }}">{{ t.header.menu }}</button>
     </div>

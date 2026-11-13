@@ -43,6 +43,7 @@
 {% include structured-data.html canonical_url=canonical_url meta_description=meta_description %}
 <link rel="icon" href="{{ '/assets/images/favicon-32.png' | relative_url }}" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+<script src="{{ '/assets/scripts/theme.min.js' | relative_url }}"></script>
 {% assign stylesheet_version = site.time | date: '%s' %}
 <link rel="stylesheet" href="{{ '/assets/css/style.min.css' | relative_url }}?v={{ stylesheet_version }}">
 {% if base_path == "/" %}<link rel="preload" href="{{ '/assets/video/hero-poster.webp' | relative_url }}" as="image" type="image/webp" media="(min-width: 761px)" fetchpriority="high"><link rel="preload" href="{{ '/assets/images/product/posture-main-1120.webp' | relative_url }}" as="image" type="image/webp" media="(max-width: 760px)" fetchpriority="high">
