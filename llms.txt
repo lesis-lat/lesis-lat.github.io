@@ -21,37 +21,37 @@ https://blog.lesis.lat
 
 ## The platform
 
-- Posture and analytics: twelve months of findings opened, fixed and closed, time to fix by severity, remediation health against deadlines, attention points that need a decision, the value of what the program has found, and a benchmark against comparable organizations on the platform.
-- Vulnerability management: an eight-state lifecycle (Draft, Identified, Fixing, Retest, Fixed, Duplicated, False Positive, Accepted Risk), severity labels (Critical, High, Medium, Low, Informative) with deadlines per severity set by each organization, evidence, comments, state history and attack trees on the finding. A finding can be shared read-only with an outside guest.
+- Posture and analytics: twelve months of findings opened, fixed and closed, time to fix by severity, remediation health against deadlines, attention points that need a decision, the value of what the program has found, and a benchmark against the median and quartiles of other organizations on the platform, none of them named.
+- Vulnerability management: an eight-state lifecycle (Draft, Identified, Fixing, Retest, Fixed, Duplicated, False Positive, Accepted Risk), severity labels (Critical, High, Medium, Low, Informative) with deadlines per severity set by each organization, evidence, comments, state history and attack trees on the finding. A finding or an investigation can be shared with a guest from outside the organization, who sees only that record.
 - Code security: GitHub, GitLab and Bitbucket connections with read-only access keep the repository inventory in sync. AI code review reports only findings that every verification confirms; secret scanning judges candidate credentials from the code around them, and the value is never sent to a model. Findings moved to Retest are checked automatically against the current code.
 - Exploit chains and root causes: AI proposals that chain open findings into attack paths across assets, or group them by a shared cause, for an analyst to confirm, edit or dismiss.
 - Attack surface: assets and repositories in one graph, with their relationships, the open findings on each resource and internet-facing systems marked.
-- Knowledge: policies, procedures, runbooks, playbooks and threat models that mention findings, assets, repositories and investigations, with previews of each mention.
+- Knowledge: policies, procedures, runbooks, playbooks and threat models that mention findings, assets, repositories and investigations, with previews of each mention and attack trees drawn in the document.
 - The wider program: investigations with timelines, third-party risk assessments with a vendor portal, a public disclosure page per organization, a trust center, an identity register, awareness campaigns, trainings and exams, and leaked-credential matching.
-- Your advisor: each organization has a named LESIS engineer, reachable from inside the platform by e-mail or a booked call.
+- Your advisor: each organization has a named LESIS engineer, reachable from inside the platform by email or a booked call.
 
 ## AI with guardrails
 
 - Proof before a finding: a suspicion becomes a finding only when every review confirms how an attacker reaches it; high and critical ones are checked twice.
 - It never sees a secret: candidate credentials are masked and removed before code reaches a model.
-- AI spend in the open: tokens and estimated cost for every AI feature, per organization and model.
+- It can't change your code: repositories are connected read-only, so no model and no one at LESIS can push a commit, open a pull request or touch a branch.
 - AI proposes, people decide: exploit chains, root causes and suggested records stay drafts until an analyst confirms, edits or dismisses them, and every change shows who made it.
 - Proof of fix, too: when a code finding moves to Retest, AI checks it against the current code and posts the result on the finding.
 
 ## API
 
-A documented REST API covers the platform, with keys bound to one organization and limited to their owner's permissions, read and write scopes, expiry and revocation, and a guide for AI agents downloadable as Markdown. A LESIS CLI and a LESIS MCP server are coming soon.
+A documented REST API covers the platform, with keys bound to one organization and limited to their owner's permissions, scoped permissions, expiry and revocation, and a guide for AI agents downloadable as Markdown. A LESIS CLI and a LESIS MCP server are coming soon.
 
 ## Enterprise
 
-Multi-organization (business units and subsidiaries, each with its own deadlines, seen together when needed), eight roles enforced by the server, an audit trail of every write, guest access, benchmark, two-step sign-in with administrator-approved accounts, least privilege on code connections, and deadlines per severity.
+Multi-organization (business units and subsidiaries, each with its own deadlines, seen together when needed), eight roles enforced by the server, an audit trail of changes, guest access, benchmark, two-step sign-in with administrator-approved accounts, least privilege on code connections (read-only access, GitHub tokens limited to the repository being scanned, encrypted credentials), and deadlines per severity with an email digest of what is past due.
 
 ---
 
 ## Ways to run LESIS
 
 - Platform: the organization's team runs its program on LESIS, with the LESIS advisor available when a decision needs a second opinion.
-- Managed: LESIS runs the security program on the platform alongside the team: findings triaged, chased, retested and closed; disclosure reports triaged as they arrive; inventory, runbooks and policies kept current; awareness campaigns and training run to completion; the trust center kept ready; posture reported against comparable organizations.
+- Managed: LESIS runs the security program on the platform alongside the team: findings triaged, chased, retested and closed; disclosure reports triaged as they arrive; inventory, runbooks and policies kept current; awareness campaigns and training run to completion; the trust center kept ready; posture benchmarked against other organizations.
 
 LESIS engineers also run vulnerability research, architecture reviews and incident investigations when a system needs one, with every finding landing in the same record. Consultancies can deliver LESIS under their own brand, or refer clients, through the LESIS Partnership Program.
 

@@ -77,7 +77,7 @@ home:
       - >-
         Most security programs run on a patchwork: a scanner here, a spreadsheet of findings there, a consultancy's PDF, a runbook in someone's drive. Nobody can say, at any given moment, what is open, who owns it and whether it is getting better.
       - >-
-        LESIS replaces the patchwork with one record. Every finding carries evidence, an owner and a deadline. AI reads your code and reports only what it can prove. LESIS engineers decide what needs a person. Leadership sees posture, not noise.
+        LESIS replaces the patchwork with one record. Every finding carries evidence, an owner and a deadline. AI reads your code and reports only what it can prove. LESIS engineers review what the AI proposes. Leadership sees posture, not noise.
 
   media:
     pause: "Pause animation"
@@ -92,14 +92,14 @@ home:
       - label: "Posture and analytics"
         title: "Know where you stand at any moment."
         text: "Twelve months of findings opened, fixed and closed, time to fix by severity, and the attention points that need a decision now, each with why it matters and what to do next."
-        points: ["Security posture and remediation health", "Attention points with a next step", "What your program found is worth", "Benchmark against comparable organizations"]
+        points: ["Security posture and remediation health", "Attention points with a next step", "The value of what your program found", "Benchmark against other organizations on LESIS"]
         image: "analytics"
         height: 1100
         screen: "Analytics"
         alt: "The LESIS analytics page: moving across twelve months of findings opened, resolved and closed shows each month's numbers, then the average time to fix by severity."
       - label: "Vulnerability management"
         title: "Every finding, from first evidence to proof of fix."
-        text: "An eight-state lifecycle, a deadline set by severity, evidence and comments on the finding itself, and attack trees drawn from the analysis. Remediators move findings forward; closing one takes an analyst."
+        text: "Evidence, comments and the attack tree live on the finding, and each one has an owner and a deadline set by its severity. Remediators move it through eight states; only an analyst can close it."
         points: ["Deadlines per severity, set by your organization", "Attack trees on the finding", "Share one finding with an outside guest", "Automatic retests for code findings"]
         image: "finding"
         height: 1280
@@ -107,8 +107,8 @@ home:
         alt: "A critical finding in LESIS, an SSRF in the merchant webhook that leads to a full AWS account takeover: it moves from Identified to Fixing, then its attack tree, the evidence from the metadata service to AdministratorAccess, impact, recommendation and the thread between the LESIS analyst, the security lead and the engineer."
       - label: "Code security"
         title: "Code review that has to prove it."
-        text: "Connect GitHub, GitLab or Bitbucket with read-only access. AI maps each application, follows the data to where it is used and reports only what a second, stronger review confirms. Secrets are judged without the value ever being read."
-        points: ["Read-only connections, kept in sync", "AI code review, verified before it reports", "Secret scanning that never sees the value", "Only what changed is read again"]
+        text: "Connect GitHub, GitLab or Bitbucket with read-only access. AI maps each application, follows the data to where it is used and reports only what a second, stronger review confirms. Secrets are judged without the AI ever seeing the value."
+        points: ["Read-only connections, kept in sync", "AI code review, verified before it reports", "Secret scanning that keeps the value from AI", "Only what changed is read again"]
         image: "repositories"
         height: 900
         screen: "Code repositories"
@@ -116,7 +116,7 @@ home:
       - label: "Exploit chains and root causes"
         title: "See how findings chain into real attacks."
         text: "AI correlates open findings into attack paths and groups them by the correction they share. Analysts edit, add or dismiss each step, and every change is marked with who made it."
-        points: ["Attack paths across findings and assets", "Root causes that close several findings at once", "Steps edited or added by people, marked as such", "Present mode and YAML export"]
+        points: ["Attack paths across findings and assets", "Root causes that close several findings at once", "Steps edited or added by people, marked as such", "Full-screen present mode and a YAML editor"]
         image: "exploit-chains"
         height: 950
         screen: "Exploit chains"
@@ -131,8 +131,8 @@ home:
         alt: "The LESIS resource graph in use: selecting the payments gateway shows its environment, criticality and connections; with vulnerabilities shown as nodes, one linked to the gateway opens as a finding with its evidence."
       - label: "Knowledge"
         title: "Your policies and threat models, linked to the work."
-        text: "Policies, procedures, playbooks, runbooks and threat models live next to the findings they explain. Mention a finding, asset, repository or investigation and it is linked to the document. Attack trees are drawn in the page and can be presented or exported."
-        points: ["Policies, procedures, playbooks, runbooks and threat models", "Mentions that link findings, assets and repositories", "Attack trees drawn in the document", "Search every document in plain words"]
+        text: "Policies, procedures, playbooks, runbooks and threat models live next to the findings they explain. Mention a finding, asset, repository or investigation and it is linked to the document. Attack trees are drawn right in the document."
+        points: ["Policies, procedures, playbooks, runbooks and threat models", "Mentions that link findings, assets and repositories", "Attack trees drawn in the document", "Search across every document"]
         image: "knowledge"
         height: 1300
         screen: "Knowledge"
@@ -140,11 +140,11 @@ home:
       - label: "Your advisor"
         title: "A named engineer, one click away."
         text: "Your organization gets a LESIS advisor inside the platform: a security engineer who knows your systems, reviews what the AI proposes and joins your team when a fix needs a second pair of eyes. Email them or book a call without leaving LESIS."
-        points: ["A named LESIS engineer for your organization", "Profile, e-mail and booking link in the app", "Reviews AI proposals and fixes with your team", "Next to the assistant, on the home screen"]
+        points: ["A named LESIS engineer for your organization", "Profile, email and booking link in the app", "Reviews AI proposals and fixes with your team", "On the home screen, beside the AI assistant"]
         image: "advisor"
         height: 900
         screen: "Home"
-        alt: "The LESIS home screen: selecting the organization's advisor opens her profile beside it, with a bio, e-mail and booking options."
+        alt: "The LESIS home screen: selecting the organization's advisor opens her profile beside it, with a bio, email and booking options."
 
   ai:
     eyebrow: "AI with guardrails"
@@ -154,8 +154,8 @@ home:
     items:
       - title: "It never sees a secret"
         text: "Candidate credentials are judged from the code around them. The value is masked on screen and removed before code reaches a model."
-      - title: "AI spend in the open"
-        text: "Tokens and estimated cost for every AI feature, per organization and model, so usage is never a surprise."
+      - title: "It can't change your code"
+        text: "LESIS connects to your repositories read-only, so no model and no one at LESIS can push a commit, open a pull request or touch a branch."
       - title: "AI proposes, people decide"
         text: "Exploit chains, root causes and suggested records stay drafts until an analyst confirms, edits or dismisses them, and every change shows who made it."
       - title: "Proof of fix, too"
@@ -166,7 +166,7 @@ home:
     title: "Your program, programmable."
     intro: >-
       A documented REST API covers the platform, so findings flow into your tickets, your SIEM and your data warehouse, and your own AI agents work with the same records your team sees, under the same permissions.
-    points: ["A documented REST API for every module", "Keys bound to one organization and their owner's permissions", "Read and write scopes, expiry and revocation", "A guide for AI agents, downloadable as Markdown"]
+    points: ["A documented REST API across the platform", "Keys bound to one organization and their owner's permissions", "Scoped permissions, expiry dates and revocation", "A guide for AI agents, downloadable as Markdown"]
     soon_label: "Coming soon"
     soon_tag: "Soon"
     soon:
@@ -181,26 +181,26 @@ home:
     eyebrow: "Enterprise"
     title: "Built for organizations <br>with more than one of everything."
     intro: >-
-      Subsidiaries, business units, outside researchers and auditors, each with exactly the access they need, and a record of everything they did.
+      Subsidiaries, business units, outside researchers and auditors, each with exactly the access they need, and a record of what they changed.
     items:
       - title: "Multi-organization"
         text: "Run each business unit or subsidiary as its own organization, with its own deadlines, and see them all together when you need to."
       - title: "Roles that match how you work"
-        text: "Eight roles, from administrator to analyst, remediator and guest. The server enforces every one of them."
-      - title: "A complete audit trail"
-        text: "Every write in every module, recorded with the account that made it and when."
+        text: "Eight roles, from administrator to analyst, remediator and guest. Each one is enforced on the server, not just hidden in the interface."
+      - title: "An audit trail"
+        text: "Changes across the platform are logged with the account that made each one and when."
       - title: "Guest access"
-        text: "Share a single finding or investigation with an outside guest, read-only, without opening the rest of the program."
+        text: "Share a single finding or investigation with someone outside your organization. They see that record and nothing else."
       - title: "Benchmark"
-        text: "Remediation metrics set beside comparable organizations on the platform, without naming any of them."
+        text: "Your remediation metrics beside the median and quartiles of other organizations on LESIS, none of them named."
       - title: "The value of the program"
-        text: "What your program has found is worth, calculated from the value your organization puts on each severity."
+        text: "What your findings would be worth, priced per severity from bug bounty data or from values your organization sets."
       - title: "Two-step sign-in"
-        text: "A password and a one-time code, with new accounts approved by an administrator before they can sign in."
+        text: "A password and a one-time code sent by email. New accounts wait for an administrator's approval."
       - title: "Least privilege on your code"
-        text: "Read-only repository access, scan tokens limited to one repository, and credentials stored encrypted."
+        text: "Read-only repository access, GitHub tokens limited to the repository being scanned, and stored credentials encrypted."
       - title: "Deadlines you set"
-        text: "Remediation windows per severity for each organization, with every overdue finding flagged before anyone asks."
+        text: "Remediation windows per severity for each organization, and an email digest of everything past due."
 
   people:
     eyebrow: "Experts on call"
@@ -213,7 +213,7 @@ home:
       - title: "Decisions AI cannot make"
         text: "Analysts confirm or dismiss what the AI proposes, and test what code review cannot reach."
       - title: "Disclosure triage"
-        text: "Every report from an outside researcher is triaged by LESIS before it reaches your team."
+        text: "On the managed program, LESIS triages reports from outside researchers as they arrive."
       - title: "Assessments"
         text: "Vulnerability research, architecture review and incident investigations, with every finding landing in the same record."
 
@@ -232,7 +232,7 @@ home:
       lead:
         - "LESIS runs your security program on the platform, alongside your team."
         - >-
-          Findings triaged, chased, retested and closed. Disclosure reports triaged as they arrive. Inventory, runbooks and policies kept current; awareness campaigns and training run to completion; the trust center kept ready; posture reported against comparable organizations. What you contribute is not headcount but access: your engineers act when acting matters, and what they learn goes into the record as they work.
+          Findings triaged, chased, retested and closed. Disclosure reports triaged as they arrive. Inventory, runbooks and policies kept current; awareness campaigns and training run to completion; the trust center kept ready; posture benchmarked against other organizations. You don't add headcount: your engineers step in when a fix needs them, and what they learn goes into the record.
     partners: >-
       Consultancies can deliver LESIS under their own brand, or refer clients to us, through the <a href="{partnership_url}">LESIS Partnership Program</a>, without building an internal team.
 
@@ -250,10 +250,10 @@ home:
           Members of our team have competed in Capture The Flag events, taking first place in the CTF at BSides São Paulo and winning a Hackaflag qualifier. LESIS also supports teams in the community: at <a href="https://www.sbseg2026.uff.br/" target="_blank" rel="noopener noreferrer">SBSeg 2026</a>, the GRIS/UFRJ team, supported by LESIS, <a href="{bulletin_url}">placed first among 18 teams</a> in challenges covering traffic analysis, forensics and incident investigation.
       - title: "Experience at market leaders"
         text: >-
-          Our team includes engineers who have worked at companies such as Nubank, Latin America's largest digital bank, and Globo, Brazil's largest media company, as well as at Brazil's leading cybersecurity vendors and other companies just as strong, if less well known. They bring experience with the engineering demands of systems serving millions of people to their work at LESIS.
+          Our team includes engineers who have worked at companies such as Nubank, Latin America's largest digital bank, and Globo, Brazil's largest media company, as well as at Brazil's leading cybersecurity vendors and other companies just as strong, if less well known. They know what it takes to secure systems used by millions of people.
       - title: "Speaking at security events"
         text: >-
-          Members of our team have presented talks at events such as BxSec, Roadsec, BSides Rio de Janeiro and XibéSec. These contributions bring our team's experience into discussions with other security professionals and help share knowledge across the Brazilian security community.
+          Members of our team have presented talks at events such as BxSec, Roadsec, BSides Rio de Janeiro and XibéSec. It is how we share what we learn with the Brazilian security community.
 
   work:
     transition: "Explore our published research and open-source tools."

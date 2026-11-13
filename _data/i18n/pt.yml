@@ -73,7 +73,7 @@ home:
       - >-
         A maioria dos programas de segurança roda numa colcha de retalhos: um scanner aqui, uma planilha de achados ali, o PDF de uma consultoria, um runbook no drive de alguém. Ninguém consegue dizer, a qualquer momento, o que está aberto, quem é o responsável e se está melhorando.
       - >-
-        A LESIS troca a colcha de retalhos por um só registro. Cada achado tem evidência, um responsável e um prazo. A IA lê o seu código e reporta só o que consegue provar. Os engenheiros da LESIS decidem o que precisa de uma pessoa. A liderança vê postura, não ruído.
+        A LESIS troca a colcha de retalhos por um só registro. Cada achado tem evidência, um responsável e um prazo. A IA lê o seu código e reporta só o que consegue provar. Os engenheiros da LESIS revisam o que a IA propõe. A liderança vê postura, não ruído.
 
   media:
     pause: "Pausar animação"
@@ -88,14 +88,14 @@ home:
       - label: "Postura e análises"
         title: "Saiba onde você está, a qualquer momento."
         text: "Doze meses de achados abertos, corrigidos e fechados, tempo de correção por severidade e os pontos de atenção que pedem uma decisão agora, cada um com o motivo e o próximo passo."
-        points: ["Postura de segurança e saúde da remediação", "Pontos de atenção com próximo passo", "Quanto vale o que o seu programa encontrou", "Benchmark com organizações comparáveis"]
+        points: ["Postura de segurança e saúde da remediação", "Pontos de atenção com próximo passo", "Quanto vale o que o seu programa encontrou", "Benchmark com outras organizações na LESIS"]
         image: "analytics"
         height: 1100
         screen: "Analytics"
         alt: "A página de análises da LESIS: ao percorrer doze meses de achados abertos, resolvidos e fechados aparecem os números de cada mês e, depois, o tempo médio de correção por severidade."
       - label: "Gestão de vulnerabilidades"
         title: "Cada achado, da primeira evidência à prova da correção."
-        text: "Um ciclo de vida de oito estados, um prazo definido pela severidade, evidências e comentários no próprio achado e árvores de ataque desenhadas a partir da análise. Remediadores fazem o achado andar; fechá-lo cabe a um analista."
+        text: "Evidência, comentários e árvore de ataque ficam no próprio achado, e cada um tem um responsável e um prazo definido pela severidade. Remediadores o fazem andar por oito estados; só um analista pode fechá-lo."
         points: ["Prazos por severidade, definidos pela sua organização", "Árvores de ataque no achado", "Compartilhe um achado com um convidado externo", "Retestes automáticos para achados de código"]
         image: "finding"
         height: 1280
@@ -103,8 +103,8 @@ home:
         alt: "Um achado crítico na LESIS, um SSRF no webhook do lojista que leva ao controle total da conta AWS: passa de Identified para Fixing e depois mostra a árvore de ataque, a evidência do serviço de metadados até AdministratorAccess, impacto, recomendação e a conversa entre a analista da LESIS, a liderança de segurança e o engenheiro."
       - label: "Segurança de código"
         title: "Revisão de código que precisa provar."
-        text: "Conecte GitHub, GitLab ou Bitbucket com acesso somente leitura. A IA mapeia cada aplicação, segue o dado até onde ele é usado e reporta só o que uma segunda revisão, mais forte, confirma. Segredos são avaliados sem que o valor seja lido."
-        points: ["Conexões somente leitura, sempre sincronizadas", "Revisão de código com IA, verificada antes de reportar", "Varredura de segredos que nunca vê o valor", "Só o que mudou é lido de novo"]
+        text: "Conecte GitHub, GitLab ou Bitbucket com acesso somente leitura. A IA mapeia cada aplicação, segue o dado até onde ele é usado e reporta só o que uma segunda revisão, mais forte, confirma. Segredos são avaliados sem que a IA veja o valor."
+        points: ["Conexões somente leitura, sempre sincronizadas", "Revisão de código com IA, verificada antes de reportar", "Varredura de segredos que esconde o valor da IA", "Só o que mudou é lido de novo"]
         image: "repositories"
         height: 900
         screen: "Code repositories"
@@ -112,7 +112,7 @@ home:
       - label: "Cadeias de exploração e causas raiz"
         title: "Veja como os achados viram ataques reais."
         text: "A IA encadeia achados abertos em caminhos de ataque e os agrupa pela correção que compartilham. Analistas editam, acrescentam ou descartam cada passo, e cada mudança fica marcada com quem a fez."
-        points: ["Caminhos de ataque entre achados e ativos", "Causas raiz que fecham vários achados de uma vez", "Passos editados ou criados por pessoas, sinalizados", "Modo apresentação e exportação em YAML"]
+        points: ["Caminhos de ataque entre achados e ativos", "Causas raiz que fecham vários achados de uma vez", "Passos editados ou criados por pessoas, sinalizados", "Modo apresentação em tela cheia e editor YAML"]
         image: "exploit-chains"
         height: 950
         screen: "Exploit chains"
@@ -127,8 +127,8 @@ home:
         alt: "O grafo de recursos da LESIS em uso: ao selecionar o gateway de pagamentos aparecem seu ambiente, criticidade e conexões; com as vulnerabilidades como nós, uma ligada ao gateway abre como achado, com sua evidência."
       - label: "Conhecimento"
         title: "Suas políticas e threat models, ligados ao trabalho."
-        text: "Políticas, procedimentos, playbooks, runbooks e threat models ficam ao lado dos achados que explicam. Mencione um achado, ativo, repositório ou investigação e ele fica vinculado ao documento. Árvores de ataque são desenhadas na própria página e podem ser apresentadas ou exportadas."
-        points: ["Políticas, procedimentos, playbooks, runbooks e threat models", "Menções que vinculam achados, ativos e repositórios", "Árvores de ataque desenhadas no documento", "Busca em linguagem simples em todos os documentos"]
+        text: "Políticas, procedimentos, playbooks, runbooks e threat models ficam ao lado dos achados que explicam. Mencione um achado, ativo, repositório ou investigação e ele fica vinculado ao documento. Árvores de ataque são desenhadas no próprio documento."
+        points: ["Políticas, procedimentos, playbooks, runbooks e threat models", "Menções que vinculam achados, ativos e repositórios", "Árvores de ataque desenhadas no documento", "Busca em todos os documentos"]
         image: "knowledge"
         height: 1300
         screen: "Knowledge"
@@ -136,7 +136,7 @@ home:
       - label: "Seu consultor"
         title: "Um engenheiro com nome, a um clique."
         text: "A sua organização tem um consultor da LESIS dentro da plataforma: um engenheiro de segurança que conhece os seus sistemas, revisa o que a IA propõe e entra com o seu time quando uma correção precisa de um segundo par de olhos. Mande um e-mail ou agende uma conversa sem sair da LESIS."
-        points: ["Um engenheiro da LESIS com nome, dedicado à sua organização", "Perfil, e-mail e link de agenda dentro do app", "Revisa propostas da IA e correções com o seu time", "Ao lado do assistente, na tela inicial"]
+        points: ["Um engenheiro da LESIS com nome, dedicado à sua organização", "Perfil, e-mail e link de agenda dentro do app", "Revisa propostas da IA e correções com o seu time", "Na tela inicial, ao lado do assistente de IA"]
         image: "advisor"
         height: 900
         screen: "Home"
@@ -150,8 +150,8 @@ home:
     items:
       - title: "Ela nunca vê um segredo"
         text: "Credenciais candidatas são avaliadas pelo código ao redor. O valor fica mascarado na tela e é removido antes de o código chegar a um modelo."
-      - title: "Custo de IA às claras"
-        text: "Tokens e custo estimado de cada recurso de IA, por organização e modelo, para o uso nunca ser uma surpresa."
+      - title: "Ela não altera o seu código"
+        text: "A LESIS se conecta aos seus repositórios só para leitura, então nenhum modelo e ninguém da LESIS consegue fazer commit, abrir pull request ou mexer numa branch."
       - title: "A IA propõe, pessoas decidem"
         text: "Cadeias de exploração, causas raiz e registros sugeridos ficam como rascunho até um analista confirmar, editar ou descartar, e cada mudança mostra quem a fez."
       - title: "Prova da correção também"
@@ -162,7 +162,7 @@ home:
     title: "Seu programa, programável."
     intro: >-
       Uma API REST documentada cobre a plataforma, para que os achados fluam para os seus tickets, o seu SIEM e o seu data warehouse, e para que os seus próprios agentes de IA trabalhem com os mesmos registros que o seu time vê, com as mesmas permissões.
-    points: ["Uma API REST documentada para cada módulo", "Chaves vinculadas a uma organização e às permissões de quem as criou", "Escopos de leitura e escrita, validade e revogação", "Um guia para agentes de IA, para baixar em Markdown"]
+    points: ["Uma API REST documentada para a plataforma", "Chaves vinculadas a uma organização e às permissões de quem as criou", "Permissões por escopo, validade e revogação", "Um guia para agentes de IA, para baixar em Markdown"]
     soon_label: "Em breve"
     soon_tag: "Em breve"
     soon:
@@ -177,26 +177,26 @@ home:
     eyebrow: "Enterprise"
     title: "Feita para organizações <br>com mais de um de tudo."
     intro: >-
-      Subsidiárias, unidades de negócio, pesquisadores externos e auditores, cada um com exatamente o acesso de que precisa, e um registro de tudo o que fizeram.
+      Subsidiárias, unidades de negócio, pesquisadores externos e auditores, cada um com exatamente o acesso de que precisa, e um registro do que alteraram.
     items:
       - title: "Multiorganização"
         text: "Opere cada unidade de negócio ou subsidiária como uma organização própria, com os seus prazos, e veja todas juntas quando precisar."
       - title: "Papéis que refletem o seu trabalho"
-        text: "Oito papéis, de administrador a analista, remediador e convidado. O servidor garante cada um deles."
-      - title: "Trilha de auditoria completa"
-        text: "Cada escrita em cada módulo, registrada com a conta que a fez e quando."
+        text: "Oito papéis, de administrador a analista, remediador e convidado. Cada um é garantido no servidor, não só escondido na interface."
+      - title: "Trilha de auditoria"
+        text: "Alterações em toda a plataforma ficam registradas com a conta que fez cada uma e quando."
       - title: "Acesso de convidados"
-        text: "Compartilhe um único achado ou investigação com um convidado externo, só para leitura, sem abrir o resto do programa."
+        text: "Compartilhe um único achado ou investigação com alguém de fora da organização. A pessoa vê esse registro e nada mais."
       - title: "Benchmark"
-        text: "Métricas de remediação comparadas com organizações semelhantes na plataforma, sem nomear nenhuma delas."
+        text: "Suas métricas de remediação ao lado da mediana e dos quartis de outras organizações na LESIS, sem nomear nenhuma."
       - title: "O valor do programa"
-        text: "Quanto vale o que o seu programa encontrou, calculado a partir do valor que a sua organização dá a cada severidade."
+        text: "Quanto valeriam os seus achados, com preço por severidade a partir de dados de bug bounty ou dos valores que a sua organização definir."
       - title: "Login em duas etapas"
-        text: "Senha e código de uso único, com contas novas aprovadas por um administrador antes de poder entrar."
+        text: "Senha e código de uso único enviado por e-mail. Contas novas aguardam a aprovação de um administrador."
       - title: "Privilégio mínimo no seu código"
-        text: "Acesso somente leitura aos repositórios, tokens de varredura limitados a um repositório e credenciais guardadas criptografadas."
+        text: "Acesso somente leitura aos repositórios, tokens do GitHub limitados ao repositório analisado e credenciais guardadas criptografadas."
       - title: "Prazos que você define"
-        text: "Janelas de correção por severidade em cada organização, com todo achado vencido sinalizado antes que alguém pergunte."
+        text: "Janelas de correção por severidade em cada organização e um resumo por e-mail de tudo o que venceu."
 
   people:
     eyebrow: "Especialistas à disposição"
@@ -209,7 +209,7 @@ home:
       - title: "Decisões que a IA não toma"
         text: "Analistas confirmam ou descartam o que a IA propõe, e testam o que a revisão de código não alcança."
       - title: "Triagem da divulgação"
-        text: "Cada relato de um pesquisador externo passa pela triagem da LESIS antes de chegar ao seu time."
+        text: "No programa gerenciado, a LESIS faz a triagem dos relatos de pesquisadores externos conforme chegam."
       - title: "Avaliações"
         text: "Pesquisa de vulnerabilidades, revisão de arquitetura e investigação de incidentes, com cada achado entrando no mesmo registro."
 
@@ -228,7 +228,7 @@ home:
       lead:
         - "A LESIS opera o seu programa de segurança na plataforma, ao lado do seu time."
         - >-
-          Achados triados, cobrados, retestados e fechados. Relatos de divulgação triados conforme chegam. Inventário, runbooks e políticas mantidos em dia; campanhas de conscientização e treinamentos levados até o fim; o trust center sempre pronto; a postura reportada em comparação com organizações semelhantes. O que você contribui não é headcount, é acesso: os seus engenheiros agem quando agir importa, e o que aprendem entra no registro enquanto trabalham.
+          Achados triados, cobrados, retestados e fechados. Relatos de divulgação triados conforme chegam. Inventário, runbooks e políticas mantidos em dia; campanhas de conscientização e treinamentos levados até o fim; o trust center sempre pronto; a postura comparada com a de outras organizações. Você não aumenta o headcount: os seus engenheiros entram quando uma correção precisa deles, e o que aprendem fica no registro.
     partners: >-
       Consultorias podem entregar a LESIS com a própria marca, ou indicar clientes para nós, pelo <a href="{partnership_url}">Programa de Parcerias LESIS</a>, sem montar um time interno.
 
@@ -246,10 +246,10 @@ home:
           Membros da nossa equipe competiram em eventos de Capture The Flag, conquistando o primeiro lugar no CTF da BSides São Paulo e vencendo uma etapa classificatória do Hackaflag. A LESIS também apoia equipes da comunidade: no <a href="https://www.sbseg2026.uff.br/" target="_blank" rel="noopener noreferrer">SBSeg 2026</a>, a equipe do GRIS/UFRJ, apoiada pela LESIS, <a href="{bulletin_url}">ficou em primeiro lugar entre 18 equipes</a> em desafios de análise de tráfego, forense e investigação de incidentes.
       - title: "Experiência em líderes de mercado"
         text: >-
-          Nossa equipe inclui engenheiros que trabalharam em empresas como o Nubank, o maior banco digital da América Latina, e a Globo, a maior empresa de mídia do Brasil, além dos principais fornecedores de cibersegurança do país e de outras empresas igualmente fortes, ainda que menos conhecidas. Eles trazem para o trabalho na LESIS a experiência com as exigências de engenharia de sistemas que atendem milhões de pessoas.
+          Nossa equipe inclui engenheiros que trabalharam em empresas como o Nubank, o maior banco digital da América Latina, e a Globo, a maior empresa de mídia do Brasil, além dos principais fornecedores de cibersegurança do país e de outras empresas igualmente fortes, ainda que menos conhecidas. Eles sabem o que é preciso para proteger sistemas usados por milhões de pessoas.
       - title: "Palestras em eventos de segurança"
         text: >-
-          Membros da nossa equipe já apresentaram palestras em eventos como BxSec, Roadsec, BSides Rio de Janeiro e XibéSec. Essas contribuições levam a experiência da nossa equipe a discussões com outros profissionais de segurança e ajudam a compartilhar conhecimento na comunidade brasileira de segurança.
+          Membros da nossa equipe já apresentaram palestras em eventos como BxSec, Roadsec, BSides Rio de Janeiro e XibéSec. É assim que compartilhamos o que aprendemos com a comunidade brasileira de segurança.
 
   work:
     transition: "Explore nossas pesquisas publicadas e ferramentas open source."

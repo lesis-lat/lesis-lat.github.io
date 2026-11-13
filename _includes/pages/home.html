@@ -1,8 +1,9 @@
 {%- comment -%}
   Home page, shared by every language. index.html, pt/index.html and
   es/index.html include it; the copy comes from _data/i18n/<lang>.yml (home).
-  Product screens live in assets/images/product/ and show a fictional
-  organization; they are the same in every language.
+  Product screens are recordings in assets/video/ (the phone hero still is in
+  assets/images/product/); they show a fictional organization and are the
+  same in every language.
 {%- endcomment -%}
 {%- assign t = site.data.i18n[page.lang] -%}
 {%- assign h = t.home -%}
@@ -157,7 +158,7 @@
     },
     <span class="c-dim">&hellip;</span>
   ],
-  <span class="c-key">"pagination"</span>: { <span class="c-key">"page"</span>: 1, <span class="c-key">"per_page"</span>: 20, <span class="c-key">"total"</span>: 3 }
+  <span class="c-key">"pagination"</span>: { <span class="c-key">"page"</span>: 1, <span class="c-key">"per_page"</span>: 20, <span class="c-key">"total"</span>: 3, <span class="c-key">"total_pages"</span>: 1 }
 }</code></pre>
       </figure>
     </div>
