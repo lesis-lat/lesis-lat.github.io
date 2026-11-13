@@ -407,7 +407,7 @@ frontier:
       title: "O seu caminho até o Daybreak."
       lead:
         - "A OpenAI agora dedica uma parte significativa da sua capacidade computacional de fronteira a encontrar e corrigir vulnerabilidades, e reserva os modelos que fazem isso para defensores aprovados. O Daybreak é como esses defensores chegam até eles."
-        - "A LESIS é parceira do Daybreak. Apontamos esses modelos para o seu código e os seus sistemas, provamos o que eles encontram e entregamos as correções ao seu time."
+        - "A LESIS é verificada pela OpenAI para o Daybreak. Apontamos esses modelos para o seu código e os seus sistemas, provamos o que eles encontram e entregamos as correções ao seu time."
       stats:
         - value: "948"
           text: "possíveis problemas no kernel Linux, cada um já com uma correção preparada."
@@ -428,7 +428,7 @@ frontier:
       access:
         title: "Feito para defensores aprovados."
         text: >-
-          O Daybreak só está aberto a pessoas e organizações que a OpenAI aprova para trabalho de segurança autorizado, e contas individuais precisam entrar com chaves de segurança físicas. Como parceira do Daybreak, a LESIS cumpre esses requisitos e executa o trabalho, então o seu time recebe os resultados sem o processo de candidatura nem a carga operacional.
+          O Daybreak só está aberto a pessoas e organizações que a OpenAI aprova para trabalho de segurança autorizado, e contas individuais precisam entrar com chaves de segurança físicas. A LESIS passou por essa verificação, cumpre esses requisitos e executa o trabalho por você, então o seu time recebe os resultados sem o processo de candidatura nem a carga operacional.
       closing:
         title: ["Modelos de fronteira", "já estão lendo código.", "Garanta que leiam o seu primeiro."]
         text: "Conte o que você opera. Nós dizemos por onde o Daybreak deve começar e em quanto tempo ele pode rodar."
@@ -476,7 +476,7 @@ frontier:
             by: "OpenAI"
             access: "Daybreak Blue e Daybreak Red, para defensores aprovados."
             strength: "Modelos de fronteira ajustados para trabalho de segurança e modelos treinados para pesquisa de vulnerabilidades e validação de exploits."
-            lesis: "Parceira do Daybreak."
+            lesis: "Verificada pela OpenAI para o Daybreak."
             path: "/daybreak/"
             link: "O seu caminho até o Daybreak &rarr;"
       access:

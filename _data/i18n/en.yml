@@ -412,7 +412,7 @@ frontier:
       title: "Your path to Daybreak."
       lead:
         - "OpenAI now puts a significant share of its frontier compute into finding and patching vulnerabilities, and keeps the models that do it for approved defenders. Daybreak is how those defenders get them."
-        - "LESIS is a Daybreak partner. We point those models at your code and systems, prove what they find and hand your team the fixes."
+        - "LESIS is verified by OpenAI for Daybreak. We point those models at your code and systems, prove what they find and hand your team the fixes."
       stats:
         - value: "948"
           text: "potential issues in the Linux kernel, each with a patch already prepared."
@@ -433,7 +433,7 @@ frontier:
       access:
         title: "Built for approved defenders."
         text: >-
-          Daybreak is open only to people and organizations OpenAI approves for authorized security work, and individual accounts must sign in with hardware security keys. As a Daybreak partner, LESIS meets those requirements and runs the work, so your team gets the results without the application or the overhead.
+          Daybreak is open only to people and organizations OpenAI approves for authorized security work, and individual accounts must sign in with hardware security keys. LESIS has been through that verification and meets those requirements, and runs the work for you, so your team gets the results without the application or the overhead.
       closing:
         title: ["Frontier models", "are already reading code.", "Make sure they read yours first."]
         text: "Tell us what you run. We will tell you where Daybreak should look first and how soon it can start."
@@ -481,7 +481,7 @@ frontier:
             by: "OpenAI"
             access: "Daybreak Blue and Daybreak Red, for approved defenders."
             strength: "Frontier models tuned for security work, and models trained for vulnerability research and exploit validation."
-            lesis: "Daybreak partner."
+            lesis: "Verified by OpenAI for Daybreak."
             path: "/daybreak/"
             link: "Your path to Daybreak &rarr;"
       access:

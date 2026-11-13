@@ -409,7 +409,7 @@ frontier:
       title: "Tu camino a Daybreak."
       lead:
         - "OpenAI ahora dedica una parte significativa de su cómputo de frontera a encontrar y corregir vulnerabilidades, y reserva los modelos que lo hacen para defensores aprobados. Daybreak es la forma en que esos defensores llegan a ellos."
-        - "LESIS es socio de Daybreak. Apuntamos esos modelos a tu código y tus sistemas, probamos lo que encuentran y le entregamos las correcciones a tu equipo."
+        - "LESIS está verificada por OpenAI para Daybreak. Apuntamos esos modelos a tu código y tus sistemas, probamos lo que encuentran y le entregamos las correcciones a tu equipo."
       stats:
         - value: "948"
           text: "posibles problemas en el kernel de Linux, cada uno con una corrección ya preparada."
@@ -430,7 +430,7 @@ frontier:
       access:
         title: "Hecho para defensores aprobados."
         text: >-
-          Daybreak solo está abierto a personas y organizaciones que OpenAI aprueba para trabajo de seguridad autorizado, y las cuentas individuales deben iniciar sesión con llaves de seguridad físicas. Como socio de Daybreak, LESIS cumple esos requisitos y hace el trabajo, así que tu equipo recibe los resultados sin la postulación ni la carga operativa.
+          Daybreak solo está abierto a personas y organizaciones que OpenAI aprueba para trabajo de seguridad autorizado, y las cuentas individuales deben iniciar sesión con llaves de seguridad físicas. LESIS pasó por esa verificación, cumple esos requisitos y hace el trabajo por ti, así que tu equipo recibe los resultados sin la postulación ni la carga operativa.
       closing:
         title: ["Los modelos de frontera", "ya están leyendo código.", "Asegúrate de que lean el tuyo primero."]
         text: "Cuéntanos qué operas. Te diremos por dónde debe empezar Daybreak y en cuánto tiempo puede correr."
@@ -478,7 +478,7 @@ frontier:
             by: "OpenAI"
             access: "Daybreak Blue y Daybreak Red, para defensores aprobados."
             strength: "Modelos de frontera ajustados para el trabajo de seguridad y modelos entrenados para investigación de vulnerabilidades y validación de exploits."
-            lesis: "Socio de Daybreak."
+            lesis: "Verificada por OpenAI para Daybreak."
             path: "/daybreak/"
             link: "Tu camino a Daybreak &rarr;"
       access:
