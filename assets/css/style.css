@@ -2705,20 +2705,7 @@
     position: relative;
     max-width: 76rem;
     margin: 4.5rem auto 0;
-    padding: 0 3rem;
-  }
-
-  .product-caption {
-    margin: 1rem 0 0;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: max(0.7rem, 11px);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .product-hero .product-caption {
-    padding-bottom: 2.5rem;
+    padding: 0 3rem 4.5rem;
   }
 
   /* A screen of the product, framed like the app's own window. */
@@ -2899,15 +2886,14 @@
   @media (max-width: 760px) {
     .product-hero { padding-top: calc(var(--header-h) + 2.5rem); }
     .product-hero .hero-actions .button { width: 100%; justify-content: center; }
-    .product-hero-shot { margin-top: 3rem; padding: 0 1rem; }
+    .product-hero-shot { margin-top: 3rem; padding: 0 1rem 3rem; }
     .feature-shot { max-height: 22rem; }
   }
 
   /* Short labels are not running text: centre or left-align them instead of
      justifying, and never hyphenate them. */
   body.landing .strip-label,
-  body.landing .product-hero .eyebrow,
-  body.landing .product-hero .product-caption {
+  body.landing .product-hero .eyebrow {
     text-align: center;
     text-wrap: balance;
     -webkit-hyphens: none;

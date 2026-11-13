@@ -64,7 +64,6 @@ home:
     screen: "Security posture"
     alt: "The LESIS security posture page: findings past their deadline, time to fix and the attention points that need a decision."
     video_alt: "A walkthrough of LESIS: from the security posture page to the vulnerabilities list, a critical finding with its attack tree and evidence, the remediation analytics, and back to the posture page."
-    caption: "Screens from the product, shown with a fictional organization"
 
   clients:
     label: "Organizations LESIS has helped protect"

@@ -60,7 +60,6 @@ home:
     screen: "Security posture"
     alt: "A página de postura de segurança da LESIS: achados com prazo vencido, tempo de correção e os pontos de atenção que pedem uma decisão."
     video_alt: "Um passeio pela LESIS: da página de postura de segurança à lista de vulnerabilidades, um achado crítico com sua árvore de ataque e evidência, os indicadores de correção e de volta à postura."
-    caption: "Telas do produto, com uma organização fictícia"
 
   clients:
     label: "Organizações que a LESIS já ajudou a proteger"
