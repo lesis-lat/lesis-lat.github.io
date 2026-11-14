@@ -405,11 +405,6 @@
     --dismissed-text: #70706f;
   }
 
-  /* Dark theme. theme.js sets data-theme on <html> before the page paints:
-     the visitor's choice from the header button, or the system setting.
-     It is a dim warm gray rather than black, with dividers a few steps
-     softer than the text, so long pages stay easy on the eyes; the bands
-     that were already dark (--night) sit one step deeper. */
   :root[data-theme="dark"] {
     color-scheme: dark;
     --ink: #dddbd4;
@@ -463,7 +458,6 @@
   [data-theme="dark"] .code-frame .c-prompt,
   [data-theme="dark"] .code-frame .c-dim { color: rgba(255, 255, 255, 0.52); }
   [data-theme="dark"] .closing-media::after { background: rgba(34, 34, 32, 0.84); }
-  /* Brand-kit tiles show the black files, so they stay light in any theme. */
   [data-theme="dark"] .kit-preview:not(.kit-preview-dark) { border-color: #f4f3ef; background: #f4f3ef; }
   [data-theme="dark"] .button-light { border-color: var(--ink); background: var(--ink); color: #1d1d1b; }
   [data-theme="dark"] .button-light:hover,
@@ -687,8 +681,6 @@
   [data-theme="dark"] .site-theme-to-dark { display: none; }
   [data-theme="dark"] .site-theme-to-light { display: flex; }
 
-  /* The label names the button for screen readers; on wide screens only the
-     icon shows, in the menu on phones the words do too. */
   .site-theme-label {
     position: absolute;
     width: 1px;

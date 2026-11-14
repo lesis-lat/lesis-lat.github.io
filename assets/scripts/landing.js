@@ -1,5 +1,3 @@
-// Theme button: flips between light and dark and remembers the choice on
-// this device. Until someone picks, the page keeps following the system.
 (function () {
   var root = document.documentElement;
   var system = window.matchMedia("(prefers-color-scheme: dark)");
