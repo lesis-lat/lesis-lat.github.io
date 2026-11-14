@@ -456,6 +456,18 @@
   [data-theme="dark"] .code-frame { background: #1e1e1c; border-color: var(--line); }
   [data-theme="dark"] .site-header.is-scrolled { background: rgba(34, 34, 32, 0.86); }
   [data-theme="dark"] .site-header[data-chrome="dark"] .site-lang-list { background: var(--night); }
+  [data-theme="dark"] .site-nav .site-lang-list a { opacity: 0.7; }
+  [data-theme="dark"] .site-nav .site-lang-list a:hover,
+  [data-theme="dark"] .site-nav .site-lang-list a:focus-visible,
+  [data-theme="dark"] .site-nav .site-lang-list a[aria-current] { opacity: 1; }
+  [data-theme="dark"] .code-frame .c-prompt,
+  [data-theme="dark"] .code-frame .c-dim { color: rgba(255, 255, 255, 0.52); }
+  [data-theme="dark"] .closing-media::after { background: rgba(34, 34, 32, 0.84); }
+  /* Brand-kit tiles show the black files, so they stay light in any theme. */
+  [data-theme="dark"] .kit-preview:not(.kit-preview-dark) { border-color: #f4f3ef; background: #f4f3ef; }
+  [data-theme="dark"] .button-light { border-color: var(--ink); background: var(--ink); color: #1d1d1b; }
+  [data-theme="dark"] .button-light:hover,
+  [data-theme="dark"] .button-light:focus-visible { border-color: var(--ink-hover); background: var(--ink-hover); }
 
   html:has(body.landing) {
     scroll-padding-top: var(--header-h);
