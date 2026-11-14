@@ -44,6 +44,7 @@ footer:
   privacy: "Política de privacidad"
   terms: "Términos de uso"
   company: "Empresa"
+  about: "Sobre LESIS"
   partnership: "Alianzas"
   press: "Kit de prensa"
   trainings: "Capacitaciones"
@@ -351,6 +352,121 @@ partnership:
     title: ["Construye ofertas", "de seguridad más sólidas", "con LESIS."]
     text: "Ya sea que quieras ampliar tu portafolio de servicios, entregar proyectos de ciberseguridad con tu propia marca o conectar a tus clientes con experiencia especializada en seguridad, podemos ayudarte a definir el modelo de alianza adecuado."
     button: "Conviértete en socio de LESIS"
+
+# --- Nosotros: /es/about/ -------------------------------------------------------
+about:
+  hero:
+    eyebrow: "Sovereign AI Lab for Cybersecurity"
+    title: ["Investigación independiente.", "Inteligencia soberana.", "Capacidades cibernéticas avanzadas."]
+    identity: "Un laboratorio de IA independiente y soberano, enfocado en ciberseguridad."
+    lead: "Investigamos y desarrollamos capacidades de IA soberana que permiten a organizaciones y gobiernos poseer, operar y hacer evolucionar su propia inteligencia cibernética."
+    talk: "Habla con el laboratorio"
+    thesis_link: "Lee la tesis"
+    subject: "Laboratorio LESIS"
+  thesis:
+    eyebrow: "Nuestra tesis"
+    display: "La ciberseguridad exige una inteligencia que las organizaciones puedan entender, controlar y en la que puedan confiar."
+    sub: "LESIS investiga y desarrolla capacidades de IA soberana para hacerlo posible."
+    items:
+      - title: "Entender"
+        text: "Una conclusión solo sirve si alguien puede seguirla. Cada resultado que entregamos trae su evidencia, y cada paso con el que contribuye un modelo queda marcado como del modelo, para que una persona vea qué se encontró, cómo y quién lo hizo."
+      - title: "Controlar"
+        text: "La organización decide qué modelos corren, dónde corren, qué datos ven y qué pueden cambiar. Una inteligencia que depende de la buena voluntad de un proveedor, o que envía datos adonde su dueño no puede seguirlos, no está bajo el control de nadie."
+      - title: "Confiar"
+        text: "La confianza viene de la prueba, no de la fluidez. Un modelo puede proponer; un hallazgo solo cuenta una vez reproducido, y una persona responde por él."
+  lab:
+    eyebrow: "El laboratorio"
+    title: "Investigación aplicada en IA, ingeniería de ciberseguridad y autonomía operativa."
+    text:
+      - "LESIS es un laboratorio de investigación aplicada e ingeniería enfocado en inteligencia artificial soberana para ciberseguridad."
+      - "Desarrollamos sistemas de IA especializados que permiten a empresas, gobiernos y organizaciones críticas construir, desplegar y operar capacidades avanzadas de ciberseguridad dentro de sus propios entornos controlados."
+      - "Nuestro trabajo une investigación aplicada en IA, ingeniería de ciberseguridad y autonomía operativa, para que las organizaciones mantengan el control sobre su inteligencia, infraestructura, datos y evolución tecnológica."
+  origin:
+    eyebrow: "De dónde venimos"
+    title: "Primero fue la investigación aplicada."
+    quote: "We are an applied security research firm, focused on developing effective offensive technology to support critical operations."
+    source: "lesis.lat, mayo de 2024. La primera frase que publicamos."
+    signoff: "Have a nice zero day."
+    signoff_source: "La despedida del primer sitio."
+    text:
+      - "LESIS, Laboratory of Engineering Studies in Information Security, nació de investigadores que vivían de encontrar vulnerabilidades: en routers de D-Link, en MISP, en productos de Oracle y Apple. El trabajo nunca fue correr el escáner de otros. Era construir los fuzzers, los analizadores estáticos y los exploits que respondían las preguntas que esos escáneres no podían responder."
+      - "Ese hábito, crear nuestros propios instrumentos en lugar de alquilar los de otro, es el mismo que hoy guía nuestro trabajo con IA. Los modelos son el instrumento más poderoso que ha tenido la investigación en seguridad. Un laboratorio que solo los alquila depende de quien es su dueño."
+  path:
+    eyebrow: "Trayectoria"
+    title: "De la investigación aplicada a un laboratorio de IA soberana."
+    stages:
+      - when: "Dónde empezamos"
+        title: "Investigación aplicada en seguridad"
+        text: "Investigación de vulnerabilidades, ingeniería inversa, fuzzing y herramientas hechas para operaciones críticas. CVE públicos, herramientas open source y la mirada de un atacante sobre cada sistema que tocamos."
+      - when: "Hoy"
+        title: "La investigación se encuentra con la IA"
+        text: "Una plataforma en la que la IA lee código y sistemas y los ingenieros de LESIS prueban lo que encuentra. Corre modelos de varios laboratorios detrás de una capa propia, y LESIS está verificada para los modelos de frontera en ciber de Anthropic y OpenAI."
+      - when: "Hacia dónde vamos"
+        title: "Un laboratorio de IA soberana"
+        text: "Modelos especializados, inferencia en entornos controlados y los datos, evaluaciones y conocimiento para seguir mejorándolos, en manos de las organizaciones que necesitan operar los suyos."
+  commitments:
+    eyebrow: "Lo que define al laboratorio"
+    title: "Tres compromisos."
+    items:
+      - title: "Primero la investigación"
+        text: "Desarrollamos conocimiento, métodos, modelos y tecnologías propias, en lugar de solo integrar herramientas de terceros. Cuando lo que necesitamos no existe, construirlo es parte del trabajo, como lo es desde el primer fuzzer."
+      - title: "Soberanía en IA"
+        text: "Control sobre los modelos, los datos, la infraestructura, la propiedad intelectual y el ciclo de evolución de las capacidades de IA. Eso no exige entrenar un foundation model desde cero. Exige no depender nunca de un solo proveedor, nube o contrato para seguir funcionando."
+      - title: "Especialización en ciberseguridad"
+        text: "Investigación e ingeniería de IA orientadas específicamente a los problemas complejos de seguridad ofensiva, defensiva e inteligencia cibernética. Un modelo formado por miles de hallazgos, exploits y correcciones reales es un instrumento distinto de uno formado por la internet abierta."
+  sovereignty:
+    eyebrow: "Soberanía, demostrada"
+    title: "Independencia que se puede comprobar."
+    intro: "Llamar soberano a un laboratorio significa poco si el control no es real. Este es el punto en que está LESIS en cada una de las cinco cosas de las que está hecha la soberanía: lo que ya es cierto y lo que estamos construyendo."
+    today_label: "Hoy"
+    building_label: "Construyendo"
+    items:
+      - name: "Modelos"
+        today: "La plataforma LESIS corre modelos de tres laboratorios, Anthropic, OpenAI y DeepSeek, detrás de una capa de enrutamiento que LESIS escribió y mantiene. Qué modelo se ocupa de cada tarea es una configuración, con cambio automático cuando uno no está disponible."
+        building: "Modelos especializados en trabajo de seguridad, adaptados a partir de modelos open-weight y medidos contra nuestra propia investigación."
+      - name: "Datos"
+        today: "Los valores de los secretos se enmascaran antes de que cualquier modelo los vea, los repositorios se conectan solo en lectura y los registros de cada organización se mantienen separados de los de todas las demás."
+        building: "Pipelines que mantienen el material sensible dentro del entorno al que pertenece, para que solo salga lo que la organización apruebe."
+      - name: "Infraestructura"
+        today: "La plataforma y la capa que habla con los modelos son código propio de LESIS. Cada llamada a un modelo queda registrada con el modelo usado, la tarea y el costo."
+        building: "Inferencia en infraestructura que LESIS controla o en la de la propia organización, incluidas redes aisladas."
+      - name: "Propiedad intelectual"
+        today: "Nuestros métodos, analizadores, evaluaciones y herramientas se desarrollan internamente, y varios se publican como open source."
+        building: "Datasets y benchmarks creados a partir de nuestra investigación, el activo que hace posibles los modelos especializados."
+      - name: "Evolución"
+        today: "Personas revisan cada resultado de la IA antes de que cuente, y lo que confirman o descartan queda registrado, para medir dónde un modelo acierta y dónde no."
+        building: "Un ciclo de evaluar, adaptar y volver a desplegar modelos que sigue nuestro calendario y el de nuestros clientes, no el calendario de lanzamientos de un proveedor."
+  clients:
+    eyebrow: "Para empresas y gobiernos"
+    title: "Soberanía en tus manos."
+    intro: "El objetivo no es solo que LESIS sea independiente. Es que las organizaciones con las que trabajamos operen sus propias capacidades de IA para ciberseguridad. Las empresas y los gobiernos que no pueden entregar su código, sus incidentes o su inteligencia a un tercero no deberían tener que renunciar a la IA moderna para protegerlos."
+    items:
+      - title: "Poseer"
+        text: "Los modelos adaptados a tus sistemas, los datos de los que aprenden y el conocimiento que construyen siguen siendo tuyos, bajo tus contratos y tu jurisdicción."
+      - title: "Operar"
+        text: "Capacidades que corren donde decidas: en tu nube, en tu centro de datos o en una red aislada, operadas por tu equipo con LESIS al lado."
+      - title: "Evolucionar"
+        text: "Tus capacidades mejoran a tu ritmo, medidas contra tus propios casos, sin esperar la hoja de ruta de un proveedor ni aceptar sus cambios a ciegas."
+  agenda:
+    eyebrow: "Agenda de investigación"
+    title: "Dónde trabaja el laboratorio."
+    items:
+      - title: "Seguridad ofensiva"
+        text: "Modelos y herramientas que encuentran, encadenan y prueban vulnerabilidades: leen código como lo haría un atacante, llevan los fuzzers a caminos que otros no alcanzan y validan exploits en condiciones controladas."
+      - title: "Defensa"
+        text: "Revisión de código que tiene que probar lo que reporta, causas raíz que cierran varios hallazgos a la vez y re-tests que confirman que una corrección sigue en pie."
+      - title: "Inteligencia cibernética"
+        text: "Convertir hallazgos, activos, incidentes y rutas de ataque en un panorama de exposición sobre el que la organización puede actuar, guardado dentro de la organización que es su dueña."
+      - title: "Evaluación"
+        text: "Benchmarks y conjuntos de prueba para tareas de seguridad, para que cada modelo que usamos o construimos se mida en el trabajo que debe hacer."
+  record:
+    eyebrow: "Trayectoria pública"
+    title: "Investigación que se puede verificar."
+    intro: "El criterio del laboratorio se apoya en trabajo público: divulgación de vulnerabilidades, competencias, charlas y experiencia dentro de grandes empresas de tecnología."
+  closing:
+    title: ["Tu infraestructura.", "Tu inteligencia.", "Tu soberanía."]
+    text: "Si te ocupas de la seguridad de una empresa, de un servicio crítico o de un gobierno, cuéntanos qué necesitas mantener bajo tu control. Te diremos hasta dónde puede llevarlo hoy la IA soberana."
+    research: "Lee nuestra investigación"
 
 # --- Modelos de frontera: /mythos/, /daybreak/, /frontier-models/ -------------
 frontier:

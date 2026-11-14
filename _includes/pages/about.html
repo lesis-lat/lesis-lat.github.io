@@ -1,0 +1,199 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign a = t.about -%}
+{%- assign h = t.home -%}
+{%- assign talk_subject = a.hero.subject | uri_escape -%}
+{%- assign talk_href = "mailto:contact@lesis.lat?subject=" | append: talk_subject -%}
+{%- capture blog_url %}{% include localized-url.html path="/blog.html" %}{% endcapture -%}
+{%- capture bulletin_url %}{% include localized-url.html path="/newsletter/lesis-bulletin-7-ctf-victory-open-source-security-and-community/" %}{% endcapture -%}
+<section class="lab-hero" data-chrome="dark" aria-labelledby="lab-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">{{ a.hero.eyebrow }}</p>
+    <h1 id="lab-title" class="lab-hero-title">
+      {%- for line in a.hero.title %}
+      <span class="reveal" style="--i:{{ forloop.index0 }}">{{ line }}</span>
+      {%- endfor %}
+    </h1>
+    <div class="lab-hero-row reveal" style="--i:3">
+      <p class="lab-hero-identity">{{ a.hero.identity }}</p>
+      <div>
+        <p class="lab-hero-lead">{{ a.hero.lead }}</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="{{ talk_href }}">{{ a.hero.talk }}</a>
+          <a class="button button-ghost" href="#thesis">{{ a.hero.thesis_link }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="statement lab-thesis" id="thesis" data-chrome="light" aria-labelledby="thesis-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">{{ a.thesis.eyebrow }}</p>
+    <h2 id="thesis-title" class="statement-display reveal">{{ a.thesis.display }}</h2>
+    <p class="lab-thesis-sub reveal">{{ a.thesis.sub }}</p>
+    <ol class="lab-triad">
+      {%- for item in a.thesis.items %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-rule" id="lab" data-chrome="light" aria-labelledby="lab-about-title">
+  <div class="wrap lab-split">
+    <div>
+      <p class="eyebrow reveal">{{ a.lab.eyebrow }}</p>
+      <h2 id="lab-about-title" class="lab-split-title reveal">{{ a.lab.title }}</h2>
+    </div>
+    <div class="lab-split-text">
+      {%- for paragraph in a.lab.text %}
+      <p class="reveal" style="--i:{{ forloop.index0 }}">{{ paragraph }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section lab-origin" id="origin" data-chrome="light" aria-labelledby="origin-title">
+  <div class="wrap lab-split">
+    <figure class="code-frame lab-archive reveal">
+      <div class="product-frame-bar" aria-hidden="true"><i></i><i></i><i></i><span>{{ a.origin.source }}</span></div>
+      <blockquote lang="en">
+        <p>{{ a.origin.quote }}</p>
+      </blockquote>
+      <figcaption><span lang="en">{{ a.origin.signoff }}</span> <span class="lab-archive-note">{{ a.origin.signoff_source }}</span></figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow reveal">{{ a.origin.eyebrow }}</p>
+      <h2 id="origin-title" class="lab-split-title reveal">{{ a.origin.title }}</h2>
+      <div class="lab-split-text">
+        {%- for paragraph in a.origin.text %}
+        <p class="reveal" style="--i:{{ forloop.index0 }}">{{ paragraph }}</p>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-rule" id="trajectory" data-chrome="light" aria-labelledby="trajectory-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow reveal">{{ a.path.eyebrow }}</p>
+      <h2 id="trajectory-title" class="statement-display reveal">{{ a.path.title }}</h2>
+    </div>
+    <ol class="lab-path">
+      {%- for stage in a.path.stages %}
+      <li class="reveal{% if forloop.last %} is-next{% endif %}" style="--i:{{ forloop.index0 }}">
+        <p class="lab-path-when">{{ stage.when }}</p>
+        <h3>{{ stage.title }}</h3>
+        <p>{{ stage.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-rule" id="commitments" data-chrome="light" aria-labelledby="commitments-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow reveal">{{ a.commitments.eyebrow }}</p>
+      <h2 id="commitments-title" class="statement-display reveal">{{ a.commitments.title }}</h2>
+    </div>
+    <ol class="lab-commitments">
+      {%- for item in a.commitments.items %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="lab-sovereignty" id="sovereignty" data-chrome="dark" aria-labelledby="sovereignty-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow reveal">{{ a.sovereignty.eyebrow }}</p>
+      <h2 id="sovereignty-title" class="statement-display reveal">{{ a.sovereignty.title }}</h2>
+      <p class="section-intro reveal">{{ a.sovereignty.intro }}</p>
+    </div>
+    <div class="lab-ledger">
+      <div class="lab-ledger-head" aria-hidden="true">
+        <span></span>
+        <span>{{ a.sovereignty.today_label }}</span>
+        <span>{{ a.sovereignty.building_label }}</span>
+      </div>
+      {%- for item in a.sovereignty.items %}
+      <div class="lab-ledger-row reveal" style="--i:{{ forloop.index0 }}">
+        <h3>{{ item.name }}</h3>
+        <p><span class="lab-ledger-label">{{ a.sovereignty.today_label }}</span>{{ item.today }}</p>
+        <p><span class="lab-ledger-label">{{ a.sovereignty.building_label }}</span>{{ item.building }}</p>
+      </div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="statement lab-clients" id="sovereign-clients" data-chrome="light" aria-labelledby="clients-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">{{ a.clients.eyebrow }}</p>
+    <h2 id="clients-title" class="statement-display reveal">{{ a.clients.title }}</h2>
+    <p class="section-intro lab-clients-intro reveal">{{ a.clients.intro }}</p>
+    <ol class="lab-triad">
+      {%- for item in a.clients.items %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-rule" id="agenda" data-chrome="light" aria-labelledby="agenda-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow reveal">{{ a.agenda.eyebrow }}</p>
+      <h2 id="agenda-title" class="statement-display reveal">{{ a.agenda.title }}</h2>
+    </div>
+    <ol class="exec-grid">
+      {%- for item in a.agenda.items %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-rule" id="track-record" data-chrome="light" aria-labelledby="track-record-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow reveal">{{ a.record.eyebrow }}</p>
+      <h2 id="track-record-title" class="statement-display reveal">{{ a.record.title }}</h2>
+      <p class="section-intro reveal">{{ a.record.intro }}</p>
+    </div>
+    <ul class="insights insights-4">
+      {%- for item in h.record.items %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}">
+        {%- assign item_text = item.text | replace: "{bulletin_url}", bulletin_url %}
+        <h3>{{ item.title }}</h3>
+        <p>{{ item_text }}</p>
+      </li>
+      {%- endfor %}
+    </ul>
+    <div class="section-foot reveal">
+      <a class="text-link" href="{{ blog_url }}">{{ h.work.all_publications }}</a>
+      <a class="text-link" href="https://github.com/lesis-lat" target="_blank" rel="noopener noreferrer">{{ h.work.explore_tools }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="closing" id="contact" data-chrome="dark" aria-labelledby="closing-title">
+  <div class="closing-media" aria-hidden="true"><picture><source type="image/avif" srcset="{{ '/assets/images/switchboard-1000.avif' | relative_url }} 1000w, {{ '/assets/images/switchboard-1600.avif' | relative_url }} 1600w" sizes="100vw"><img src="{{ '/assets/images/switchboard-1600.webp' | relative_url }}" srcset="{{ '/assets/images/switchboard-1000.webp' | relative_url }} 1000w, {{ '/assets/images/switchboard-1600.webp' | relative_url }} 1600w" sizes="100vw" alt="" width="1600" height="1154" loading="lazy" decoding="async"></picture></div>
+  <div class="wrap closing-inner">
+    <h2 id="closing-title" class="closing-title">
+      {%- for line in a.closing.title %}
+      <span class="reveal" style="--i:{{ forloop.index0 }}">{{ line }}</span>
+      {%- endfor %}
+    </h2>
+    <div class="closing-row reveal" style="--i:3">
+      <p>{{ a.closing.text }}</p>
+      <div class="hero-actions">
+        <a class="button button-light" href="{{ talk_href }}">{{ a.hero.talk }}</a>
+        <a class="button button-ghost" href="{{ blog_url }}">{{ a.closing.research }}</a>
+      </div>
+    </div>
+  </div>
+</section>
