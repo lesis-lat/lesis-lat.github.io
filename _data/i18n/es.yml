@@ -467,6 +467,7 @@ about:
     title: ["Tu infraestructura.", "Tu inteligencia.", "Tu soberanía."]
     text: "Si te ocupas de la seguridad de una empresa, de un servicio crítico o de un gobierno, cuéntanos qué necesitas mantener bajo tu control. Te diremos hasta dónde puede llevarlo hoy la IA soberana."
     research: "Lee nuestra investigación"
+    signoff: "Sovereign Intelligence. Secure Futures."
 
 # --- Modelos de frontera: /mythos/, /daybreak/, /frontier-models/ -------------
 frontier:

@@ -469,6 +469,7 @@ about:
     title: ["Your infrastructure.", "Your intelligence.", "Your sovereignty."]
     text: "Whether you run security for a company, a critical service or a government, tell us what you need to keep under your control. We will tell you how far sovereign AI can take it today."
     research: "Read our research"
+    signoff: "Sovereign Intelligence. Secure Futures."
 
 # --- Frontier models: /mythos/, /daybreak/, /frontier-models/ ------------------
 # One block per page under `pages`; the rest is shared by the three.

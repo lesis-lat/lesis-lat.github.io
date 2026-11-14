@@ -3667,6 +3667,20 @@
     white-space: nowrap;
   }
 
+  body.landing .lab-signoff {
+    margin: 4.5rem 0 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: max(0.85rem, 12px);
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #e9c58f;
+  }
+
+  .lab-signoff::before {
+    content: "> ";
+    color: rgba(255, 255, 255, 0.5);
+  }
+
   .lab-clients-intro {
     max-width: 52rem;
     margin: 0 auto 4.5rem;

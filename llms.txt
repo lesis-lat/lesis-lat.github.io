@@ -22,7 +22,7 @@ https://blog.lesis.lat
 ## The lab
 https://lesis.lat/about/
 
-LESIS is an independent, sovereign AI lab focused on cybersecurity: "Independent research. Sovereign intelligence. Advanced cyber capabilities." Its thesis: cybersecurity requires intelligence that organizations can understand, control and trust, and LESIS researches and engineers sovereign AI capabilities to make that possible, so that enterprises and governments can own, operate and evolve their cyber intelligence.
+LESIS is an independent, sovereign AI lab focused on cybersecurity: "Independent research. Sovereign intelligence. Advanced cyber capabilities." Its sign-off: "Sovereign Intelligence. Secure Futures." Its thesis: cybersecurity requires intelligence that organizations can understand, control and trust, and LESIS researches and engineers sovereign AI capabilities to make that possible, so that enterprises and governments can own, operate and evolve their cyber intelligence.
 
 LESIS began as an applied security research firm (vulnerability research, reverse engineering, fuzzing, custom tooling). Today its platform runs on models from Anthropic, OpenAI and DeepSeek behind a routing layer LESIS owns, masks secret values before any model sees them, connects to repositories read-only and records every model call. What the lab is building: specialized models adapted from open-weight models, inference on infrastructure LESIS or the client controls, and datasets and evaluations drawn from its research.
 
