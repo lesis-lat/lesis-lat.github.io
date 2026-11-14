@@ -1,7 +1,5 @@
 {%- assign t = site.data.i18n[page.lang] -%}
 {%- assign about = t.about -%}
-{%- assign talk_subject = about.hero.subject | uri_escape -%}
-{%- assign talk_href = "mailto:contact@lesis.lat?subject=" | append: talk_subject -%}
 {%- capture blog_url %}{% include localized-url.html path="/blog.html" %}{% endcapture -%}
 {%- capture bulletin_url %}{% include localized-url.html path="/newsletter/lesis-bulletin-7-ctf-victory-open-source-security-and-community/" %}{% endcapture -%}
 <section class="lab-hero" data-chrome="dark" aria-labelledby="lab-title">
@@ -14,26 +12,11 @@
     </h1>
     <div class="lab-hero-row reveal" style="--i:3">
       <p class="lab-hero-identity">{{ about.hero.identity }}</p>
-      <div>
-        <p class="lab-hero-lead">{{ about.hero.lead }}</p>
-        <div class="hero-actions">
-          <a class="button button-light" href="{{ talk_href }}">{{ about.hero.talk }}</a>
-          <a class="button button-ghost" href="#thesis">{{ about.hero.thesis_link }}</a>
-        </div>
-      </div>
+      <p class="lab-hero-lead">{{ about.hero.lead }}</p>
     </div>
-  </div>
-</section>
-
-<section class="statement" id="thesis" data-chrome="light" aria-labelledby="thesis-title">
-  <div class="wrap">
-    <p class="eyebrow reveal">{{ about.thesis.eyebrow }}</p>
-    <h2 id="thesis-title" class="statement-display reveal">{{ about.thesis.display }}</h2>
-    <ol class="lab-cards lab-cards-words">
-      {%- for item in about.thesis.items %}
-      <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
-      {%- endfor %}
-    </ol>
+    <div class="lab-hero-cta reveal" style="--i:4">
+      <a class="button button-ghost" href="#thesis">{{ about.hero.thesis_link }}</a>
+    </div>
   </div>
 </section>
 
@@ -53,14 +36,17 @@
   </div>
 </section>
 
-<section class="section" id="trajectory" data-chrome="light" aria-labelledby="trajectory-title">
+<section class="statement" id="shift" data-chrome="light" aria-labelledby="shift-title">
   <div class="wrap">
-    <div class="section-heading">
-      <p class="eyebrow reveal">{{ about.path.eyebrow }}</p>
-      <h2 id="trajectory-title" class="statement-display reveal">{{ about.path.title }}</h2>
+    <p class="eyebrow reveal">{{ about.shift.eyebrow }}</p>
+    <h2 id="shift-title" class="statement-display reveal">{{ about.shift.title }}</h2>
+    <div class="lab-shift-text">
+      {%- for paragraph in about.shift.text %}
+      <p class="section-intro reveal" style="--i:{{ forloop.index0 }}">{{ paragraph }}</p>
+      {%- endfor %}
     </div>
     <ol class="lab-cards lab-path">
-      {%- for stage in about.path.stages %}
+      {%- for stage in about.shift.stages %}
       <li class="reveal{% if forloop.last %} is-next{% endif %}" style="--i:{{ forloop.index0 }}">
         <p class="lab-path-when">{{ stage.when }}</p>
         <h3>{{ stage.title }}</h3>
@@ -71,14 +57,12 @@
   </div>
 </section>
 
-<section class="section section-rule" id="commitments" data-chrome="light" aria-labelledby="commitments-title">
+<section class="statement section-rule" id="thesis" data-chrome="light" aria-labelledby="thesis-title">
   <div class="wrap">
-    <div class="section-heading">
-      <p class="eyebrow reveal">{{ about.commitments.eyebrow }}</p>
-      <h2 id="commitments-title" class="statement-display reveal">{{ about.commitments.title }}</h2>
-    </div>
-    <ol class="lab-cards lab-cards-numbered">
-      {%- for item in about.commitments.items %}
+    <p class="eyebrow reveal">{{ about.thesis.eyebrow }}</p>
+    <h2 id="thesis-title" class="statement-display reveal">{{ about.thesis.display }}</h2>
+    <ol class="lab-cards lab-cards-words">
+      {%- for item in about.thesis.items %}
       <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
       {%- endfor %}
     </ol>
@@ -109,26 +93,14 @@
   </div>
 </section>
 
-<section class="statement" id="sovereign-clients" data-chrome="light" aria-labelledby="clients-title">
-  <div class="wrap">
-    <p class="eyebrow reveal">{{ about.clients.eyebrow }}</p>
-    <h2 id="clients-title" class="statement-display reveal">{{ about.clients.title }}</h2>
-    <p class="section-intro lab-clients-intro reveal">{{ about.clients.intro }}</p>
-    <ol class="lab-cards lab-cards-words">
-      {%- for item in about.clients.items %}
-      <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
-      {%- endfor %}
-    </ol>
-  </div>
-</section>
-
-<section class="section section-rule" id="agenda" data-chrome="light" aria-labelledby="agenda-title">
+<section class="section" id="agenda" data-chrome="light" aria-labelledby="agenda-title">
   <div class="wrap">
     <div class="section-heading">
       <p class="eyebrow reveal">{{ about.agenda.eyebrow }}</p>
       <h2 id="agenda-title" class="statement-display reveal">{{ about.agenda.title }}</h2>
+      <p class="section-intro reveal">{{ about.agenda.intro }}</p>
     </div>
-    <ol class="lab-cards lab-cards-four lab-cards-numbered">
+    <ol class="lab-cards lab-cards-four">
       {%- for item in about.agenda.items %}
       <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ item.title }}</h3><p>{{ item.text }}</p></li>
       {%- endfor %}
@@ -162,8 +134,7 @@
     <div class="closing-row reveal" style="--i:3">
       <p>{{ about.closing.text }}</p>
       <div class="hero-actions">
-        <a class="button button-light" href="{{ talk_href }}">{{ about.hero.talk }}</a>
-        <a class="button button-ghost" href="{{ blog_url }}">{{ about.closing.research }}</a>
+        <a class="button button-light" href="{{ blog_url }}">{{ about.closing.research }}</a>
       </div>
     </div>
     <p class="lab-signoff reveal" lang="en">{{ about.closing.signoff }}</p>
