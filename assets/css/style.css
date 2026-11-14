@@ -107,7 +107,7 @@
   hr {
     border: 0;
     height: 1px;
-    background: var(--ink);
+    background: var(--rule);
     margin: 3em 0;
   }
   .social-icons {
@@ -219,7 +219,7 @@
   .newsletter-body blockquote {
     margin: 1.5rem 0;
     padding-left: 1.25rem;
-    border-left: 3px solid var(--ink);
+    border-left: 3px solid var(--rule);
   }
 
   .newsletter-body pre {
@@ -375,6 +375,7 @@
     --glass: rgba(255, 255, 255, 0.8);
     --hair: rgba(0, 0, 0, 0.12);
     --ink-hover: #333;
+    --rule: #000;
     --header-h: 7rem;
     color-scheme: light;
 
@@ -406,24 +407,26 @@
 
   /* Dark theme. theme.js sets data-theme on <html> before the page paints:
      the visitor's choice from the header button, or the system setting.
-     Light sections turn dark; the bands that were already dark (--night)
-     go a step deeper so they still read as their own sections. */
+     It is a warm charcoal rather than black, with dividers a few steps
+     softer than the text, so long pages stay easy on the eyes; the bands
+     that were already dark (--night) sit one step deeper. */
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --ink: #edece7;
-    --text: #d5d4ce;
-    --text-soft: #bfbeb8;
-    --paper: #131312;
-    --paper-soft: #1a1a19;
-    --paper-deep: #212120;
-    --surface: #1d1d1c;
-    --line: #363633;
-    --muted: #9d9c96;
-    --night: #050505;
-    --track: #3b3b38;
-    --glass: rgba(19, 19, 18, 0.82);
-    --hair: rgba(255, 255, 255, 0.12);
-    --ink-hover: #c8c7c1;
+    --ink: #e6e4de;
+    --text: #cfcdc6;
+    --text-soft: #b8b6af;
+    --paper: #1d1d1b;
+    --paper-soft: #222220;
+    --paper-deep: #282826;
+    --surface: #262624;
+    --line: #3a3936;
+    --rule: #4d4c48;
+    --muted: #9a9891;
+    --night: #151514;
+    --track: #42413d;
+    --glass: rgba(29, 29, 27, 0.86);
+    --hair: rgba(255, 255, 255, 0.1);
+    --ink-hover: #cfcdc6;
 
     --critical: #ce564a;
     --critical-bg: rgba(206, 86, 74, 0.16);
@@ -447,6 +450,9 @@
   [data-theme="dark"] .site-header[data-chrome="light"] .site-logo img { filter: none; }
   [data-theme="dark"] .newsletter-edition-mark img { filter: invert(1); }
   [data-theme="dark"] .clients-list img { filter: grayscale(1) invert(1); }
+  [data-theme="dark"] .clients-list img { opacity: 0.7; }
+  [data-theme="dark"] .product-frame img,
+  [data-theme="dark"] .product-frame video { filter: brightness(0.9); }
 
   html:has(body.landing) {
     scroll-padding-top: var(--header-h);
@@ -1231,7 +1237,7 @@
 
   .statement-cols .statement-text {
     padding-top: 1.25rem;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
   }
 
   .statement-display {
@@ -1262,7 +1268,7 @@
   }
 
   .section-rule {
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
   }
 
   .section-heading {
@@ -1336,7 +1342,7 @@
   .exec-grid li {
     counter-increment: exec;
     padding-top: 1rem;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
   }
 
   .exec-grid h3 {
@@ -1534,9 +1540,9 @@
   .dg .inv { fill: var(--paper); }
   .dg .start { text-anchor: start; }
   .dg .end { text-anchor: end; }
-  .dg-box { fill: var(--surface); stroke: var(--ink); stroke-width: 1; }
+  .dg-box { fill: var(--surface); stroke: var(--rule); stroke-width: 1; }
   .dg-key, .dg-fill { fill: var(--ink); }
-  .dg-line { fill: none; stroke: var(--ink); stroke-width: 1; }
+  .dg-line { fill: none; stroke: var(--rule); stroke-width: 1; }
   .dg-faint { fill: none; stroke: var(--line); stroke-width: 1; }
   .dg-dash { stroke-dasharray: 3 3; }
   .dg-hatch { stroke: color-mix(in srgb, var(--ink) 30%, transparent); stroke-width: 1; }
@@ -1572,7 +1578,7 @@
   .badge {
     display: inline-block;
     padding: 0.2rem 0.55rem;
-    border: 1px solid var(--ink);
+    border: 1px solid var(--rule);
     font-family: "IBM Plex Mono", monospace;
     font-size: max(0.66rem, 11px);
     letter-spacing: 0.08em;
@@ -1597,7 +1603,7 @@
 
   .mock-links span {
     padding: 0.25rem 0.6rem;
-    border: 1px solid var(--ink);
+    border: 1px solid var(--rule);
     font-family: "IBM Plex Mono", monospace;
     font-size: max(0.7rem, 11px);
   }
@@ -1625,7 +1631,7 @@
   .ways {
     padding: 7rem 0;
     background: var(--paper-soft);
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
   }
 
   .ways-grid {
@@ -1849,7 +1855,7 @@
 
   .insights li {
     padding-top: 1.25rem;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
   }
 
   .work-selection {
@@ -1876,13 +1882,13 @@
   #track-record .insights-4 h3 {
     margin-bottom: 1rem;
     padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
   }
 
   #selected-work .work-meta {
     margin: 1.25rem 0 1rem;
     padding-top: 1rem;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
   }
 
   .insights time,
@@ -2619,7 +2625,7 @@
 
   .kit li {
     padding-top: 1.25rem;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
   }
 
   .kit-preview {
@@ -2688,7 +2694,7 @@
     grid-template-columns: 2.5rem minmax(0, 1fr);
     gap: 1rem;
     padding: 1.1rem 0;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
     font-size: 1.05rem;
     font-weight: 300;
     line-height: 1.5;
@@ -2991,12 +2997,12 @@
 
   .feature-points li {
     padding: 0.65rem 0;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
     font-size: 0.95rem;
   }
 
   .feature-points li:last-child {
-    border-bottom: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
   }
 
   .feature .product-frame {
@@ -3103,7 +3109,7 @@
 
   .soon li {
     padding: 1.25rem;
-    border: 1px dashed var(--ink);
+    border: 1px dashed var(--rule);
     background: var(--surface);
   }
 
@@ -3111,7 +3117,7 @@
     display: inline-block;
     margin: 0 0 0.75rem;
     padding: 0.15rem 0.5rem;
-    border: 1px solid var(--ink);
+    border: 1px solid var(--rule);
     font-family: "IBM Plex Mono", monospace;
     font-size: max(0.65rem, 10px);
     letter-spacing: 0.12em;
@@ -3223,7 +3229,7 @@
     display: flex;
     flex-direction: column;
     padding: 2.5rem;
-    border: 1px solid var(--ink);
+    border: 1px solid var(--rule);
   }
 
   .frontier-compare-by {
@@ -3274,7 +3280,7 @@
     max-width: 44rem;
     margin: 3rem auto 0;
     padding-top: 1.5rem;
-    border-top: 1px solid var(--ink);
+    border-top: 1px solid var(--rule);
   }
 
   .frontier-sources ul {
