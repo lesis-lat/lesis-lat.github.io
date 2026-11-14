@@ -1,25 +1,4 @@
 (function () {
-  var root = document.documentElement;
-  var system = window.matchMedia("(prefers-color-scheme: dark)");
-  function chosen() {
-    try { return localStorage.getItem("theme"); } catch (e) { return null; }
-  }
-  var button = document.querySelector("[data-theme-toggle]");
-  if (button) {
-    button.addEventListener("click", function () {
-      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-      root.setAttribute("data-theme", next);
-      try { localStorage.setItem("theme", next); } catch (e) {}
-    });
-  }
-  function followSystem() {
-    var theme = chosen();
-    if (theme !== "light" && theme !== "dark") root.setAttribute("data-theme", system.matches ? "dark" : "light");
-  }
-  if (system.addEventListener) system.addEventListener("change", followSystem);
-})();
-
-(function () {
   var header = document.querySelector(".site-header");
   if (!header) return;
 

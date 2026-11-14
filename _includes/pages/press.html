@@ -28,7 +28,7 @@
     <ul class="kit">
       {%- assign alt = a.alt | replace: "{asset}", a.alt_horizontal | replace: "{color}", a.alt_black %}
       <li class="reveal" style="--i:0">
-        <div class="kit-preview"><img src="{{ '/assets/images/logo-horizontal-preto-preview.webp' | relative_url }}" width="1050" height="353" alt="{{ alt }}" loading="lazy"></div>
+        <div class="kit-preview kit-preview-light"><img src="{{ '/assets/images/logo-horizontal-preto-preview.webp' | relative_url }}" width="1050" height="353" alt="{{ alt }}" loading="lazy"></div>
         <h3>{{ a.horizontal }}</h3>
         <p class="kit-meta">{{ a.black }} &middot; PNG</p>
         <a class="text-link" href="{{ '/assets/images/logo-horizontal-preto.png' | relative_url }}" download>{{ a.download }}</a>
@@ -42,7 +42,7 @@
       </li>
       {%- assign alt = a.alt | replace: "{asset}", a.alt_logo | replace: "{color}", a.alt_black %}
       <li class="reveal" style="--i:2">
-        <div class="kit-preview kit-preview-stacked"><img src="{{ '/assets/images/logo-black-preview.webp' | relative_url }}" width="500" height="638" alt="{{ alt }}" loading="lazy"></div>
+        <div class="kit-preview kit-preview-light kit-preview-stacked"><img src="{{ '/assets/images/logo-black-preview.webp' | relative_url }}" width="500" height="638" alt="{{ alt }}" loading="lazy"></div>
         <h3>{{ a.logo }}</h3>
         <p class="kit-meta">{{ a.black }} &middot; PNG</p>
         <a class="text-link" href="{{ '/assets/images/logo-black.png' | relative_url }}" download>{{ a.download }}</a>
@@ -56,7 +56,7 @@
       </li>
       {%- assign alt = a.alt | replace: "{asset}", a.alt_symbol | replace: "{color}", a.alt_black %}
       <li class="reveal" style="--i:4">
-        <div class="kit-preview kit-preview-symbol"><img src="{{ '/assets/images/favicon-preview.webp' | relative_url }}" width="480" height="508" alt="{{ alt }}" loading="lazy"></div>
+        <div class="kit-preview kit-preview-light kit-preview-symbol"><img src="{{ '/assets/images/favicon-preview.webp' | relative_url }}" width="480" height="508" alt="{{ alt }}" loading="lazy"></div>
         <h3>{{ a.symbol }}</h3>
         <p class="kit-meta">{{ a.black }} &middot; PNG</p>
         <a class="text-link" href="{{ '/assets/images/favicon.png' | relative_url }}" download>{{ a.download }}</a>
