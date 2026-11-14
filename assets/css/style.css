@@ -407,26 +407,26 @@
 
   /* Dark theme. theme.js sets data-theme on <html> before the page paints:
      the visitor's choice from the header button, or the system setting.
-     It is a warm charcoal rather than black, with dividers a few steps
+     It is a dim warm gray rather than black, with dividers a few steps
      softer than the text, so long pages stay easy on the eyes; the bands
      that were already dark (--night) sit one step deeper. */
   :root[data-theme="dark"] {
     color-scheme: dark;
-    --ink: #e6e4de;
-    --text: #cfcdc6;
-    --text-soft: #b8b6af;
-    --paper: #1d1d1b;
-    --paper-soft: #222220;
-    --paper-deep: #282826;
-    --surface: #262624;
-    --line: #3a3936;
-    --rule: #4d4c48;
-    --muted: #9a9891;
-    --night: #151514;
-    --track: #42413d;
-    --glass: rgba(29, 29, 27, 0.86);
+    --ink: #dddbd4;
+    --text: #c8c6be;
+    --text-soft: #b4b2aa;
+    --paper: #2a2a27;
+    --paper-soft: #2f2f2c;
+    --paper-deep: #353532;
+    --surface: #33332f;
+    --line: #45443f;
+    --rule: #5a5852;
+    --muted: #9c9a92;
+    --night: #222220;
+    --track: #4b4a45;
+    --glass: rgba(42, 42, 39, 0.86);
     --hair: rgba(255, 255, 255, 0.1);
-    --ink-hover: #cfcdc6;
+    --ink-hover: #c8c6be;
 
     --critical: #ce564a;
     --critical-bg: rgba(206, 86, 74, 0.16);
@@ -453,6 +453,9 @@
   [data-theme="dark"] .clients-list img { opacity: 0.7; }
   [data-theme="dark"] .product-frame img,
   [data-theme="dark"] .product-frame video { filter: brightness(0.9); }
+  [data-theme="dark"] .code-frame { background: #1e1e1c; border-color: var(--line); }
+  [data-theme="dark"] .site-header.is-scrolled { background: rgba(34, 34, 32, 0.86); }
+  [data-theme="dark"] .site-header[data-chrome="dark"] .site-lang-list { background: var(--night); }
 
   html:has(body.landing) {
     scroll-padding-top: var(--header-h);
@@ -2305,6 +2308,8 @@
         clip-path 0.25s cubic-bezier(0.4, 0, 1, 1),
         visibility 0s linear 0.25s;
     }
+
+    [data-theme="dark"] .site-nav { background: var(--night); }
 
     .site-nav.is-open {
       visibility: visible;
