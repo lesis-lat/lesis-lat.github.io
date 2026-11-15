@@ -3361,7 +3361,6 @@
     font-size: clamp(1.3rem, 2vw, 1.75rem);
     font-weight: 300;
     line-height: 1.35;
-    text-align: center;
     color: rgba(255, 255, 255, 0.88);
     -webkit-hyphens: none;
     hyphens: none;
@@ -3382,6 +3381,10 @@
 
   .lab-shift-text p {
     margin: 0;
+  }
+
+  body.lab-page .section-intro {
+    text-align-last: auto;
   }
 
   .lab-cards {
@@ -3531,10 +3534,7 @@
     margin: 0;
     font-size: 0.95rem;
     font-weight: 300;
-    text-align: left;
     color: rgba(255, 255, 255, 0.85);
-    -webkit-hyphens: none;
-    hyphens: none;
   }
 
   body.landing .lab-ledger-row p:last-child {
