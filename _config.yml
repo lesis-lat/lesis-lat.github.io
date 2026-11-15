@@ -1,6 +1,7 @@
 title: LESIS
 url: "https://lesis.lat"
 baseurl: ""
+demo_url: "https://cal.com/9b7e125a0ecfe5adb0af34639c9051b2/meeting"
 
 collections:
   newsletters:

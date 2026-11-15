@@ -16,7 +16,6 @@ months: ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto
 # --- Calls to action ------------------------------------------------------------
 cta:
   book_demo: "Agendar una demo"
-  book_demo_subject: "Demo de LESIS"
   talk_to_team: "Hablar con el equipo"
   start_conversation: "Iniciar una conversación"
   managed_program_subject: "Programa gestionado"

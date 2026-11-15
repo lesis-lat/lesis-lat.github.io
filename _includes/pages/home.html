@@ -7,8 +7,6 @@
 {%- endcomment -%}
 {%- assign t = site.data.i18n[page.lang] -%}
 {%- assign h = t.home -%}
-{%- assign demo_subject = t.cta.book_demo_subject | uri_escape -%}
-{%- assign demo_href = "mailto:contact@lesis.lat?subject=" | append: demo_subject -%}
 {%- capture partnership_url %}{% include localized-url.html path="/partnership/" %}{% endcapture -%}
 {%- comment -%} Screens that play as a short recording of someone using the product; the rest are stills. Each recording ships as AV1, HEVC and H.264 so every browser gets the smallest file it can play. {%- endcomment -%}
 {%- assign product_videos = "analytics,finding,repositories,exploit-chains,resource-graph,knowledge,advisor" | split: "," -%}
@@ -18,7 +16,7 @@
     <h1 id="hero-title" class="hero-title">{{ h.hero.title }}</h1>
     <p class="hero-lead">{{ h.hero.lead }}</p>
     <div class="hero-actions">
-      <a class="button button-dark" href="{{ demo_href }}">{{ t.cta.book_demo }}</a>
+      <a class="button button-dark" href="{{ site.demo_url }}" target="_blank" rel="noopener noreferrer">{{ t.cta.book_demo }}</a>
       <a class="button button-outline-dark" href="#platform">{{ h.hero.see_platform }}</a>
     </div>
   </div>
@@ -203,7 +201,7 @@
         {%- for paragraph in h.ways.platform.lead %}
         <p class="way-lead">{{ paragraph }}</p>
         {%- endfor %}
-        <a class="button button-dark" href="{{ demo_href }}">{{ t.cta.book_demo }}</a>
+        <a class="button button-dark" href="{{ site.demo_url }}" target="_blank" rel="noopener noreferrer">{{ t.cta.book_demo }}</a>
       </div>
       <div class="way way-program reveal" style="--i:1">
         <h3>{{ h.ways.managed.title }}</h3>
@@ -275,7 +273,7 @@
     <div class="closing-row reveal" style="--i:3">
       <p>{{ h.closing.text }}</p>
       <div class="hero-actions">
-        <a class="button button-light" href="{{ demo_href }}">{{ t.cta.book_demo }}</a>
+        <a class="button button-light" href="{{ site.demo_url }}" target="_blank" rel="noopener noreferrer">{{ t.cta.book_demo }}</a>
         <a class="button button-ghost" href="mailto:contact@lesis.lat">{{ t.cta.talk_to_team }}</a>
       </div>
     </div>

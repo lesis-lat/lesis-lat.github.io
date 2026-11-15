@@ -1,5 +1,4 @@
   {%- capture home_url %}{% include localized-url.html path="/" %}{% endcapture %}
-  {%- assign demo_subject = t.cta.book_demo_subject | uri_escape %}
   <header class="site-header" data-chrome="light">
     <div class="site-header-inner">
       <a class="site-logo" href="{{ home_url }}" aria-label="{{ t.header.home }}">
@@ -9,7 +8,7 @@
         <a href="{% include localized-url.html path="/about/" %}">{{ t.header.about }}</a>
         <a href="{{ home_url }}#platform">{{ t.header.services }}</a>
         <a href="{{ home_url }}#contact">{{ t.header.contact }}</a>
-        <a class="site-nav-cta" href="mailto:contact@lesis.lat?subject={{ demo_subject }}">{{ t.cta.book_demo }}</a>
+        <a class="site-nav-cta" href="{{ site.demo_url }}" target="_blank" rel="noopener noreferrer">{{ t.cta.book_demo }}</a>
         {% include language-switcher.html variant="menu" %}
         <button class="site-theme" type="button" data-theme-toggle title="{{ t.header.theme }}">
           <span class="site-theme-to-dark">{% include icon.html name="moon" %}<span class="site-theme-label">{{ t.header.theme_dark }}</span></span>
