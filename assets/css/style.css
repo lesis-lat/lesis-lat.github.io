@@ -410,16 +410,16 @@
     --ink: #dddbd4;
     --text: #c8c6be;
     --text-soft: #b4b2aa;
-    --paper: #2a2a27;
-    --paper-soft: #2f2f2c;
-    --paper-deep: #353532;
-    --surface: #33332f;
-    --line: #45443f;
-    --rule: #5a5852;
+    --paper: #161615;
+    --paper-soft: #1b1b1a;
+    --paper-deep: #21211f;
+    --surface: #1e1e1c;
+    --line: #353431;
+    --rule: #4a4945;
     --muted: #9c9a92;
-    --night: #222220;
-    --bar-track: #4b4a45;
-    --header-scrolled-bg: rgba(42, 42, 39, 0.86);
+    --night: #0c0c0b;
+    --bar-track: #3a3935;
+    --header-scrolled-bg: rgba(22, 22, 21, 0.86);
     --hairline: rgba(255, 255, 255, 0.1);
     --ink-hover: #c8c6be;
 
