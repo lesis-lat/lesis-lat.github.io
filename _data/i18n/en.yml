@@ -360,94 +360,80 @@ about:
   hero:
     eyebrow: "Sovereign AI Lab for Cybersecurity"
     title: ["Independent research.", "Sovereign intelligence.", "Advanced cyber capabilities."]
-    identity: "An independent, sovereign AI lab focused on cybersecurity."
-    lead: "We research and engineer sovereign AI capabilities that enable organizations and governments to own, operate and evolve their cyber intelligence."
+    lead: "We research and engineer AI that organizations and governments can own, operate and evolve themselves."
     thesis_link: "Read the thesis"
   origin:
     eyebrow: "01 &middot; Where we come from"
     title: "It started with research."
     quote: "We are an applied security research firm, focused on developing effective offensive technology to support critical operations."
     source: "lesis.lat, May 2024. The first sentence we published."
-    text: >-
-      LESIS was founded by researchers who built their own fuzzers, analyzers and exploits to answer what off-the-shelf scanners could not. Research first was never a slogan for us. When the instrument we needed did not exist, building it was the work.
+    text: "LESIS was founded by people who wrote their own fuzzers, analyzers and exploits to answer what off-the-shelf scanners could not. When the instrument we needed did not exist, building it was the work."
   shift:
     eyebrow: "02 &middot; What changed"
     title: "Then the instrument changed."
     text:
-      - >-
-        Language models became the most powerful instrument security research has ever had. They read code at a scale no team can, and the strongest of them now find vulnerabilities that stayed hidden for decades.
-      - >-
-        Yet almost everyone uses them the same way: rented from a handful of labs, on terms those labs set, with code and incidents sent wherever the model runs. A lab that can only rent its intelligence depends on whoever owns it, and so does everyone who relies on that lab.
-    stages:
-      - when: "Where we started"
-        title: "Applied security research"
-        text: "Offensive research, reverse engineering and tooling built for critical operations."
-      - when: "Today"
-        title: "Research meets AI"
-        text: "A platform for the whole security program, with access to the frontier cyber models of Anthropic and OpenAI."
-      - when: "Where we are going"
-        title: "A sovereign AI lab"
-        text: "The capabilities we built for ourselves, run by the organizations that need their own."
+      - "Language models are now the most powerful one security has ever had. They read code at a scale no team can match, and the strongest of them, open only to verified defenders such as LESIS, find flaws that stayed hidden for decades."
+      - "Yet almost everyone uses them the same way: rented from a handful of providers, on their terms, with code and incidents sent wherever the model runs. Intelligence you can only rent belongs to whoever owns it, and so does each decision built on it."
   thesis:
     eyebrow: "03 &middot; What we believe"
     display: "Cybersecurity requires intelligence that organizations can understand, control and trust."
     items:
       - title: "Understand"
-        text: "Every result carries its evidence, and every step a model contributes is marked as the model's. A person can always see what was found, how and by whom."
+        text: "Each result carries its evidence, and whatever a model contributes is marked as the model's. A person can always see what was found, how and by whom."
       - title: "Control"
-        text: "Models, data and infrastructure answer to the organization that relies on them, not to whoever sells access. Without that, no security decision is fully its own."
+        text: "Whoever runs a model decides what it sees, what it keeps and when it changes. That has to be the organization that depends on it, not the vendor selling it."
       - title: "Trust"
-        text: "Trust comes from proof, not fluency. A model may propose, but a finding counts only once it has been verified, and a person answers for it."
+        text: "Trust comes from proof, not fluency. A model may propose, but nothing counts as a finding until a person has checked it and answers for it."
   sovereignty:
     eyebrow: "04 &middot; What sovereignty means"
-    title: "Independence you can check."
-    intro: "Sovereignty is control over the models, the data, the infrastructure, the intellectual property and the way AI capabilities evolve. It does not take a foundation model built from scratch, but the control has to be real. This is where we stand."
+    title: "Independence you can inspect."
+    intro: "Five things make it real: the models, the data, the infrastructure, the intellectual property and the way AI capabilities evolve. None of them requires a foundation model built from scratch. Here is where we stand on each."
     today_label: "Today"
     building_label: "Building"
     items:
       - name: "Models"
         today: "Model-agnostic by design. LESIS runs closed models, such as Claude and GPT, and open-weight models, such as DeepSeek and GLM. You choose which one handles each task; you stay in control."
-        building: "Specialized models for security work, adapted from open-weight models and measured against our own research."
+        building: "Specialized models for security work, adapted from open-weight ones and tested on real findings."
       - name: "Data"
-        today: "Secret values are masked before any model sees them, repositories are connected read-only, and every model call is recorded with the model, the task and the cost."
-        building: "Pipelines that keep sensitive material inside its own environment, so only what the organization approves ever leaves it."
+        today: "Secret values are masked before any model sees them, repositories are connected read-only, and each model call is logged with the model, the task and the cost."
+        building: "Pipelines that keep sensitive material where it belongs, so only what the organization approves ever leaves."
       - name: "Infrastructure"
         today: "The platform ships as a portable container image, and a full cloud installation, from network to backups, is written as code and can be stood up in another account."
-        building: "Inference on infrastructure LESIS controls or on the organization's own, including networks isolated from the internet."
+        building: "Inference on infrastructure run by LESIS or by the organization itself, including networks cut off from the internet."
       - name: "Intellectual property"
-        today: "The platform, its analyzers and our methods are developed in house, so what the lab learns stays with the lab instead of with a vendor."
-        building: "Datasets drawn from our own research, the raw material that specialized models are made from."
+        today: "The platform, its analyzers and our methods are made in house, so what we learn along the way stays with us."
+        building: "Datasets drawn from our research, the raw material specialized models are made from."
       - name: "Evolution"
-        today: "Every time an analyst confirms or dismisses an AI result, it is recorded, giving us a running measure of where each model is right and where it is not."
-        building: "A cycle of evaluating, adapting and redeploying models on our clients' schedule, not on a vendor's release calendar."
+        today: "Each time an analyst accepts or rejects an AI result, it is logged, giving us a running record of where a model is right and where it is not."
+        building: "A cycle of evaluating, adapting and redeploying models on our clients' schedule, not on someone else's release calendar."
   agenda:
     eyebrow: "05 &middot; Where we apply it"
     title: "Only cybersecurity."
-    intro: "A model shaped by real findings, exploits and fixes is a different instrument from one shaped by the open internet. That is why the lab works on security and nothing else."
+    intro: "A model trained on real findings, exploits and fixes knows things that one trained on the open internet does not. So the lab works on security and nothing else."
     items:
       - title: "Offensive security"
-        text: "Models and tooling that find and chain vulnerabilities, steer fuzzers toward paths others miss and validate exploits under controlled conditions."
+        text: "Models and tooling that find and chain vulnerabilities, steer fuzzers toward paths others miss and validate exploits in isolated environments."
       - title: "Defense"
-        text: "Code review, root causes that close several findings at once, and retests that confirm a fix still holds after every change."
+        text: "Code review, root causes that close several findings at once, and retests that confirm a fix still holds as the code keeps changing."
       - title: "Cyber intelligence"
-        text: "Findings, assets, incidents and attack paths turned into a single picture of exposure that an organization can act on."
+        text: "Findings, assets, incidents and attack paths brought together into a single picture of exposure an organization can act on."
       - title: "Evaluation"
-        text: "Benchmarks and test sets for security tasks, so every model we use or build is measured on the work it is meant to do."
+        text: "Benchmarks and test sets for security tasks, so any model we use or build is judged on the work it is actually meant to do."
   record:
-    eyebrow: "06 &middot; Why trust us"
-    title: "Research you can verify."
+    eyebrow: "06 &middot; Track record"
+    title: "Work you can verify."
     items:
       - title: "Vulnerability disclosures"
-        text: '<a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9376" target="_blank" rel="noopener noreferrer">CVE-2020-9376</a> and <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9377" target="_blank" rel="noopener noreferrer">CVE-2020-9377</a> in D-Link, <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28043" target="_blank" rel="noopener noreferrer">CVE-2020-28043</a> in MISP, and reports credited by <a href="https://www.oracle.com/security-alerts/cpujul2022.html" target="_blank" rel="noopener noreferrer">Oracle</a> and <a href="https://support.apple.com/en-gb/102774" target="_blank" rel="noopener noreferrer">Apple</a>.'
+        text: "<a href=\"https://nvd.nist.gov/vuln/detail/CVE-2020-9376\" target=\"_blank\" rel=\"noopener noreferrer\">CVE-2020-9376</a> and <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2020-9377\" target=\"_blank\" rel=\"noopener noreferrer\">CVE-2020-9377</a> in D-Link, <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2020-28043\" target=\"_blank\" rel=\"noopener noreferrer\">CVE-2020-28043</a> in MISP, and reports credited by <a href=\"https://www.oracle.com/security-alerts/cpujul2022.html\" target=\"_blank\" rel=\"noopener noreferrer\">Oracle</a> and <a href=\"https://support.apple.com/en-gb/102774\" target=\"_blank\" rel=\"noopener noreferrer\">Apple</a>."
       - title: "Competitions"
-        text: 'First place in the BSides São Paulo CTF, a Hackaflag qualifier win, and the LESIS-backed GRIS/UFRJ team <a href="{bulletin_url}">first among 18</a> at SBSeg 2026.'
+        text: "First place in the BSides São Paulo CTF, a Hackaflag qualifier win, and the LESIS-backed GRIS/UFRJ team <a href=\"{bulletin_url}\">first among 18</a> at SBSeg 2026."
       - title: "Open source"
-        text: '<a href="https://github.com/lesis-lat/security-gate" target="_blank" rel="noopener noreferrer">Security Gate</a>, <a href="https://github.com/lesis-lat/bunkai" target="_blank" rel="noopener noreferrer">Bunkai</a> and <a href="https://github.com/lesis-lat/kasumi" target="_blank" rel="noopener noreferrer">Kasumi</a>, tools the team builds and maintains in the open, for anyone to use and audit.'
+        text: "<a href=\"https://github.com/lesis-lat/security-gate\" target=\"_blank\" rel=\"noopener noreferrer\">Security Gate</a>, <a href=\"https://github.com/lesis-lat/bunkai\" target=\"_blank\" rel=\"noopener noreferrer\">Bunkai</a> and <a href=\"https://github.com/lesis-lat/kasumi\" target=\"_blank\" rel=\"noopener noreferrer\">Kasumi</a>, tools the team builds and maintains in the open, for anyone to use and audit."
       - title: "Talks"
-        text: "Research presented at BxSec, Roadsec, BSides Rio de Janeiro and XibéSec, and shared with the wider Brazilian security community."
+        text: "Presented at BxSec, Roadsec, BSides Rio de Janeiro and XibéSec, and shared with the wider Brazilian security community."
   closing:
     title: ["Your infrastructure.", "Your intelligence.", "Your sovereignty."]
-    text: "For companies, critical services and governments that cannot hand their code, incidents or intelligence to a third party, and should not have to give up modern AI to protect them."
+    text: "Modern AI, without handing your most sensitive systems to someone else."
     research: "Read our research"
     signoff: "Sovereign Intelligence. Secure Futures."
 

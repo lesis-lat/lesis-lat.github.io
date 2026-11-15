@@ -10,10 +10,7 @@
       <span class="reveal" style="--i:{{ forloop.index0 }}">{{ line }}</span>
       {%- endfor %}
     </h1>
-    <div class="lab-hero-row reveal" style="--i:3">
-      <p class="lab-hero-identity">{{ about.hero.identity }}</p>
-      <p class="lab-hero-lead">{{ about.hero.lead }}</p>
-    </div>
+    <p class="lab-hero-lead reveal" style="--i:3">{{ about.hero.lead }}</p>
     <div class="lab-hero-cta reveal" style="--i:4">
       <a class="button button-ghost" href="#thesis">{{ about.hero.thesis_link }}</a>
     </div>
@@ -45,15 +42,6 @@
       <p class="section-intro reveal" style="--i:{{ forloop.index0 }}">{{ paragraph }}</p>
       {%- endfor %}
     </div>
-    <ol class="lab-cards lab-path">
-      {%- for stage in about.shift.stages %}
-      <li class="reveal{% if forloop.last %} is-next{% endif %}" style="--i:{{ forloop.index0 }}">
-        <p class="lab-path-when">{{ stage.when }}</p>
-        <h3>{{ stage.title }}</h3>
-        <p>{{ stage.text }}</p>
-      </li>
-      {%- endfor %}
-    </ol>
   </div>
 </section>
 

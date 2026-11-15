@@ -358,94 +358,80 @@ about:
   hero:
     eyebrow: "Sovereign AI Lab for Cybersecurity"
     title: ["Investigación independiente.", "Inteligencia soberana.", "Capacidades cibernéticas avanzadas."]
-    identity: "Un laboratorio de IA independiente y soberano, enfocado en ciberseguridad."
-    lead: "Investigamos y desarrollamos capacidades de IA soberana que permiten a organizaciones y gobiernos poseer, operar y hacer evolucionar su propia inteligencia cibernética."
+    lead: "Investigamos y desarrollamos IA que organizaciones y gobiernos pueden poseer, operar y hacer evolucionar por su cuenta."
     thesis_link: "Lee la tesis"
   origin:
     eyebrow: "01 &middot; De dónde venimos"
     title: "Todo empezó con investigación."
     quote: "We are an applied security research firm, focused on developing effective offensive technology to support critical operations."
     source: "lesis.lat, mayo de 2024. La primera frase que publicamos."
-    text: >-
-      LESIS fue fundada por investigadores que construían sus propios fuzzers, analizadores y exploits para responder lo que los escáneres comerciales no podían. Primero la investigación nunca fue un eslogan para nosotros. Cuando el instrumento que necesitábamos no existía, construirlo era el trabajo.
+    text: "LESIS fue fundada por personas que escribían sus propios fuzzers, analizadores y exploits para responder lo que los escáneres comerciales no podían. Cuando el instrumento que necesitábamos no existía, construirlo era el trabajo."
   shift:
     eyebrow: "02 &middot; Qué cambió"
     title: "Entonces cambió el instrumento."
     text:
-      - >-
-        Los modelos de lenguaje se volvieron el instrumento más poderoso que ha tenido la investigación en seguridad. Leen código a una escala que ningún equipo alcanza, y los más fuertes ya encuentran vulnerabilidades ocultas durante décadas.
-      - >-
-        Aun así, casi todos los usan de la misma forma: alquilados a un puñado de laboratorios, en las condiciones que esos laboratorios fijan, con código e incidentes enviados adonde corra el modelo. Un laboratorio que solo puede alquilar su inteligencia depende de quien es su dueño, y lo mismo vale para todos los que dependen de ese laboratorio.
-    stages:
-      - when: "Dónde empezamos"
-        title: "Investigación aplicada en seguridad"
-        text: "Investigación ofensiva, ingeniería inversa y herramientas construidas para operaciones críticas."
-      - when: "Hoy"
-        title: "La investigación se encuentra con la IA"
-        text: "Una plataforma para todo el programa de seguridad, con acceso a los modelos de frontera en ciber de Anthropic y OpenAI."
-      - when: "Hacia dónde vamos"
-        title: "Un laboratorio de IA soberana"
-        text: "Las capacidades que construimos para nosotros, operadas por las organizaciones que necesitan las suyas."
+      - "Los modelos de lenguaje son hoy el más poderoso que ha tenido la seguridad. Leen código a una escala que ningún equipo alcanza, y los más fuertes, abiertos solo a defensores verificados como LESIS, encuentran fallas ocultas durante décadas."
+      - "Aun así, casi todos los usan de la misma forma: alquilados a un puñado de proveedores, en sus condiciones, con código e incidentes enviados adonde corra el modelo. Una inteligencia que solo se puede alquilar pertenece a quien es su dueño, y lo mismo vale para cada decisión tomada con ella."
   thesis:
     eyebrow: "03 &middot; En qué creemos"
     display: "La ciberseguridad exige una inteligencia que las organizaciones puedan entender, controlar y en la que puedan confiar."
     items:
       - title: "Entender"
-        text: "Cada resultado trae su evidencia, y cada paso con el que contribuye un modelo queda marcado como del modelo. Una persona siempre puede ver qué se encontró, cómo y quién lo hizo."
+        text: "Cada resultado trae su evidencia, y todo lo que aporta un modelo queda marcado como suyo. Una persona siempre puede ver qué se encontró, cómo y quién lo hizo."
       - title: "Controlar"
-        text: "Los modelos, los datos y la infraestructura responden a la organización que depende de ellos, no a quien vende el acceso. Sin eso, ninguna decisión de seguridad es del todo suya."
+        text: "Quien corre un modelo decide qué ve, qué guarda y cuándo cambia. Esa decisión tiene que ser de la organización que depende de él, no del proveedor que lo vende."
       - title: "Confiar"
-        text: "La confianza viene de la prueba, no de la fluidez. Un modelo puede proponer, pero un hallazgo solo cuenta una vez verificado, y una persona responde por él."
+        text: "La confianza viene de la prueba, no de la fluidez. Un modelo puede proponer, pero nada es un hallazgo hasta que una persona lo revisa y responde por él."
   sovereignty:
     eyebrow: "04 &middot; Qué significa soberanía"
-    title: "Independencia que se puede comprobar."
-    intro: "La soberanía es control sobre los modelos, los datos, la infraestructura, la propiedad intelectual y la forma en que evolucionan las capacidades de IA. No exige un foundation model creado desde cero, pero el control tiene que ser real. Aquí es donde estamos."
+    title: "Independencia que se puede inspeccionar."
+    intro: "Cinco cosas la hacen real: los modelos, los datos, la infraestructura, la propiedad intelectual y la forma en que evolucionan las capacidades de IA. Ninguna exige un foundation model creado desde cero. Así estamos en cada una."
     today_label: "Hoy"
     building_label: "Construyendo"
     items:
       - name: "Modelos"
         today: "Agnósticos por diseño. LESIS corre modelos cerrados, como Claude y GPT, y modelos open-weight, como DeepSeek y GLM. Tú eliges cuál se ocupa de cada tarea; el control es tuyo."
-        building: "Modelos especializados en trabajo de seguridad, adaptados a partir de modelos open-weight y medidos contra nuestra propia investigación."
+        building: "Modelos especializados en trabajo de seguridad, adaptados de modelos open-weight y probados en hallazgos reales."
       - name: "Datos"
-        today: "Los valores de los secretos se enmascaran antes de que cualquier modelo los vea, los repositorios se conectan solo en lectura, y cada llamada a un modelo queda registrada con el modelo, la tarea y el costo."
-        building: "Pipelines que mantienen el material sensible dentro de su propio entorno, para que solo salga lo que la organización apruebe."
+        today: "Los valores de los secretos se enmascaran antes de que cualquier modelo los vea, los repositorios se conectan solo en lectura, y cada llamada a un modelo se registra con el modelo, la tarea y el costo."
+        building: "Pipelines que mantienen el material sensible donde corresponde, para que solo salga lo que la organización apruebe."
       - name: "Infraestructura"
         today: "La plataforma se distribuye como una imagen de contenedor portátil, y una instalación completa en la nube, de la red a los backups, está escrita como código y puede levantarse en otra cuenta."
-        building: "Inferencia en infraestructura que LESIS controla o en la de la propia organización, incluidas redes aisladas de internet."
+        building: "Inferencia en infraestructura operada por LESIS o por la propia organización, incluidas redes sin acceso a internet."
       - name: "Propiedad intelectual"
-        today: "La plataforma, sus analizadores y nuestros métodos se desarrollan internamente, así que lo que aprende el laboratorio se queda en el laboratorio y no en un proveedor."
-        building: "Datasets creados a partir de nuestra propia investigación, la materia prima de la que están hechos los modelos especializados."
+        today: "La plataforma, sus analizadores y nuestros métodos se hacen internamente, así que lo que aprendemos en el camino se queda con nosotros."
+        building: "Datasets extraídos de nuestra investigación, la materia prima de la que están hechos los modelos especializados."
       - name: "Evolución"
-        today: "Cada vez que un analista confirma o descarta un resultado de la IA, queda registrado, lo que nos da una medida continua de dónde acierta cada modelo y dónde no."
-        building: "Un ciclo de evaluar, adaptar y volver a desplegar modelos al ritmo de nuestros clientes, no según el calendario de lanzamientos de un proveedor."
+        today: "Cada vez que un analista acepta o rechaza un resultado de la IA, queda registrado, lo que nos da un historial continuo de dónde acierta un modelo y dónde no."
+        building: "Un ciclo de evaluar, adaptar y volver a desplegar modelos al ritmo de nuestros clientes, no según el calendario de lanzamientos de otra empresa."
   agenda:
     eyebrow: "05 &middot; Dónde la aplicamos"
     title: "Solo ciberseguridad."
-    intro: "Un modelo formado por hallazgos, exploits y correcciones reales es un instrumento distinto de uno formado por la internet abierta. Por eso el laboratorio trabaja en seguridad y en nada más."
+    intro: "Un modelo entrenado con hallazgos, exploits y correcciones reales sabe cosas que uno entrenado con la internet abierta no sabe. Por eso el laboratorio trabaja en seguridad y en nada más."
     items:
       - title: "Seguridad ofensiva"
-        text: "Modelos y herramientas que encuentran y encadenan vulnerabilidades, llevan los fuzzers a caminos que otros no alcanzan y validan exploits en condiciones controladas."
+        text: "Modelos y herramientas que encuentran y encadenan vulnerabilidades, llevan los fuzzers a caminos que otros no alcanzan y validan exploits en entornos aislados."
       - title: "Defensa"
-        text: "Revisión de código, causas raíz que cierran varios hallazgos a la vez y retests que confirman que una corrección sigue en pie tras cada cambio."
+        text: "Revisión de código, causas raíz que cierran varios hallazgos a la vez y retests que confirman que una corrección se mantiene mientras el código cambia."
       - title: "Inteligencia cibernética"
         text: "Hallazgos, activos, incidentes y rutas de ataque reunidos en un único panorama de exposición sobre el que la organización puede actuar."
       - title: "Evaluación"
-        text: "Benchmarks y conjuntos de prueba para tareas de seguridad, para que cada modelo que usamos o construimos se mida en el trabajo que debe hacer."
+        text: "Benchmarks y conjuntos de prueba para tareas de seguridad, para que cualquier modelo que usamos o construimos se juzgue en el trabajo que debe hacer."
   record:
-    eyebrow: "06 &middot; Por qué confiar"
-    title: "Investigación que se puede verificar."
+    eyebrow: "06 &middot; Historial"
+    title: "Trabajo que se puede verificar."
     items:
       - title: "Divulgación de vulnerabilidades"
-        text: '<a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9376" target="_blank" rel="noopener noreferrer">CVE-2020-9376</a> y <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9377" target="_blank" rel="noopener noreferrer">CVE-2020-9377</a> en D-Link, <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28043" target="_blank" rel="noopener noreferrer">CVE-2020-28043</a> en MISP, y reportes reconocidos por <a href="https://www.oracle.com/security-alerts/cpujul2022.html" target="_blank" rel="noopener noreferrer">Oracle</a> y <a href="https://support.apple.com/en-gb/102774" target="_blank" rel="noopener noreferrer">Apple</a>.'
+        text: "<a href=\"https://nvd.nist.gov/vuln/detail/CVE-2020-9376\" target=\"_blank\" rel=\"noopener noreferrer\">CVE-2020-9376</a> y <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2020-9377\" target=\"_blank\" rel=\"noopener noreferrer\">CVE-2020-9377</a> en D-Link, <a href=\"https://nvd.nist.gov/vuln/detail/CVE-2020-28043\" target=\"_blank\" rel=\"noopener noreferrer\">CVE-2020-28043</a> en MISP, y reportes reconocidos por <a href=\"https://www.oracle.com/security-alerts/cpujul2022.html\" target=\"_blank\" rel=\"noopener noreferrer\">Oracle</a> y <a href=\"https://support.apple.com/en-gb/102774\" target=\"_blank\" rel=\"noopener noreferrer\">Apple</a>."
       - title: "Competencias"
-        text: 'Primer lugar en el CTF de BSides São Paulo, una eliminatoria de Hackaflag ganada, y el equipo GRIS/UFRJ, apoyado por LESIS, <a href="{bulletin_url}">primero entre 18</a> en SBSeg 2026.'
+        text: "Primer lugar en el CTF de BSides São Paulo, una eliminatoria de Hackaflag ganada, y el equipo GRIS/UFRJ, apoyado por LESIS, <a href=\"{bulletin_url}\">primero entre 18</a> en SBSeg 2026."
       - title: "Open source"
-        text: '<a href="https://github.com/lesis-lat/security-gate" target="_blank" rel="noopener noreferrer">Security Gate</a>, <a href="https://github.com/lesis-lat/bunkai" target="_blank" rel="noopener noreferrer">Bunkai</a> y <a href="https://github.com/lesis-lat/kasumi" target="_blank" rel="noopener noreferrer">Kasumi</a>, herramientas que el equipo construye y mantiene abiertas, para que cualquiera las use y audite.'
+        text: "<a href=\"https://github.com/lesis-lat/security-gate\" target=\"_blank\" rel=\"noopener noreferrer\">Security Gate</a>, <a href=\"https://github.com/lesis-lat/bunkai\" target=\"_blank\" rel=\"noopener noreferrer\">Bunkai</a> y <a href=\"https://github.com/lesis-lat/kasumi\" target=\"_blank\" rel=\"noopener noreferrer\">Kasumi</a>, herramientas que el equipo construye y mantiene abiertas, para que cualquiera las use y audite."
       - title: "Charlas"
-        text: "Investigación presentada en BxSec, Roadsec, BSides Rio de Janeiro y XibéSec, y compartida con la comunidad brasileña de seguridad."
+        text: "Presentaciones en BxSec, Roadsec, BSides Rio de Janeiro y XibéSec, compartidas con la comunidad brasileña de seguridad."
   closing:
     title: ["Tu infraestructura.", "Tu inteligencia.", "Tu soberanía."]
-    text: "Para empresas, servicios críticos y gobiernos que no pueden entregar su código, sus incidentes o su inteligencia a un tercero, y que no deberían tener que renunciar a la IA moderna para protegerlos."
+    text: "IA moderna, sin entregar tus sistemas más sensibles a terceros."
     research: "Lee nuestra investigación"
     signoff: "Sovereign Intelligence. Secure Futures."
 
