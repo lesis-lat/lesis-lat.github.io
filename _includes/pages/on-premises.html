@@ -1,0 +1,101 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign o = t.onprem -%}
+{%- assign request_subject = o.subject | uri_escape -%}
+{%- assign request_href = "mailto:contact@lesis.lat?subject=" | append: request_subject -%}
+<section class="page-head" data-chrome="light" aria-labelledby="onprem-title">
+  <div class="wrap">
+    <p class="eyebrow reveal">{{ o.eyebrow }}</p>
+    <div class="page-head-grid">
+      <h1 id="onprem-title" class="page-title reveal">{{ o.title }}</h1>
+      <div class="reveal" style="--i:1">
+        {%- for paragraph in o.lead %}
+        <p class="page-lead">{{ paragraph }}</p>
+        {%- endfor %}
+        <div class="hero-actions">
+          <a class="button button-dark" href="{{ request_href }}">{{ o.request }}</a>
+          <a class="button button-outline-dark" href="#how">{{ o.how_link }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="levels frontier-stats" data-chrome="dark" aria-labelledby="facts-title">
+  <div class="wrap">
+    <h2 id="facts-title" class="eyebrow reveal">{{ o.facts_eyebrow }}</h2>
+    <ul class="frontier-stats-grid">
+      {%- for fact in o.facts %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}"><span class="frontier-stat-value">{{ fact.value }}</span><span class="frontier-stat-text">{{ fact.text }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="statement" data-chrome="light" aria-labelledby="speech-title">
+  <div class="wrap">
+    <h2 id="speech-title" class="eyebrow reveal">{{ o.speech.eyebrow }}</h2>
+    <p class="statement-display reveal">{{ o.speech.display }}</p>
+    <div class="statement-cols">
+      {%- for paragraph in o.speech.text %}
+      <p class="statement-text reveal" style="--i:{{ forloop.index0 }}">{{ paragraph }}</p>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-rule" id="models" data-chrome="light" aria-labelledby="models-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow reveal">{{ o.models.eyebrow }}</p>
+      <h2 id="models-title" class="statement-display reveal">{{ o.models.title }}</h2>
+      <p class="section-intro reveal">{{ o.models.intro }}</p>
+    </div>
+    <ul class="frontier-compare">
+      {%- for model in o.models.items %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}">
+        <p class="frontier-compare-by">{{ model.by }}</p>
+        <h3>{{ model.name }}</h3>
+        <dl>
+          <dt>{{ o.models.known_label }}</dt><dd>{{ model.known }}</dd>
+        </dl>
+      </li>
+      {%- endfor %}
+    </ul>
+    <div class="frontier-sources reveal">
+      <p class="frontier-note">{{ o.models.note }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section-rule" id="how" data-chrome="light" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow reveal">{{ o.how.eyebrow }}</p>
+      <h2 id="how-title" class="statement-display reveal">{{ o.how.title }}</h2>
+      <p class="section-intro reveal">{{ o.how.intro }}</p>
+    </div>
+    <ol class="exec-grid">
+      {%- for step in o.how.steps %}
+      <li class="reveal" style="--i:{{ forloop.index0 }}"><h3>{{ step.title }}</h3><p>{{ step.text }}</p></li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="closing" id="contact" data-chrome="dark" aria-labelledby="closing-title">
+  <div class="closing-media" aria-hidden="true"><picture><source type="image/avif" srcset="{{ '/assets/images/switchboard-1000.avif' | relative_url }} 1000w, {{ '/assets/images/switchboard-1600.avif' | relative_url }} 1600w" sizes="100vw"><img src="{{ '/assets/images/switchboard-1600.webp' | relative_url }}" srcset="{{ '/assets/images/switchboard-1000.webp' | relative_url }} 1000w, {{ '/assets/images/switchboard-1600.webp' | relative_url }} 1600w" sizes="100vw" alt="" width="1600" height="1154" loading="lazy" decoding="async"></picture></div>
+  <div class="wrap closing-inner">
+    <h2 id="closing-title" class="closing-title">
+      {%- for line in o.closing.title %}
+      <span class="reveal" style="--i:{{ forloop.index0 }}">{{ line }}</span>
+      {%- endfor %}
+    </h2>
+    <div class="closing-row reveal" style="--i:3">
+      <p>{{ o.closing.text }}</p>
+      <div class="hero-actions">
+        <a class="button button-light" href="{{ request_href }}">{{ o.request }}</a>
+        <a class="button button-ghost" href="mailto:contact@lesis.lat">{{ t.cta.talk_to_team }}</a>
+      </div>
+    </div>
+  </div>
+</section>

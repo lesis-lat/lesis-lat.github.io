@@ -45,6 +45,7 @@ footer:
   mythos: "Claude Mythos"
   daybreak: "OpenAI Daybreak"
   frontier: "Mythos y Daybreak"
+  onprem: "IA on-premises"
   company: "Empresa"
   about: "Sobre LESIS"
   partnership: "Alianzas"
@@ -368,8 +369,8 @@ about:
         today: "Los valores de los secretos se enmascaran antes de que cualquier modelo los vea, los repositorios se conectan solo en lectura, y cada llamada a un modelo se registra con el modelo, la tarea y el costo."
         building: "Pipelines que mantienen el material sensible donde corresponde, para que solo salga lo que la organización apruebe."
       - name: "Infraestructura"
-        today: "La plataforma se distribuye como una imagen de contenedor portátil, y una instalación completa en la nube, de la red a los backups, está escrita como código y puede levantarse en otra cuenta."
-        building: "Inferencia en infraestructura operada por LESIS o por la propia organización, incluidas redes sin acceso a internet."
+        today: "La plataforma y modelos open-weight, como DeepSeek y GLM, corren dentro de la infraestructura de la propia organización, y nada sale de ella. Una instalación completa en la nube, de la red a los backups, está escrita como código."
+        building: "Inferencia en infraestructura operada por LESIS e instalaciones en redes sin acceso a internet."
       - name: "Propiedad intelectual"
         today: "La plataforma, sus analizadores y nuestros métodos se hacen internamente, así que lo que aprendemos en el camino se queda con nosotros."
         building: "Datasets extraídos de nuestra investigación, la materia prima de la que están hechos los modelos especializados."
@@ -546,6 +547,65 @@ frontier:
       closing:
         title: ["Dos modelos de frontera.", "Un solo registro.", "Tu código, leído primero."]
         text: "Cuéntanos qué operas. Te diremos qué modelo debe empezar, por dónde y en cuánto tiempo."
+
+# --- On-premises AI: /on-premises/ --------------------------------------------
+onprem:
+  subject: "IA on-premises"
+  request: "Planificar la implementación"
+  how_link: "Cómo funciona"
+  eyebrow: "Modelos abiertos en tu infraestructura"
+  title: "IA que nunca sale de tu red."
+  lead:
+    - "La mayor parte de la IA para seguridad funciona enviando tu código al modelo de otra empresa. Para un banco, una entidad de gobierno o cualquier empresa obligada por contrato a mantener su código fuente en casa, ahí se termina la conversación."
+    - "LESIS corre modelos open-weight, DeepSeek o GLM, en tus propios servidores, junto a la plataforma. La revisión de código, la verificación de hallazgos y la comprobación de correcciones ocurren dentro de tu red, y nada se envía a un proveedor de IA externo."
+  facts_eyebrow: "Lo que se queda contigo"
+  facts:
+    - value: "Local"
+      text: "El modelo corre en servidores de tu centro de datos o de tu propia cuenta en la nube, junto a la plataforma LESIS."
+    - value: "Cero"
+      text: "llamadas a proveedores de IA externos. El código, los hallazgos y los prompts se quedan dentro de tu red."
+    - value: "Abierto"
+      text: "Los pesos del modelo los publican DeepSeek y Zhipu AI, así que puede inspeccionarse y mantenerse en la versión que aprobaste."
+    - value: "Registrado"
+      text: "Cada llamada al modelo queda anotada con el modelo y la tarea, en logs que conservas tú."
+  speech:
+    eyebrow: "Por qué importa"
+    display: "El código que más proteges es justamente el que menos puedes enviar afuera."
+    text:
+      - >-
+        El código fuente, los detalles de incidentes y los reportes de vulnerabilidades están entre los datos más sensibles de una organización. Reguladores, clientes y contratos a menudo exigen que nunca salgan de su control, y un modelo alojado por terceros hace difícil cumplir esa promesa: cada solicitud lleva una parte de tu código a un proveedor y a una jurisdicción que no elegiste.
+      - >-
+        Los modelos open-weight cambian eso. DeepSeek y GLM pueden descargarse y ejecutarse como cualquier otro software, sin ninguna conexión con la empresa que los entrenó. Correrlos en tu infraestructura significa que el análisis va hacia tu código, y tu código se queda donde está.
+  models:
+    eyebrow: "Los modelos"
+    title: "DeepSeek o GLM. <br>Tú eliges."
+    intro: "Ambos están entre los modelos open-weight más potentes de la actualidad. LESIS puede correr cualquiera de los dos, o ambos, y tú decides cuál se encarga de cada tarea."
+    known_label: "Destaca por"
+    items:
+      - name: "DeepSeek"
+        by: "DeepSeek"
+        known: "Razonamiento y código de alto nivel con una fracción del cómputo que exigen modelos comparables."
+      - name: "GLM"
+        by: "Zhipu AI"
+        known: "Trabajo agéntico: seguir tareas largas, usar herramientas y escribir código."
+    note: "DeepSeek es desarrollado por DeepSeek y GLM por Zhipu AI. Sus nombres aparecen aquí solo para describir los modelos que corre LESIS."
+  how:
+    eyebrow: "Cómo lo opera LESIS"
+    title: "Instalado en tu red. <br>Operado por LESIS."
+    intro: >-
+      Dimensionamos el hardware, instalamos la plataforma y el modelo dentro de tu red y mantenemos ambos al día. Tu equipo usa LESIS como siempre, y ninguna solicitud sale de tu red.
+    steps:
+      - title: "Dimensionamiento"
+        text: "Evaluamos qué se va a analizar, cuánto código y con qué frecuencia, y especificamos los servidores y las GPU que necesita el modelo. Tú compras el equipo o usas el que ya tienes."
+      - title: "Instalación"
+        text: "La plataforma y el modelo se instalan en tu centro de datos o en tu cuenta privada en la nube como imágenes de contenedor, con reglas de red que bloquean cualquier llamada a proveedores de IA externos."
+      - title: "Dentro de tu red"
+        text: "La revisión de código, la verificación de hallazgos y la comprobación de correcciones corren sobre el modelo local. Los ingenieros de LESIS revisan los resultados con el acceso que tú otorgas y puedes revocar en cualquier momento."
+      - title: "Actualizaciones a tu ritmo"
+        text: "Cuando sale un modelo o una versión mejor, LESIS lo prueba primero en hallazgos reales y solo lo instala cuando tú lo apruebas."
+  closing:
+    title: ["Lleva el modelo a tu código,", "no tu código", "al modelo."]
+    text: "Cuéntanos dónde vive tu código. Te diremos qué hace falta para correr LESIS ahí."
 
 # --- Press kit ------------------------------------------------------------------
 press:

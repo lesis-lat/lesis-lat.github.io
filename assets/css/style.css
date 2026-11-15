@@ -3167,7 +3167,7 @@
     .ai-rules { grid-template-columns: 1fr; }
   }
 
-  /* Frontier model pages (/mythos/, /daybreak/, /frontier-models/). */
+  /* Frontier and on-premises model pages (/mythos/, /daybreak/, /frontier-models/, /on-premises/). */
   .frontier-stats .eyebrow {
     margin-bottom: 3rem;
     color: rgba(255, 255, 255, 0.6);

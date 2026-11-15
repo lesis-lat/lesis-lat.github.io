@@ -47,6 +47,7 @@ footer:
   mythos: "Claude Mythos"
   daybreak: "OpenAI Daybreak"
   frontier: "Mythos and Daybreak"
+  onprem: "On-premises AI"
   company: "Company"
   about: "About LESIS"
   partnership: "Partnership"
@@ -370,8 +371,8 @@ about:
         today: "Secret values are masked before any model sees them, repositories are connected read-only, and each model call is logged with the model, the task and the cost."
         building: "Pipelines that keep sensitive material where it belongs, so only what the organization approves ever leaves."
       - name: "Infrastructure"
-        today: "The platform ships as a portable container image, and a full cloud installation, from network to backups, is written as code and can be stood up in another account."
-        building: "Inference on infrastructure run by LESIS or by the organization itself, including networks cut off from the internet."
+        today: "The platform and open-weight models, such as DeepSeek and GLM, run inside the organization's own infrastructure, and nothing leaves it. A full cloud installation, from network to backups, is written as code."
+        building: "Inference on infrastructure run by LESIS, and installations on networks cut off from the internet."
       - name: "Intellectual property"
         today: "The platform, its analyzers and our methods are made in house, so what we learn along the way stays with us."
         building: "Datasets drawn from our research, the raw material specialized models are made from."
@@ -549,6 +550,65 @@ frontier:
       closing:
         title: ["Two frontier models.", "One record.", "Your code, read first."]
         text: "Tell us what you run. We will tell you which model should look first, where, and how soon it can start."
+
+# --- On-premises AI: /on-premises/ --------------------------------------------
+onprem:
+  subject: "On-premises AI"
+  request: "Plan your deployment"
+  how_link: "How it works"
+  eyebrow: "Open models on your infrastructure"
+  title: "AI that never leaves your network."
+  lead:
+    - "Most AI for security works by sending your code to someone else's model. For a bank, a government agency or any company bound by contract to keep its source code in house, that ends the conversation."
+    - "LESIS runs open-weight models, DeepSeek or GLM, on your own servers, next to the platform. Code review, verification and retests happen inside your network, and nothing is sent to an outside AI provider."
+  facts_eyebrow: "What stays with you"
+  facts:
+    - value: "Local"
+      text: "The model runs on servers in your data center or in your own cloud account, alongside the LESIS platform."
+    - value: "Zero"
+      text: "calls to outside AI providers. Code, findings and prompts stay inside your network."
+    - value: "Open"
+      text: "weights, published by DeepSeek and Zhipu AI, so the model you run can be inspected and kept at the version you approved."
+    - value: "Logged"
+      text: "Every model call is recorded with the model and the task, in logs that stay with you."
+  speech:
+    eyebrow: "Why it matters"
+    display: "The code you protect most is the code you can least afford to send away."
+    text:
+      - >-
+        Source code, incident details and vulnerability reports are some of the most sensitive data an organization holds. Regulators, clients and contracts often require that they never leave its control, and a hosted model makes that promise hard to keep: each request carries a piece of your code to a provider and a jurisdiction you did not choose.
+      - >-
+        Open-weight models change that. DeepSeek and GLM can be downloaded and run like any other software, with no connection back to the company that trained them. Running them inside your infrastructure means the analysis comes to your code, and your code stays where it is.
+  models:
+    eyebrow: "The models"
+    title: "DeepSeek or GLM. <br>You choose."
+    intro: "Both are among the strongest open-weight models available. LESIS can run either one, or both, and you decide which handles each task."
+    known_label: "Known for"
+    items:
+      - name: "DeepSeek"
+        by: "DeepSeek"
+        known: "Strong reasoning and code at a fraction of the compute that comparable models need."
+      - name: "GLM"
+        by: "Zhipu AI"
+        known: "Agentic work: following long tasks, calling tools and writing code."
+    note: "DeepSeek is developed by DeepSeek and GLM by Zhipu AI. Their names are used here only to describe the models LESIS runs."
+  how:
+    eyebrow: "How LESIS runs it"
+    title: "Installed in your network. <br>Run by LESIS."
+    intro: >-
+      We size the hardware, install the platform and the model inside your network and keep both current. Your team works in LESIS as usual, and no request leaves your network.
+    steps:
+      - title: "Sizing"
+        text: "We look at what will be analyzed, how much code and how often, and specify the servers and GPUs the model needs. You buy them or use what you already have."
+      - title: "Installation"
+        text: "The platform and the model are installed in your data center or private cloud account as container images, with network rules that block any call to outside AI providers."
+      - title: "Inside your network"
+        text: "Code review, finding verification and retests run on the local model. LESIS engineers review the results through access you grant and can revoke at any time."
+      - title: "Updates on your schedule"
+        text: "When a better model or version comes out, LESIS tests it on real findings first and installs it only when you approve."
+  closing:
+    title: ["Bring the model to your code,", "not your code", "to the model."]
+    text: "Tell us where your code lives. We will tell you what it takes to run LESIS there."
 
 # --- Press kit ------------------------------------------------------------------
 press:
