@@ -1861,10 +1861,6 @@
     list-style: none;
   }
 
-  .insights-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
   .insights li {
     padding-top: 1.25rem;
     border-top: 1px solid var(--rule);
@@ -1884,17 +1880,6 @@
   #selected-work .section-foot {
     flex-wrap: wrap;
     gap: 1rem 2.5rem;
-  }
-
-  #track-record .insights li {
-    padding-top: 0;
-    border-top: 0;
-  }
-
-  #track-record .insights-4 h3 {
-    margin-bottom: 1rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--rule);
   }
 
   #selected-work .work-meta {
@@ -2218,9 +2203,6 @@
   .legal-content a { color: inherit; text-underline-offset: 3px; }
 
   @media (max-width: 1080px) {
-    .insights-4 {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
     .site-nav { gap: 1.25rem; }
     .site-nav a { font-size: max(0.78rem, 11px); }
 
@@ -3150,12 +3132,6 @@
     text-align: left;
     -webkit-hyphens: none;
     hyphens: none;
-  }
-
-  /* Track record links sit side by side, with room between them. */
-  #track-record .section-foot {
-    flex-wrap: wrap;
-    gap: 1rem 2.5rem;
   }
 
   @media (max-width: 1080px) {

@@ -238,36 +238,6 @@ home:
     partners: >-
       Las consultoras pueden entregar LESIS con su propia marca, o referirnos clientes, a través del <a href="{partnership_url}">Programa de Partners de LESIS</a>, sin armar un equipo interno.
 
-  record:
-    eyebrow: "Trayectoria"
-    title: "Ingenieros que puedes verificar"
-    intro: >-
-      El criterio en LESIS viene de personas con un historial público: divulgaciones de vulnerabilidades, experiencia dentro de grandes empresas de tecnología y contribuciones a la comunidad de seguridad a través de competencias y charlas en conferencias.
-    items:
-      - title: "Vulnerabilidades publicadas"
-        text: >-
-          Miembros de nuestro equipo han reportado vulnerabilidades a D-Link, documentadas en <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9376" target="_blank" rel="noopener noreferrer">CVE-2020-9376</a> y <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-9377" target="_blank" rel="noopener noreferrer">CVE-2020-9377</a>, y a MISP, registrada como <a href="https://nvd.nist.gov/vuln/detail/CVE-2020-28043" target="_blank" rel="noopener noreferrer">CVE-2020-28043</a>. Su trabajo también incluye reportes a Oracle y Apple, con registros públicos en el <a href="https://www.oracle.com/security-alerts/cpujul2022.html" target="_blank" rel="noopener noreferrer">Critical Patch Update de julio de 2022 de Oracle</a> y en los <a href="https://support.apple.com/en-gb/102774" target="_blank" rel="noopener noreferrer">agradecimientos de seguridad de servidores web de Apple</a>.
-      - title: "Participación en competencias CTF"
-        text: >-
-          Miembros de nuestro equipo han competido en eventos Capture The Flag, obteniendo el primer lugar en el CTF de BSides São Paulo y ganando una etapa clasificatoria de Hackaflag. LESIS también apoya equipos de la comunidad: en <a href="https://www.sbseg2026.uff.br/" target="_blank" rel="noopener noreferrer">SBSeg 2026</a>, el equipo GRIS/UFRJ, con el apoyo de LESIS, <a href="{bulletin_url}">quedó en primer lugar entre 18 equipos</a> en desafíos de análisis de tráfico, forense e investigación de incidentes.
-      - title: "Experiencia en líderes del mercado"
-        text: >-
-          Nuestro equipo incluye ingenieros que han trabajado en empresas como Nubank, el mayor banco digital de América Latina, y Globo, la mayor empresa de medios de Brasil, así como en los principales proveedores de ciberseguridad de Brasil y en otras empresas igual de sólidas, aunque menos conocidas. Saben lo que hace falta para proteger sistemas que usan millones de personas.
-      - title: "Charlas en eventos de seguridad"
-        text: >-
-          Miembros de nuestro equipo han dado charlas en eventos como BxSec, Roadsec, BSides Rio de Janeiro y XibéSec. Así compartimos lo que aprendemos con la comunidad de seguridad de Brasil.
-
-  work:
-    transition: "Explora nuestras investigaciones publicadas y herramientas de código abierto."
-    tool: "Herramienta de código abierto"
-    no_release: "Sin versión publicada"
-    tools:
-      security_gate: "Aplica umbrales de seguridad configurables a las alertas de GitHub para que tu equipo pueda exigir verificaciones en su pipeline de CI/CD."
-      bunkai: "Examina las dependencias de proyectos Perl en busca de módulos desactualizados y vulnerabilidades conocidas, con resultados que se integran a los flujos de desarrollo."
-      kasumi: "Extrae y busca mensajes de Slack por palabra clave y rango de fechas para apoyar evaluaciones de seguridad autorizadas."
-    all_publications: "Todas las publicaciones &rarr;"
-    explore_tools: "Explora nuestras herramientas &rarr;"
-
   closing:
     title: ["Una plataforma", "para todo el programa.", "Mírala en el tuyo."]
     text: >-
