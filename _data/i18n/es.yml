@@ -75,15 +75,6 @@ home:
     title: "A quiénes ya ayudamos a proteger"
     empty: "Fintechs, retail, salud, telecomunicaciones y lawtechs"
 
-  what:
-    eyebrow: "Por qué LESIS"
-    display: "Los equipos de seguridad no necesitan más alertas. Necesitan hallazgos con alguien detrás."
-    text:
-      - >-
-        La mayoría de los programas de seguridad funciona como un mosaico: un escáner aquí, una planilla de hallazgos allá, el PDF de una consultora, un runbook en el drive de alguien. Nadie puede decir, en cualquier momento, qué está abierto, quién es responsable y si está mejorando.
-      - >-
-        LESIS reemplaza el mosaico por un solo registro. Cada hallazgo tiene evidencia, un responsable y un plazo. La IA lee tu código y reporta solo lo que puede probar. Los ingenieros de LESIS revisan lo que la IA propone. La dirección ve postura, no ruido.
-
   media:
     pause: "Pausar animación"
     play: "Reproducir animación"
@@ -237,7 +228,7 @@ home:
       lead:
         - "LESIS opera tu programa de seguridad en la plataforma, junto a tu equipo."
         - >-
-          Hallazgos triados, perseguidos, vueltos a probar y cerrados. Reportes de divulgación triados a medida que llegan. Inventario, runbooks y políticas al día; campañas de concientización y capacitaciones llevadas hasta el final; el trust center siempre listo; la postura comparada con la de otras organizaciones. No sumas headcount: tus ingenieros entran cuando una corrección los necesita, y lo que aprenden queda en el registro.
+          Hallazgos triados, perseguidos, vueltos a probar y cerrados. Reportes de divulgación triados a medida que llegan. Inventario, runbooks y políticas al día; la postura comparada con la de otras organizaciones. No sumas headcount: tus ingenieros entran cuando una corrección los necesita, y lo que aprenden queda en el registro.
     partners: >-
       Las consultoras pueden entregar LESIS con su propia marca, o referirnos clientes, a través del <a href="{partnership_url}">Programa de Partners de LESIS</a>, sin armar un equipo interno.
 

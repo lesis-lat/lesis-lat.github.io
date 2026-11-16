@@ -77,15 +77,6 @@ home:
     title: "Organizations we've helped protect"
     empty: "Fintechs, retail, healthcare, telecommunications and lawtechs"
 
-  what:
-    eyebrow: "Why LESIS"
-    display: "Security teams don't need more alerts. They need findings someone stands behind."
-    text:
-      - >-
-        Most security programs run on a patchwork: a scanner here, a spreadsheet of findings there, a consultancy's PDF, a runbook in someone's drive. Nobody can say, at any given moment, what is open, who owns it and whether it is getting better.
-      - >-
-        LESIS replaces the patchwork with one record. Every finding carries evidence, an owner and a deadline. AI reads your code and reports only what it can prove. LESIS engineers review what the AI proposes. Leadership sees posture, not noise.
-
   media:
     pause: "Pause animation"
     play: "Play animation"
@@ -239,7 +230,7 @@ home:
       lead:
         - "LESIS runs your security program on the platform, alongside your team."
         - >-
-          Findings triaged, chased, retested and closed. Disclosure reports triaged as they arrive. Inventory, runbooks and policies kept current; awareness campaigns and training run to completion; the trust center kept ready; posture benchmarked against other organizations. You don't add headcount: your engineers step in when a fix needs them, and what they learn goes into the record.
+          Findings triaged, chased, retested and closed. Disclosure reports triaged as they arrive. Inventory, runbooks and policies kept current; posture benchmarked against other organizations. You don't add headcount: your engineers step in when a fix needs them, and what they learn goes into the record.
     partners: >-
       Consultancies can deliver LESIS under their own brand, or refer clients to us, through the <a href="{partnership_url}">LESIS Partnership Program</a>, without building an internal team.
 

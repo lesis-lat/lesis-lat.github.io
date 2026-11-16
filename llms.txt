@@ -60,7 +60,7 @@ Multi-organization (business units and subsidiaries, each with its own deadlines
 ## Ways to run LESIS
 
 - Platform: the organization's team runs its program on LESIS, with the LESIS advisor available when a decision needs a second opinion.
-- Managed: LESIS runs the security program on the platform alongside the team: findings triaged, chased, retested and closed; disclosure reports triaged as they arrive; inventory, runbooks and policies kept current; awareness campaigns and training run to completion; the trust center kept ready; posture benchmarked against other organizations.
+- Managed: LESIS runs the security program on the platform alongside the team: findings triaged, chased, retested and closed; disclosure reports triaged as they arrive; inventory, runbooks and policies kept current; posture benchmarked against other organizations.
 
 LESIS engineers also run vulnerability research, architecture reviews and incident investigations when a system needs one, with every finding landing in the same record. Consultancies can deliver LESIS under their own brand, or refer clients, through the LESIS Partnership Program.
 

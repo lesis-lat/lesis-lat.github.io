@@ -73,15 +73,6 @@ home:
     title: "Quem já ajudamos a proteger"
     empty: "Fintechs, varejo, saúde, telecomunicações e lawtechs"
 
-  what:
-    eyebrow: "Por que a LESIS"
-    display: "Times de segurança não precisam de mais alertas. Precisam de achados com alguém por trás."
-    text:
-      - >-
-        A maioria dos programas de segurança roda numa colcha de retalhos: um scanner aqui, uma planilha de achados ali, o PDF de uma consultoria, um runbook no drive de alguém. Ninguém consegue dizer, a qualquer momento, o que está aberto, quem é o responsável e se está melhorando.
-      - >-
-        A LESIS troca a colcha de retalhos por um só registro. Cada achado tem evidência, um responsável e um prazo. A IA lê o seu código e reporta só o que consegue provar. Os engenheiros da LESIS revisam o que a IA propõe. A liderança vê postura, não ruído.
-
   media:
     pause: "Pausar animação"
     play: "Reproduzir animação"
@@ -235,7 +226,7 @@ home:
       lead:
         - "A LESIS opera o seu programa de segurança na plataforma, ao lado do seu time."
         - >-
-          Achados triados, cobrados, retestados e fechados. Relatos de divulgação triados conforme chegam. Inventário, runbooks e políticas mantidos em dia; campanhas de conscientização e treinamentos levados até o fim; o trust center sempre pronto; a postura comparada com a de outras organizações. Você não aumenta o headcount: os seus engenheiros entram quando uma correção precisa deles, e o que aprendem fica no registro.
+          Achados triados, cobrados, retestados e fechados. Relatos de divulgação triados conforme chegam. Inventário, runbooks e políticas mantidos em dia; a postura comparada com a de outras organizações. Você não aumenta o headcount: os seus engenheiros entram quando uma correção precisa deles, e o que aprendem fica no registro.
     partners: >-
       Consultorias podem entregar a LESIS com a própria marca, ou indicar clientes para nós, pelo <a href="{partnership_url}">Programa de Parcerias LESIS</a>, sem montar um time interno.
 
