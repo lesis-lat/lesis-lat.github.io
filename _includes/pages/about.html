@@ -65,16 +65,10 @@
       <p class="section-intro reveal">{{ about.sovereignty.intro }}</p>
     </div>
     <div class="lab-ledger">
-      <div class="lab-ledger-head" aria-hidden="true">
-        <span></span>
-        <span>{{ about.sovereignty.today_label }}</span>
-        <span>{{ about.sovereignty.building_label }}</span>
-      </div>
       {%- for item in about.sovereignty.items %}
       <div class="lab-ledger-row reveal" style="--i:{{ forloop.index0 }}">
         <h3>{{ item.name }}</h3>
-        <p><span class="lab-ledger-label">{{ about.sovereignty.today_label }}</span>{{ item.today }}</p>
-        <p><span class="lab-ledger-label">{{ about.sovereignty.building_label }}</span>{{ item.building }}</p>
+        <p>{{ item.text }}</p>
       </div>
       {%- endfor %}
     </div>

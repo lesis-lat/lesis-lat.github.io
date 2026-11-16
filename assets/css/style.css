@@ -2001,6 +2001,10 @@
     color: rgba(255, 255, 255, 0.8);
   }
 
+  body.lab-page .closing-row p {
+    max-width: none;
+  }
+
   .closing .hero-actions {
     justify-content: flex-start;
   }
@@ -3501,24 +3505,10 @@
     background: var(--night);
   }
 
-  .lab-ledger-head,
   .lab-ledger-row {
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 5fr) minmax(0, 5fr);
+    grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
     gap: 3rem;
-  }
-
-  .lab-ledger-head {
-    padding-bottom: 0.9rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.35);
-    font-family: "IBM Plex Mono", monospace;
-    font-size: max(0.72rem, 11px);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.6);
-  }
-
-  .lab-ledger-row {
     padding: 1.75rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   }
@@ -3535,19 +3525,6 @@
     font-size: 0.95rem;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.85);
-  }
-
-  body.landing .lab-ledger-row p:last-child {
-    color: rgba(255, 255, 255, 0.62);
-  }
-
-  .lab-ledger-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
   }
 
   body.landing .lab-signoff {
@@ -3567,8 +3544,7 @@
   @media (max-width: 1080px) {
     .lab-split { grid-template-columns: minmax(0, 1fr); }
     .lab-cards-four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .lab-ledger-head,
-    .lab-ledger-row { grid-template-columns: minmax(0, 2fr) minmax(0, 5fr) minmax(0, 5fr); gap: 2rem; }
+    .lab-ledger-row { grid-template-columns: minmax(0, 2fr) minmax(0, 5fr); gap: 2rem; }
   }
 
   @media (max-width: 760px) {
@@ -3579,21 +3555,6 @@
     .lab-cards,
     .lab-cards-four { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; }
     .lab-sovereignty { padding: 4.5rem 0; }
-    .lab-ledger-head { display: none; }
     .lab-ledger-row { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
-    .lab-ledger-label {
-      position: static;
-      display: block;
-      width: auto;
-      height: auto;
-      margin-bottom: 0.35rem;
-      overflow: visible;
-      clip-path: none;
-      font-family: "IBM Plex Mono", monospace;
-      font-size: 11px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.55);
-    }
     .lab-archive blockquote { padding: 1.75rem 1.25rem; }
   }
